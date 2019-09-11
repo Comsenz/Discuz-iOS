@@ -1,0 +1,35 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 71,
+          "height" : 82
+        },
+        "cap-insets" : {
+          "bottom" : 169,
+          "top" : 181,
+          "right" : 268,
+          "left" : 301
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "chatkeyboardbg@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

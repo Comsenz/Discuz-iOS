@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>帖子详细</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet"  type="text/css" href="base.css"/>
+    <link rel="stylesheet"  type="text/css" href="style.css"/>
+    <script type="text/javascript" src="public.js"></script>
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="ios_debate.js"></script>
+	<style type="text/css">
+		.attachlist{align:center;text-align:left}
+		.attachlist ul{list-style-type:none;}
+		.attachlist ul li{padding-top:2px;}
+	</style>
+</head>
+<body>
+<div>
+    <div class="detailHeader">
+        <div class="detailTit"></div>
+        <div class="scannedInfo">
+            <div class="scannedInfo-l pull-left">
+                <img class="viewCount" src="d_see.png"><span>0</span>
+                    <img class="commendCount" src="d_disc.png"><span>0</span>
+                        </div>
+            <div class="sectionName pull-right"></div>
+        </div>
+    </div>
+    <div class="floorHostPost">
+        <div class="hostInfo">
+            <div class="time pull-right"></div>
+            <div class="hostInfo-l pull-left">
+                <a class="avatar"><img src="noavatar_small.png"></a><a class="userName"></a><span>楼主</span>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+    <p class="acTips debateTips"><span>辩论进行中</span>,<span>2017-6-23 9:45</span>截止, 裁判<span>admin</span></p>
+    <div class="content_box thread_details">
+        <div id="thread_content">
+        </div>
+        <!-- 活动贴内容开始 -->
+        <div class="detail">
+            <p class="viewTit">正方观点:</p>
+            <p class="viewsCon">正方观点正方观点正方观点正方观点正方观点</p>
+            <p class="viewTit conTit">反方观点:</p>
+            <p class="viewsCon">反方观点反方观点反方观点反方观点反方观点</p>
+            <div class="viewGraphBox">
+            <div class="viewWrapper">
+
+                <div class="viewPercent">
+                    <span class="sq">66% 正方观点</span>
+                    <span class="pull-right">33% 反方观点</span>
+                </div>
+                <div class="ratiobox">
+                    <div class="sqRatio"></div>
+                    <span class="vs"><img src="vs.png"></span>
+                </div>
+                <div class="supBtn">
+                    <span class="sqBtn">支持正方</span>
+                    <span class="pull-right conBtn">支持反方</span>
+                </div>
+                <!-- <div class="viewGraphItem">
+                    <p>正方观点</p>
+                    <p class="viewNum">(2)</p>
+                    <div class="viewGrapBg">
+                        <div class="sqPercent"></div>
+                    </div>
+                </div>
+                <div class="viewGraphMargin">VS</div>
+                <div class="viewGraphItem">
+                    <p>反方观点</p>
+                    <p class="viewNum">(1)</p>
+                    <div class="viewGrapBg">
+                        <div class="conPercent"></div>
+                    </div>
+                </div> -->
+            </div>
+<!--            <div class="supportBox">-->
+<!--                <div class="supportBtn"><a>支持</a></div>-->
+<!--                <div class="viewGraphMargin"></div>-->
+<!--                <div class="supportBtn"><a>支持</a></div>-->
+<!--            </div>-->
+            </div>
+            <div class="sjoinBox">
+                <div class="joinNum">
+                    <span>正方辩手:2</span><a href="javascript:void(0);">加入</a>
+                </div>
+                <div class="joinInfo" hidden>
+                    <div class="joinInfoScroll"></div>
+                </div>
+                <div class="joinNum">
+                    <span>反方辩手:0</span><a href="javascript:void(0);">加入</a>
+                    <div class="joinInfo" hidden>
+                        <div class="joinInfoScroll"></div>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="cjoinBox"></div>-->
+<!--            活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴活动贴-->
+<!--            <div class="debateImg">-->
+<!--                <img src="images/debateImg.png">-->
+<!--            </div>-->
+<!--            <a class="joinBtn" hidden>结束此次辩论</a>-->
+        </div>
+        <!-- 活动贴内容结束 -->
+        
+		<div class="attachlist" hidden><ul></ul></div>
+        <div class="P_share">
+            <div>
+                <a href="javascript:void(0)"><img src="complain.png" width="16" height="16"></a><span class="gray_text">举报</span>
+                <a href="javascript:void(0)"><img src="praise.png" width="16" height="16"></a><span class="main_color">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="positionSec">
+        <span class="secTit">按立场筛选:</span><a class="positionItem itemActive">全部</a><a class="positionItem">正方</a><a class="positionItem">反方</a><a class="positionItem">中方</a>
+    </div>
+    <div class="content_box font_c content_thread_reply" >
+    	<ul class="thread_reply">
+			<li class="bor1" hidden>
+                
+                <div class="otherPostItem">
+                    <div class="userAvatar"><a><img src="noavatar_small.png"></a></div>
+                    <div class="otnerPostDetail">
+                        <p class="topInfo">
+                        <a class="nickName"></a>
+                        <span class="floor pull-right"></span>
+                        </p>
+                        <p class="replyCon"></p>
+                        <div class="attachlist" hidden><ul></ul></div>
+                        <p class="buttomMess">
+                        <span class="time"></span>
+                        <span class="dataInfo pull-right">
+                            <img src="complain.png" class="complainIcon"><i class="complainBtn">举报</i>
+                                <img src="discuss.png" class="plIcon"><i class="replyBtn">回复</i>
+                                    </span>
+                        </p>
+                    </div>
+                </div>
+			</li>
+        </ul>
+    </div>
+    <div hidden class="P_footer clearfix" >
+    	<input class="P_write" value="写跟帖" id="txt"/>
+        <div class="P_icon">
+        	<span class="smiling_face"><img src="smiling_face.png" width="45" height="45" alt=""/></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>		

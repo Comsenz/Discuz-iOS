@@ -1,0 +1,131 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DTCoreText (1.6.21):
+    - DTCoreText/Core (= 1.6.21)
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTCoreText/Core (1.6.21):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.13)
+  - DTFoundation/DTAnimatedGIF (1.7.13)
+  - DTFoundation/DTHTMLParser (1.7.13):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.13):
+    - DTFoundation/Core
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - IQKeyboardManager (5.0.8)
+  - libPusher (1.6.3):
+    - libPusher/Core (= 1.6.3)
+  - libPusher/Core (1.6.3):
+    - SocketRocket (= 0.5.1)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.7)
+  - mob_sharesdk (4.1.4):
+    - mob_sharesdk/ShareSDK (= 4.1.4)
+    - MOBFoundation
+  - mob_sharesdk/ShareSDK (4.1.4):
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKExtension (4.1.4):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/QQ (4.1.4):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.1.4):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKUI (4.1.4):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - MOBFoundation (3.2.0)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
+  - SocketRocket (0.5.1)
+  - WebViewJavascriptBridge (6.0.3)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - DTCoreText (~> 1.6.21)
+  - FMDB (~> 2.6.2)
+  - IQKeyboardManager (~> 5.0.7)
+  - libPusher (~> 1.6.2)
+  - Masonry (~> 1.1.0)
+  - MBProgressHUD (~> 1.0.0)
+  - MJExtension (~> 3.0.13)
+  - MJRefresh (~> 3.1.15.1)
+  - mob_sharesdk (~> 4.1.0)
+  - mob_sharesdk/ShareSDKExtension (~> 4.1.0)
+  - mob_sharesdk/ShareSDKPlatforms/QQ (~> 4.1.0)
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (~> 4.1.0)
+  - mob_sharesdk/ShareSDKUI (~> 4.1.0)
+  - SDWebImage (~> 4.1.2)
+  - WebViewJavascriptBridge (~> 6.0)
+  - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - DTCoreText
+    - DTFoundation
+    - FMDB
+    - IQKeyboardManager
+    - libPusher
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - mob_sharesdk
+    - MOBFoundation
+    - SDWebImage
+    - SocketRocket
+    - WebViewJavascriptBridge
+    - YYKit
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DTCoreText: e5d688cffc9f6a61eddd1a4f94e2046851230de3
+  DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
+  libPusher: b7fcf16e2db51c37915613652311d66065743ead
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  mob_sharesdk: 765cc2fd2fac0a6fd7c3e6c2b10d729ad006c608
+  MOBFoundation: ca11e6640e995875ff755faa56ea324eed260e70
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 38c0dd67df9fcf3dc22d35c3edc773227807c8d2
+
+COCOAPODS: 1.5.3

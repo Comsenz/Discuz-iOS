@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" /> 
+<meta content="telephone=no" name="format-detection" />
+<title>投票详细</title>
+<link rel="stylesheet" href="base.css" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="rednet-jq-theme.css">
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="public.js"></script>
+<script src="jquery-ui.js"></script>
+<script type="text/javascript" src="ios_poll.js"></script>
+<style>
+	.ui-button-text{
+		color:#333;
+		font-weight:normal;
+		font-size:medium;
+	}
+	.poll_list li{
+		margin-top:12px;
+	}
+	.poll_list li:first{
+		margin-top:0px;
+	}
+	.poll_list li label{
+		padding-left:24px;
+	}
+    label.ui-state-default[widget="radio"]{
+		height:20px;
+		background:#ffffff url("button.png") no-repeat;
+		background-position: 0px 0px;
+	}
+	label.ui-state-active[widget="radio"]{
+		height:20px;
+		background:#ffffff url("button.png") no-repeat;
+		background-position: 0px -20px;
+	}
+	label.ui-state-default[widget="checkbox"]{
+		height:20px;
+		background:#ffffff url("button.png") no-repeat;
+		background-position: 0px -41px;
+	}
+	label.ui-state-active[widget="checkbox"]{
+		height:20px;
+		background:#ffffff url("button.png") no-repeat;
+		background-position: 0px -62px;
+	}
+	.attachlist{align:center;text-align:left}
+	.attachlist ul{list-style-type:none;}
+	.attachlist ul li{padding-top:2px;}
+</style>
+</head>
+<body>
+    <div class="detailHeader">
+        <div class="detailTit"></div>
+        <div class="scannedInfo">
+            <div class="scannedInfo-l pull-left">
+                <img class="viewCount" src="d_see.png"><span>0</span>
+                    <img class="commendCount" src="d_disc.png"><span>0</span>
+                        </div>
+            <div class="sectionName pull-right"></div>
+        </div>
+    </div>
+    <div class="floorHostPost">
+        <div class="hostInfo">
+            <div class="time pull-right"></div>
+            <div class="hostInfo-l pull-left">
+                <a class="avatar"><img src="noavatar_small.png"></a><a class="userName"></a><span>楼主</span>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+    <div>
+        <div class="p_vote">
+            <div class="vote_tips p_vote-text"></div>
+            <div class="vote_expirations" hidden></div>
+        </div>
+        <div class="content_box thread_details">
+            <div>
+                <p id="thread_content"></p>
+                <ul class="poll_list">
+                    <li hidden>
+                        <div class="ui-type-poll-img-txt" hidden>
+                            <p><img/></p>
+                            <div><input type="checkbox"/><label widget="checkbox"></label></div>
+                        </div>
+                        <div class="ui-type-poll-txt-only" hidden><input type="checkbox"/><label widget="checkbox"></label></div>
+                    </li>
+                    <li hidden>
+                        <div class="ui-type-poll-img-txt" hidden>
+                            <p><img/></p>
+                            <div><input type="radio" name="radio"/><label widget="radio"></label></div>
+                        </div>
+                        <div class="ui-type-poll-txt-only" hidden><input type="radio" name="radio"/><label widget="radio"></label></div>
+                    </li>
+                </ul>
+                <button class="P_submit mt">提交</button>
+            </div>
+            <div class="attachlist" hidden><ul></ul></div>
+            <div class="P_share">
+                <div>
+                    <a href="javascript:void(0)"><img src="complain.png" width="16" height="16"></a><span class="gray_text">举报</span>
+                    <a href="javascript:void(0)"><img src="praise.png" width="16" height="16"></a><span class="main_color">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="p_vote bg">
+            <div class="p_vote-text">
+                全部回复
+            </div>
+        </div>
+        <div class="content_box font_c content_thread_reply">
+            <ul class="thread_reply">
+                <li class="bor1"  hidden>
+                    <div class="otherPostItem">
+                        <div class="userAvatar"><a><img src="noavatar_small.png"></a></div>
+                        <div class="otnerPostDetail">
+                            <p class="topInfo">
+                            <a class="nickName"></a>
+                            <span class="floor pull-right"></span>
+                            </p>
+                            <p class="replyCon"></p>
+                            <div class="attachlist" hidden><ul></ul></div>
+                            <p class="buttomMess">
+                            <span class="time"></span>
+                            <span class="dataInfo pull-right">
+                                <img src="complain.png" class="complainIcon"><i class="complainBtn">举报</i>
+                                    <img src="discuss.png" class="plIcon"><i class="replyBtn">回复</i>
+                                        </span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="P_footer clearfix" hidden>
+            <input class="P_write" value="写跟帖" id="txt"></input>
+            <div class="P_icon">
+                <span class="smiling_face"><img src="smiling_face.png" width="45" height="45" alt=""/></span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

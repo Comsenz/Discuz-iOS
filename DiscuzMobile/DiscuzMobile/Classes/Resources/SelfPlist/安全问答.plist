@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>无安全提问</string>
+	<string>母亲的名字</string>
+	<string>爷爷的名字</string>
+	<string>父亲出生的城市</string>
+	<string>您其中一位老师的名字</string>
+	<string>您个人计算机的型号</string>
+	<string>您最喜欢的餐馆名称</string>
+	<string>驾驶执照最后四位数字</string>
+</array>
+</plist>

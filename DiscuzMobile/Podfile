@@ -1,0 +1,38 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+# ruby语法
+# target数组 如果有新的target直接加入该数组
+targetsArray = ['DiscuzMobile','Jinbifun','Penjing']
+# 循环
+targetsArray.each do |t|
+    target t do
+        inhibit_all_warnings!
+        
+        # sharesdk 主模块(必须)
+        pod 'mob_sharesdk', '~> 4.1.0'
+        # UI模块(非必须，需要用到ShareSDK提供的分享菜单栏和分享编辑页面需要以下1行)
+        pod 'mob_sharesdk/ShareSDKUI', '~> 4.1.0'
+        # 平台SDK模块(对照一下平台，需要的加上。如果只需要QQ、微信、新浪微博，只需要以下3行)
+        pod 'mob_sharesdk/ShareSDKPlatforms/QQ', '~> 4.1.0'
+        # pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
+        #（微信sdk不带支付的命令）
+        pod 'mob_sharesdk/ShareSDKPlatforms/WeChat', '~> 4.1.0'
+        # 扩展模块（在调用可以弹出我们UI分享方法的时候是必需的）
+        # 使用配置文件分享模块（非必需）
+        # pod 'mob_sharesdk/ShareSDKConfigFile', '~> 4.1.0'
+        pod 'mob_sharesdk/ShareSDKExtension', '~> 4.1.0'
+        
+        pod 'AFNetworking', '~> 3.1.0'
+        pod 'SDWebImage', '~> 4.1.2'
+        pod 'MJRefresh', '~> 3.1.15.1'
+        pod 'Masonry', '~> 1.1.0’
+        pod 'MBProgressHUD', '~> 1.0.0'
+        pod 'libPusher', '~> 1.6.2'
+        pod 'FMDB', '~> 2.6.2'
+        pod 'MJExtension', '~> 3.0.13'
+        pod 'DTCoreText', '~> 1.6.21'
+        pod 'IQKeyboardManager', '~> 5.0.7'
+        pod 'WebViewJavascriptBridge', '~> 6.0'
+        pod 'YYKit', '~> 1.0.9'
+    end
+end

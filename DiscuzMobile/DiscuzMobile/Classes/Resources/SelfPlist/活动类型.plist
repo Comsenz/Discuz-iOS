@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>朋友聚会</string>
+	<string>出外郊游</string>
+	<string>自驾出行</string>
+	<string>公益活动</string>
+	<string>线上活动</string>
+	<string>自定义</string>
+</array>
+</plist>

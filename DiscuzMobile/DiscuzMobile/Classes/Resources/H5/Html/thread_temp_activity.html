@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>活动详细</title>
+    
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="public.js"></script>
+	<script type="text/javascript" src="ios_activities.js"></script>
+	<style type="text/css">
+		button[joined="true"]{background-color:#f1f1f1;color:#b9b9b9}
+		button[joined="false"]{background-color:#3278E6}
+		.attachlist{align:center;text-align:center}
+		.attachlist ul{list-style-type:none;}
+		.attachlist ul li{padding-top:2px;}
+	</style>
+</head>
+<body>
+    <div class="detailHeader">
+        <div class="detailTit"></div>
+        <div class="scannedInfo">
+            <div class="scannedInfo-l pull-left">
+                <img class="viewCount" src="d_see.png"><span>0</span>
+                    <img class="commendCount" src="d_disc.png"><span>0</span>
+                        </div>
+            <div class="sectionName pull-right"></div>
+        </div>
+    </div>
+    <div class="floorHostPost">
+        <div class="hostInfo">
+            <div class="time pull-right"></div>
+            <div class="hostInfo-l pull-left">
+                <a class="avatar"><img src="noavatar_small.png"></a><a class="userName"></a><span>楼主</span>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+<div class="p_vote">
+    <div class="activity_time_tip p_vote-text"></div>
+</div>
+<div class="content_box thread_details">
+    <div class="activity_message">
+        <div class="activityInfo">
+            <label>开始时间：</label><span></span>
+        </div>
+        <div class="activityInfo">
+            <label>结束时间：</label><span></span>
+        </div>
+        <div class="activityInfo">
+            <label>地点：</label><span></span>
+        </div>
+        <div class="activityInfo">
+            <label>性别：</label><span></span>
+        </div>
+        <div class="activityInfo">
+            <label>每人花销：</label><span></span>
+        </div>
+        <div class="activityInfo">
+            <label>已报名人数：</label><span><span>
+        </div>
+    </div>
+    
+    <div class="senbtto">
+        <button type="submit" class="sendbtn" joined="false">我要参加</button>
+    </div>
+    
+	<div class="contentPictext"></div>
+    
+	<div class="attachlist" hidden><ul></ul></div>
+    <div class="P_share">
+        <div>
+            <a href="javascript:void(0)"><img src="complain.png" width="16" height="16"></a><span class="gray_text">举报</span>
+            <a href="javascript:void(0)"><img src="praise.png" width="16" height="16"></a><span class="main_color">0</span>
+        </div>
+    </div>
+</div>
+
+<div class="p_vote bg">
+    <div class="p_vote-text">
+    全部回复
+    </div>
+</div>
+<div class="content_box font_c content_thread_reply">
+	<ul class="thread_reply">
+         <li class="bor1"  hidden>
+             <div class="otherPostItem">
+                 <div class="userAvatar"><a><img src="noavatar_small.png"></a></div>
+                 <div class="otnerPostDetail">
+                     <p class="topInfo">
+                     <a class="nickName"></a>
+                     <span class="floor pull-right">沙发</span>
+                     </p>
+                     <p class="replyCon"></p>
+                     <div class="attachlist" hidden><ul></ul></div>
+                     <p class="buttomMess">
+                     <span class="time"></span>
+                     <span class="dataInfo pull-right">
+                         <img src="complain.png" class="complainIcon"><i class="complainBtn">举报</i>
+                             <img src="discuss.png" class="plIcon"><i class="replyBtn">回复</i>
+                                 </span>
+                     </p>
+                 </div>
+             </div>
+		</li>
+	</ul>
+	<p class="reply_botton_j" hidden><a href="javascript:void(0)">加载更多</a></p>
+</div>
+<!--<div class="actplaceholder" style="height:57px;" hidden/>-->
+<!---->
+<!--<div class="sendoperate" >-->
+<!--	<div class="senbtto">-->
+<!--		<button type="submit" class="sendbtn" joined="false"/>我要参加</button>-->
+<!--	</div>-->
+<!--</div>-->
+</body>
+</html>

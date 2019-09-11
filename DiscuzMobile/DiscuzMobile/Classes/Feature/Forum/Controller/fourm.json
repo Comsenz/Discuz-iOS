@@ -1,0 +1,333 @@
+{
+	"Charset": "UTF-8",
+	"Variables": {
+		"auth": null,
+		"catlist": [
+			{
+				"fid": "80",
+				"forums": [
+					"84",
+					"83",
+					"89",
+					"85",
+					"88"
+				],
+				"name": "互动交流"
+			},
+			{
+				"fid": "81",
+				"forums": [
+					"86",
+					"87",
+					"90"
+				],
+				"name": "官方服务"
+			}
+		],
+		"cookiepre": "IiUw_2132_",
+		"formhash": "7808f51b",
+		"forumlist": [
+			{
+				"description": "爱咋咋地，畅所欲言，萝莉大叔不拒绝",
+				"fid": "84",
+				"folder": " class=\"new\"",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/68/common_84_icon.jpg",
+				"name": "杂谈",
+				"posts": "142",
+				"redirect": "",
+				"threads": "70",
+				"sublist": [
+					{
+						"fid": "94",
+						"name": "子版块一级1",
+						"posts": "0",
+						"threads": "0",
+                            "sublist": [
+                                        {
+                                        "fid": "94",
+                                        "name": "子版块二级1",
+                                        "posts": "0",
+                                        "threads": "0",
+                                        "sublist": [
+                                                    {
+                                                    "fid": "94",
+                                                    "name": "子版块三级1",
+                                                    "posts": "0",
+                                                    "threads": "0",
+                                                    "todayposts": "0"
+                                                    },
+                                                    {
+                                                    "fid": "93",
+                                                    "name": "子版块三级2",
+                                                    "sublist": [
+                                                                {
+                                                                "fid": "94",
+                                                                "name": "子版块四级1",
+                                                                "posts": "0",
+                                                                "threads": "0",
+                                                                "todayposts": "0"
+                                                                },
+                                                                {
+                                                                "fid": "93",
+                                                                "name": "子版块四级2",
+                                                                "posts": "0",
+                                                                "threads": "0",
+                                                                "todayposts": "0"
+                                                                }
+                                                                ],
+                                                    "posts": "0",
+                                                    "threads": "0",
+                                                    "todayposts": "0"
+                                                    }
+                                                    ],
+                                        "todayposts": "0"
+                                        },
+                                        {
+                                        "fid": "93",
+                                        "name": "子版块二级2",
+                                        "posts": "0",
+                                        "threads": "0",
+                                        "todayposts": "0"
+                                        }
+                                        ],
+						"todayposts": "0"
+					},
+					{
+						"fid": "93",
+						"name": "子版块一级2",
+						"posts": "0",
+						"threads": "0",
+						"todayposts": "0"
+					}
+				],
+				"todayposts": "0"
+			},
+			{
+				"description": "汇集媒体、科技、互联网最新创业讯息",
+				"fid": "86",
+				"folder": " class=\"new\"",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/93/common_86_icon.jpg",
+				"name": "新闻公告",
+				"posts": "17",
+				"redirect": "",
+				"threads": "11",
+				"todayposts": "0"
+			},
+			{
+				"description": "版块简介:把你的意见和bug发表在这里，我们将有保留的进行改进",
+				"fid": "87",
+				"folder": " class=\"new\"",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/c7/common_87_icon.jpg",
+				"name": "意见建议",
+				"posts": "26",
+				"redirect": "",
+				"threads": "17",
+				"todayposts": "0"
+			},
+			{
+				"description": "有时候大家也可以一起放松一下下。",
+				"fid": "83",
+				"folder": " class=\"new\"",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/fe/common_83_icon.jpg",
+				"name": "一起去旅行",
+				"posts": "58",
+				"redirect": "",
+				"threads": "29",
+				"todayposts": "0"
+			},
+			{
+				"description": "新手会玩？来看入门教程吧，牛级工程狮精品技术",
+				"fid": "90",
+				"folder": "",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/86/common_90_icon.jpg",
+				"name": "新手入门",
+				"posts": "20",
+				"redirect": "",
+				"sublist": [
+					{
+						"fid": "94",
+						"name": "子版块1",
+						"posts": "0",
+						"threads": "0",
+						"todayposts": "0"
+					},
+					{
+						"fid": "93",
+						"name": "子版块2",
+						"posts": "0",
+						"threads": "0",
+						"sublist": [
+					{
+						"fid": "94",
+						"name": "子版块1",
+						"posts": "0",
+						"threads": "0",
+						"todayposts": "0"
+					},
+					{
+						"fid": "93",
+						"name": "子版块2",
+						"posts": "0",
+						"threads": "0",
+						"sublist": [
+					{
+						"fid": "94",
+						"name": "子版块1",
+						"posts": "0",
+						"threads": "0",
+						"todayposts": "0"
+					},
+					{
+						"fid": "93",
+						"name": "子版块2",
+						"posts": "0",
+						"threads": "0",
+						"todayposts": "0"
+					}
+				],
+						"todayposts": "0"
+					}
+				],
+						"todayposts": "0"
+					}
+				],
+				"threads": "12",
+				"todayposts": "0"
+			},
+			{
+				"description": "设计师的你们有神马趣味一起聊聊",
+				"fid": "89",
+				"folder": "",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/76/common_89_icon.jpg",
+				"name": "设计趣味",
+				"posts": "2",
+				"redirect": "",
+				"threads": "2",
+				"todayposts": "0"
+			},
+			{
+				"description": "影视爱好者聚集地。",
+				"fid": "85",
+				"folder": "",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/3e/common_85_icon.jpg",
+				"name": "影视",
+				"posts": "14",
+				"redirect": "",
+				"threads": "11",
+				"todayposts": "0"
+			},
+			{
+				"description": "哪些经典，哪些风流",
+				"fid": "88",
+				"folder": " class=\"new\"",
+				"icon": "http://wsq.demo.comsenz-service.com/data/attachment/common/2a/common_88_icon.jpg",
+				"name": "文学",
+				"posts": "55",
+				"redirect": "",
+				"threads": "21",
+				"todayposts": "0"
+			}
+		],
+		"group": {
+			"allowanonymous": "0",
+			"allowat": "0",
+			"allowbegincode": "0",
+			"allowblog": "0",
+			"allowblogmod": "0",
+			"allowbuildgroup": "0",
+			"allowclick": "0",
+			"allowcomment": "0",
+			"allowcommentarticle": "0",
+			"allowcommentcollection": "0",
+			"allowcommentitem": "0",
+			"allowcommentpost": "0",
+			"allowcommentreply": "0",
+			"allowcreatecollection": "0",
+			"allowcss": "0",
+			"allowcstatus": "0",
+			"allowdirectpost": "0",
+			"allowdoing": "0",
+			"allowdoingmod": "0",
+			"allowdownlocalimg": "0",
+			"allowdownremoteimg": "0",
+			"allowfollowcollection": "0",
+			"allowfriend": "0",
+			"allowgetattach": "1",
+			"allowgetimage": "1",
+			"allowgroupdirectpost": "3",
+			"allowgroupposturl": "0",
+			"allowhidecode": "0",
+			"allowhtml": "0",
+			"allowimgcontent": "0",
+			"allowinvisible": "0",
+			"allowinvite": "0",
+			"allowmagic": "0",
+			"allowmagics": "0",
+			"allowmailinvite": "0",
+			"allowmediacode": "0",
+			"allowmyop": "1",
+			"allowpoke": "0",
+			"allowpost": "0",
+			"allowpostactivity": "0",
+			"allowpostarticle": "0",
+			"allowpostarticlemod": "0",
+			"allowpostattach": "0",
+			"allowpostdebate": "0",
+			"allowpostimage": "0",
+			"allowpostpoll": "0",
+			"allowpostreward": "0",
+			"allowpostrushreply": "0",
+			"allowposttag": "0",
+			"allowposttrade": "0",
+			"allowposturl": "3",
+			"allowrecommend": "0",
+			"allowreply": "0",
+			"allowreplycredit": "0",
+			"allowsearch": "19",
+			"allowsendallpm": "0",
+			"allowsendpm": "1",
+			"allowsendpmmaxnum": "0",
+			"allowsetattachperm": "0",
+			"allowsetpublishdate": "0",
+			"allowsetreadperm": "0",
+			"allowshare": "0",
+			"allowsharemod": "0",
+			"allowsigbbcode": "0",
+			"allowsigimgcode": "0",
+			"allowspacediybbcode": "0",
+			"allowspacediyhtml": "0",
+			"allowspacediyimgcode": "0",
+			"allowstat": "0",
+			"allowstatdata": "0",
+			"allowthreadplugin": [
+			],
+			"allowtransfer": "0",
+			"allowupload": "0",
+			"allowuploadmod": "0",
+			"allowviewvideophoto": "0",
+			"allowvisit": "1",
+			"allowvote": "0",
+			"groupid": "7",
+			"grouptitle": "游客"
+		},
+		"groupid": "7",
+		"ismoderator": null,
+		"member_avatar": "http://wsq.demo.comsenz-service.com/uc_server/avatar.php?uid=0&size=small",
+		"member_credits": "0",
+		"member_email": null,
+		"member_uid": "0",
+		"member_username": "",
+		"notice": {
+			"newmypost": "0",
+			"newpm": "0",
+			"newprompt": "0",
+			"newpush": "0"
+		},
+		"readaccess": "1",
+		"saltkey": "KXc52Jcc",
+		"setting_bbclosed": "0",
+		"visitedforums": [
+		]
+	},
+	"Version": "5"
+}
