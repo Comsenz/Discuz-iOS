@@ -16,7 +16,6 @@ DerivedData
 *.hmap
 *.ipa
 *.svn
-BaseConfig.h
 
 ### Objective-C ###
 # CocoaPods
