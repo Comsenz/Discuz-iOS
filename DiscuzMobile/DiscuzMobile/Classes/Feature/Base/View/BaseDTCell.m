@@ -7,7 +7,7 @@
 //
 
 #import "BaseDTCell.h"
-#import "DTWebVideoView.h"
+//#import "DTWebVideoView.h"
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface BaseDTCell() <DTAttributedTextContentViewDelegate,DTLazyImageViewDelegate>
@@ -145,10 +145,10 @@
         return imageView;
         
     } else if ([attachment isKindOfClass:[DTIframeTextAttachment class]]) {
-        DTWebVideoView *videoView = [[DTWebVideoView alloc] initWithFrame:frame];
-        videoView.attachment = attachment;
-        videoView.backgroundColor = [UIColor redColor];
-        return videoView;
+//        DTWebVideoView *videoView = [[DTWebVideoView alloc] initWithFrame:frame];
+//        videoView.attachment = attachment;
+//        videoView.backgroundColor = [UIColor redColor];
+//        return videoView;
         
     } else if ([attachment isKindOfClass:[DTObjectTextAttachment class]]) {
         // somecolorparameter has a HTML color

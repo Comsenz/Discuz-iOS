@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YYKit.h"
 
 //typedef enum {
 //    

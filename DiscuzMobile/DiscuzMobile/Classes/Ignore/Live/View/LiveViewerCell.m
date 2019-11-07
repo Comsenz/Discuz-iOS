@@ -8,7 +8,6 @@
 
 #import "LiveViewerCell.h"
 #import "LiveDetailModel.h"
-#import "DTWebVideoView.h"
 #import "JudgeImageModel.h"
 #import "JTWebImageBrowerHelper.h"
 

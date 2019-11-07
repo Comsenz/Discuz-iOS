@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginModule.h"
-#import "MBProgressHUD.h"
-#import "MBProgressHUD+Add.h"
 #import "EmptyAlertView.h"
 
 typedef NS_ENUM(NSUInteger, NavDirection) {

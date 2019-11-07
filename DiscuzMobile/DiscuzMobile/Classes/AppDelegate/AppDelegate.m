@@ -81,15 +81,17 @@ static AppDelegate *_appDelegate;
     [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
 //    [NSURLProtocol registerClass:[WebImageCacheNSURLProtocol class]];
     
-    SDWebImageManager.sharedManager.imageDownloader.downloadTimeout = 10;
-    SDWebImageManager.sharedManager.imageDownloader.maxConcurrentDownloads = 6;
-#if Penjing
-    SDWebImageManager.sharedManager.imageDownloader.executionOrder = SDWebImageDownloaderLIFOExecutionOrder;  // 图片加载方式默认FIFO先进先出，后入先出
-#endif
-    // 设置图片缓存信息
-    [SDImageCache sharedImageCache].config.maxCacheAge = 7 * 24 * 60 * 60; //7天
-    [SDImageCache sharedImageCache].config.maxCacheSize = 1024 * 1024 * 100; //100MB
-    [SDImageCache sharedImageCache].maxMemoryCost = 1024 * 1024 * 40; //40MB
+//    SDWebImageDownloaderConfig *coonfig = [[SDWebImageDownloaderConfig alloc] init];
+//    coonfig.downloadTimeout = 10;
+//    coonfig.maxConcurrentDownloads = 6;
+//    coonfig.executionOrder = SDWebImageDownloaderLIFOExecutionOrder;
+//   SDWebImageDownloader *downloader = [[SDWebImageDownloader alloc] initWithConfig:coonfig];
+//    // 设置图片缓存信息
+//    
+//    SDImageCacheConfig *cacheConfig = [[SDImageCacheConfig alloc] init];
+//    cacheConfig.maxCacheAge = 7 * 24 * 60 * 60; //7天
+//    cacheConfig.maxCacheSize = 1024 * 1024 * 100; //100MB
+//    cacheConfig.maxMemoryCost = 1024 * 1024 * 40; //40MB
 }
 
 #pragma mark - Status bar 点击tableview滚到顶部

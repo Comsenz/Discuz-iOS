@@ -7,7 +7,6 @@
 //
 
 #import "TTLaunchImageView.h"
-
 @interface TTLaunchImageView()
 
 @property (nonatomic, weak) UIImageView *adImageView;
@@ -119,7 +118,7 @@
         if (image != nil) {
             _adImageView.alpha = 1.0;
             _button.alpha = 1.0;
-            [[SDWebImageManager sharedManager] saveImageToCache:image forURL:[NSURL URLWithString:URLString]];
+            [[SDImageCache sharedImageCache] storeImage:image forKey:URLString toDisk:YES completion:nil];
         } else {
             [self removeFromSuperview];
         }

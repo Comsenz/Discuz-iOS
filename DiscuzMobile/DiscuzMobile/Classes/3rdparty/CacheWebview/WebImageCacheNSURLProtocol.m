@@ -33,12 +33,9 @@ static NSString *WebImageCacheURLProtocolHandledKey1 = @"WebImageCacheURLProtoco
     if ([url containsString:@".jpg"] || [url containsString:@".jpeg"] || [url containsString:@".png"])  {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
-            UIImage *image = [[SDWebImageManager sharedManager].imageCache imageFromCacheForKey:url];
+            UIImage *image = [[SDImageCache sharedImageCache] imageFromCacheForKey:url];
             
             if (image) {
-                //            [SDWebImageCodersManager sharedManager]
-                //            [SDWebImageCodersManager sharedManager] saveImageToCache:<#(nullable UIImage *)#> forURL:<#(nullable NSURL *)#>
-                //            NSData *data = [[SDWebImageCodersManager sharedManager] encodedDataWithImage:image format:SDImageFormatUndefined];
                 NSData *data = UIImagePNGRepresentation(image);
                 NSURLResponse *res = [[NSURLResponse alloc] initWithURL:self.request.URL MIMEType:@"image/*;q=0.8" expectedContentLength:data.length textEncodingName:nil];
                 
@@ -50,12 +47,11 @@ static NSString *WebImageCacheURLProtocolHandledKey1 = @"WebImageCacheURLProtoco
                 //request处理过的放进去
                 [NSURLProtocol setProperty:@YES forKey:WebImageCacheURLProtocolHandledKey1 inRequest:mutableReqeust];
                 
-                [[SDWebImageManager sharedManager].imageDownloader downloadImageWithURL:self.request.URL options:SDWebImageDownloaderHighPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
-                    
+                [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:self.request.URL options:SDWebImageDownloaderHighPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
                     if (error) {
                         [self.client URLProtocol:self didFailWithError:error];
                     } else {
-                        [[SDWebImageManager sharedManager].imageCache storeImageDataToDisk:data forKey:url];
+                        [[SDImageCache sharedImageCache] storeImageDataToDisk:data forKey:url];
                         
                         NSURLResponse *res = [[NSURLResponse alloc] initWithURL:self.request.URL MIMEType:@"image/*;q=0.8" expectedContentLength:data.length textEncodingName:nil];
                         [self.client URLProtocol:self didReceiveResponse:res cacheStoragePolicy:NSURLCacheStorageNotAllowed];

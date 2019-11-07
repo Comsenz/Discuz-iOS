@@ -37,13 +37,8 @@
     [nameImageV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self.mas_top).offset(50);
-#if Penjing
-        make.width.mas_equalTo(310);
-        make.height.mas_equalTo(50);
-#else
         make.width.mas_equalTo(240);
         make.height.mas_equalTo(35);
-#endif
     }];
     
     IQPreviousNextView *contentView = [[IQPreviousNextView alloc] init];

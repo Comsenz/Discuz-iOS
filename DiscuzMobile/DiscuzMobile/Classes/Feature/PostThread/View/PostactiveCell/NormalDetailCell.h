@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "yykit.h"
 
 @interface NormalDetailCell : UITableViewCell
 @property (nonatomic,strong) YYTextView *textView;;

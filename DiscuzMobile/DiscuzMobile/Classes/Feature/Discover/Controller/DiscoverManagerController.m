@@ -41,10 +41,7 @@
 - (void)setPageView {
     
 //    [self addItemClass:[RecommendController class] andTitle:@"推荐"];
-//#if Jinbifun
-//#else
 //    [self addItemClass:[LiveController class] andTitle:@"直播"];
-//#endif
     [self addItemClass:[NewestListController class] andTitle:@"最新"];
     [self addItemClass:[DigestListController class] andTitle:@"精华"];
     

@@ -16,7 +16,6 @@
 #import "UsertermsController.h"
 #import "DomainListController.h"
 #import "SendEmailHelper.h"
-
 #import "ShareCenter.h"
 #import "JudgeImageModel.h"
 #import "DZDevice.h"
@@ -285,10 +284,9 @@
 }
 // 清除缓存(清除sdWebImage的缓存)
 - (void)cleanSaveImages {
-    SDWebImageManager *manger = [SDWebImageManager sharedManager];
-    [manger cancelAll];
-    [manger.imageCache clearDiskOnCompletion:nil];
-    [manger.imageCache clearMemory];
+    [[SDWebImageManager sharedManager] cancelAll];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
+    [[SDImageCache sharedImageCache] clearMemory];
 }
 
 -(void)clearCacheSuccess {

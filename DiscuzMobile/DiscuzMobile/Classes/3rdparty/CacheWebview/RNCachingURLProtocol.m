@@ -112,7 +112,7 @@ static NSSet *RNCachingSupportedSchemes;
     if ([url ifUrlContainDomain]) {
         if ([url containsString:@".jpg"] || [url containsString:@".jpeg"] || [url containsString:@".png"])  {
             
-            NSString *defaultPath = [[SDImageCache sharedImageCache] defaultCachePathForKey:url];
+            NSString *defaultPath = [[SDImageCache sharedImageCache] cachePathForKey:url];
             NSData *data = [NSData dataWithContentsOfFile:defaultPath];
             if (data) {
                 NSURLResponse *res = [[NSURLResponse alloc] initWithURL:self.request.URL MIMEType:@"image/*;q=0.8" expectedContentLength:data.length textEncodingName:nil];
