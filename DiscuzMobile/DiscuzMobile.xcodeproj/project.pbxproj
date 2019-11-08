@@ -305,7 +305,6 @@
 		27FA50C91F1CB00400544229 /* MsglistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA50C81F1CB00400544229 /* MsglistCell.m */; };
 		27FF32081F04E59000C05BA1 /* PostBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF32071F04E59000C05BA1 /* PostBaseController.m */; };
 		70E69D3623742C3E00760DC4 /* DiscuzMobile copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E69D3523742C3D00760DC4 /* DiscuzMobile copy-Info.plist */; };
-		70E69D3C23742D2900760DC4 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E69D3B23742D2900760DC4 /* AFNetworking.framework */; };
 		940028E722E5B6B400442CD0 /* DZNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 940028E622E5B6B400442CD0 /* DZNoticeModel.m */; };
 		940028ED22E5B8A600442CD0 /* DiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 940028EC22E5B8A600442CD0 /* DiscoverModel.m */; };
 		940028F022E5B94200442CD0 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 940028EF22E5B94200442CD0 /* BaseModel.m */; };
@@ -414,7 +413,6 @@
 		94F36BD220804221002AEF9E /* JTWebImageBrowerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F36BD120804221002AEF9E /* JTWebImageBrowerHelper.m */; };
 		94F6064B2019E3B100B33AF5 /* BaseStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F6064A2019E3B100B33AF5 /* BaseStyleCell.m */; };
 		94FFDE6E2008A0AD00114E5A /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FFDE6D2008A0AD00114E5A /* NSDate+Extension.m */; };
-		B31D68DACA2B3D6DE937A8E7 /* Pods_DiscuzMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F46790DE09CD7D48F77C38 /* Pods_DiscuzMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1201,7 +1199,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E69D3C23742D2900760DC4 /* AFNetworking.framework in Frameworks */,
 				27714EBA1DDC4AE3008CDC7A /* UIKit.framework in Frameworks */,
 				27714EB61DDC4AC9008CDC7A /* Foundation.framework in Frameworks */,
 				27382C931EC5B6040071C3A1 /* AVFoundation.framework in Frameworks */,
@@ -1227,7 +1224,6 @@
 				27714E9E1DDC4A16008CDC7A /* libc++.tbd in Frameworks */,
 				27714E9C1DDC4A0C008CDC7A /* libsqlite3.0.tbd in Frameworks */,
 				27714E421DDC47DF008CDC7A /* libXG-SDK.a in Frameworks */,
-				B31D68DACA2B3D6DE937A8E7 /* Pods_DiscuzMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3337,9 +3333,7 @@
 				TargetAttributes = {
 					27D1C8E21DD2BE8E00B835B7 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5ZLZJ65EY9;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -4023,9 +4017,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5ZLZJ65EY9;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H5J89P9FJL;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -4072,11 +4067,11 @@
 					"-licucore",
 					"-w",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.DiscuzMob;
+				PRODUCT_BUNDLE_IDENTIFIER = com.516680.discuz;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "56ce636d-6762-4b86-bc74-9e16be0e6f93";
-				PROVISIONING_PROFILE_SPECIFIER = DiscuzMobile_development;
+				PROVISIONING_PROFILE_SPECIFIER = iOS_development_wildcard_profile;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-shorten-64-to-32";
@@ -4092,7 +4087,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 5ZLZJ65EY9;
+				DEVELOPMENT_TEAM = H5J89P9FJL;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -4143,7 +4138,7 @@
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e4dbcae1-e5da-497c-b2de-c25159204981";
-				PROVISIONING_PROFILE_SPECIFIER = DiscuzMobile_adHoc;
+				PROVISIONING_PROFILE_SPECIFIER = iOS_development_wildcard_profile;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-shorten-64-to-32";
