@@ -1,21 +1,21 @@
 //
-//  AboutView.m
+//  DZAboutView.m
 //  DiscuzMobile
 //
 //  Created by HB on 16/12/5.
 //  Copyright © 2016年 comsenz-service.com.  All rights reserved.
 //
 
-#import "AboutView.h"
+#import "DZAboutView.h"
 #import "DZDevice.h"
 
-@interface AboutView()
+@interface DZAboutView()
 
 @property (nonatomic, strong) UIImageView *bgImageView;
 
 @end
 
-@implementation AboutView
+@implementation DZAboutView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

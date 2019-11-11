@@ -11,7 +11,6 @@
 #import "ThreadListModel.h"
 #import "DZHomeListCell.h"
 #import "ThreadViewController.h"
-#import "LoginController.h"
 #import "OtherUserController.h"
 
 @interface FootmarkController ()

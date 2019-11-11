@@ -1,5 +1,5 @@
 //
-//  JTLoginView.h
+//  DZLoginView.h
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/10.
@@ -12,7 +12,7 @@
 #import "ZHPickView.h"
 @class LoginCustomView, Web2AuthCodeView, ZHPickView;
 
-@interface JTLoginView : UIScrollView
+@interface DZLoginView : UIScrollView
 
 @property (nonatomic, strong) LoginCustomView *countView;
 @property (nonatomic, strong) LoginCustomView *pwordView;

@@ -1,19 +1,19 @@
 //
-//  CountRootController.m
+//  DZLoginBaseController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/12.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "CountRootController.h"
+#import "DZLoginBaseController.h"
 #import "XinGeCenter.h"
 
-@interface CountRootController ()
+@interface DZLoginBaseController ()
 
 @end
 
-@implementation CountRootController
+@implementation DZLoginBaseController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -8,7 +8,7 @@
 
 #import "DZBaseViewController.h"
 
-#import "LoginController.h"
+#import "DZLoginController.h"
 #import "PostVoteViewController.h"
 #import "Environment.h"
 #import "UIImageView+FindHairline.h"
@@ -87,7 +87,7 @@
 
 // 弹出登录界面
 - (void)initLogin {
-    LoginController *login = [[LoginController alloc] init];
+    DZLoginController *login = [[DZLoginController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:login];
     [self presentViewController:nc animated:YES completion:nil];
 }

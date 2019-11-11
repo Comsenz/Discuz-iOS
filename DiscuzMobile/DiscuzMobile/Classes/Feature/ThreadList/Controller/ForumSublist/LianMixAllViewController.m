@@ -13,7 +13,6 @@
 #import "LianCollectionController.h"
 #import "FListController.h"
 #import "LianContainTableView.h"
-#import "LoginController.h"
 
 #import "PostNormalViewController.h"
 #import "PostVoteViewController.h"

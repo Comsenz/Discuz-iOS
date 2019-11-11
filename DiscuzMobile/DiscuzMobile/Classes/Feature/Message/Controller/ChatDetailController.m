@@ -9,7 +9,6 @@
 #import "ChatDetailController.h"
 #import "MessageModel.h"
 #import "EmoticonKeyboard.h"
-#import "LoginController.h"
 #import "LoginModule.h"
 #import "ChatContentCell.h"
 

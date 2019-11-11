@@ -1,5 +1,5 @@
 //
-//  AboutController.h
+//  DZAboutController.h
 //  DiscuzMobile
 //
 //  Created by HB on 16/12/5.
@@ -8,6 +8,6 @@
 
 #import "DZBaseViewController.h"
 
-@interface AboutController : DZBaseViewController
+@interface DZAboutController : DZBaseViewController
 
 @end

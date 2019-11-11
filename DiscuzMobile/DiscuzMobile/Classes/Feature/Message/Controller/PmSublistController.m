@@ -10,7 +10,7 @@
 #import "PmTypeModel.h"
 #import "MessageListModel.h"
 #import "MessageCell.h"
-#import "systemNoteCell.h"
+#import "SystemNoteCell.h"
 #import "MsglistCell.h"
 #import "ThreadViewController.h"
 

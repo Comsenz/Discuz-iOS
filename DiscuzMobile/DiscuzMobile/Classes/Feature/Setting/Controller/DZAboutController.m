@@ -1,26 +1,26 @@
 //
-//  AboutController.m
+//  DZAboutController.m
 //  DiscuzMobile
 //
 //  Created by HB on 16/12/5.
 //  Copyright © 2016年 comsenz-service.com.  All rights reserved.
 //
 
-#import "AboutController.h"
-#import "AboutView.h"
+#import "DZAboutController.h"
+#import "DZAboutView.h"
 
-@interface AboutController ()
+@interface DZAboutController ()
 
-@property (nonatomic, strong) AboutView *aboutView;
+@property (nonatomic, strong) DZAboutView *aboutView;
 
 @end
 
-@implementation AboutController
+@implementation DZAboutController
 
 - (void)loadView {
     [super loadView];
     
-    self.aboutView = [[AboutView alloc] initWithFrame:self.view.bounds];
+    self.aboutView = [[DZAboutView alloc] initWithFrame:self.view.bounds];
     self.view = self.aboutView;
 }
 

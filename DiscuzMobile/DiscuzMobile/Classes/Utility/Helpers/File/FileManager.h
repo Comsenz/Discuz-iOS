@@ -14,7 +14,7 @@
 /**
  *  删除文件
  */
-- (BOOL)DeleteSingleFile:(NSString *)filePath;
+- (BOOL)DeleteSingleFile:(NSString *_Nullable)filePath;
 
 // 数据库存储路径
 - (NSString *_Nonnull)databaseFilePath:(NSString *_Nonnull)databaseName;

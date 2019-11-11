@@ -1,5 +1,5 @@
 //
-//  SettingViewController.h
+//  DZSettingViewController.h
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/5.
@@ -8,6 +8,6 @@
 
 #import "DZBaseTableViewController.h"
 
-@interface SettingViewController : DZBaseTableViewController
+@interface DZSettingViewController : DZBaseTableViewController
 
 @end

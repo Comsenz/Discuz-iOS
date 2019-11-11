@@ -1,12 +1,12 @@
 //
-//  DomainListController.m
+//  DZDomainListController.m
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/3/30.
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "DomainListController.h"
+#import "DZDomainListController.h"
 #import "UIAlertController+Extension.h"
 
 NSString * const domainList = @"domainList";
@@ -14,11 +14,11 @@ NSString * const domainList = @"domainList";
 NSString * const domain = @"domain";
 NSString * const domainName = @"name";
 
-@interface DomainListController ()
+@interface DZDomainListController ()
 
 @end
 
-@implementation DomainListController
+@implementation DZDomainListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,30 +1,29 @@
 //
-//  ResetPwdController.m
+//  DZResetPwdController.m
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/7/17.
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "ResetPwdController.h"
+#import "DZResetPwdController.h"
 #import "UsertermsController.h"
 
-#import "JTResetPwdView.h"
+#import "XinGeCenter.h"
+#import "DZResetPwdView.h"
 #import "DZAuthCodeView.h"
 #import "LoginCustomView.h"
 #import "Web2AuthCodeView.h"
 
-#import "XinGeCenter.h"
-
-@interface ResetPwdController ()
-@property (nonatomic,strong) JTResetPwdView *resetView;
+@interface DZResetPwdController ()
+@property (nonatomic,strong) DZResetPwdView *resetView;
 @property (nonatomic, strong) NSString *bbrulestxt;
 @end
 
-@implementation ResetPwdController
+@implementation DZResetPwdController
 - (void)loadView {
     [super loadView];
-    _resetView = [[JTResetPwdView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _resetView = [[DZResetPwdView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.view = _resetView;
 }
 

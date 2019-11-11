@@ -11,7 +11,7 @@
 #import "LoginModule.h"
 #import "UIView+WebCache.h"
 #import "PraiseHelper.h"
-#import "LoginController.h"
+#import "DZLoginController.h"
 #import "JudgeImageModel.h"
 
 @interface BaseStyleCell()
@@ -326,7 +326,7 @@
     
     if (![LoginModule isLogged]) {
         UIViewController *controller = [self jtGetViewController];
-        LoginController *loginVc = [[LoginController alloc] init];
+        DZLoginController *loginVc = [[DZLoginController alloc] init];
         loginVc.isKeepTabbarSelected = YES;
         UINavigationController *navVc = [[UINavigationController alloc] initWithRootViewController:loginVc];
         [controller presentViewController:navVc animated:YES completion:nil];

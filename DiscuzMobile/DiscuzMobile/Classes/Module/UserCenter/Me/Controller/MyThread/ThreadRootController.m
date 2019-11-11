@@ -8,7 +8,6 @@
 
 #import "ThreadRootController.h"
 #import "DZContainerController.h"
-#import "LoginController.h"
 #import "MySubjectViewController.h"
 #import "MyReplyController.h"
 

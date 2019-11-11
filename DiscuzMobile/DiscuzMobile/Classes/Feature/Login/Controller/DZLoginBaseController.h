@@ -1,5 +1,5 @@
 //
-//  CountRootController.h
+//  DZLoginBaseController.h
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/12.
@@ -13,7 +13,7 @@
 
 typedef void(^RefreshBlock)(void);
 
-@interface CountRootController : DZBaseViewController<UIScrollViewDelegate>
+@interface DZLoginBaseController : DZBaseViewController<UIScrollViewDelegate>
 
 @property (nonatomic, assign) BOOL isKeepTabbarSelected;     // tabbar页面的时候跳登录页面考虑这个属性
 @property (nonatomic, strong) SeccodeverifyView *verifyView; // 验证码

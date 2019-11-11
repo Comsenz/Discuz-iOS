@@ -17,12 +17,12 @@
 #import "MyFriendViewController.h"
 #import "CollectionRootController.h"
 #import "ThreadRootController.h"
-#import "LoginController.h"
+#import "DZLoginController.h"
 #import "BoundManageController.h"
 #import "PmListController.h"
-#import "SettingViewController.h"
+#import "DZSettingViewController.h"
 #import "FootRootController.h"
-#import "ResetPwdController.h"
+#import "DZResetPwdController.h"
 
 #import "TextIconModel.h"
 #import "CenterUserInfoView.h"
@@ -88,7 +88,7 @@
 
 - (void)rightBarBtnClick {
     
-    SettingViewController * svc = [[SettingViewController alloc] init];
+    DZSettingViewController * svc = [[DZSettingViewController alloc] init];
     [self.navigationController pushViewController:svc animated:YES];
 }
 
@@ -275,7 +275,7 @@
         
         if (indexPath.row == 1) {
             return;
-            ResetPwdController *restVc = [[ResetPwdController alloc] init];
+            DZResetPwdController *restVc = [[DZResetPwdController alloc] init];
             restVc.hidesBottomBarWhenPushed = YES;
             [self showViewController:restVc sender:nil];
         }
@@ -355,7 +355,7 @@
 
 - (void)initLogin {
     
-    LoginController *login = [[LoginController alloc] init];
+    DZLoginController *login = [[DZLoginController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:login];
     [self presentViewController:nc animated:YES completion:nil];
 }

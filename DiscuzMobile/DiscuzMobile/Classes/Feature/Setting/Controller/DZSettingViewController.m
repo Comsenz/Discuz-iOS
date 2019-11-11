@@ -1,30 +1,30 @@
 //
-//  SettingViewController.m
+//  DZSettingViewController.m
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/5.
 //  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
-#import "SettingViewController.h"
+#import "DZSettingViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 #import <ShareSDKExtension/ShareSDK+Extension.h>
 
-#import "AboutController.h"
+#import "DZAboutController.h"
 #import "XinGeCenter.h"
 #import "UsertermsController.h"
-#import "DomainListController.h"
+#import "DZDomainListController.h"
 #import "SendEmailHelper.h"
 #import "DZShareCenter.h"
 #import "JudgeImageModel.h"
 #import "DZDevice.h"
 
-@interface SettingViewController ()
+@interface DZSettingViewController ()
 @property (nonatomic,strong) NSString * strcache;
 @end
 
-@implementation SettingViewController
+@implementation DZSettingViewController
 
 - (instancetype)init
 {
@@ -172,7 +172,7 @@
 }
 
 - (void)setDomain {
-    DomainListController *domainVC = [[DomainListController alloc] init];
+    DZDomainListController *domainVC = [[DZDomainListController alloc] init];
     [self.navigationController pushViewController:domainVC animated:YES];
 }
 
@@ -192,7 +192,7 @@
 }
 
 - (void)aboutAPP {
-    AboutController *abVC = [[AboutController alloc] init];
+    DZAboutController *abVC = [[DZAboutController alloc] init];
     [self.navigationController pushViewController:abVC animated:YES];
 }
 

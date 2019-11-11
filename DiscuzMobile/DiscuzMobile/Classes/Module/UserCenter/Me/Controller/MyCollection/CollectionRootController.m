@@ -9,7 +9,6 @@
 #import "CollectionRootController.h"
 #import "CollectionForumController.h"
 #import "CollectionThreadController.h"
-#import "LoginController.h"
 
 #import "DZContainerController.h"
 

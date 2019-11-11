@@ -13,7 +13,6 @@
 #import "PostNormalModel.h"
 #import "WSImageModel.h"
 
-#import "LoginController.h"
 #import "SeccodeverifyView.h"
 #import "NewThreadTypeModel.h"
 #import "PostSelectTypeCell.h"

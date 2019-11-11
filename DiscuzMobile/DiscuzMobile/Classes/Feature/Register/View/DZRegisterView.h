@@ -1,5 +1,5 @@
 //
-//  JTRegisterView.h
+//  DZRegisterView.h
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/11.
@@ -11,7 +11,7 @@
 
 @class LoginCustomView,DZAuthCodeView,Web2AuthCodeView;
 
-@interface JTRegisterView : UIScrollView <UITextFieldDelegate>
+@interface DZRegisterView : UIScrollView <UITextFieldDelegate>
 @property (nonatomic, strong) LoginCustomView *usernameView;
 @property (nonatomic, strong) LoginCustomView *passwordView;
 @property (nonatomic, strong) LoginCustomView *repassView;

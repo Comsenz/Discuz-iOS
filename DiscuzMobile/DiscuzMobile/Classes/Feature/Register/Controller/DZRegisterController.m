@@ -1,15 +1,15 @@
 //
-//  JTRegisterController.m
+//  DZRegisterController.m
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/11.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "JTRegisterController.h"
+#import "DZRegisterController.h"
 #import "UsertermsController.h"
 
-#import "JTRegisterView.h"
+#import "DZRegisterView.h"
 #import "DZAuthCodeView.h"
 #import "LoginCustomView.h"
 #import "Web2AuthCodeView.h"
@@ -17,16 +17,16 @@
 #import "XinGeCenter.h"
 #import "CheckHelper.h"
 
-@interface JTRegisterController ()
-@property (nonatomic,strong) JTRegisterView *registerView;
+@interface DZRegisterController ()
+@property (nonatomic,strong) DZRegisterView *registerView;
 @property (nonatomic, strong) NSString *bbrulestxt;
 @end
 
-@implementation JTRegisterController
+@implementation DZRegisterController
 
 - (void)loadView {
     [super loadView];
-    _registerView = [[JTRegisterView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _registerView = [[DZRegisterView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.view = _registerView;
 }
 

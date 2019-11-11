@@ -12,7 +12,6 @@
 #import "CollectionTool.h"
 #import "UploadTool.h"
 
-#import "LoginController.h"
 #import "WebViewJavascriptBridge.h"
 #import "OtherUserController.h"
 #import "ViewPollPotionNumberViewController.h"

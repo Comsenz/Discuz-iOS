@@ -6,17 +6,17 @@
 //  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
-#import "TTJudgeBoundController.h"
-#import "JTRegisterController.h"
+#import "DZJudgeBoundController.h"
+#import "DZRegisterController.h"
 #import "JudgeBoundView.h"
 
-@interface TTJudgeBoundController ()
+@interface DZJudgeBoundController ()
 
 @property (nonatomic,strong) JudgeBoundView *judgeView;
 
 @end
 
-@implementation TTJudgeBoundController
+@implementation DZJudgeBoundController
 
 - (void)loadView {
     [super loadView];
@@ -56,7 +56,7 @@
 }
 
 - (void)registerBtnClick {
-    JTRegisterController * rvc =[[JTRegisterController alloc] init];
+    DZRegisterController * rvc =[[DZRegisterController alloc] init];
     [self.navigationController pushViewController:rvc animated:YES];
 }
 

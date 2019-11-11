@@ -1,13 +1,13 @@
 //
-//  TTJudgeBoundController.h
+//  DZJudgeBoundController.h
 //  DiscuzMobile
 //
 //  Created by HB on 16/9/18.
 //  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
-#import "CountRootController.h"
+#import "DZLoginBaseController.h"
 
-@interface TTJudgeBoundController : CountRootController
+@interface DZJudgeBoundController : DZLoginBaseController
 
 @end

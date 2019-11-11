@@ -1,19 +1,19 @@
 //
-//  JTRegisterView.m
+//  DZRegisterView.m
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/11.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "JTRegisterView.h"
+#import "DZRegisterView.h"
 #import "LoginCustomView.h"
 #import "Web2AuthCodeView.h"
 #import "DZShareCenter.h"
 
 #define TEXTHEIGHT 50
 
-@implementation JTRegisterView
+@implementation DZRegisterView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

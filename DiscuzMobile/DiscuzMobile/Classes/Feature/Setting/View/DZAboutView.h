@@ -1,5 +1,5 @@
 //
-//  AboutView.h
+//  DZAboutView.h
 //  DiscuzMobile
 //
 //  Created by HB on 16/12/5.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutView : UIScrollView
+@interface DZAboutView : UIScrollView
 
 @property (nonatomic, strong) UIImageView *logoView;
 @property (nonatomic, strong) UILabel *appNameLabel;

@@ -1,13 +1,13 @@
 //
-//  JTRegisterController.h
+//  DZRegisterController.h
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/11.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "CountRootController.h"
+#import "DZLoginBaseController.h"
 
-@interface JTRegisterController : CountRootController
+@interface DZRegisterController : DZLoginBaseController
 
 @end

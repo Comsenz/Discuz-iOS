@@ -7,10 +7,9 @@
 //
 
 #import "DZHomeController.h"
-#import "SettingViewController.h"
+#import "DZSettingViewController.h"
 #import "ThreadViewController.h"
 #import "RNCachingURLProtocol.h"
-#import "LoginController.h"
 #import "LoginModule.h"
 #import "DZSlideShowScrollView.h"
 #import "ForumCell.h"

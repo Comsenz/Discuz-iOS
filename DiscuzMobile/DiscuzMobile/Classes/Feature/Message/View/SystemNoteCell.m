@@ -1,15 +1,15 @@
 //
-//  systemNoteCell.m
+//  SystemNoteCell.m
 //  DiscuzMobile
 //
 //  Created by HB on 17/4/13.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "systemNoteCell.h"
+#import "SystemNoteCell.h"
 #import "MessageListModel.h"
 
-@implementation systemNoteCell
+@implementation SystemNoteCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

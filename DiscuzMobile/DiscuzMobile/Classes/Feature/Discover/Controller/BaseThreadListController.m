@@ -7,7 +7,6 @@
 //
 
 #import "BaseThreadListController.h"
-#import "LoginController.h"
 #import "OtherUserController.h"
 #import "ThreadViewController.h"
 #import "BaseStyleCell.h"

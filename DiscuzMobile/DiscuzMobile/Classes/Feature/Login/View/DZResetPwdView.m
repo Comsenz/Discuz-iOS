@@ -1,17 +1,17 @@
 //
-//  JTResetPwdView.m
+//  DZResetPwdView.m
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/7/17.
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "JTResetPwdView.h"
+#import "DZResetPwdView.h"
 #import "LoginCustomView.h"
 
 #define TEXTHEIGHT 50
 
-@implementation JTResetPwdView
+@implementation DZResetPwdView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

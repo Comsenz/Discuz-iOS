@@ -1,12 +1,12 @@
 //
-//  JTLoginView.m
+//  DZLoginView.m
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/10.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "JTLoginView.h"
+#import "DZLoginView.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 #import <ShareSDKExtension/ShareSDK+Extension.h>
@@ -19,7 +19,7 @@
 
 #define TEXTHEIGHT 50
 
-@implementation JTLoginView
+@implementation DZLoginView
 
 -(instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

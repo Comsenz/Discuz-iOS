@@ -10,7 +10,7 @@
 
 #import "DiscoverManagerController.h"
 #import "DZForumManagerController.h"
-#import "LoginController.h"
+#import "DZLoginController.h"
 #import "DZUserController.h"
 #import "DZFastPlaceController.h"
 #import "TTSearchController.h"
@@ -89,7 +89,7 @@
 }
 
 - (void)login {
-    LoginController * lvc = [[LoginController alloc] init];
+    DZLoginController * lvc = [[DZLoginController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:lvc];
     [self presentViewController:nc animated:YES completion:nil];
 }

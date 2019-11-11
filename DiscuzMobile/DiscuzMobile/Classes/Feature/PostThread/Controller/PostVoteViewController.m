@@ -9,7 +9,6 @@
 #import "PostVoteViewController.h"
 #import "QRadioButton.h"
 #import "QCheckBox.h"
-#import "LoginController.h"
 
 #import "PostVoteModel.h"
 

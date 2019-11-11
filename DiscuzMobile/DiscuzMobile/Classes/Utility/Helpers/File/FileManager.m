@@ -22,7 +22,7 @@
 /**
  *  删除文件
  */
-- (BOOL)DeleteSingleFile:(NSString *)filePath{
+- (BOOL)DeleteSingleFile:(NSString *_Nullable)filePath{
     NSError *err = nil;
     
     if (nil == filePath) {

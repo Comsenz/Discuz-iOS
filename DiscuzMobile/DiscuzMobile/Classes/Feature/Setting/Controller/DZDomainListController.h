@@ -1,5 +1,5 @@
 //
-//  DomainListController.h
+//  DZDomainListController.h
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/3/30.
@@ -8,6 +8,6 @@
 
 #import "DZBaseTableViewController.h"
 
-@interface DomainListController : DZBaseTableViewController
+@interface DZDomainListController : DZBaseTableViewController
 
 @end

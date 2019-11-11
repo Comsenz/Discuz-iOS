@@ -1,5 +1,5 @@
 //
-//  JTResetPwdView.h
+//  DZResetPwdView.h
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/7/17.
@@ -11,7 +11,7 @@
 
 @class LoginCustomView,DZAuthCodeView;
 
-@interface JTResetPwdView : UIScrollView <UITextFieldDelegate>
+@interface DZResetPwdView : UIScrollView <UITextFieldDelegate>
 
 @property (nonatomic, strong) LoginCustomView *passwordView;
 @property (nonatomic, strong) LoginCustomView *repassView;

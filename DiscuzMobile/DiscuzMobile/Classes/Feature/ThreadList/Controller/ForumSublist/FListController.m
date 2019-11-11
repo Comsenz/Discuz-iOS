@@ -8,7 +8,6 @@
 
 #import "FListController.h"
 #import "ThreadViewController.h"
-#import "LoginController.h"
 #import "OtherUserController.h"
 #import "LianCollectionController.h"
 #import "MySubjectViewController.h"

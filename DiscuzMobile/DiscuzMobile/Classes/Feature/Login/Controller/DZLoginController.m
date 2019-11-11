@@ -1,21 +1,21 @@
 //
-//  LoginController.m
+//  DZLoginController.m
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/10.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "LoginController.h"
+#import "DZLoginController.h"
 
 #import <ShareSDK/ShareSDK.h>
 
 #import "LoginModule.h"
 
-#import "JTRegisterController.h"
-#import "TTJudgeBoundController.h"
+#import "DZRegisterController.h"
+#import "DZJudgeBoundController.h"
 
-#import "JTLoginView.h"
+#import "DZLoginView.h"
 #import "LoginCustomView.h"
 #import "ZHPickView.h"
 
@@ -28,21 +28,21 @@
 NSString * const debugUsername = @"debugUsername";
 NSString * const debugPassword = @"debugPassword";
 
-@interface LoginController ()<UITextFieldDelegate,ZHPickViewDelegate>{
+@interface DZLoginController ()<UITextFieldDelegate,ZHPickViewDelegate>{
     BOOL isQCreateView;  // 是否有安全问答
 }
 
-@property (nonatomic, strong) JTLoginView *logView;
+@property (nonatomic, strong) DZLoginView *logView;
 @property (nonatomic, strong) NSString *preSalkey;
 
 @end
 
 
-@implementation LoginController
+@implementation DZLoginController
 
 - (void)loadView {
     [super loadView];
-    self.logView = [[JTLoginView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.logView = [[DZLoginView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.view = self.logView;
 }
 
@@ -279,14 +279,14 @@ NSString * const debugPassword = @"debugPassword";
 - (void)registerNavview {
     // 重置一下
 //    [DZShareCenter shareInstance].bloginModel = nil;
-    JTRegisterController * rvc =[[JTRegisterController alloc] init];
+    DZRegisterController * rvc =[[DZRegisterController alloc] init];
     [self.navigationController pushViewController:rvc animated:YES];
 }
 
 
 - (void)boundThirdview {
     
-    TTJudgeBoundController * rvc =[[TTJudgeBoundController alloc]init];
+    DZJudgeBoundController * rvc =[[DZJudgeBoundController alloc]init];
     [self.navigationController pushViewController:rvc animated:YES];
 }
 

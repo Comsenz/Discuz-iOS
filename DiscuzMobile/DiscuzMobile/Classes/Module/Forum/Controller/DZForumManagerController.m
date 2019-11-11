@@ -12,7 +12,6 @@
 #import "DZForumIndexListController.h"
 #import "DZContainerController.h"
 
-#import "LoginController.h"
 #import "TTSearchController.h"
 
 static NSString *isFourmList = @"isFourmList";

@@ -12,9 +12,8 @@
 #import "DigestListController.h"
 #import "NewestListController.h"
 #import "FootmarkController.h"
-#import "LoginController.h"
 #import "TTSearchController.h"
-#import "SettingViewController.h"
+#import "DZSettingViewController.h"
 
 @interface DiscoverManagerController ()
 
@@ -56,7 +55,7 @@
 }
 
 - (void)leftBarBtnClick {
-    SettingViewController *setVC = [[SettingViewController alloc] init];
+    DZSettingViewController *setVC = [[DZSettingViewController alloc] init];
     [self showViewController:setVC sender:nil];
 }
 

@@ -8,7 +8,6 @@
 
 #import "ViewPollpotionViewController.h"
 #import "ViewPollpotionCell.h"
-#import "LoginController.h"
 #import "SendMessageViewController.h"
 #import "ResponseMessage.h"
 #import "UIAlertController+Extension.h"

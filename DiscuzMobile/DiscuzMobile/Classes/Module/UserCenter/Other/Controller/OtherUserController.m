@@ -13,8 +13,7 @@
 #import "VerticalImageTextView.h"
 #import "MyFriendViewController.h"
 #import "MySubjectViewController.h"
-#import "LoginController.h"
-#import "SettingViewController.h"
+#import "DZSettingViewController.h"
 #import "OtherUserThreadViewController.h"
 #import "OtherUserPostReplyViewController.h"
 
@@ -72,7 +71,7 @@
 }
 
 - (void)rightBarBtnClick {
-    SettingViewController * svc = [[SettingViewController alloc]init];
+    DZSettingViewController * svc = [[DZSettingViewController alloc]init];
     [self.navigationController pushViewController:svc animated:YES];
 }
 

@@ -7,7 +7,6 @@
 //
 
 #import "SendMessageViewController.h"
-#import "LoginController.h"
 
 @interface SendMessageViewController ()<UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate>
 @property (nonatomic, strong) UITextView *messageTextView;

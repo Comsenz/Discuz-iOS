@@ -6,8 +6,8 @@
 //  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
-#import "CountRootController.h"
+#import "DZLoginBaseController.h"
 
-@interface TTBoundController : CountRootController
+@interface TTBoundController : DZLoginBaseController
 
 @end
