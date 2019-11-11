@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18FC8C838C3D86A101C02EBC /* Pods_DiscuzMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F46790DE09CD7D48F77C38 /* Pods_DiscuzMobile.framework */; };
 		27001B6D1DEEBAC5004DF091 /* ActiveTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27001B6C1DEEBAC5004DF091 /* ActiveTimeCell.m */; };
 		27001B701DEEC672004DF091 /* ActiveContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27001B6F1DEEC672004DF091 /* ActiveContentCell.m */; };
 		27001B731DEECC3A004DF091 /* ActiveDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27001B721DEECC3A004DF091 /* ActiveDetailCell.m */; };
@@ -1224,6 +1225,7 @@
 				27714E9E1DDC4A16008CDC7A /* libc++.tbd in Frameworks */,
 				27714E9C1DDC4A0C008CDC7A /* libsqlite3.0.tbd in Frameworks */,
 				27714E421DDC47DF008CDC7A /* libXG-SDK.a in Frameworks */,
+				18FC8C838C3D86A101C02EBC /* Pods_DiscuzMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1661,8 +1663,8 @@
 		27473AA31DD30C380024375F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				942E244020620B3C006A9CB0 /* BusinessLayer */,
 				27473AA41DD30C380024375F /* Base */,
+				942E244020620B3C006A9CB0 /* BusinessLayer */,
 				27C51DD51EBB043700048610 /* Discover */,
 				27CD9E421DDEB7FD0075831B /* Forum */,
 				270561E31E2DB1D10026F37F /* ThreadList */,
@@ -2652,10 +2654,10 @@
 		943430A92022FAD0009C0102 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				27473AC31DD30C380024375F /* PrefixHeader.pch */,
 				943430A62022F551009C0102 /* Color.h */,
-				2750F7E41EB2F77A008E9E80 /* BaseConfig.h */,
 				943430A82022F870009C0102 /* constant.h */,
+				2750F7E41EB2F77A008E9E80 /* BaseConfig.h */,
+				27473AC31DD30C380024375F /* PrefixHeader.pch */,
 				94195AEB20246E120024D074 /* URLStrings.h */,
 				94195AEC20246E120024D074 /* URLStrings.m */,
 			);

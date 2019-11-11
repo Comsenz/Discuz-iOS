@@ -94,7 +94,7 @@ DEPENDENCIES:
   - YYKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
     - DTCoreText
     - DTFoundation
@@ -130,6 +130,6 @@ SPEC CHECKSUMS:
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: ce07a909b972c9ebdea7b7a1b4fd04f85fadf666
+PODFILE CHECKSUM: 9dc98bcbd730ca4691d59925c16a9f1fd3c6f937
 
 COCOAPODS: 1.8.4

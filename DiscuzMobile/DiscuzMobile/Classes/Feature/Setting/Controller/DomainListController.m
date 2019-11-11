@@ -36,27 +36,13 @@ NSString * const domainName = @"name";
         NSDictionary *devDz = @{domain:@"https://guanjia.comsenz-service.com/",
                                 domainName:@"管家测试",
                                 };
-        NSDictionary *rednet = @{domain:@"https://bbs.rednet.cn/",
-                                 domainName:@"红网",
-                                 };
-        NSDictionary *bird = @{domain:@"https://www.birdnet.cn/",
+        NSDictionary *wbDZ = @{domain:@"http://demo.516680.com/",
+                               domainName:@"卫博生DZ测试站",
+                               };
+        NSDictionary *bird = @{domain:@"https://www.birdnet.com/",
                                domainName:@"鸟网",
                                };
-        NSDictionary *taifeng = @{domain:@"https://bbs.typhoon.org.cn/",
-                                 domainName:@"台风",
-                                 };
-        NSDictionary *leshan = @{domain:@"https://mobile.leshan.cn/",
-                               domainName:@"乐山",
-                               };
-        NSDictionary *jinbifun = @{domain:@"http://www.jinbifun.com/",
-                                   domainName:@"金碧坊",
-                                   };
-        NSDictionary *penjing = @{domain:@"http://bbs.cnpenjing.com/",
-                                   domainName:@"盆景艺术在线",
-                                  };
-        
-        
-        NSArray *domainArray = @[disDz,devDz,rednet,bird,taifeng,leshan,jinbifun,penjing,];
+        NSArray *domainArray = @[disDz,devDz,bird,wbDZ];
         [[FileManager shareInstance] writeDocumentPlist:@{domain:domainArray} fileName:@"domainList"];
         self.dataSourceArr = domainArray.mutableCopy;
     }

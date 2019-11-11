@@ -16,7 +16,8 @@
 #define APPNAME APPDISPLAYNAME
 #define INCINFO [NSString stringWithFormat:@"©2001 - %@ comsenz-service.com.",NOWYEAR] // 版权时间
 //#define BASEURL @"https://guanjia.comsenz-service.com/" // 域名  除了两个plugin.php的，别的都需要拼接 api/mobile/
-#define BASEURL @"https://bbs.comsenz-service.com/"
+//#define BASEURL @"https://bbs.comsenz-service.com/"
+#define BASEURL @"http://demo.516680.com/"
 #define MAINCOLOR mRGBColor(50, 120, 230) // 主题色
 #define EMPTYIMAGE @"empty_icon" // 无数据显示图片
 #define LOGONAME @"ap_name" // 登录、注册页APP名称图片
