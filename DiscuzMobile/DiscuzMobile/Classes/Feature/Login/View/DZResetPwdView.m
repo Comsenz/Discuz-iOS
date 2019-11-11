@@ -103,7 +103,7 @@
     self.submitButton.cs_acceptEventInterval = 1;
     [self addSubview:self.submitButton];
     [self.submitButton setTitle:@"提交" forState:UIControlStateNormal];
-    self.submitButton.backgroundColor = MAIN_COLLOR;
+    self.submitButton.backgroundColor = K_Color_Theme;
     [self.submitButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contentView);
         make.top.equalTo(self.authCodeView.mas_bottom).offset(16);

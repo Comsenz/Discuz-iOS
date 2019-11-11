@@ -46,7 +46,7 @@
 - (void)setInfo:(TTSearchModel *)info {
     NSRange range = [info.subject rangeOfString:info.keyword];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:info.subject];
-    [str addAttribute:NSForegroundColorAttributeName value:MAIN_COLLOR range:range];
+    [str addAttribute:NSForegroundColorAttributeName value:K_Color_Theme range:range];
     [str addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:17] range:range];
     self.contentLabel.attributedText = str;
     self.timeLabel.text = info.dateline;
@@ -74,7 +74,7 @@
     if (_timeLabel == nil) {
         _timeLabel = [[UILabel alloc] init];
         _timeLabel.font = [DZFontSize forumtimeFontSize14];
-        _timeLabel.textColor = LIGHT_TEXT_COLOR;
+        _timeLabel.textColor = K_Color_LightText;
     }
     return  _timeLabel;
 }
@@ -83,7 +83,7 @@
     if (_evaluateLabel == nil) {
         _evaluateLabel = [[UILabel alloc] init];
         _evaluateLabel.font = [DZFontSize forumtimeFontSize14];
-        _evaluateLabel.textColor = LIGHT_TEXT_COLOR;
+        _evaluateLabel.textColor = K_Color_LightText;
     }
     return _evaluateLabel;
 }

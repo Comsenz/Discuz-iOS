@@ -30,15 +30,15 @@
     [self addSubview:self.headView];
     
     self.nameLab = [[UILabel alloc] init];
-    self.nameLab.textColor = MAIN_TITLE_COLOR;
+    self.nameLab.textColor = K_Color_MainTitle;
     self.nameLab.font = [DZFontSize HomecellTitleFontSize17];
     self.nameLab.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.nameLab];
     
     self.identityLab = [[UILabel alloc] init];
     self.identityLab.font = [UIFont boldSystemFontOfSize:13.0];
-    self.identityLab.textColor = BTN_USE_COLOR;
-    self.identityLab.backgroundColor = MAIN_COLLOR;
+    self.identityLab.textColor = K_Color_btn_user;
+    self.identityLab.backgroundColor = K_Color_Theme;
     self.identityLab.textAlignment = NSTextAlignmentCenter;
     self.identityLab.text = @"新手上路";
     [self addSubview:self.identityLab];

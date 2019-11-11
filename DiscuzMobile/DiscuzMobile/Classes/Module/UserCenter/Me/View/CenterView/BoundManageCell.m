@@ -29,8 +29,8 @@
     self.detailBtn.titleLabel.textAlignment = NSTextAlignmentRight;
     self.detailBtn.titleLabel.font = [DZFontSize fontSize:14];
     
-    [self.detailBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
-    [self.detailBtn setTitleColor:DARK_TEXT_COLOR forState:UIControlStateSelected];
+    [self.detailBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
+    [self.detailBtn setTitleColor:K_Color_DarkText forState:UIControlStateSelected];
     [self.detailBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 40, 0, -40)];
     [self.contentView addSubview:self.detailBtn];
     [self.detailBtn setTitle:@"绑定" forState:UIControlStateNormal];
@@ -49,13 +49,13 @@
             self.detailBtn.selected = NO;
             name = [name stringByAppendingString:@"(未绑定)"];
             if ([model.type isEqualToString:@"minapp"]) {
-                [self.detailBtn setTitleColor:LIGHT_TEXT_COLOR forState:UIControlStateNormal];
+                [self.detailBtn setTitleColor:K_Color_LightText forState:UIControlStateNormal];
             }
         }
         NSMutableAttributedString *attName = [[NSMutableAttributedString alloc] initWithString:name];
         NSRange brange = {name.length - 5, 5};
         [attName addAttribute:NSFontAttributeName value:[DZFontSize forumInfoFontSize12] range:brange];
-        [attName addAttribute:NSForegroundColorAttributeName value:MESSAGE_COLOR range:brange];
+        [attName addAttribute:NSForegroundColorAttributeName value:K_Color_Message range:brange];
         self.nameV.textLabel.attributedText = attName;
     }
 }

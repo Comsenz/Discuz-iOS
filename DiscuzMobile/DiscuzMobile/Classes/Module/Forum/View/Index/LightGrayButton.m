@@ -26,13 +26,13 @@
 - (void)setLighted:(BOOL)lighted {
     _lighted = lighted;
     if (!lighted) {
-        [self setTitleColor:LIGHT_TEXT_COLOR forState:UIControlStateNormal];
+        [self setTitleColor:K_Color_LightText forState:UIControlStateNormal];
         [self setTitle:@"已收藏" forState:UIControlStateNormal];
-        self.layer.borderColor = LIGHT_TEXT_COLOR.CGColor;
+        self.layer.borderColor = K_Color_LightText.CGColor;
     } else {
-        [self setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+        [self setTitleColor:K_Color_Theme forState:UIControlStateNormal];
         [self setTitle:@"收藏" forState:UIControlStateNormal];
-        self.layer.borderColor = MAIN_COLLOR.CGColor;
+        self.layer.borderColor = K_Color_Theme.CGColor;
     }
 }
 

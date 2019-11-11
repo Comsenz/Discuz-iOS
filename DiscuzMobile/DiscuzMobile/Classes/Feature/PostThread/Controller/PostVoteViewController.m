@@ -150,7 +150,7 @@ static int i = 0 ;
         UIView *addView = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(tipslabel.frame) + 5, KScreenWidth - 20, 40)];
         addView.backgroundColor = [UIColor whiteColor];
         addView.layer.borderWidth = 1;
-        addView.layer.borderColor = MAIN_COLLOR.CGColor;
+        addView.layer.borderColor = K_Color_Theme.CGColor;
         addView.layer.cornerRadius = 6;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addOption)];
         [addView addGestureRecognizer:tap];
@@ -167,7 +167,7 @@ static int i = 0 ;
         addLab.text = @"＋ 添加一项";
         addLab.textAlignment = NSTextAlignmentCenter;
         addLab.font = [UIFont boldSystemFontOfSize:18.0];
-        addLab.textColor = MAIN_COLLOR;
+        addLab.textColor = K_Color_Theme;
         
         
         [addView addSubview:addLab];

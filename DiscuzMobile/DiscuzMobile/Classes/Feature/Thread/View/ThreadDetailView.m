@@ -50,7 +50,7 @@
 - (void)createHPGrowingTextView {
     
     [self addSubview:self.emoKeyboard];
-    self.emoKeyboard.backgroundColor = MAIN_GRAY_COLOR;
+    self.emoKeyboard.backgroundColor = K_Color_MainGray;
     self.emoKeyboard.textBarView.style = detail_textBar;
     WEAKSELF;
     __block CGFloat height = 0;

@@ -85,9 +85,9 @@ static NSString * headerSection = @"CellHeader";
     flowLayout.minimumLineSpacing = 10;
     flowLayout.minimumInteritemSpacing = 4;
 //    flowLayout.itemSize = CGSizeMake((WIDTH - 18 - 18) / 3, WIDTH / 3 + 52);
-    flowLayout.itemSize = CGSizeMake((WIDTH - 20 - 20) / 3, WIDTH / 3 + 40);
+    flowLayout.itemSize = CGSizeMake((KScreenWidth - 20 - 20) / 3, KScreenWidth / 3 + 40);
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight) collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
@@ -174,7 +174,7 @@ static NSString * headerSection = @"CellHeader";
     
     CGSize size = CGSizeMake(0, 0);
     if (self.type == Forum_index) {
-        size = CGSizeMake(WIDTH, 54);
+        size = CGSizeMake(KScreenWidth, 54);
     }
     return size;
 }

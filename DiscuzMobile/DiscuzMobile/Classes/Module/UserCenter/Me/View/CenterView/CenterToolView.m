@@ -35,7 +35,7 @@
     
     NSArray *arr = @[@"好友",@"收藏",@"消息",@"帖子"];
     
-    CGFloat item_width = (WIDTH - 24) / 4;
+    CGFloat item_width = (KScreenWidth - 24) / 4;
     for (int i = 0; i < 4; i ++) {
         
         TextIconModel *model = [[TextIconModel alloc] init];

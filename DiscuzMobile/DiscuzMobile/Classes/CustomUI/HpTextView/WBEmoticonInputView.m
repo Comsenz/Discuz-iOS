@@ -486,7 +486,7 @@
         layer.size = CGSizeMake(width, height);
         layer.cornerRadius = 1;
         if (page - curGroupPageIndex == i) {
-            layer.backgroundColor = MAIN_COLLOR.CGColor;
+            layer.backgroundColor = K_Color_Theme.CGColor;
 //            layer.backgroundColor = UIColorHex(fd8225).CGColor;
         } else {
             layer.backgroundColor = UIColorHex(dedede).CGColor;

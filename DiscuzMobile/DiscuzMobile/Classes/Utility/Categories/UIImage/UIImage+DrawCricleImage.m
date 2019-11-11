@@ -55,7 +55,7 @@
         DLog(@"superView不能为nil");
         return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     }
-    superView.tintColor = MAIN_COLLOR;
+    superView.tintColor = K_Color_Theme;
     return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 }
 

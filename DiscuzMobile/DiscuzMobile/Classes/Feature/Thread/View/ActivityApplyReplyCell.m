@@ -21,12 +21,12 @@
 - (void)commitInit {
     self.tipLab = [[UILabel alloc] init];
     self.tipLab.font = [DZFontSize HomecellTimeFontSize14];
-    self.tipLab.textColor = LIGHT_TEXT_COLOR;
+    self.tipLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.tipLab];
     
     self.detailView = [[UITextView alloc] init];
     self.detailView.font = [DZFontSize forumtimeFontSize14];
-    self.detailView.layer.borderColor = LINE_COLOR.CGColor;
+    self.detailView.layer.borderColor = K_Color_Line.CGColor;
     self.detailView.layer.borderWidth = 1;
     [self.contentView addSubview:self.detailView];
 

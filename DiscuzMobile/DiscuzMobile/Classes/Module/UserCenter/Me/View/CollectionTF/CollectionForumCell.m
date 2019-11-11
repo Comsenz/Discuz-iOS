@@ -24,7 +24,7 @@
     
     self.textLab = [[UILabel alloc] init];
     self.textLab.font = [DZFontSize HomecellTitleFontSize17];
-    self.textLab.textColor = MAIN_TITLE_COLOR;
+    self.textLab.textColor = K_Color_MainTitle;
     [self.contentView addSubview:self.textLab];
     
     self.cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -39,7 +39,7 @@
     self.iconV.layer.masksToBounds = YES;
     self.iconV.layer.cornerRadius = 6;
     self.textLab.frame = CGRectMake(CGRectGetMaxX(self.iconV.frame) + 10, CGRectGetMinY(self.iconV.frame), 150, CGRectGetHeight(self.iconV.frame));
-    self.cancelBtn.frame = CGRectMake(WIDTH - 25 - 15, 17, 25, 25);
+    self.cancelBtn.frame = CGRectMake(KScreenWidth - 25 - 15, 17, 25, 25);
 }
 
 @end

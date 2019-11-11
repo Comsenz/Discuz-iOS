@@ -27,7 +27,7 @@
     CGRect frame = self.headImageView.frame;
     self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 10, 190, 15)];
     self.nameLabel.font = [DZFontSize forumtimeFontSize14];//13-14
-    self.nameLabel.textColor = MAIN_COLLOR;
+    self.nameLabel.textColor = K_Color_Theme;
     [self addSubview:self.nameLabel];
     
     self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(KScreenWidth-100, 10,90, 15)];

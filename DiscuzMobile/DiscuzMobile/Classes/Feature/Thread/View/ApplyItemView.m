@@ -19,7 +19,7 @@
 
 - (void)commitInit {
     self.tipLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, (KScreenWidth - 35) / 3, 20)];
-    self.tipLab.textColor = MESSAGE_COLOR;
+    self.tipLab.textColor = K_Color_Message;
     self.tipLab.font = [DZFontSize HomecellmessageNumLFontSize10];
     [self addSubview:self.tipLab];
     

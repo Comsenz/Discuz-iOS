@@ -30,7 +30,7 @@
     self.titleLab = [[UILabel alloc] init];
     self.titleLab.font = [DZFontSize forumtimeFontSize14];
     self.titleLab.textAlignment = NSTextAlignmentLeft;
-    self.titleLab.textColor = MAIN_TITLE_COLOR;
+    self.titleLab.textColor = K_Color_MainTitle;
     self.titleLab.text = @"用户报名填写项";
     [self.contentView addSubview:self.titleLab];
     
@@ -102,7 +102,7 @@
                 button.layer.cornerRadius  = 4.0;
                 button.layer.borderWidth = 1.0;
                 button.tag = 10001;
-                button.layer.borderColor = MAIN_COLLOR.CGColor;
+                button.layer.borderColor = K_Color_Theme.CGColor;
                 
                 button.tag = 100 + index;
                 button.isSelect = NO;

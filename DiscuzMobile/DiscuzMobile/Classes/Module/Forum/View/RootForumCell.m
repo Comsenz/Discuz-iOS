@@ -28,7 +28,7 @@
 - (UIView *)sepLine {
     if (_sepLine == nil) {
         _sepLine = [[UIView alloc] init];
-        _sepLine.backgroundColor = NAV_SEP_COLOR;
+        _sepLine.backgroundColor = K_Color_NaviBack;
     }
     return _sepLine;
 }
@@ -37,7 +37,7 @@
     if (_textLab == nil) {
         _textLab = [[UILabel alloc] init];
         _textLab.font = [DZFontSize HomecellTitleFontSize15];
-        _textLab.textColor = MAIN_COLLOR;
+        _textLab.textColor = K_Color_Theme;
     }
     return _textLab;
 }

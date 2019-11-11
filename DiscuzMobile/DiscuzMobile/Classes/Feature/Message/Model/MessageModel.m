@@ -38,7 +38,7 @@
     NSMutableString *string = text.mutableCopy;
     NSMutableAttributedString *textstr = [[NSMutableAttributedString alloc] initWithString:string];
     textstr.font = fontSize;
-    textstr.color = MAIN_TITLE_COLOR;
+    textstr.color = K_Color_MainTitle;
     
     [textstr emotionFontsize:16.0f];
     

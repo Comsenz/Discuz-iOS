@@ -82,7 +82,7 @@ NSString * const debugPassword = @"debugPassword";
         autoFullBtn.titleLabel.font = [DZFontSize messageFontSize14];
         [autoFullBtn setTitle:@"填充" forState:UIControlStateNormal];
         autoFullBtn.layer.borderWidth = 1;
-        [autoFullBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+        [autoFullBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
         [self.view addSubview:autoFullBtn];
     }
 #endif

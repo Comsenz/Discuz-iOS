@@ -33,7 +33,7 @@
     self.selectNumTextField.layer.cornerRadius = 4.0;
     self.selectNumTextField.text = @"1";
     self.selectNumTextField.font = [DZFontSize HomecellTitleFontSize15];
-    self.selectNumTextField.layer.borderColor = LINE_COLOR.CGColor;
+    self.selectNumTextField.layer.borderColor = K_Color_Line.CGColor;
     
     UILabel *itemLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.selectNumTextField.frame) + 10,CGRectGetMinY(self.selectNumTextField.frame) + 10, 30, 15)];
     itemLab.font = [DZFontSize HomecellTitleFontSize15];
@@ -53,7 +53,7 @@
     self.dayNumTextField.layer.borderWidth = 1.0;
     self.dayNumTextField.layer.cornerRadius = 4.0;
     self.dayNumTextField.font = [DZFontSize HomecellTitleFontSize15];
-    self.dayNumTextField.layer.borderColor = LINE_COLOR.CGColor;
+    self.dayNumTextField.layer.borderColor = K_Color_Line.CGColor;
     
     [self.contentView addSubview:self.dayNumTextField];
     

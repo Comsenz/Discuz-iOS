@@ -105,7 +105,7 @@
             if ([subjectStr hasPrefix:spaceCharater]) {
                 typeRange = NSMakeRange(spaceCharater.length, info.typeName.length + 2);
             }
-            [describe addAttribute:NSForegroundColorAttributeName value:MAIN_COLLOR range:typeRange];
+            [describe addAttribute:NSForegroundColorAttributeName value:K_Color_Theme range:typeRange];
             self.desLab.attributedText = describe;
         } else {
             self.desLab.text = info.useSubject;
@@ -114,7 +114,7 @@
         
         NSMutableAttributedString *describe = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",subjectStr]];
         NSRange typeRange = NSMakeRange(0, info.typeName.length + 2);
-        [describe addAttribute:NSForegroundColorAttributeName value:MAIN_COLLOR range:typeRange];
+        [describe addAttribute:NSForegroundColorAttributeName value:K_Color_Theme range:typeRange];
         self.desLab.attributedText = describe;
         
     } else {
@@ -239,7 +239,7 @@
             self.info.recommend = @"1";
             self.info.recommend_add = [NSString stringWithFormat:@"%ld",[self.info.recommend_add integerValue] + 1];
             [self setPriceSelected];
-            self.priceLab.iconV.tintColor = MAIN_COLLOR;
+            self.priceLab.iconV.tintColor = K_Color_Theme;
             self.priceLab.textLab.text = self.info.recommend_add;
             [PraiseHelper praiseRequestTid:self.info.tid successBlock:^{
                 if (self.info.isRecently) {
@@ -289,7 +289,7 @@
     if (_nameLab == nil) {
         _nameLab = [[UILabel alloc] init];
         _nameLab.font = [DZFontSize HomecellNameFontSize16];
-        _nameLab.textColor = LIGHT_TEXT_COLOR;
+        _nameLab.textColor = K_Color_LightText;
     }
     return _nameLab;
 }
@@ -299,8 +299,8 @@
         _grade = [[UILabel alloc] init];
         _grade.font = [DZFontSize gradeFontSize9];
         _grade.textAlignment = NSTextAlignmentCenter;
-        _grade.textColor = NAVI_BAR_COLOR;
-        _grade.backgroundColor = MAIN_COLLOR;
+        _grade.textColor = K_Color_NaviBar;
+        _grade.backgroundColor = K_Color_Theme;
     }
     return _grade;
 }
@@ -316,7 +316,7 @@
     if (_desLab == nil) {
         _desLab = [[UILabel alloc] init];
         _desLab.font = [DZFontSize HomecellTitleFontSize15];
-        _desLab.textColor = MAIN_TITLE_COLOR;
+        _desLab.textColor = K_Color_MainTitle;
         _desLab.textAlignment = NSTextAlignmentLeft;
         _desLab.numberOfLines = 0;
     }
@@ -327,7 +327,7 @@
     if (_messageLab == nil) {
         _messageLab = [[UILabel alloc] init];
         _messageLab.font = [DZFontSize messageFontSize14];
-        _messageLab.textColor = MESSAGE_COLOR;
+        _messageLab.textColor = K_Color_Message;
         _messageLab.textAlignment = NSTextAlignmentLeft;
         _messageLab.numberOfLines = 0;
     }
@@ -338,7 +338,7 @@
     if (_datelineLab == nil) {
         _datelineLab = [[UILabel alloc] init];
         _datelineLab.font = [DZFontSize HomecellTimeFontSize14];
-        _datelineLab.textColor = LIGHT_TEXT_COLOR;
+        _datelineLab.textColor = K_Color_LightText;
     }
     return _datelineLab;
 }
@@ -347,7 +347,7 @@
     if (_tipLab == nil) {
         _tipLab = [[UILabel alloc] init];
         _tipLab.font = [DZFontSize HomecellTimeFontSize14];
-        _tipLab.textColor = LIGHT_TEXT_COLOR;
+        _tipLab.textColor = K_Color_LightText;
         _tipLab.textAlignment = NSTextAlignmentRight;
     }
     return _tipLab;
@@ -380,7 +380,7 @@
 - (CALayer *)lineV {
     if (_lineV == nil) {
         _lineV = [[CALayer alloc] init];
-        _lineV.backgroundColor = LINE_COLOR.CGColor;
+        _lineV.backgroundColor = K_Color_Line.CGColor;
     }
     return _lineV;
 }
@@ -395,7 +395,7 @@
 - (CALayer *)sepLine {
     if (_sepLine == nil) {
         _sepLine = [[CALayer alloc] init];
-        _sepLine.backgroundColor = LINE_COLOR.CGColor;
+        _sepLine.backgroundColor = K_Color_Line.CGColor;
     }
     return _sepLine;
 }

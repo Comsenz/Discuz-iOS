@@ -46,7 +46,7 @@
     ;
     
    _lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.frame) - 1, CGRectGetWidth(self.frame), 1)];
-    _lineLabel.backgroundColor = LINE_COLOR;
+    _lineLabel.backgroundColor = K_Color_Line;
     [self addSubview:_lineLabel];
 }
 

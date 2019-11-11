@@ -35,8 +35,8 @@
     _messageBtn.frame=CGRectMake(KScreenWidth-95+20, 10+10,60, 30);
     _messageBtn.layer.cornerRadius = 3.0;
     _messageBtn.layer.borderWidth = 1.0;
-    [_messageBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
-    _messageBtn.layer.borderColor = MAIN_COLLOR.CGColor;
+    [_messageBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
+    _messageBtn.layer.borderColor = K_Color_Theme.CGColor;
     [_messageBtn setTitle:@"发消息" forState:UIControlStateNormal];
     [_messageBtn addTarget:self action:@selector(messageOnAction:) forControlEvents:UIControlEventTouchUpInside];
     

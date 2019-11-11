@@ -35,7 +35,7 @@
     
     self.titleLab = [[UILabel alloc] init];
     self.titleLab.font = [UIFont systemFontOfSize:16.5];
-    self.titleLab.textColor = MAIN_TITLE_COLOR;
+    self.titleLab.textColor = K_Color_MainTitle;
     [self.contentView addSubview:self.titleLab];
     
     

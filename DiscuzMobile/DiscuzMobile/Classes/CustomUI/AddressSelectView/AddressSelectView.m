@@ -37,7 +37,7 @@
 
 - (void)commitInit {
     
-    self.backgroundColor = TOOLBAR_BACK_COLOR;
+    self.backgroundColor = K_Color_ToolBar;
     
     NSData *JSONData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area" ofType:@"json"]];
     
@@ -70,7 +70,7 @@
     self.cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.cancelBtn.frame = CGRectMake(5, 5, 40, 30);
     [self.cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [self.cancelBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [self.cancelBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     [self.cancelBtn addTarget:self action:@selector(remove) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.cancelBtn];
     
@@ -78,16 +78,16 @@
     self.doneBtn.frame = CGRectMake(KScreenWidth - 5 - 40, 5, 40, 30);
     [self.doneBtn setTitle:@"确定" forState:UIControlStateNormal];
     [self.doneBtn addTarget:self action:@selector(doneAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.doneBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [self.doneBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     [self addSubview:self.doneBtn];
     
     UIView *sepView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 0.5)];
     [self addSubview:sepView];
-    sepView.backgroundColor = NAV_SEP_COLOR;
+    sepView.backgroundColor = K_Color_NaviBack;
     
     // 选择框
     myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 40, self.width, 220)];
-    myPickerView.backgroundColor = TOOL_BACK_COLOR;
+    myPickerView.backgroundColor = K_Color_ToolBack;
     // 显示选中框
     myPickerView.showsSelectionIndicator=YES;
     myPickerView.dataSource = self;

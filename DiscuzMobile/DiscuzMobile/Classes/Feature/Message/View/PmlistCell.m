@@ -27,7 +27,7 @@
     self.titleLab = [[UILabel alloc] init];
     //    self.detailLab.backgroundColor= [UIColor redColor];
     self.titleLab.textAlignment = NSTextAlignmentLeft;
-    self.titleLab.textColor = MAIN_TITLE_COLOR;
+    self.titleLab.textColor = K_Color_MainTitle;
     self.titleLab.font = [DZFontSize HomecellNameFontSize16];
     [self.contentView addSubview:self.titleLab];
 }

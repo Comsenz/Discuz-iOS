@@ -37,25 +37,25 @@
     UILabel *notips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_desclabl.frame) + 22, KScreenWidth - 16, 40)];
     notips.text = @"还没有论坛账户？";
     notips.font = [DZFontSize HomecellTimeFontSize16];
-    notips.textColor = LIGHT_TEXT_COLOR;
+    notips.textColor = K_Color_LightText;
     [self addSubview:notips];
     
     _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _registerBtn.frame = CGRectMake(10, CGRectGetMaxY(notips.frame) + 10, KScreenWidth-20, 44);
     [_registerBtn setTitle:@"立即注册" forState:UIControlStateNormal];
-    _registerBtn.backgroundColor = MAIN_COLLOR;
+    _registerBtn.backgroundColor = K_Color_Theme;
     _registerBtn.layer.cornerRadius = 5.0;
     [self addSubview:_registerBtn];
     
     UILabel *havetips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_registerBtn.frame) + 22, KScreenWidth - 16, 40)];
     havetips.text = @"已有论坛账号！";
     havetips.font = [DZFontSize HomecellTimeFontSize16];
-    havetips.textColor = LIGHT_TEXT_COLOR;
+    havetips.textColor = K_Color_LightText;
     [self addSubview:havetips];
     
     _boundBtn =[UIButton buttonWithType:UIButtonTypeCustom];
     _boundBtn.frame = CGRectMake(10, CGRectGetMaxY(havetips.frame) + 10, KScreenWidth-20, 44);
-    [_boundBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [_boundBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     _boundBtn.layer.borderColor = mRGBColor(210, 210, 210).CGColor;
     _boundBtn.layer.borderWidth = 0.5;
     [_boundBtn setTitle:@"立即关联" forState:UIControlStateNormal];

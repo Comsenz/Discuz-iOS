@@ -80,7 +80,7 @@
     textview.placeholder = @"  请输入投票选项";
     textview.layer.borderWidth = 1;
     textview.layer.masksToBounds = YES;
-    textview.layer.borderColor = LINE_COLOR.CGColor;
+    textview.layer.borderColor = K_Color_Line.CGColor;
     textview.font = [DZFontSize HomecellTitleFontSize15];
     return textview;
 }

@@ -166,9 +166,9 @@
     if (_segmentedControl == nil) {
         _segmentedControl = [[DZSegmentedControl alloc] initWithSectionTitles:self.titleArray.copy];
         _segmentedControl.borderType = DZSegmentedControlBorderTypeBottom | DZSegmentedControlBorderTypeTop;
-        _segmentedControl.borderColor = LINE_COLOR;
+        _segmentedControl.borderColor = K_Color_Line;
         _segmentedControl.borderWidth = 0.5;
-        [_segmentedControl setSelectionIndicatorColor:MAIN_COLLOR];
+        [_segmentedControl setSelectionIndicatorColor:K_Color_Theme];
         [_segmentedControl setSelectionIndicatorHeight:2.0];
         [_segmentedControl setBackgroundColor:[UIColor whiteColor]];
         _segmentedControl.segmentWidthStyle = DZSegmentedControlSegmentWidthStyleFixed;
@@ -181,9 +181,9 @@
         _segmentedControl.segmentEdgeInset = UIEdgeInsetsMake(0, space, 0, space);
         [_segmentedControl setTitleFormatter:^NSAttributedString *(DZSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected) {
             NSAttributedString *attString = [[NSAttributedString alloc] init];
-            attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : LIGHT_TEXT_COLOR,NSFontAttributeName:[DZFontSize SlideTitleFontSize:minsize andIsBold:NO]}];
+            attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : K_Color_LightText,NSFontAttributeName:[DZFontSize SlideTitleFontSize:minsize andIsBold:NO]}];
             if (selected) {
-                attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : MAIN_COLLOR,NSFontAttributeName:[DZFontSize SlideTitleFontSize:maxsize andIsBold:YES]}];
+                attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : K_Color_Theme,NSFontAttributeName:[DZFontSize SlideTitleFontSize:maxsize andIsBold:YES]}];
             }
             return attString;
         }];

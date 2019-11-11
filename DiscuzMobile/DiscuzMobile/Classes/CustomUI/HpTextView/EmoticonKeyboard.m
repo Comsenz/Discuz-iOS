@@ -145,7 +145,7 @@ static const NSInteger RowFaceCount = 9;
 
 - (void)setAttachmentBar {
     self.attachmentBar = [[AttachmentBar alloc] initWithFrame:CGRectMake(KScreenWidth, 0, KScreenWidth, 44)];
-    self.attachmentBar.layer.borderColor = LINE_COLOR.CGColor;
+    self.attachmentBar.layer.borderColor = K_Color_Line.CGColor;
     self.attachmentBar.layer.borderWidth = 0.8;
     [self.contentView addSubview:self.attachmentBar];
 }

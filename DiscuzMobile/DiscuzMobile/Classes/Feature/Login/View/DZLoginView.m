@@ -133,7 +133,7 @@
     self.loginBtn.cs_acceptEventInterval = 1;
     [self addSubview:self.loginBtn];
     [self.loginBtn setTitle:@"登录" forState:UIControlStateNormal];
-    self.loginBtn.backgroundColor = MAIN_COLLOR;
+    self.loginBtn.backgroundColor = K_Color_Theme;
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contentView.mas_left);
         make.top.equalTo(contentView.mas_bottom).offset(16);
@@ -187,7 +187,7 @@
     UILabel *thirdLabel = [[UILabel alloc] init];
     thirdLabel.textAlignment = NSTextAlignmentCenter;
     thirdLabel.backgroundColor = [UIColor whiteColor];
-    thirdLabel.textColor = LIGHT_TEXT_COLOR;
+    thirdLabel.textColor = K_Color_LightText;
     thirdLabel.text = @"第三方登录";
     thirdLabel.font = [DZFontSize HomecellTitleFontSize15];
     [self.thirdView addSubview:thirdLabel];
@@ -267,7 +267,7 @@
         [describe addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:allRange];
         [describe addAttribute:NSFontAttributeName value:[DZFontSize forumtimeFontSize14] range:allRange];
         
-        [describe addAttribute:NSForegroundColorAttributeName value:LIGHT_TEXT_COLOR range:dearRange];
+        [describe addAttribute:NSForegroundColorAttributeName value:K_Color_LightText range:dearRange];
         [describe addAttribute:NSFontAttributeName value:[DZFontSize HomecellTimeFontSize16] range:dearRange];
         
         [describe addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:nameRange];
@@ -293,7 +293,7 @@
 - (ZHPickView *)pickView {
     if (!_pickView) {
         _pickView = [[ZHPickView alloc] initPickviewWithPlistName:@"安全问答" isHaveNavControler:NO];
-        [_pickView setToolbarTintColor:TOOLBAR_BACK_COLOR];
+        [_pickView setToolbarTintColor:K_Color_ToolBar];
     }
     return _pickView;
 }

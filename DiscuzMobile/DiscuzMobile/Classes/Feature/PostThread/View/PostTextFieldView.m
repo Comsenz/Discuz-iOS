@@ -31,7 +31,7 @@
     
     self.line = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetHeight(self.frame) - 0.5, KScreenWidth - 10, 0.5)];
     [self addSubview:self.line];
-    self.line.backgroundColor = LINE_COLOR;
+    self.line.backgroundColor = K_Color_Line;
     
 }
 

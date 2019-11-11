@@ -31,7 +31,7 @@
     self.titleLab.font = [DZFontSize HomecellTimeFontSize14];
     self.titleLab.numberOfLines = 0;
     self.titleLab.textAlignment = NSTextAlignmentLeft;
-    self.titleLab.textColor = MESSAGE_COLOR;
+    self.titleLab.textColor = K_Color_Message;
     [self.contentView addSubview:self.titleLab];
     
     self.selectView = [[UIView alloc] init];
@@ -102,7 +102,7 @@
                     button.layer.cornerRadius  = 4.0;
                     button.layer.borderWidth = 1.0;
                     button.tag = 10001;
-                    button.layer.borderColor = MAIN_COLLOR.CGColor;
+                    button.layer.borderColor = K_Color_Theme.CGColor;
                     
                     button.tag = 100 + index;
                     button.isSelect = NO;

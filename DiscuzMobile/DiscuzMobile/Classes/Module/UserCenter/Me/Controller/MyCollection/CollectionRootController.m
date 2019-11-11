@@ -45,7 +45,7 @@
     [self.controllerArr addObject:forumVC];
     [self.controllerArr addObject:threadVC];
     
-    CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
+    CGRect segmentRect = CGRectMake(0, 0, KScreenWidth, 44);
     self.rootVC = [[DZContainerController alloc] init];
     [self.rootVC setSubControllers:self.controllerArr parentController:self andSegmentRect:segmentRect];
 }

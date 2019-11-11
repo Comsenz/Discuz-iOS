@@ -53,7 +53,7 @@
     
     self.allowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.allowBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.allowBtn.backgroundColor = MAIN_COLLOR;
+    self.allowBtn.backgroundColor = K_Color_Theme;
     
     CGFloat b_width = (CGRectGetWidth(self.listTableView.frame) - 15) / 2;
     self.allowBtn.frame = CGRectMake(CGRectGetMinX(self.listTableView.frame), CGRectGetMaxY(self.listTableView.frame) + 15, b_width, 40);
@@ -64,13 +64,13 @@
     
     
     self.rejectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.rejectBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [self.rejectBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     self.rejectBtn.backgroundColor = [UIColor whiteColor];
      self.rejectBtn.frame = CGRectMake(CGRectGetMaxX(self.allowBtn.frame) + 15, CGRectGetMinY(self.allowBtn.frame), b_width, CGRectGetHeight(self.allowBtn.frame));
     [self.rejectBtn setTitle:@"拒绝" forState:UIControlStateNormal];
     self.rejectBtn.layer.masksToBounds = YES;
     self.rejectBtn.layer.borderWidth = 1;
-    self.rejectBtn.layer.borderColor = MAIN_COLLOR.CGColor;
+    self.rejectBtn.layer.borderColor = K_Color_Theme.CGColor;
     self.rejectBtn.layer.cornerRadius = 5;
     [self.contentView addSubview:self.rejectBtn];
     

@@ -37,12 +37,12 @@
     self.numLab = [[UILabel alloc] init];
     self.numLab.font = [DZFontSize ForumInfoFontSize];
     self.numLab.textAlignment = NSTextAlignmentCenter;
-    self.numLab.textColor = LIGHT_TEXT_COLOR;
+    self.numLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.numLab];
     
 //    self.postsLab = [[UILabel alloc] init];
 //    self.postsLab.font = [DZFontSize HomecellmessageNumLFontSize10];
-//    self.postsLab.textColor = LIGHT_TEXT_COLOR;
+//    self.postsLab.textColor = K_Color_LightText;
 //    [self.contentView addSubview:self.postsLab];
 
     [self.iconV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -120,7 +120,7 @@
     [super layoutSubviews];
     
     self.contentView.layer.borderWidth = 1;
-    self.contentView.layer.borderColor = LINE_COLOR.CGColor;
+    self.contentView.layer.borderColor = K_Color_Line.CGColor;
     self.contentView.layer.masksToBounds = YES;
     self.contentView.layer.cornerRadius = 5;
     

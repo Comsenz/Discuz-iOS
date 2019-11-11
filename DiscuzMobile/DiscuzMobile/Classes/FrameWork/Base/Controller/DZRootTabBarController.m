@@ -34,16 +34,16 @@
 //    [self.tabBar addSubview:self.composeButton];
 //    CGFloat b_width = self.tabBar.width / self.childViewControllers.count;
 //    CGFloat b_height = self.tabBar.height;
-//    self.composeButton.frame = CGRectMake(2 * b_width, 0, b_width, b_height);
+//    self.composeButton.frame = CGRectMake(b_width, 0, b_width, b_height);
 //    [self.composeButton mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.top.equalTo(@4);
 //        make.height.equalTo(@(b_height));
 //        make.width.equalTo(@(b_width));
 //    }];
 
-    self.tabBar.tintColor = MAIN_COLLOR;
+    self.tabBar.tintColor = K_Color_Theme;
     self.tabBar.translucent = YES;
-//    [[UINavigationBar appearance] setBarTintColor:NAVI_BAR_COLOR];
+//    [[UINavigationBar appearance] setBarTintColor:K_Color_NaviBar];
     self.selectedIndex = 0;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ttsetSelectInex:) name:SETSELECTINDEX object:nil];
@@ -120,9 +120,9 @@
     childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     // 设置文字的样式
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = DARK_TEXT_COLOR;
+    textAttrs[NSForegroundColorAttributeName] = K_Color_DarkText;
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] = MAIN_COLLOR;
+    selectTextAttrs[NSForegroundColorAttributeName] = K_Color_Theme;
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     

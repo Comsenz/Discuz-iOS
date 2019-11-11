@@ -38,12 +38,12 @@
     
     self.numLab = [[UILabel alloc] init];
     self.numLab.font = [DZFontSize forumtimeFontSize14];
-    self.numLab.textColor = LIGHT_TEXT_COLOR;
+    self.numLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.numLab];
     
     self.postsLab = [[UILabel alloc] init];
     self.postsLab.font = [DZFontSize forumtimeFontSize14];
-    self.postsLab.textColor = LIGHT_TEXT_COLOR;
+    self.postsLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.postsLab];
     
     self.AccessoryV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"to"]];

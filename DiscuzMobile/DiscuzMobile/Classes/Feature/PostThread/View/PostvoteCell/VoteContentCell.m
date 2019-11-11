@@ -24,7 +24,7 @@
     self.textField.font = [DZFontSize HomecellTitleFontSize15];
     self.textField.layer.borderWidth = 1.0;
     self.textField.layer.cornerRadius = 4.0;
-    self.textField.layer.borderColor = LINE_COLOR.CGColor;
+    self.textField.layer.borderColor = K_Color_Line.CGColor;
     [self.contentView addSubview:self.textField];
     
     self.postImageBtn = [UIButton buttonWithType:UIButtonTypeCustom];

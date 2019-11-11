@@ -22,7 +22,7 @@
 - (void)commitInit {
     self.titleLabel = [[TopLabel alloc] init];
     self.titleLabel.font = [DZFontSize HomecellTitleFontSize15];
-    self.titleLabel.textColor = MAIN_TITLE_COLOR;
+    self.titleLabel.textColor = K_Color_MainTitle;
     
     [self.contentView addSubview:self.titleLabel];
     

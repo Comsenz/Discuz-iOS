@@ -32,7 +32,7 @@
     
     // 分割线
     UIView *line = [[UIView alloc] init];
-    line.backgroundColor = NAV_SEP_COLOR;
+    line.backgroundColor = K_Color_NaviBack;
     [self.view addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.width.equalTo(self.view);
@@ -54,7 +54,7 @@
         make.right.equalTo(self.view);
         make.height.equalTo(self.view);
     }];
-    self.tableView.backgroundColor = FORUM_GRAY_COLOR;
+    self.tableView.backgroundColor = K_Color_ForumGray;
     
     [self.leftTable registerClass:[ForumLeftCell class] forCellReuseIdentifier:[ForumLeftCell getReuseId]];
     [self.tableView registerClass:[ForumRightCell class] forCellReuseIdentifier:[ForumRightCell getReuseId]];
@@ -216,7 +216,7 @@
     }
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(15, header.height - 1, header.width - 15, 0.5)];
     line.tag = 2018;
-    line.backgroundColor = NAV_SEP_COLOR;
+    line.backgroundColor = K_Color_NaviBack;
     [header addSubview:line];
     
     if (tableView == self.tableView) {
@@ -284,7 +284,7 @@
 - (UITableView *)leftTable {
     if (_leftTable == nil) {
         _leftTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * 0.22, self.view.frame.size.height) style:UITableViewStylePlain];
-        _leftTable.backgroundColor = FORUM_GRAY_COLOR;
+        _leftTable.backgroundColor = K_Color_ForumGray;
         //    _leftTable.showsVerticalScrollIndicator = NO;
         _leftTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         _leftTable.delegate = self;

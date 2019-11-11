@@ -76,7 +76,7 @@
         _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(KScreenWidth / 2 - 30, KScreenHeight - 40, 60, 30)];
         _pageControl.currentPage = 0;
         _pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
-        _pageControl.currentPageIndicatorTintColor = MAIN_COLLOR;
+        _pageControl.currentPageIndicatorTintColor = K_Color_Theme;
         [[[UIApplication sharedApplication].delegate window] addSubview:_pageControl];
     }
     return _pageControl;

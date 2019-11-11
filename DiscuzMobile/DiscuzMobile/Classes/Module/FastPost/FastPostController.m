@@ -58,7 +58,7 @@
     // 判断左边菜单是否点击选中
     self.isSelected = NO;
     
-    self.view.backgroundColor = FORUM_GRAY_COLOR;
+    self.view.backgroundColor = K_Color_ForumGray;
     // 做菜单
     [self.view addSubview:self.leftTable];
     [self.leftTable mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -75,7 +75,7 @@
         make.right.equalTo(self.view);
         make.height.equalTo(self.view).offset(-self.tabbarHeight);
     }];
-    self.tableView.backgroundColor = FORUM_GRAY_COLOR;
+    self.tableView.backgroundColor = K_Color_ForumGray;
     
     [self.leftTable registerClass:[ForumLeftCell class] forCellReuseIdentifier:[ForumLeftCell getReuseId]];
     [self.tableView registerClass:[FastLevelCell class] forCellReuseIdentifier:[FastLevelCell getReuseId]];
@@ -525,7 +525,7 @@
 - (UITableView *)leftTable {
     if (_leftTable == nil) {
         _leftTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * 0.22, self.view.frame.size.height) style:UITableViewStylePlain];
-        _leftTable.backgroundColor = FORUM_GRAY_COLOR;
+        _leftTable.backgroundColor = K_Color_ForumGray;
         _leftTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         _leftTable.delegate = self;
         _leftTable.dataSource = self;
@@ -558,9 +558,9 @@
 - (UIButton *)refreshBtn {
     if (!_refreshBtn) {
         _refreshBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _refreshBtn.layer.borderColor = MESSAGE_COLOR.CGColor;
+        _refreshBtn.layer.borderColor = K_Color_Message.CGColor;
         _refreshBtn.layer.borderWidth = 1;
-        [_refreshBtn setTitleColor:MESSAGE_COLOR forState:UIControlStateNormal];
+        [_refreshBtn setTitleColor:K_Color_Message forState:UIControlStateNormal];
         [_refreshBtn setTitle:@"刷新" forState:UIControlStateNormal];
         [_refreshBtn addTarget:self action:@selector(errorRefresh) forControlEvents:UIControlEventTouchUpInside];
     }

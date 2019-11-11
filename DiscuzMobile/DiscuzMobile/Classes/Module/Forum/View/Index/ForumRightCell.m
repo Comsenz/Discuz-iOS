@@ -39,17 +39,17 @@
     
     self.titleLab = [[UILabel alloc] init];
     self.titleLab.font = [UIFont systemFontOfSize:16.5];
-    self.titleLab.textColor = MAIN_TITLE_COLOR;
+    self.titleLab.textColor = K_Color_MainTitle;
     [self.contentView addSubview:self.titleLab];
     
     self.numLab = [[UILabel alloc] init];
     self.numLab.font = [DZFontSize ActiveListFontSize11];
-    self.numLab.textColor = MESSAGE_COLOR;
+    self.numLab.textColor = K_Color_Message;
     [self.contentView addSubview:self.numLab];
     
     self.postsLab = [[UILabel alloc] init];
     self.postsLab.font = [DZFontSize ActiveListFontSize11];
-    self.postsLab.textColor = MESSAGE_COLOR;
+    self.postsLab.textColor = K_Color_Message;
     [self.contentView addSubview:self.postsLab];
     
     //收藏按钮

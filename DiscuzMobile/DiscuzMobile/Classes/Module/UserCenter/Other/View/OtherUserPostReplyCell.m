@@ -26,7 +26,7 @@
     
     self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, self.titleLabel.frame.size.height+10, 100, 15)];
     self.nameLabel.font = [DZFontSize  forumInfoFontSize12];//12
-    self.nameLabel.textColor = MAIN_COLLOR;
+    self.nameLabel.textColor = K_Color_Theme;
     [self addSubview:self.nameLabel];
     
     self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(110, self.titleLabel.frame.size.height+10, 120, 15)];

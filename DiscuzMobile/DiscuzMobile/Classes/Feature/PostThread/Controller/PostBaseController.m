@@ -55,7 +55,7 @@
         
         if (self.typeArray.count > 0) {
             self.pickView = [[ZHPickView alloc] initPickviewWithArray:arr isHaveNavControler:NO];
-            [self.pickView setToolbarTintColor:TOOLBAR_BACK_COLOR];
+            [self.pickView setToolbarTintColor:K_Color_ToolBar];
         }
         
     }

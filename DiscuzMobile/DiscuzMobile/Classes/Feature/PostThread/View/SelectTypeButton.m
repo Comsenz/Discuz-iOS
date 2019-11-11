@@ -13,7 +13,7 @@
 - (void)setIsSelect:(BOOL)isSelect {
     _isSelect = isSelect;
     if (isSelect) {
-        [self setBackgroundColor:MAIN_COLLOR];
+        [self setBackgroundColor:K_Color_Theme];
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     } else {
         [self setBackgroundColor:[UIColor whiteColor]];

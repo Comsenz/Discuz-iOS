@@ -50,7 +50,7 @@
     cell.textLabel.font=[DZFontSize HomecellTitleFontSize15];
     cell.detailTextLabel.text = [dic objectForKey:@"votes"];
     cell.detailTextLabel.font = [DZFontSize messageFontSize14];
-    cell.detailTextLabel.textColor = MAIN_COLLOR;
+    cell.detailTextLabel.textColor = K_Color_Theme;
     return cell;
 }
 

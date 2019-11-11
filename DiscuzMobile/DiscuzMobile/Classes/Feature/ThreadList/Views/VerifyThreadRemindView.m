@@ -51,7 +51,7 @@
         _textLabel = [[UILabel alloc] init];
         _textLabel.font = [UIFont systemFontOfSize:14];
         _textLabel.textAlignment = NSTextAlignmentCenter;
-        _textLabel.textColor = MAIN_COLLOR;
+        _textLabel.textColor = K_Color_Theme;
     }
     return _textLabel;
 }

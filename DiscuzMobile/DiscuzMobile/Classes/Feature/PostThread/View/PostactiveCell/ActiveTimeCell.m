@@ -48,7 +48,7 @@
     [self.contentView addSubview:self.beginTimeField];
     
     _lineView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.postImageView.frame) + 10, CGRectGetMaxY(self.beginTimeField.frame), CGRectGetWidth(self.frame) - 150, 1)];
-    _lineView.backgroundColor = LINE_COLOR;
+    _lineView.backgroundColor = K_Color_Line;
     [self.contentView addSubview:_lineView];
     
     _endLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(_startLabel.frame), CGRectGetMaxY(_lineView.frame) + 10, 80, CGRectGetHeight(_startLabel.frame))];

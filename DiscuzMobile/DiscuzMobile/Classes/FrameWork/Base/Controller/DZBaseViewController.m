@@ -33,7 +33,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:NAVI_TITLE_COLOR,NSForegroundColorAttributeName,[DZFontSize NavTitleFontSize18],NSFontAttributeName, nil];
+    NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:K_Color_NaviTitle,NSForegroundColorAttributeName,[DZFontSize NavTitleFontSize18],NSFontAttributeName, nil];
     self.navigationController.navigationBar.titleTextAttributes = dict;
     [self createBarBtn:@"back" type:NavItemImage Direction:NavDirectionLeft];
     
@@ -118,7 +118,7 @@
             leftBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:titleORImageUrl] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarBtnClick)];
         }
         self.navigationItem.leftBarButtonItem = leftBtn;
-        self.navigationItem.leftBarButtonItem.tintColor = MAIN_TITLE_COLOR;
+        self.navigationItem.leftBarButtonItem.tintColor = K_Color_MainTitle;
     } else {
         UIBarButtonItem *rightBtn;
         if (type == NavItemText) {
@@ -130,7 +130,7 @@
             rightBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:titleORImageUrl] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarBtnClick)];
         }
         self.navigationItem.rightBarButtonItem = rightBtn;
-        self.navigationItem.rightBarButtonItem.tintColor = MAIN_TITLE_COLOR;
+        self.navigationItem.rightBarButtonItem.tintColor = K_Color_MainTitle;
     }
     
 }

@@ -21,7 +21,7 @@
 - (void)commitInit {
     self.tipLab = [[UILabel alloc] init];
     self.tipLab.font = [DZFontSize HomecellTimeFontSize14];
-    self.tipLab.textColor = LIGHT_TEXT_COLOR;
+    self.tipLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.tipLab];
     
     self.infoLab = [[UILabel alloc] init];

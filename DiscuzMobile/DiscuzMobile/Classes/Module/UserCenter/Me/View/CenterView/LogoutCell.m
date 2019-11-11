@@ -23,7 +23,7 @@
     self.lab.backgroundColor = [UIColor whiteColor];
     self.lab.textAlignment = NSTextAlignmentCenter;
     self.lab.font = [DZFontSize HomecellTitleFontSize17];
-    self.lab.textColor = LIGHT_TEXT_COLOR;
+    self.lab.textColor = K_Color_LightText;
     self.lab.text = @"退出登录";
     [self.contentView addSubview:self.lab];
 }
@@ -35,7 +35,7 @@
 }
 
 - (void)setRadius:(UILabel *)lab {
-    lab.layer.borderColor = NAV_SEP_COLOR.CGColor;
+    lab.layer.borderColor = K_Color_NaviBack.CGColor;
     lab.layer.borderWidth = 0.5;
     lab.layer.masksToBounds = YES;
     lab.layer.cornerRadius = 8;

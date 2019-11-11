@@ -52,7 +52,7 @@
     _yanTextField.borderStyle= UITextBorderStyleRoundedRect;
     _yanTextField.layer.borderWidth = 1.0f;
     _yanTextField.layer.cornerRadius = 5;
-    _yanTextField.layer.borderColor = MAIN_COLLOR.CGColor;
+    _yanTextField.layer.borderColor = K_Color_Theme.CGColor;
     _yanTextField.font = [DZFontSize forumtimeFontSize14];//14
     [bgview addSubview:_yanTextField];
     
@@ -89,19 +89,19 @@
         _secTextField.borderStyle= UITextBorderStyleRoundedRect;
         _secTextField.layer.borderWidth = 2.0f;
         _secTextField.layer.cornerRadius = 5;
-        _secTextField.layer.borderColor = MAIN_COLLOR.CGColor;
+        _secTextField.layer.borderColor = K_Color_Theme.CGColor;
         _secTextField.font = [DZFontSize forumtimeFontSize14];//14
     }
     //    _yanTextField.delegate = self;
     UIButton * buttonpost = [UIButton buttonWithType:UIButtonTypeCustom];
     buttonpost.frame = CGRectMake(11, CGRectGetMaxY(_secTextField.frame) + 15,KScreenWidth-100, 50);
-    buttonpost.backgroundColor = MAIN_COLLOR;
+    buttonpost.backgroundColor = K_Color_Theme;
     [buttonpost addTarget:self action:@selector(postClick) forControlEvents:UIControlEventTouchUpInside];
     buttonpost.layer.cornerRadius = 5;
     [buttonpost setTitle:@"提交" forState:UIControlStateNormal];
     [buttonpost setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [buttonpost setTitleColor:[UIColor darkGrayColor] forState:UIControlStateSelected];
-    //    buttonSeccode.layer.borderColor = MAIN_COLLOR.CGColor;
+    //    buttonSeccode.layer.borderColor = K_Color_Theme.CGColor;
     [bgview addSubview:buttonpost];
     
     [self creatSecureView];

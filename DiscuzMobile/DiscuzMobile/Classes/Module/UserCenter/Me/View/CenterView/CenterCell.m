@@ -28,7 +28,7 @@
 //    self.detailLab.backgroundColor= [UIColor redColor];
     self.detailLab.textAlignment = NSTextAlignmentRight;
     self.detailLab.font = [DZFontSize HomecellTimeFontSize14];
-    self.detailLab.textColor = LIGHT_TEXT_COLOR;
+    self.detailLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.detailLab];
 }
 
@@ -44,7 +44,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.nameV.frame = CGRectMake(15, 11, 200, CGRectGetHeight(self.frame) - 20);
-    self.detailLab.frame = CGRectMake(WIDTH - 120 - 10, CGRectGetMinY(self.nameV.frame), 120, CGRectGetHeight(self.nameV.frame));
+    self.detailLab.frame = CGRectMake(KScreenWidth - 120 - 10, CGRectGetMinY(self.nameV.frame), 120, CGRectGetHeight(self.nameV.frame));
 }
 
 @end

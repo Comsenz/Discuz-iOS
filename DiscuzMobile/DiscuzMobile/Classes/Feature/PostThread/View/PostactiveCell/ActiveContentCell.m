@@ -31,7 +31,7 @@
     [self.contentView addSubview:placeLable];
     
     UILabel * lineLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52, KScreenWidth-25, 1)];
-    lineLabel1.backgroundColor = LINE_COLOR;
+    lineLabel1.backgroundColor = K_Color_Line;
     [self.contentView addSubview:lineLabel1];
     
     
@@ -50,7 +50,7 @@
     self.cityTextField.placeholder = @"请输入所在城市";
     [self.contentView addSubview:self.cityTextField];
     UILabel *lineLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*2, KScreenWidth-25, 1)];
-    lineLabel2.backgroundColor = LINE_COLOR;
+    lineLabel2.backgroundColor = K_Color_Line;
     [self.contentView addSubview:lineLabel2];
     
     
@@ -68,7 +68,7 @@
     [self.contentView addSubview:self.classTextField];
     
     UILabel * lineLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*3, KScreenWidth-25, 1)];
-    lineLabel3.backgroundColor = LINE_COLOR;
+    lineLabel3.backgroundColor = K_Color_Line;
     [self.contentView addSubview:lineLabel3];
     
     
@@ -93,7 +93,7 @@
     [self.contentView addSubview:self.peopleNumTextField];
     
     UILabel *lineLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*4, KScreenWidth-25, 1)];
-    lineLabel4.backgroundColor = LINE_COLOR;
+    lineLabel4.backgroundColor = K_Color_Line;
     [self.contentView addSubview:lineLabel4];
     
     
@@ -104,20 +104,20 @@
     [self.contentView addSubview:sexNumLable];
     self.sexSelectView =[[SelectTipView alloc] initWithFrame:CGRectMake(sexNumLable.frame.size.width +sexNumLable.frame.origin.x + 5,CGRectGetMinY(self.peopleNumTextField.frame) + 5, KScreenWidth - numWidth - numspace - 70 - CGRectGetWidth(self.peopleNumTextField.frame), 33)];
     self.sexSelectView.layer.masksToBounds = YES;
-    self.sexSelectView.layer.borderColor = LINE_COLOR.CGColor;
+    self.sexSelectView.layer.borderColor = K_Color_Line.CGColor;
     self.sexSelectView.layer.borderWidth = 1;
     self.sexSelectView.layer.cornerRadius = 5;
     self.sexSelectView.tipLab.text = @"不限";
     [self.contentView addSubview:self.sexSelectView];
     
 //    UILabel *lineLabel5 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*5, WIDTH-25, 1)];
-//    lineLabel5.backgroundColor = LINE_COLOR;
+//    lineLabel5.backgroundColor = K_Color_Line;
 //    [self.contentView addSubview:lineLabel5];
     
     
     self.classSelectView = [[SelectTipView alloc] initWithFrame:CGRectMake(self.classTextField.frame.size.width+self.classTextField.frame.origin.x +10,lineLabel2.frame.origin.y + lineLabel2.frame.size.height + 10, 100, 33)];
     self.classSelectView.layer.masksToBounds = YES;
-    self.classSelectView.layer.borderColor = LINE_COLOR.CGColor;
+    self.classSelectView.layer.borderColor = K_Color_Line.CGColor;
     self.classSelectView.layer.borderWidth = 1;
     self.classSelectView.layer.cornerRadius = 5;
     self.classSelectView.tipLab.text = @"自定义";

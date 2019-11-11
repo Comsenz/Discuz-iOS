@@ -37,12 +37,12 @@
     self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(KScreenWidth-128, 10,120, 15)];
     self.timeLabel.font = [DZFontSize forumInfoFontSize12];
     self.timeLabel.textAlignment = NSTextAlignmentRight;
-    self.timeLabel.textColor = MAIN_TITLE_COLOR;
+    self.timeLabel.textColor = K_Color_MainTitle;
     [self addSubview:self.timeLabel];
     
     self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, KScreenWidth-(frame.size.width+20+10), 45)];
     self.contenLabel.font =  [DZFontSize forumtimeFontSize14];
-    self.contenLabel.textColor = MAIN_TITLE_COLOR;
+    self.contenLabel.textColor = K_Color_MainTitle;
     self.contenLabel.numberOfLines = 0;
     [self addSubview:self.contenLabel];
     

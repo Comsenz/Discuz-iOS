@@ -49,7 +49,7 @@
     self.titleLab.text = @"请选择发帖类型";
     self.titleLab.font = [DZFontSize NavTitleFontSize18];
     self.titleLab.textAlignment = NSTextAlignmentCenter;
-    self.titleLab.textColor = MAIN_TITLE_COLOR;
+    self.titleLab.textColor = K_Color_MainTitle;
     [self.contentView addSubview:self.titleLab];
     
     self.selectTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, 10, 10) style:UITableViewStylePlain];

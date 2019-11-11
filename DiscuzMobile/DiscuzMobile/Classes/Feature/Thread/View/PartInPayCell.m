@@ -34,7 +34,7 @@
     [_selfRadio setImage:[UIImage imageNamed:@"option"] forState:(UIControlStateNormal)];
     [_selfRadio setImage:[UIImage imageNamed:@"option_select"] forState:(UIControlStateSelected)];
     [_selfRadio setTitle:@"自己承担应付的花销" forState:UIControlStateNormal];
-    [_selfRadio setTitleColor:MAIN_TITLE_COLOR forState:UIControlStateNormal];
+    [_selfRadio setTitleColor:K_Color_MainTitle forState:UIControlStateNormal];
     _selfRadio.titleLabel.font = [DZFontSize HomecellTimeFontSize14];
     [self.contentView addSubview:self.selfRadio];
     
@@ -42,7 +42,7 @@
     [_payRadio setImage:[UIImage imageNamed:@"option"] forState:(UIControlStateNormal)];
     [_payRadio setImage:[UIImage imageNamed:@"option_select"] forState:(UIControlStateSelected)];
     [_payRadio setTitle:@"支付" forState:UIControlStateNormal];
-    [_payRadio setTitleColor:MAIN_TITLE_COLOR forState:UIControlStateNormal];
+    [_payRadio setTitleColor:K_Color_MainTitle forState:UIControlStateNormal];
     _payRadio.titleLabel.font = [DZFontSize HomecellTimeFontSize14];
     [self.contentView addSubview:self.payRadio];
     
@@ -61,14 +61,14 @@
 // 90
 - (void)layoutSubviews {
     [super layoutSubviews];
-//    self.tipLab.frame = CGRectMake(15, 15, WIDTH - 30, 20);
-    self.tipLab.frame = CGRectMake(15, 0, WIDTH - 30, 0);
+//    self.tipLab.frame = CGRectMake(15, 15, KScreenWidth - 30, 20);
+    self.tipLab.frame = CGRectMake(15, 0, KScreenWidth - 30, 0);
     
     self.tipLab2.frame = CGRectMake(CGRectGetMinX(self.tipLab.frame), CGRectGetMaxY(self.tipLab.frame) + 15, 80, 20);
     self.selfRadio.frame = CGRectMake(CGRectGetMaxX(self.tipLab2.frame) + 10, CGRectGetMinY(self.tipLab2.frame), 150, 20);
     self.payRadio.frame = CGRectMake(CGRectGetMinX(self.selfRadio.frame), CGRectGetMaxY(self.selfRadio.frame) + 10, 60, 20);
     self.payTextField.frame = CGRectMake(CGRectGetMaxX(self.payRadio.frame) + 5, CGRectGetMinY(self.payRadio.frame), 60, 20);
-    self.payTextField.layer.borderColor = LINE_COLOR.CGColor;
+    self.payTextField.layer.borderColor = K_Color_Line.CGColor;
     self.payTextField.layer.borderWidth = 1;
     self.yuanLab.frame = CGRectMake(CGRectGetMaxX(self.payTextField.frame) + 5, CGRectGetMinY(self.payRadio.frame), 20, 20);
 }

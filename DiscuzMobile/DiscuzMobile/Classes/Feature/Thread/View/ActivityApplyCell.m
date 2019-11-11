@@ -41,7 +41,7 @@
     [self.bgView addSubview:self.applyLab];
     
     self.line1 = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.applyLab.frame), 8, 1, CGRectGetHeight(self.bgView.frame) - 16)];
-    self.line1.backgroundColor = LINE_COLOR;
+    self.line1.backgroundColor = K_Color_Line;
     [self.bgView addSubview:self.line1];
     
     self.timeLab = [[ApplyItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.line1.frame), 0, CGRectGetWidth(self.applyLab.frame), CGRectGetHeight(self.bgView.frame))];
@@ -49,7 +49,7 @@
     [self.bgView addSubview:self.timeLab];
     
     self.line2 = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.timeLab.frame), 8, 1, CGRectGetHeight(self.bgView.frame) - 16)];
-    self.line2.backgroundColor = LINE_COLOR;
+    self.line2.backgroundColor = K_Color_Line;
     [self.bgView addSubview:self.line2];
     
     self.statusView = [[ApplyItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.line2.frame), 0, CGRectGetWidth(self.applyLab.frame), CGRectGetHeight(self.bgView.frame))];
@@ -78,7 +78,7 @@
     [super layoutSubviews];
     
     self.bgView.frame = CGRectMake(15, 10, KScreenWidth - 30, CGRectGetHeight(self.frame)- 10);
-    self.bgView.layer.borderColor = LINE_COLOR.CGColor;
+    self.bgView.layer.borderColor = K_Color_Line.CGColor;
     self.bgView.layer.borderWidth = 1;
     self.bgView.layer.masksToBounds = YES;
     self.bgView.layer.cornerRadius = 4;

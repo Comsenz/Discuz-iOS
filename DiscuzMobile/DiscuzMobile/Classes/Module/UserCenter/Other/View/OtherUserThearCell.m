@@ -27,7 +27,7 @@
     
     
     self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, self.titleLabel.frame.size.height+10, 80, 15)];
-    self.nameLabel.textColor = MAIN_COLLOR;
+    self.nameLabel.textColor = K_Color_Theme;
     self.nameLabel.font = [DZFontSize forumInfoFontSize12];
     [self addSubview:self.nameLabel];
     

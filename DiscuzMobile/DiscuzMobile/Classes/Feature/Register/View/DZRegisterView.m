@@ -127,7 +127,7 @@
     self.registerButton.cs_acceptEventInterval = 1;
     [self addSubview:self.registerButton];
     [self.registerButton setTitle:@"注册" forState:UIControlStateNormal];
-    self.registerButton.backgroundColor = MAIN_COLLOR;
+    self.registerButton.backgroundColor = K_Color_Theme;
     [self.registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contentView);
         make.top.equalTo(self.authCodeView.mas_bottom).offset(16);
@@ -175,7 +175,7 @@
         [describe addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:allRange];
         [describe addAttribute:NSFontAttributeName value:[DZFontSize forumtimeFontSize14] range:allRange];
         
-        [describe addAttribute:NSForegroundColorAttributeName value:LIGHT_TEXT_COLOR range:dearRange];
+        [describe addAttribute:NSForegroundColorAttributeName value:K_Color_LightText range:dearRange];
         [describe addAttribute:NSFontAttributeName value:[DZFontSize HomecellTimeFontSize16] range:dearRange];
         
         [describe addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:nameRange];

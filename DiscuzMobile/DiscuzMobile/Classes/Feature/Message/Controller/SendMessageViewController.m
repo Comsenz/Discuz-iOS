@@ -79,12 +79,12 @@
     
     UIButton *postBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [postBtn setTitle:@"发送" forState:UIControlStateNormal];
-    [postBtn setBackgroundColor:MAIN_COLLOR];
+    [postBtn setBackgroundColor:K_Color_Theme];
     [postBtn addTarget:self action:@selector(postData) forControlEvents:UIControlEventTouchUpInside];
     postBtn.frame = CGRectMake(10, messageView.frame.origin.y +messageView.frame.size.height +20 ,KScreenWidth -20, 40);
     postBtn.layer.cornerRadius  = 4.0;
     postBtn.layer.borderWidth = 1.0;
-    postBtn.layer.borderColor = MAIN_COLLOR.CGColor;
+    postBtn.layer.borderColor = K_Color_Theme.CGColor;
    
     [_bgScrollView addSubview:postBtn];
 }

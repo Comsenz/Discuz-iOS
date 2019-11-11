@@ -90,7 +90,7 @@
     
     _dropDownView = [[DropDownView alloc] initWithFrame:CGRectMake(KScreenWidth-120, 0, 96, 31 * self.activitytypeArr.count)  activityType:self.activitytypeArr];
 
-    _dropDownView.layer.borderColor = [MAIN_COLLOR CGColor];
+    _dropDownView.layer.borderColor = [K_Color_Theme CGColor];
     _dropDownView.layer.borderWidth = 0.5f;
     _dropDownView.backgroundColor = [UIColor whiteColor];
     _dropDownView.delegate = self;
@@ -111,7 +111,7 @@
     self.sexPickView = [[ZHPickView alloc] initPickviewWithArray:arr isHaveNavControler:NO];
     self.sexPickView.isIntextfield = NO;
     self.sexPickView.delegate = self;
-    [self.sexPickView setToolbarTintColor:TOOLBAR_BACK_COLOR];
+    [self.sexPickView setToolbarTintColor:K_Color_ToolBar];
 }
 
 #pragma mark ZhpickVIewDelegate

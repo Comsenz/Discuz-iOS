@@ -129,7 +129,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     [self.view addSubview:self.emoKeyboard];
-    self.emoKeyboard.backgroundColor = MAIN_GRAY_COLOR;
+    self.emoKeyboard.backgroundColor = K_Color_MainGray;
     self.emoKeyboard.textBarView.style = chat_textBar;
     _emoKeyboard.textBarView.textView.placeholderText = @"回复消息";
     [_emoKeyboard.textBarView.sendBtn setTitle:@"发送" forState:UIControlStateNormal];

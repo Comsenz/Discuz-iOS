@@ -32,7 +32,7 @@
     
     self.textLab = [[UILabel alloc] init];
     self.textLab.textAlignment = NSTextAlignmentLeft;
-    self.textLab.textColor = LIGHT_TEXT_COLOR;
+    self.textLab.textColor = K_Color_LightText;
     self.textLab.font = [DZFontSize HomecellTimeFontSize14];
     [self addSubview:self.textLab];
 }

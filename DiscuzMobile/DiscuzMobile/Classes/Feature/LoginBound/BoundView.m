@@ -60,7 +60,7 @@
     
     UILabel *tips2 = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_passwordField.frame) + 22, KScreenWidth - 16, 28)];
     
-    tips2.textColor = LIGHT_TEXT_COLOR;
+    tips2.textColor = K_Color_LightText;
     tips2.font = [DZFontSize HomecellTimeFontSize14];
     tips2.numberOfLines = 0;
     tips2.text = @"关联后，你的微信/QQ账户和论坛账户都可以登录";
@@ -72,7 +72,7 @@
     _boundBtn.cs_acceptEventInterval = 1;
     _boundBtn.frame = CGRectMake(10, CGRectGetMaxY(tips2.frame) + 15, KScreenWidth-20, 40);
     [_boundBtn setTitle:@"登录" forState:UIControlStateNormal];
-    _boundBtn.backgroundColor = MAIN_COLLOR;
+    _boundBtn.backgroundColor = K_Color_Theme;
     _boundBtn.layer.cornerRadius = 5.0;
     [self addSubview:_boundBtn];
     

@@ -23,13 +23,13 @@
     self.timeLab = [[UILabel alloc] init];
     self.timeLab.backgroundColor = [UIColor whiteColor];
     self.timeLab.font = [DZFontSize HomecellTimeFontSize14];
-    self.timeLab.textColor = LIGHT_TEXT_COLOR;
+    self.timeLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.timeLab];
     
     self.floorLab = [[UILabel alloc] init];
     self.floorLab.font = [DZFontSize HomecellTimeFontSize14];
     self.floorLab.textAlignment = NSTextAlignmentRight;
-    self.floorLab.textColor = LIGHT_TEXT_COLOR;
+    self.floorLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.floorLab];
     
     self.messageLab = [[UILabel alloc] init];
@@ -38,7 +38,7 @@
     [self.contentView addSubview:self.messageLab];
     
     self.subjectLab = [[UILabel alloc] init];
-    self.subjectLab.textColor = LIGHT_TEXT_COLOR;
+    self.subjectLab.textColor = K_Color_LightText;
     self.subjectLab.font = [DZFontSize HomecellTitleFontSize15];
     [self.contentView addSubview:self.subjectLab];
     

@@ -23,7 +23,7 @@
     self.ActionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.ActionBtn.cs_acceptEventInterval = 1;
     self.ActionBtn.frame = CGRectMake(10, 25 ,CGRectGetWidth(self.frame) - 20, 40);
-    [self.ActionBtn setBackgroundColor:MAIN_COLLOR];
+    [self.ActionBtn setBackgroundColor:K_Color_Theme];
     [self.ActionBtn addTarget:self action:@selector(onAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.ActionBtn];
 }
@@ -39,7 +39,7 @@
     self.ActionBtn.frame = CGRectMake(10, CGRectGetHeight(self.frame) * 0.15 ,CGRectGetWidth(self.frame) - 20, CGRectGetHeight(self.frame) * 0.7);
     self.ActionBtn.layer.cornerRadius  =4.0;
     self.ActionBtn.layer.borderWidth = 1.0;
-    self.ActionBtn.layer.borderColor = MAIN_COLLOR.CGColor;
+    self.ActionBtn.layer.borderColor = K_Color_Theme.CGColor;
 }
 
 @end
