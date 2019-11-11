@@ -387,7 +387,7 @@
 - (UILabel *)nameLab {
     if (_nameLab == nil) {
         _nameLab = [[UILabel alloc] init];
-        _nameLab.font = [FontSize HomecellNameFontSize16];
+        _nameLab.font = [DZFontSize HomecellNameFontSize16];
         _nameLab.textColor = LIGHT_TEXT_COLOR;
     }
     return _nameLab;
@@ -396,7 +396,7 @@
 - (UILabel *)grade {
     if (_grade == nil) {
         _grade = [[UILabel alloc] init];
-        _grade.font = [FontSize gradeFontSize9];
+        _grade.font = [DZFontSize gradeFontSize9];
         _grade.textAlignment = NSTextAlignmentCenter;
         _grade.textColor = NAVI_BAR_COLOR;
         _grade.backgroundColor = MAIN_COLLOR;
@@ -414,7 +414,7 @@
 - (UILabel *)desLab {
     if (_desLab == nil) {
         _desLab = [[UILabel alloc] init];
-        _desLab.font = [FontSize HomecellTitleFontSize15];
+        _desLab.font = [DZFontSize HomecellTitleFontSize15];
         _desLab.textColor = MAIN_TITLE_COLOR;
         _desLab.textAlignment = NSTextAlignmentLeft;
         _desLab.numberOfLines = 0;
@@ -425,7 +425,7 @@
 - (UILabel *)messageLab {
     if (_messageLab == nil) {
         _messageLab = [[UILabel alloc] init];
-        _messageLab.font = [FontSize messageFontSize14];
+        _messageLab.font = [DZFontSize messageFontSize14];
         _messageLab.textColor = MESSAGE_COLOR;
         _messageLab.textAlignment = NSTextAlignmentLeft;
         _messageLab.numberOfLines = 0;
@@ -436,7 +436,7 @@
 - (UILabel *)datelineLab {
     if (_datelineLab == nil) {
         _datelineLab = [[UILabel alloc] init];
-        _datelineLab.font = [FontSize HomecellTimeFontSize14];
+        _datelineLab.font = [DZFontSize HomecellTimeFontSize14];
         _datelineLab.textColor = LIGHT_TEXT_COLOR;
     }
     return _datelineLab;
@@ -445,7 +445,7 @@
 - (UILabel *)tipLab {
     if (_tipLab == nil) {
         _tipLab = [[UILabel alloc] init];
-        _tipLab.font = [FontSize HomecellTimeFontSize14];
+        _tipLab.font = [DZFontSize HomecellTimeFontSize14];
         _tipLab.textColor = LIGHT_TEXT_COLOR;
         _tipLab.textAlignment = NSTextAlignmentRight;
     }

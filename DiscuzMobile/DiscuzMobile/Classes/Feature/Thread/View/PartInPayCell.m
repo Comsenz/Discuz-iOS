@@ -20,12 +20,12 @@
 
 - (void)commitInit {
     _tipLab = [[UILabel alloc] init];
-    _tipLab.font = [FontSize forumInfoFontSize12];
+    _tipLab.font = [DZFontSize forumInfoFontSize12];
     _tipLab.textColor = [UIColor orangeColor];
     [self.contentView addSubview:self.tipLab];
     
     _tipLab2 = [[UILabel alloc] init];
-    _tipLab2.font = [FontSize forumInfoFontSize12];
+    _tipLab2.font = [DZFontSize forumInfoFontSize12];
     _tipLab2.text = @"支付方式:";
     [self.contentView addSubview:self.tipLab2];
     
@@ -35,7 +35,7 @@
     [_selfRadio setImage:[UIImage imageNamed:@"option_select"] forState:(UIControlStateSelected)];
     [_selfRadio setTitle:@"自己承担应付的花销" forState:UIControlStateNormal];
     [_selfRadio setTitleColor:MAIN_TITLE_COLOR forState:UIControlStateNormal];
-    _selfRadio.titleLabel.font = [FontSize HomecellTimeFontSize14];
+    _selfRadio.titleLabel.font = [DZFontSize HomecellTimeFontSize14];
     [self.contentView addSubview:self.selfRadio];
     
     _payRadio = [[QRadioButton alloc] initWithDelegate:self groupId:@"selfId1"];
@@ -43,16 +43,16 @@
     [_payRadio setImage:[UIImage imageNamed:@"option_select"] forState:(UIControlStateSelected)];
     [_payRadio setTitle:@"支付" forState:UIControlStateNormal];
     [_payRadio setTitleColor:MAIN_TITLE_COLOR forState:UIControlStateNormal];
-    _payRadio.titleLabel.font = [FontSize HomecellTimeFontSize14];
+    _payRadio.titleLabel.font = [DZFontSize HomecellTimeFontSize14];
     [self.contentView addSubview:self.payRadio];
     
     _payTextField = [[UITextField alloc] init];
-    _payTextField.font = [FontSize HomecellTimeFontSize14];
+    _payTextField.font = [DZFontSize HomecellTimeFontSize14];
     _payTextField.keyboardType = UIKeyboardTypeNumberPad;
     [self.contentView addSubview:self.payTextField];
     
     _yuanLab = [[UILabel alloc] init];
-    _yuanLab.font = [FontSize HomecellTimeFontSize14];
+    _yuanLab.font = [DZFontSize HomecellTimeFontSize14];
     _yuanLab.text = @"元";
     [self.contentView addSubview:_yuanLab];
     

@@ -33,7 +33,7 @@
     if (_titleLab == nil) {
         _titleLab = [[UILabel alloc] init];
         _titleLab.text = @"裁判";
-        _titleLab.font = [FontSize forumtimeFontSize14];
+        _titleLab.font = [DZFontSize forumtimeFontSize14];
         _titleLab.textAlignment = NSTextAlignmentLeft;
     }
     return _titleLab;
@@ -43,7 +43,7 @@
     if (_contentTextfield == nil) {
         _contentTextfield = [[UITextField alloc] init];
         _contentTextfield.placeholder = @"请输入裁判名称";
-        _contentTextfield.font = [FontSize HomecellTitleFontSize15];
+        _contentTextfield.font = [DZFontSize HomecellTitleFontSize15];
     }
     return _contentTextfield;
 }

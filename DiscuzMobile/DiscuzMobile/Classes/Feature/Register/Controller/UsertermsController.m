@@ -30,7 +30,7 @@
     
     self.contentLabel = [[UILabel alloc] init];
     self.contentLabel.numberOfLines = 0;
-    self.contentLabel.font = [FontSize HomecellNameFontSize16];
+    self.contentLabel.font = [DZFontSize HomecellNameFontSize16];
     [self.view addSubview:self.contentLabel];
     
     NSString *fileName = BBSRULE;
@@ -43,7 +43,7 @@
         self.contentLabel.text = strp;
     }
     
-    CGSize messageSize = [self.contentLabel.text sizeWithFont:[FontSize HomecellNameFontSize16] maxSize:CGSizeMake(WIDTH - 40, CGFLOAT_MAX)];
+    CGSize messageSize = [self.contentLabel.text sizeWithFont:[DZFontSize HomecellNameFontSize16] maxSize:CGSizeMake(WIDTH - 40, CGFLOAT_MAX)];
     self.contentLabel.frame = CGRectMake(20, 15, messageSize.width, messageSize.height);
     self.scrollview.contentSize = CGSizeMake(WIDTH, CGRectGetMaxY(self.contentLabel.frame) + 40);
 }

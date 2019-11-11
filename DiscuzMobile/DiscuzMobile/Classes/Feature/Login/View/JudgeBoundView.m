@@ -36,7 +36,7 @@
     
     UILabel *notips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_desclabl.frame) + 22, WIDTH - 16, 40)];
     notips.text = @"还没有论坛账户？";
-    notips.font = [FontSize HomecellTimeFontSize16];
+    notips.font = [DZFontSize HomecellTimeFontSize16];
     notips.textColor = LIGHT_TEXT_COLOR;
     [self addSubview:notips];
     
@@ -49,7 +49,7 @@
     
     UILabel *havetips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_registerBtn.frame) + 22, WIDTH - 16, 40)];
     havetips.text = @"已有论坛账号！";
-    havetips.font = [FontSize HomecellTimeFontSize16];
+    havetips.font = [DZFontSize HomecellTimeFontSize16];
     havetips.textColor = LIGHT_TEXT_COLOR;
     [self addSubview:havetips];
     

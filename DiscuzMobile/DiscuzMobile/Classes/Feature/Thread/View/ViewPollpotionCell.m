@@ -8,7 +8,6 @@
 
 #import "ViewPollpotionCell.h"
 #import "UIButton+WebCache.h"
-#import "FontSize.h"
 
 @implementation ViewPollpotionCell
 
@@ -29,7 +28,7 @@
     
     CGRect frame = self.headImageView.frame;
     self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20+10, CGRectGetMinY(self.headImageView.frame), 190, 40)];
-    self.nameLabel.font =[FontSize HomecellTitleFontSize15];
+    self.nameLabel.font =[DZFontSize HomecellTitleFontSize15];
     [self addSubview:self.nameLabel];
     
     self.messageBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];

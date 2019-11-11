@@ -1,5 +1,5 @@
 //
-//  FontSize.h
+//  DZFontSize.h
 //  DiscuzMobile
 //
 //  Created by HB on 16/7/12.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FontSize : NSObject
+@interface DZFontSize : NSObject
 
 + (UIFont *)fontSize:(CGFloat)size;
 

@@ -55,7 +55,7 @@
         UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
         header.backgroundColor = [UIColor whiteColor];
         UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, WIDTH - 30, 20)];
-        tipLab.font = [FontSize forumInfoFontSize12];
+        tipLab.font = [DZFontSize forumInfoFontSize12];
         tipLab.textColor = [UIColor orangeColor];
         tipLab.text = [NSString stringWithFormat:@"注意：参加此活动将扣除您 %@",creditcost];
         [header addSubview:tipLab];
@@ -394,7 +394,7 @@
         PartInSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:selectID];
         if (cell == nil) {
             cell = [[PartInSelectCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:selectID];
-            cell.detailTextLabel.font = [FontSize HomecellTimeFontSize14];
+            cell.detailTextLabel.font = [DZFontSize HomecellTimeFontSize14];
             cell.detailTextLabel.text = @"请选择";
             if ([partModel.fieldid isEqualToString:@"gender"]) {
                 cell.detailTextLabel.text = @"保密";
@@ -419,7 +419,7 @@
 //            PartInSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:selectID];
 //            if (cell == nil) {
 //                cell = [[PartInSelectCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:selectID];
-//                cell.detailTextLabel.font = [FontSize HomecellTimeFontSize14];
+//                cell.detailTextLabel.font = [DZFontSize HomecellTimeFontSize14];
 //                cell.detailTextLabel.text = @"请选择";
 //            }
 //            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

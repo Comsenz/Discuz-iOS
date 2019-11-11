@@ -1,5 +1,5 @@
 //
-//  URLStrings.h
+//  DZURLStrings.h
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/2/2.

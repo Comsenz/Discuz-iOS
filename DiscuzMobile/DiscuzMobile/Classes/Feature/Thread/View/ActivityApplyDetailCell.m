@@ -20,13 +20,13 @@
 
 - (void)commitInit {
     self.tipLab = [[UILabel alloc] init];
-    self.tipLab.font = [FontSize HomecellTimeFontSize14];
+    self.tipLab.font = [DZFontSize HomecellTimeFontSize14];
     self.tipLab.textColor = LIGHT_TEXT_COLOR;
     [self.contentView addSubview:self.tipLab];
     
     self.infoLab = [[UILabel alloc] init];
     self.infoLab.numberOfLines = 0;
-    self.infoLab.font = [FontSize forumtimeFontSize14];
+    self.infoLab.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:self.infoLab];
     
     self.tipLab.frame = CGRectMake(15, 0, 69, CGRectGetHeight(self.contentView.frame));
@@ -40,7 +40,7 @@
     self.tipLab.frame = CGRectMake(15, 0, 69, CGRectGetHeight(self.contentView.frame));
     
     CGSize maxSize = CGSizeMake(CGRectGetWidth(self.contentView.frame) - 69 - 30, MAXFLOAT);
-    CGSize textSize = [self.infoLab.text sizeWithFont:[FontSize forumtimeFontSize14] maxSize:maxSize];
+    CGSize textSize = [self.infoLab.text sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:maxSize];
     CGFloat height = 38;
     if (textSize.height > 38) {
         height = textSize.height;
@@ -54,7 +54,7 @@
     if ([DataCheck isValidString:self.infoLab.text]) {
         NSLog(@"%@",self.infoLab.text);
         CGSize maxSize = CGSizeMake(WIDTH - 60 - 20 - 69 - 30, MAXFLOAT);
-        CGSize textSize = [self.infoLab.text sizeWithFont:[FontSize forumtimeFontSize14] maxSize:maxSize];
+        CGSize textSize = [self.infoLab.text sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:maxSize];
         CGFloat height = 38;
         if (textSize.height > 38) {
             height = textSize.height;

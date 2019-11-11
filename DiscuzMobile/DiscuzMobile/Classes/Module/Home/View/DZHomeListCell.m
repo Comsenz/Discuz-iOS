@@ -147,12 +147,12 @@
     
     // 名字
     CGSize maxSize = CGSizeMake(120, 30);
-    CGSize textSize = [self.nameLab.text sizeWithFont:[FontSize HomecellNameFontSize16] maxSize:maxSize];
+    CGSize textSize = [self.nameLab.text sizeWithFont:[DZFontSize HomecellNameFontSize16] maxSize:maxSize];
     self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headV.frame) + 10, CGRectGetMidY(self.headV.frame) - 15, textSize.width, 30);
     
     // 等级
     maxSize = CGSizeMake(100, 20);
-    textSize = [self.grade.text sizeWithFont:[FontSize gradeFontSize9] maxSize:maxSize];
+    textSize = [self.grade.text sizeWithFont:[DZFontSize gradeFontSize9] maxSize:maxSize];
     if ([DataCheck isValidString:self.grade.text]) {
         self.grade.frame = CGRectMake(CGRectGetMaxX(self.nameLab.frame) + 10, CGRectGetMidY(self.nameLab.frame) - textSize.height / 2, textSize.width + 4, textSize.height);
         self.grade.layer.masksToBounds = YES;
@@ -163,13 +163,13 @@
     
     // 标题
     maxSize = CGSizeMake(WIDTH - 30, 45);
-    textSize = [self.desLab.text sizeWithFont:[FontSize HomecellTitleFontSize15] maxSize:maxSize];
+    textSize = [self.desLab.text sizeWithFont:[DZFontSize HomecellTitleFontSize15] maxSize:maxSize];
     self.sepLine.frame = CGRectMake(0, CGRectGetMaxY(self.headV.frame) + 8, WIDTH, 1);
     self.desLab.frame = CGRectMake(CGRectGetMinX(self.headV.frame), CGRectGetMaxY(self.sepLine.frame) + 10, WIDTH - 30, textSize.height);
     
     // 内容
     maxSize = CGSizeMake(WIDTH - 30, 40);
-    textSize = [self.messageLab.text sizeWithFont:[FontSize messageFontSize14] maxSize:maxSize];
+    textSize = [self.messageLab.text sizeWithFont:[DZFontSize messageFontSize14] maxSize:maxSize];
     self.messageLab.frame = CGRectMake(CGRectGetMinX(self.desLab.frame), CGRectGetMaxY(self.desLab.frame) + 8, WIDTH - 30, textSize.height);
     
     if ([DataCheck isValidString:self.messageLab.text]) {
@@ -288,7 +288,7 @@
 - (UILabel *)nameLab {
     if (_nameLab == nil) {
         _nameLab = [[UILabel alloc] init];
-        _nameLab.font = [FontSize HomecellNameFontSize16];
+        _nameLab.font = [DZFontSize HomecellNameFontSize16];
         _nameLab.textColor = LIGHT_TEXT_COLOR;
     }
     return _nameLab;
@@ -297,7 +297,7 @@
 - (UILabel *)grade {
     if (_grade == nil) {
         _grade = [[UILabel alloc] init];
-        _grade.font = [FontSize gradeFontSize9];
+        _grade.font = [DZFontSize gradeFontSize9];
         _grade.textAlignment = NSTextAlignmentCenter;
         _grade.textColor = NAVI_BAR_COLOR;
         _grade.backgroundColor = MAIN_COLLOR;
@@ -315,7 +315,7 @@
 - (UILabel *)desLab {
     if (_desLab == nil) {
         _desLab = [[UILabel alloc] init];
-        _desLab.font = [FontSize HomecellTitleFontSize15];
+        _desLab.font = [DZFontSize HomecellTitleFontSize15];
         _desLab.textColor = MAIN_TITLE_COLOR;
         _desLab.textAlignment = NSTextAlignmentLeft;
         _desLab.numberOfLines = 0;
@@ -326,7 +326,7 @@
 - (UILabel *)messageLab {
     if (_messageLab == nil) {
         _messageLab = [[UILabel alloc] init];
-        _messageLab.font = [FontSize messageFontSize14];
+        _messageLab.font = [DZFontSize messageFontSize14];
         _messageLab.textColor = MESSAGE_COLOR;
         _messageLab.textAlignment = NSTextAlignmentLeft;
         _messageLab.numberOfLines = 0;
@@ -337,7 +337,7 @@
 - (UILabel *)datelineLab {
     if (_datelineLab == nil) {
         _datelineLab = [[UILabel alloc] init];
-        _datelineLab.font = [FontSize HomecellTimeFontSize14];
+        _datelineLab.font = [DZFontSize HomecellTimeFontSize14];
         _datelineLab.textColor = LIGHT_TEXT_COLOR;
     }
     return _datelineLab;
@@ -346,7 +346,7 @@
 - (UILabel *)tipLab {
     if (_tipLab == nil) {
         _tipLab = [[UILabel alloc] init];
-        _tipLab.font = [FontSize HomecellTimeFontSize14];
+        _tipLab.font = [DZFontSize HomecellTimeFontSize14];
         _tipLab.textColor = LIGHT_TEXT_COLOR;
         _tipLab.textAlignment = NSTextAlignmentRight;
     }

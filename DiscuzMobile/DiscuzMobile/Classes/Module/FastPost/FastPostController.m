@@ -490,7 +490,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
     if (tableView == self.tableView) {
         UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
-        header.textLabel.font = [FontSize HomecellTimeFontSize14];
+        header.textLabel.font = [DZFontSize HomecellTimeFontSize14];
         header.contentView.backgroundColor = [UIColor whiteColor];
         [self leftTableSet];
     }

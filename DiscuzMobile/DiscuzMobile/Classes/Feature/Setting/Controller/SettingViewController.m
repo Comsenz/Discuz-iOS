@@ -86,8 +86,8 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellId];
-        cell.textLabel.font = [FontSize messageFontSize14];
-        cell.detailTextLabel.font = [FontSize ActiveListFontSize11];
+        cell.textLabel.font = [DZFontSize messageFontSize14];
+        cell.detailTextLabel.font = [DZFontSize ActiveListFontSize11];
         if (indexPath.section == 0 && indexPath.row == 0) {
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }

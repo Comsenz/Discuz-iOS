@@ -140,7 +140,7 @@
         _messageLabel = [[ChatYYLabel alloc] init];
         _messageLabel.userInteractionEnabled = YES;
         _messageLabel.numberOfLines = 0;
-        _messageLabel.font = [FontSize HomecellNameFontSize16];
+        _messageLabel.font = [DZFontSize HomecellNameFontSize16];
         _messageLabel.textVerticalAlignment = YYTextVerticalAlignmentCenter;
         _messageLabel.displaysAsynchronously = YES;
         _messageLabel.ignoreCommonProperties = YES;

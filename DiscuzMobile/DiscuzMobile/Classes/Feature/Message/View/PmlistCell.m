@@ -28,7 +28,7 @@
     //    self.detailLab.backgroundColor= [UIColor redColor];
     self.titleLab.textAlignment = NSTextAlignmentLeft;
     self.titleLab.textColor = MAIN_TITLE_COLOR;
-    self.titleLab.font = [FontSize HomecellNameFontSize16];
+    self.titleLab.font = [DZFontSize HomecellNameFontSize16];
     [self.contentView addSubview:self.titleLab];
 }
 

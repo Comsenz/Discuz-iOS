@@ -99,8 +99,8 @@ NSString * const domainName = @"name";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass([self class])];
-        cell.detailTextLabel.font = [FontSize ActiveListFontSize11];
-        cell.textLabel.font = [FontSize messageFontSize14];
+        cell.detailTextLabel.font = [DZFontSize ActiveListFontSize11];
+        cell.textLabel.font = [DZFontSize messageFontSize14];
     }
     NSDictionary *domainDic = self.dataSourceArr[indexPath.row];
     

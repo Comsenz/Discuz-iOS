@@ -31,21 +31,21 @@
     [self.contentView addSubview:self.iconV];
     
     self.titleLab = [[UILabel alloc] init];
-    self.titleLab.font = [FontSize HomecellTitleFontSize17];
+    self.titleLab.font = [DZFontSize HomecellTitleFontSize17];
     [self.contentView addSubview:self.titleLab];
     
     self.numLab = [[UILabel alloc] init];
-    self.numLab.font = [FontSize HomecellTimeFontSize16];
+    self.numLab.font = [DZFontSize HomecellTimeFontSize16];
     self.numLab.textColor = LIGHT_TEXT_COLOR;
     [self.contentView addSubview:self.numLab];
     
     self.postsLab = [[UILabel alloc] init];
-    self.postsLab.font = [FontSize HomecellTimeFontSize16];
+    self.postsLab.font = [DZFontSize HomecellTimeFontSize16];
     self.postsLab.textColor = LIGHT_TEXT_COLOR;
     [self.contentView addSubview:self.postsLab];
     
     self.desLab = [[UILabel alloc] init];
-    self.desLab.font = [FontSize HomecellTimeFontSize16];
+    self.desLab.font = [DZFontSize HomecellTimeFontSize16];
     self.desLab.textColor = LIGHT_TEXT_COLOR;
     [self.contentView addSubview:self.desLab];
     

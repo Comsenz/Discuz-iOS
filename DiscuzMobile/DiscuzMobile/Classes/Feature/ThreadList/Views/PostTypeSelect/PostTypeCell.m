@@ -35,7 +35,7 @@
     self.titleLab = [[UILabel alloc] init];
     self.titleLab.textColor = MAIN_COLLOR;
     self.titleLab.textAlignment = NSTextAlignmentCenter;
-    self.titleLab.font = [FontSize NavTitleFontSize18];
+    self.titleLab.font = [DZFontSize NavTitleFontSize18];
     [self.bgView addSubview:self.titleLab];
 }
 

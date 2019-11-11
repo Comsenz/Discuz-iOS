@@ -23,7 +23,7 @@
     [self.contentView addSubview:self.headV];
     
     self.nameLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.headV.frame) + 10, CGRectGetMinY(self.headV.frame), 150, CGRectGetHeight(self.headV.frame))];
-    self.nameLab.font = [FontSize HomecellNameFontSize16];
+    self.nameLab.font = [DZFontSize HomecellNameFontSize16];
 //    self.nameLab.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.nameLab];
     
@@ -31,7 +31,7 @@
     self.sendBtn.frame = CGRectMake(WIDTH - 55, 18, 45, 24);
     [self.sendBtn setTitleColor:NAVI_BUTTON_COLLOR forState:UIControlStateNormal];
     self.sendBtn.highlighted = YES;
-    self.sendBtn.titleLabel.font = [FontSize forumInfoFontSize12];
+    self.sendBtn.titleLabel.font = [DZFontSize forumInfoFontSize12];
     [self.contentView addSubview:self.sendBtn];
     
     

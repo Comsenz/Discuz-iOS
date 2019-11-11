@@ -33,7 +33,7 @@
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.titleTextField = [[UITextField alloc] initWithFrame:CGRectMake(15, 5, WIDTH - 20, 45)];
     self.titleTextField.placeholder = @" 标题(最多只能输入80个字符)";
-    self.titleTextField.font = [FontSize HomecellTitleFontSize15];
+    self.titleTextField.font = [DZFontSize HomecellTitleFontSize15];
     [self.contentView addSubview:self.titleTextField];
 }
 

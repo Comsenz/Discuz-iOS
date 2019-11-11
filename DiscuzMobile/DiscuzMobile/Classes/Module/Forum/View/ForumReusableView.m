@@ -89,7 +89,7 @@
 - (UILabel *)textLab {
     if (_textLab == nil) {
         _textLab = [[UILabel alloc] init];
-        _textLab.font = [FontSize HomecellTitleFontSize17];
+        _textLab.font = [DZFontSize HomecellTitleFontSize17];
         _textLab.textColor = MAIN_COLLOR;
     }
     return _textLab;

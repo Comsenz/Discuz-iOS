@@ -33,7 +33,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:NAVI_TITLE_COLOR,NSForegroundColorAttributeName,[FontSize NavTitleFontSize18],NSFontAttributeName, nil];
+    NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:NAVI_TITLE_COLOR,NSForegroundColorAttributeName,[DZFontSize NavTitleFontSize18],NSFontAttributeName, nil];
     self.navigationController.navigationBar.titleTextAttributes = dict;
     [self createBarBtn:@"back" type:NavItemImage Direction:NavDirectionLeft];
     

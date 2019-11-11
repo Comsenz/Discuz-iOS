@@ -21,11 +21,11 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.detailTextView = [[DZPlaceholderTextView alloc] initWithFrame:CGRectMake(5, 10, WIDTH-10, CGRectGetHeight(self.frame) -20)];
-    self.detailTextView.font = [FontSize HomecellTitleFontSize15];
+    self.detailTextView.font = [DZFontSize HomecellTitleFontSize15];
     
     [self.contentView addSubview:self.detailTextView];
     self.detailTextView.placeholder = @" 活动详情";
-    self.detailTextView.font  = [FontSize HomecellTitleFontSize15];
+    self.detailTextView.font  = [DZFontSize HomecellTitleFontSize15];
 }
 
 - (void)layoutSubviews {

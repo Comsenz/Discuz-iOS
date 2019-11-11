@@ -56,7 +56,7 @@
     
     JTSegmentedCell *cell = [[JTSegmentedCell alloc] init];
     cell.label.text = text;
-    cell.label.font = [FontSize HomecellTitleFontSize17];
+    cell.label.font = [DZFontSize HomecellTitleFontSize17];
     cell.label.textColor = MAIN_TITLE_COLOR;
     cell.imageView.image = image;
     return cell;

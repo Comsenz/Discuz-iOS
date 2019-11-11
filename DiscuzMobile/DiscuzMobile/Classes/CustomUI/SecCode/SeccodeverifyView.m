@@ -123,7 +123,7 @@
     _yanTextField.layer.borderWidth = 2.0f;
     _yanTextField.layer.cornerRadius = 5;
     _yanTextField.layer.borderColor = MAIN_COLLOR.CGColor;
-    _yanTextField.font = [FontSize forumtimeFontSize14];//14
+    _yanTextField.font = [DZFontSize forumtimeFontSize14];//14
     [bgview addSubview:_yanTextField];
     
     //验证码webview
@@ -148,7 +148,7 @@
     [bgview addSubview:_secTextField];
     if ([DataCheck isValidString:[self.secureData objectForKey:@"secqaa"]]) {
         _secqaaLabel.frame = CGRectMake(CGRectGetMinX(_identWebView.frame), CGRectGetMaxY(_identWebView.frame) + 15,CGRectGetWidth(_identWebView.frame), 40);
-        _secqaaLabel.font = [FontSize forumtimeFontSize14];
+        _secqaaLabel.font = [DZFontSize forumtimeFontSize14];
         _secqaaLabel.textAlignment = NSTextAlignmentCenter;
         
         _secTextField.frame = CGRectMake(CGRectGetMinX(buttonSeccode.frame), CGRectGetMaxY(_identWebView.frame) + 15, CGRectGetWidth(buttonSeccode.frame), 40);
@@ -158,7 +158,7 @@
         _secTextField.layer.borderWidth = 2.0f;
         _secTextField.layer.cornerRadius = 5;
         _secTextField.layer.borderColor = MAIN_COLLOR.CGColor;
-        _secTextField.font = [FontSize forumtimeFontSize14];//14
+        _secTextField.font = [DZFontSize forumtimeFontSize14];//14
     }
     //    _yanTextField.delegate = self;
     UIButton * buttonpost = [UIButton buttonWithType:UIButtonTypeCustom];

@@ -39,12 +39,12 @@
     _startLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.postImageView.frame) + 10, CGRectGetMinY(self.postImageView.frame) + 10, 80, 15)];
     _startLabel.attributedText = [@"开始时间:" getAttributeStr];
     
-    _startLabel.font = [FontSize forumtimeFontSize14];
+    _startLabel.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:_startLabel];
     
     self.beginTimeField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_startLabel.frame), CGRectGetMinY(_startLabel.frame), CGRectGetWidth(self.frame) - 180, 45)];
     self.beginTimeField.placeholder = @"请输入开始时间";
-    self.beginTimeField.font = [FontSize forumtimeFontSize14];
+    self.beginTimeField.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:self.beginTimeField];
     
     _lineView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.postImageView.frame) + 10, CGRectGetMaxY(self.beginTimeField.frame), CGRectGetWidth(self.frame) - 150, 1)];
@@ -53,12 +53,12 @@
     
     _endLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(_startLabel.frame), CGRectGetMaxY(_lineView.frame) + 10, 80, CGRectGetHeight(_startLabel.frame))];
     _endLabel.attributedText = [@"结束时间:" getAttributeStr];
-    _endLabel.font = [FontSize forumtimeFontSize14];
+    _endLabel.font = [DZFontSize forumtimeFontSize14];
     
     [self.contentView addSubview:_endLabel];
     
     self.endTimeField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.beginTimeField.frame), CGRectGetMinY(_endLabel.frame) - 15, CGRectGetWidth(self.beginTimeField.frame), CGRectGetHeight(self.beginTimeField.frame))];
-    self.endTimeField.font = [FontSize forumtimeFontSize14];
+    self.endTimeField.font = [DZFontSize forumtimeFontSize14];
     self.endTimeField.placeholder = @"请输入结束时间";
     self.endTimeField.tag = 801;
     [self.contentView addSubview:self.endTimeField];

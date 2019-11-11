@@ -20,11 +20,11 @@
 - (void)commitInit {
     self.tipLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, (WIDTH - 35) / 3, 20)];
     self.tipLab.textColor = MESSAGE_COLOR;
-    self.tipLab.font = [FontSize HomecellmessageNumLFontSize10];
+    self.tipLab.font = [DZFontSize HomecellmessageNumLFontSize10];
     [self addSubview:self.tipLab];
     
     self.infoLab = [[ApplyStatusView alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.tipLab.frame), CGRectGetMaxY(self.tipLab.frame) + 10, CGRectGetWidth(self.tipLab.frame), 20)];
-    self.infoLab.statusLab.font = [FontSize ActiveListFontSize11];
+    self.infoLab.statusLab.font = [DZFontSize ActiveListFontSize11];
     [self addSubview:self.infoLab];
     
 }

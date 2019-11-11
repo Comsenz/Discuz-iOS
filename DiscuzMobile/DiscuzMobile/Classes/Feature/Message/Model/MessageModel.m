@@ -33,7 +33,7 @@
     _text = text;
     
     CGFloat textWidth = 250.0;
-    UIFont *fontSize = [FontSize HomecellNameFontSize16];
+    UIFont *fontSize = [DZFontSize HomecellNameFontSize16];
     
     NSMutableString *string = text.mutableCopy;
     NSMutableAttributedString *textstr = [[NSMutableAttributedString alloc] initWithString:string];

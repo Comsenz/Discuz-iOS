@@ -1,16 +1,16 @@
 //
-//  FontSize.m
+//  DZFontSize.m
 //  DiscuzMobile
 //
 //  Created by HB on 16/7/12.
 //  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
-#import "FontSize.h"
+#import "DZFontSize.h"
 
 #define jtFontName iOS9?@"PingFangSC-Light":@".PingFang-SC-Light"
 
-@implementation FontSize
+@implementation DZFontSize
 
 + (UIFont *)fontSize:(CGFloat)size {
     return [UIFont fontWithName:jtFontName size:size];

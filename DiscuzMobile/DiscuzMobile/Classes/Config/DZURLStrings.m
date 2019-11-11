@@ -1,12 +1,12 @@
 //
-//  URLStrings.m
+//  DZURLStrings.m
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/2/2.
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "URLStrings.h"
+#import "DZURLStrings.h"
 
 NSString * const url_Check =  @"?version=5&module=check";
 

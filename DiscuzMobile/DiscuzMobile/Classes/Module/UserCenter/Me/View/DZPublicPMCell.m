@@ -7,7 +7,7 @@
 //
 
 #import "DZPublicPMCell.h"
-#import "FontSize.h"
+
 @implementation DZPublicPMCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -26,17 +26,17 @@
     
     CGRect frame = self.headImageView.frame;
     self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 10, 190, 15)];
-    self.nameLabel.font = [FontSize forumtimeFontSize14];//13-14
+    self.nameLabel.font = [DZFontSize forumtimeFontSize14];//13-14
     self.nameLabel.textColor = MAIN_COLLOR;
     [self addSubview:self.nameLabel];
     
     self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(WIDTH-100, 10,90, 15)];
-    self.timeLabel.font = [FontSize HomecellmessageNumLFontSize10];//10
+    self.timeLabel.font = [DZFontSize HomecellmessageNumLFontSize10];//10
     self.timeLabel.textColor = mRGBColor(180, 180, 180);
     [self addSubview:self.timeLabel];
     
     self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, WIDTH-(frame.size.width+20+10), 45)];
-    self.contenLabel.font =  [FontSize forumInfoFontSize12];//12
+    self.contenLabel.font =  [DZFontSize forumInfoFontSize12];//12
     self.contenLabel.numberOfLines = 0;
     [self addSubview:self.contenLabel];
     

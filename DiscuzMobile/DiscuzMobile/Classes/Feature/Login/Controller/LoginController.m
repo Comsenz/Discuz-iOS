@@ -79,7 +79,7 @@ NSString * const debugPassword = @"debugPassword";
         UIButton *autoFullBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         autoFullBtn.frame = CGRectMake(WIDTH - 60, 20, 40, 20);
         [autoFullBtn addTarget:self action:@selector(isHaveFullContent) forControlEvents:UIControlEventTouchUpInside];
-        autoFullBtn.titleLabel.font = [FontSize messageFontSize14];
+        autoFullBtn.titleLabel.font = [DZFontSize messageFontSize14];
         [autoFullBtn setTitle:@"填充" forState:UIControlStateNormal];
         autoFullBtn.layer.borderWidth = 1;
         [autoFullBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];

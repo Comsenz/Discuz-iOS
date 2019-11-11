@@ -31,14 +31,14 @@
     self.titleLab.backgroundColor = [UIColor whiteColor];
     self.titleLab.text = @"选项类型";
     self.titleLab.textColor = MAIN_TITLE_COLOR;
-    self.titleLab.font = [FontSize HomecellTimeFontSize14];
+    self.titleLab.font = [DZFontSize HomecellTimeFontSize14];
     [self.contentView addSubview:self.titleLab];
     
     self.singleRadio = [[QRadioButton alloc] initWithDelegate:self groupId:@"groupId1"];
     self.singleRadio.frame = CGRectMake(10, CGRectGetMaxY(self.titleLab.frame) + 10, 60, 30);
     [self.singleRadio setTitle:@"单选" forState:UIControlStateNormal];
     [self.singleRadio setTitleColor:MAIN_TITLE_COLOR forState:UIControlStateNormal];
-    self.singleRadio.titleLabel.font = [FontSize HomecellNameFontSize16];
+    self.singleRadio.titleLabel.font = [DZFontSize HomecellNameFontSize16];
     
     [self.singleRadio setImage:[UIImage imageNamed:@"option"] forState:(UIControlStateNormal)];
     [self.singleRadio setImage:[UIImage imageNamed:@"option_select"] forState:(UIControlStateSelected)];
@@ -48,7 +48,7 @@
     self.multiRadio.frame = CGRectMake(CGRectGetMaxX(self.singleRadio.frame) + 30, CGRectGetMinY(self.singleRadio.frame), CGRectGetWidth(self.singleRadio.frame), CGRectGetHeight(self.singleRadio.frame));
     [self.multiRadio setTitle:@"多选" forState:UIControlStateNormal];
     [self.multiRadio setTitleColor:MAIN_TITLE_COLOR forState:UIControlStateNormal];
-    self.multiRadio.titleLabel.font = [FontSize HomecellNameFontSize16];
+    self.multiRadio.titleLabel.font = [DZFontSize HomecellNameFontSize16];
     [self.multiRadio setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.multiRadio setImage:[UIImage imageNamed:@"option"] forState:UIControlStateNormal];
     [self.multiRadio setImage:[UIImage imageNamed:@"option_select"] forState:UIControlStateSelected];

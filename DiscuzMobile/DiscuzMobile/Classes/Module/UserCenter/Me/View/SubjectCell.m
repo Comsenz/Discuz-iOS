@@ -7,7 +7,7 @@
 //
 
 #import "SubjectCell.h"
-#import "FontSize.h"
+
 @implementation SubjectCell
 
 
@@ -21,18 +21,18 @@
 
 - (void)createUI {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, WIDTH-25, 50)];
-    self.titleLabel.font = [FontSize HomecellNameFontSize16];
+    self.titleLabel.font = [DZFontSize HomecellNameFontSize16];
     self.titleLabel.textColor = MAIN_TITLE_COLOR;
     self.titleLabel.numberOfLines = 0;
     [self addSubview:self.titleLabel];
     
     self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.titleLabel.frame), self.titleLabel.frame.size.height, 100, 15)];
-    self.nameLabel.font = [FontSize forumInfoFontSize12];//12
+    self.nameLabel.font = [DZFontSize forumInfoFontSize12];//12
     self.nameLabel.textColor = MAIN_COLLOR;
     [self addSubview:self.nameLabel];
     
     self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.nameLabel.frame) + 5, self.titleLabel.frame.size.height, 120, 15)];
-    self.timeLabel.font = [FontSize forumInfoFontSize12];//12
+    self.timeLabel.font = [DZFontSize forumInfoFontSize12];//12
     self.timeLabel.textColor = mRGBColor(180, 180, 180);
     [self addSubview:self.timeLabel];
 }
@@ -53,7 +53,7 @@
         if ([displayorder isEqualToString:@"-2"] || [displayorder isEqualToString:@"-1"]) {
             NSMutableAttributedString *subjectStr = [[NSMutableAttributedString alloc] initWithString:subject];
             NSDictionary *attDic = @{NSForegroundColorAttributeName:LIGHT_TEXT_COLOR,
-                                     NSFontAttributeName:[FontSize forumInfoFontSize12]
+                                     NSFontAttributeName:[DZFontSize forumInfoFontSize12]
                                      };
             [subjectStr addAttributes:attDic range:NSMakeRange(subject.length - 5, 5)];
             self.titleLabel.attributedText = subjectStr;

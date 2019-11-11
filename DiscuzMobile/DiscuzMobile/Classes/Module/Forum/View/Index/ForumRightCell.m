@@ -43,18 +43,18 @@
     [self.contentView addSubview:self.titleLab];
     
     self.numLab = [[UILabel alloc] init];
-    self.numLab.font = [FontSize ActiveListFontSize11];
+    self.numLab.font = [DZFontSize ActiveListFontSize11];
     self.numLab.textColor = MESSAGE_COLOR;
     [self.contentView addSubview:self.numLab];
     
     self.postsLab = [[UILabel alloc] init];
-    self.postsLab.font = [FontSize ActiveListFontSize11];
+    self.postsLab.font = [DZFontSize ActiveListFontSize11];
     self.postsLab.textColor = MESSAGE_COLOR;
     [self.contentView addSubview:self.postsLab];
     
     //收藏按钮
     self.collectionBtn = [LightGrayButton buttonWithType:UIButtonTypeCustom];
-    self.collectionBtn.titleLabel.font = [FontSize ForumInfoFontSize];
+    self.collectionBtn.titleLabel.font = [DZFontSize ForumInfoFontSize];
     self.collectionBtn.layer.borderWidth = 0.6;
     self.collectionBtn.cs_acceptEventInterval = 1;
     self.collectionBtn.hidden = YES;
@@ -133,7 +133,7 @@
             NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithString:forumName];
             NSRange todayRange = {infoModel.name.length,todayposts.length};
             [att addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:todayRange];
-            [att addAttribute:NSFontAttributeName value:[FontSize fontSize:12] range:todayRange];
+            [att addAttribute:NSFontAttributeName value:[DZFontSize fontSize:12] range:todayRange];
             self.titleLab.attributedText = att;
         } else {
             self.titleLab.text = infoModel.name;

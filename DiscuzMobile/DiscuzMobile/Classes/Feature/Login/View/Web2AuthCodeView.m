@@ -25,7 +25,7 @@
     self.backgroundColor = [UIColor whiteColor];
     self.textField = [[UITextField alloc] init];
     self.textField.placeholder = @"请输入验证码";
-    self.textField.font = [FontSize forumtimeFontSize14];
+    self.textField.font = [DZFontSize forumtimeFontSize14];
     [self.textField setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:self.textField];
     [self setHidden:YES];

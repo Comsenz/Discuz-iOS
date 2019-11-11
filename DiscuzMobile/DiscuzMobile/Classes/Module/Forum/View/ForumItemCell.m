@@ -27,7 +27,7 @@
     [self.contentView addSubview:self.iconV];
     
     self.titleLab = [[UILabel alloc] init];
-    self.titleLab.font = [FontSize HomecellTitleFontSize15];
+    self.titleLab.font = [DZFontSize HomecellTitleFontSize15];
 //    self.titleLab.numberOfLines = 0;
 //    self.titleLab.textAlignment = NSTextAlignmentLeft;
     self.titleLab.textAlignment = NSTextAlignmentCenter;
@@ -35,13 +35,13 @@
     [self.contentView addSubview:_titleLab];
     
     self.numLab = [[UILabel alloc] init];
-    self.numLab.font = [FontSize ForumInfoFontSize];
+    self.numLab.font = [DZFontSize ForumInfoFontSize];
     self.numLab.textAlignment = NSTextAlignmentCenter;
     self.numLab.textColor = LIGHT_TEXT_COLOR;
     [self.contentView addSubview:self.numLab];
     
 //    self.postsLab = [[UILabel alloc] init];
-//    self.postsLab.font = [FontSize HomecellmessageNumLFontSize10];
+//    self.postsLab.font = [DZFontSize HomecellmessageNumLFontSize10];
 //    self.postsLab.textColor = LIGHT_TEXT_COLOR;
 //    [self.contentView addSubview:self.postsLab];
 

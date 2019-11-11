@@ -36,25 +36,25 @@
     
     self.titleLab = [[UILabel alloc] init];
     self.titleLab.textColor = MAIN_COLLOR;
-    self.titleLab.font = [FontSize HomecellTitleFontSize17];
+    self.titleLab.font = [DZFontSize HomecellTitleFontSize17];
     [self addSubview:self.titleLab];
     self.titleLab.text = @"";
     
     self.todayPostLab = [[UILabel alloc] init];
     self.todayPostLab.textColor = LIGHT_TEXT_COLOR;
-    self.todayPostLab.font = [FontSize forumInfoFontSize12];
+    self.todayPostLab.font = [DZFontSize forumInfoFontSize12];
     [self addSubview:self.todayPostLab];
     self.todayPostLab.text = @"今日：0";
     
     self.threadsLab = [[UILabel alloc] init];
     self.threadsLab.textColor = LIGHT_TEXT_COLOR;
-    self.threadsLab.font = [FontSize forumInfoFontSize12];
+    self.threadsLab.font = [DZFontSize forumInfoFontSize12];
     [self addSubview:self.threadsLab];
     self.threadsLab.text = @"主题：0";
     
     self.bankLab = [[UILabel alloc] init];
     self.bankLab.textColor = LIGHT_TEXT_COLOR;
-    self.bankLab.font = [FontSize forumInfoFontSize12];
+    self.bankLab.font = [DZFontSize forumInfoFontSize12];
     [self addSubview:self.bankLab];
     self.bankLab.text = @"排名：暂无";
     
@@ -148,7 +148,7 @@
     if (!_describLab) {
         _describLab = [[UILabel alloc] init];
         _describLab.textColor = DARK_TEXT_COLOR;
-        _describLab.font = [FontSize forumtimeFontSize14];
+        _describLab.font = [DZFontSize forumtimeFontSize14];
     }
     return _describLab;
 }

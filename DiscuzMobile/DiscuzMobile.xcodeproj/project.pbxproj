@@ -29,7 +29,7 @@
 		27473AC91DD30C380024375F /* NSString+MoreMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 27473AB41DD30C380024375F /* NSString+MoreMethod.m */; };
 		27473ACA1DD30C380024375F /* UIImage+DrawCricleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 27473AB61DD30C380024375F /* UIImage+DrawCricleImage.m */; };
 		27473ACB1DD30C380024375F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27473AB81DD30C380024375F /* UIView+Extension.m */; };
-		27473ACD1DD30C380024375F /* FontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 27473ABD1DD30C380024375F /* FontSize.m */; };
+		27473ACD1DD30C380024375F /* DZFontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 27473ABD1DD30C380024375F /* DZFontSize.m */; };
 		27473ACF1DD30C380024375F /* DZDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 27473AC11DD30C380024375F /* DZDevice.m */; };
 		274C95161EE647C300163106 /* AttachmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C95151EE647C300163106 /* AttachmentBar.m */; };
 		274F387D1EEA44F6009F4E10 /* ImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F387C1EEA44F6009F4E10 /* ImagePickerView.m */; };
@@ -337,7 +337,7 @@
 		940BB6F02079F7C7001BC1D1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D44F702079C490000DA603 /* MessageUI.framework */; };
 		941111061FDFD14C0033E94C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D1C8F21DD2BE8E00B835B7 /* Assets.xcassets */; };
 		94171FF42025665E00A1328B /* JTCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94171FF32025665E00A1328B /* JTCacheManager.m */; };
-		94195AED20246E120024D074 /* URLStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 94195AEC20246E120024D074 /* URLStrings.m */; };
+		94195AED20246E120024D074 /* DZURLStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 94195AEC20246E120024D074 /* DZURLStrings.m */; };
 		942959DF22DC5EA10020B0E1 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 942959DC22DC5EA10020B0E1 /* MBProgressHUD+Add.m */; };
 		942959E322DC5EA10020B0E1 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 942959DE22DC5EA10020B0E1 /* MBProgressHUD.bundle */; };
 		942959E922DC6ABB0020B0E1 /* UIView+CurrentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942959E722DC6ABA0020B0E1 /* UIView+CurrentController.m */; };
@@ -453,8 +453,8 @@
 		27473AB61DD30C380024375F /* UIImage+DrawCricleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DrawCricleImage.m"; sourceTree = "<group>"; };
 		27473AB71DD30C380024375F /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		27473AB81DD30C380024375F /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		27473ABC1DD30C380024375F /* FontSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontSize.h; sourceTree = "<group>"; };
-		27473ABD1DD30C380024375F /* FontSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontSize.m; sourceTree = "<group>"; };
+		27473ABC1DD30C380024375F /* DZFontSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZFontSize.h; sourceTree = "<group>"; };
+		27473ABD1DD30C380024375F /* DZFontSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZFontSize.m; sourceTree = "<group>"; };
 		27473AC01DD30C380024375F /* DZDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZDevice.h; sourceTree = "<group>"; };
 		27473AC11DD30C380024375F /* DZDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZDevice.m; sourceTree = "<group>"; };
 		27473AC31DD30C380024375F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -462,7 +462,7 @@
 		274C95151EE647C300163106 /* AttachmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachmentBar.m; sourceTree = "<group>"; };
 		274F387B1EEA44F6009F4E10 /* ImagePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerView.h; sourceTree = "<group>"; };
 		274F387C1EEA44F6009F4E10 /* ImagePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerView.m; sourceTree = "<group>"; };
-		2750F7E41EB2F77A008E9E80 /* BaseConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseConfig.h; sourceTree = "<group>"; };
+		2750F7E41EB2F77A008E9E80 /* DZBaseConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZBaseConfig.h; sourceTree = "<group>"; };
 		275BABC51F346EE100DB804B /* AddressSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressSelectView.h; sourceTree = "<group>"; };
 		275BABC61F346EE100DB804B /* AddressSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressSelectView.m; sourceTree = "<group>"; };
 		275BABC81F346EF500DB804B /* addressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressModel.h; sourceTree = "<group>"; };
@@ -1023,8 +1023,8 @@
 		940BB6EC2079F799001BC1D1 /* SendEmailHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendEmailHelper.m; sourceTree = "<group>"; };
 		94171FF22025665E00A1328B /* JTCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCacheManager.h; sourceTree = "<group>"; };
 		94171FF32025665E00A1328B /* JTCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTCacheManager.m; sourceTree = "<group>"; };
-		94195AEB20246E120024D074 /* URLStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLStrings.h; sourceTree = "<group>"; };
-		94195AEC20246E120024D074 /* URLStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLStrings.m; sourceTree = "<group>"; };
+		94195AEB20246E120024D074 /* DZURLStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZURLStrings.h; sourceTree = "<group>"; };
+		94195AEC20246E120024D074 /* DZURLStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZURLStrings.m; sourceTree = "<group>"; };
 		942959DC22DC5EA10020B0E1 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		942959DD22DC5EA10020B0E1 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		942959DE22DC5EA10020B0E1 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -1038,8 +1038,8 @@
 		943430982022E56E009C0102 /* AppDelegate+XinGe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XinGe.m"; sourceTree = "<group>"; };
 		943430A12022EB2F009C0102 /* AppDelegate+Local.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Local.h"; sourceTree = "<group>"; };
 		943430A22022EB2F009C0102 /* AppDelegate+Local.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Local.m"; sourceTree = "<group>"; };
-		943430A62022F551009C0102 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
-		943430A82022F870009C0102 /* constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
+		943430A62022F551009C0102 /* DZColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZColor.h; sourceTree = "<group>"; };
+		943430A82022F870009C0102 /* DZConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZConstant.h; sourceTree = "<group>"; };
 		9434AFAA212A627B00DCC691 /* UIScrollView+GestureConflict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GestureConflict.h"; sourceTree = "<group>"; };
 		9434AFAB212A627B00DCC691 /* UIScrollView+GestureConflict.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GestureConflict.m"; sourceTree = "<group>"; };
 		9445AA1A20649D0C0008F641 /* DZApiRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZApiRequest.h; sourceTree = "<group>"; };
@@ -1923,12 +1923,12 @@
 		7062110A237936C800130B9D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				7062110B237936C800130B9D /* LoginModule.h */,
+				7062110F237936C800130B9D /* MyPerson.h */,
 				7062110C237936C800130B9D /* MyPerson.m */,
 				7062110D237936C800130B9D /* Environment.h */,
-				7062110E237936C800130B9D /* LoginModule.m */,
-				7062110F237936C800130B9D /* MyPerson.h */,
 				70621110237936C800130B9D /* Environment.m */,
+				7062110B237936C800130B9D /* LoginModule.h */,
+				7062110E237936C800130B9D /* LoginModule.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2032,18 +2032,18 @@
 		70621142237936C800130B9D /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				70621143237936C800130B9D /* SearchListCell.m */,
 				70621144237936C800130B9D /* TTSearchBar.h */,
-				70621145237936C800130B9D /* TTSearchModel.m */,
-				70621146237936C800130B9D /* SearchHistoryController.m */,
-				70621147237936C800130B9D /* TTSearchController.h */,
-				70621148237936C800130B9D /* CustomSearchBarView.h */,
 				70621149237936C800130B9D /* TTSearchBar.m */,
 				7062114A237936C800130B9D /* SearchListCell.h */,
+				70621143237936C800130B9D /* SearchListCell.m */,
+				7062114E237936C800130B9D /* TTSearchModel.h */,
+				70621145237936C800130B9D /* TTSearchModel.m */,
+				70621147237936C800130B9D /* TTSearchController.h */,
 				7062114B237936C800130B9D /* TTSearchController.m */,
+				70621148237936C800130B9D /* CustomSearchBarView.h */,
 				7062114C237936C800130B9D /* CustomSearchBarView.m */,
 				7062114D237936C800130B9D /* SearchHistoryController.h */,
-				7062114E237936C800130B9D /* TTSearchModel.h */,
+				70621146237936C800130B9D /* SearchHistoryController.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -2686,12 +2686,12 @@
 		943430A92022FAD0009C0102 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				943430A62022F551009C0102 /* Color.h */,
-				943430A82022F870009C0102 /* constant.h */,
-				2750F7E41EB2F77A008E9E80 /* BaseConfig.h */,
+				943430A62022F551009C0102 /* DZColor.h */,
+				943430A82022F870009C0102 /* DZConstant.h */,
+				2750F7E41EB2F77A008E9E80 /* DZBaseConfig.h */,
+				94195AEB20246E120024D074 /* DZURLStrings.h */,
+				94195AEC20246E120024D074 /* DZURLStrings.m */,
 				27473AC31DD30C380024375F /* PrefixHeader.pch */,
-				94195AEB20246E120024D074 /* URLStrings.h */,
-				94195AEC20246E120024D074 /* URLStrings.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -2860,8 +2860,8 @@
 		9438F06F22F3E1D10093EB0B /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				27473ABC1DD30C380024375F /* FontSize.h */,
-				27473ABD1DD30C380024375F /* FontSize.m */,
+				27473ABC1DD30C380024375F /* DZFontSize.h */,
+				27473ABD1DD30C380024375F /* DZFontSize.m */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -3498,9 +3498,9 @@
 				70621267237936C800130B9D /* DiscoverManagerController.m in Sources */,
 				70621294237936C900130B9D /* VoteDayVisableCell.m in Sources */,
 				70621285237936C900130B9D /* PostActivityViewController.m in Sources */,
-				27473ACD1DD30C380024375F /* FontSize.m in Sources */,
+				27473ACD1DD30C380024375F /* DZFontSize.m in Sources */,
 				947ECB202064D403002D3536 /* WSPhotosBroseVC.m in Sources */,
-				94195AED20246E120024D074 /* URLStrings.m in Sources */,
+				94195AED20246E120024D074 /* DZURLStrings.m in Sources */,
 				70621078237935ED00130B9D /* RNCachingURLProtocol.m in Sources */,
 				277EDC701E6D5B8D00E8F0E1 /* QRadioButton.m in Sources */,
 				706212CC237936C900130B9D /* ViewPollpotionViewController.m in Sources */,

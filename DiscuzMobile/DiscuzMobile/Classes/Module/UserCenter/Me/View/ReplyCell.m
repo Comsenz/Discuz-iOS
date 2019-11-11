@@ -22,24 +22,24 @@
 - (void)createUI {
     self.timeLab = [[UILabel alloc] init];
     self.timeLab.backgroundColor = [UIColor whiteColor];
-    self.timeLab.font = [FontSize HomecellTimeFontSize14];
+    self.timeLab.font = [DZFontSize HomecellTimeFontSize14];
     self.timeLab.textColor = LIGHT_TEXT_COLOR;
     [self.contentView addSubview:self.timeLab];
     
     self.floorLab = [[UILabel alloc] init];
-    self.floorLab.font = [FontSize HomecellTimeFontSize14];
+    self.floorLab.font = [DZFontSize HomecellTimeFontSize14];
     self.floorLab.textAlignment = NSTextAlignmentRight;
     self.floorLab.textColor = LIGHT_TEXT_COLOR;
     [self.contentView addSubview:self.floorLab];
     
     self.messageLab = [[UILabel alloc] init];
-    self.messageLab.font = [FontSize HomecellTitleFontSize15];
+    self.messageLab.font = [DZFontSize HomecellTitleFontSize15];
     self.messageLab.numberOfLines = 0;
     [self.contentView addSubview:self.messageLab];
     
     self.subjectLab = [[UILabel alloc] init];
     self.subjectLab.textColor = LIGHT_TEXT_COLOR;
-    self.subjectLab.font = [FontSize HomecellTitleFontSize15];
+    self.subjectLab.font = [DZFontSize HomecellTitleFontSize15];
     [self.contentView addSubview:self.subjectLab];
     
 }
@@ -61,7 +61,7 @@
     self.floorLab.frame = CGRectMake(WIDTH - 15 - 50, 10, 50, 15);
     
     CGSize maxSize = CGSizeMake(WIDTH - 30, 100);
-    CGSize textSize = [self.messageLab.text sizeWithFont:[FontSize HomecellTitleFontSize15] maxSize:maxSize];
+    CGSize textSize = [self.messageLab.text sizeWithFont:[DZFontSize HomecellTitleFontSize15] maxSize:maxSize];
     
     self.messageLab.frame = CGRectMake(15, CGRectGetMaxY(self.timeLab.frame) + 10, WIDTH - 30, textSize.height);
     

@@ -59,7 +59,7 @@
     NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableAttributedString *muString = [[NSAttributedString alloc] initWithHTMLData:data options:options documentAttributes:NULL].mutableCopy;
     NSRange allRange = {0,[muString length]};
-    [muString addAttribute:NSFontAttributeName value:[FontSize HomecellTitleFontSize15] range:allRange];
+    [muString addAttribute:NSFontAttributeName value:[DZFontSize HomecellTitleFontSize15] range:allRange];
     
     self.attributedString = muString;
     [self setNeedsLayout];

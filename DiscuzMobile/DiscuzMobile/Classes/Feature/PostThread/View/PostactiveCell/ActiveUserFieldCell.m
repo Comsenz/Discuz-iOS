@@ -28,7 +28,7 @@
 - (void)commitInit {
     
     self.titleLab = [[UILabel alloc] init];
-    self.titleLab.font = [FontSize forumtimeFontSize14];
+    self.titleLab.font = [DZFontSize forumtimeFontSize14];
     self.titleLab.textAlignment = NSTextAlignmentLeft;
     self.titleLab.textColor = MAIN_TITLE_COLOR;
     self.titleLab.text = @"用户报名填写项";
@@ -78,10 +78,10 @@
                 SelectTypeButton *button = [SelectTypeButton buttonWithType:UIButtonTypeCustom];
                 [button setTitle:obj forState:UIControlStateNormal];
                 [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-                button.titleLabel.font = [FontSize forumtimeFontSize14];
+                button.titleLabel.font = [DZFontSize forumtimeFontSize14];
                 button.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
                 [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-                CGSize textSize = [obj sizeWithFont:[FontSize forumtimeFontSize14] maxSize:CGSizeMake(WIDTH / 2, MAXFLOAT)];
+                CGSize textSize = [obj sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:CGSizeMake(WIDTH / 2, MAXFLOAT)];
                 CGFloat b_width = textSize.width + addWidth;
                 
                 // ************

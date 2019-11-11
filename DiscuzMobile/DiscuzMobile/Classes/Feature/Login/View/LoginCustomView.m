@@ -42,7 +42,7 @@
     [_leftview addSubview:_imgView];
     _userNameTextField.leftView = _leftview;
     _userNameTextField.leftViewMode = UITextFieldViewModeAlways;
-    _userNameTextField.font = [FontSize HomecellNameFontSize16];//14
+    _userNameTextField.font = [DZFontSize HomecellNameFontSize16];//14
     ;
     
    _lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.frame) - 1, CGRectGetWidth(self.frame), 1)];

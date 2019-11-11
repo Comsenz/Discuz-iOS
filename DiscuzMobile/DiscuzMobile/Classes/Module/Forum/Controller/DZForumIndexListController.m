@@ -207,7 +207,7 @@
 // 向下滑（将出现的要重新计算一下）
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
-    header.textLabel.font = [FontSize HomecellTimeFontSize14];
+    header.textLabel.font = [DZFontSize HomecellTimeFontSize14];
     header.contentView.backgroundColor = [UIColor whiteColor];
     for (UIView *subview in header.subviews) {
         if (subview.tag == 2018) {

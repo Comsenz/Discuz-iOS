@@ -8,6 +8,7 @@
 
 #import "JTRequestConst.h"
 #import "JTURLRequest.h"
+#import <AFNetworking.h>
 
 @interface JTRequestOperation : AFHTTPSessionManager
 
