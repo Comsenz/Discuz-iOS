@@ -45,14 +45,14 @@
     [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
         make.top.equalTo(self).offset(10);
-        make.width.mas_equalTo(WIDTH * 0.48);
+        make.width.mas_equalTo(KScreenWidth * 0.48);
         make.height.mas_equalTo(0);
     }];
     [self.webview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.mas_right);
         make.height.mas_equalTo(0);
         make.top.equalTo(self).offset(10);
-        int width = WIDTH * 0.3;
+        int width = KScreenWidth * 0.3;
         make.width.mas_equalTo(width);
     }];
 

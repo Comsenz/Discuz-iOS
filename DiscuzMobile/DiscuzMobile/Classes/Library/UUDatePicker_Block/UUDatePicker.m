@@ -94,7 +94,7 @@
 - (void)drawRect:(CGRect)rect
 {
     if (self.frame.size.height<216 || self.frame.size.width<320)
-        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, WIDTH, 216);
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, KScreenWidth, 216);
 
     yearArray   = [self ishave:yearArray];
     monthArray  = [self ishave:monthArray];

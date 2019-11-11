@@ -119,7 +119,7 @@
         request.urlString = url_UserPost;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
-        NSLog(@"userpostreplyVariables=%@",responseObject);
+        DLog(@"userpostreplyVariables=%@",responseObject);
         [self.HUD hideAnimated:YES];
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
@@ -158,7 +158,7 @@
         [self.tableView reloadData];
         
     } failed:^(NSError *error) {
-        NSLog(@"%@",error);
+        DLog(@"%@",error);
         [self emptyShow];
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];

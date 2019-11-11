@@ -20,7 +20,7 @@
 }
 
 - (void)createUI {
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, WIDTH-25, 50)];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, KScreenWidth-25, 50)];
     self.titleLabel.font = [DZFontSize HomecellNameFontSize16];
     self.titleLabel.textColor = MAIN_TITLE_COLOR;
     self.titleLabel.numberOfLines = 0;

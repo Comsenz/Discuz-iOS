@@ -26,10 +26,10 @@
 
 - (void)commitInit {
     self.backgroundColor = [UIColor whiteColor];
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 5, WIDTH - 10, CGRectGetHeight(self.frame) - 10)];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 5, KScreenWidth - 10, CGRectGetHeight(self.frame) - 10)];
     [self addSubview:self.textField];
     
-    self.line = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetHeight(self.frame) - 0.5, WIDTH - 10, 0.5)];
+    self.line = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetHeight(self.frame) - 0.5, KScreenWidth - 10, 0.5)];
     [self addSubview:self.line];
     self.line.backgroundColor = LINE_COLOR;
     
@@ -37,8 +37,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.textField.frame = CGRectMake(10, 5, WIDTH - 10, CGRectGetHeight(self.frame) - 10);
-    self.line.frame = CGRectMake(10, CGRectGetHeight(self.frame) - 0.5, WIDTH - 10, 0.5);
+    self.textField.frame = CGRectMake(10, 5, KScreenWidth - 10, CGRectGetHeight(self.frame) - 10);
+    self.line.frame = CGRectMake(10, CGRectGetHeight(self.frame) - 0.5, KScreenWidth - 10, 0.5);
 }
 
 

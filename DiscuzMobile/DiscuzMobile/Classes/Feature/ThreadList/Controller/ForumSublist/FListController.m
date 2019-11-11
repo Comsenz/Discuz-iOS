@@ -473,7 +473,7 @@
 
 - (VerifyThreadRemindView *)verifyThreadRemindView {
     if (!_verifyThreadRemindView) {
-        _verifyThreadRemindView = [[VerifyThreadRemindView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 44)];
+        _verifyThreadRemindView = [[VerifyThreadRemindView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 44)];
         WEAKSELF;
         _verifyThreadRemindView.clickRemindBlock = ^{
             [weakSelf ToMySubjectViewController];

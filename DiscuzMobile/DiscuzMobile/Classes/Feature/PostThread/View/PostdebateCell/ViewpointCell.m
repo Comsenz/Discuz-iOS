@@ -31,11 +31,11 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.positiveLab.frame = CGRectMake(10, 10, 200, 20);
-    self.positiveTextView.frame  = CGRectMake(CGRectGetMinX(self.positiveLab.frame), CGRectGetMaxY(self.positiveLab.frame) + 10, WIDTH - 20, 80); // 120
+    self.positiveTextView.frame  = CGRectMake(CGRectGetMinX(self.positiveLab.frame), CGRectGetMaxY(self.positiveLab.frame) + 10, KScreenWidth - 20, 80); // 120
     self.positiveTextView.layer.cornerRadius = 4;
     
     self.oppositeLab.frame  = CGRectMake(CGRectGetMinX(self.positiveTextView.frame), CGRectGetMaxY(self.positiveTextView.frame) + 15, CGRectGetWidth(self.positiveLab.frame), CGRectGetHeight(self.positiveLab.frame)); // 155
-    self.oppositeTextView.frame = CGRectMake(CGRectGetMinX(self.oppositeLab.frame), CGRectGetMaxY(self.oppositeLab.frame) + 10, WIDTH - 20, 80); // 245
+    self.oppositeTextView.frame = CGRectMake(CGRectGetMinX(self.oppositeLab.frame), CGRectGetMaxY(self.oppositeLab.frame) + 10, KScreenWidth - 20, 80); // 245
     self.oppositeTextView.layer.cornerRadius = 4;
     
 }

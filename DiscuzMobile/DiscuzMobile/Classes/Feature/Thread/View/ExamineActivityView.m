@@ -38,11 +38,11 @@
     
     CGFloat maxNavMaxY = 64;
     
-    if (HEIGHT >= 812) {
+    if (KScreenHeight >= 812) {
         maxNavMaxY = 108;
         allHeight = 480;
     }
-    self.contentView.frame = CGRectMake(30, maxNavMaxY + 10, WIDTH - 60, allHeight + 90 + 20);
+    self.contentView.frame = CGRectMake(30, maxNavMaxY + 10, KScreenWidth - 60, allHeight + 90 + 20);
     self.closeBtn.frame = CGRectMake(CGRectGetWidth(self.contentView.frame) - close_width - 16, 16, close_width, close_width);
     
     self.listTableView = [[UITableView alloc] initWithFrame:CGRectMake(8, close_width + 20, CGRectGetWidth(self.contentView.frame) - 20, allHeight) style:UITableViewStylePlain];
@@ -78,7 +78,7 @@
 
 - (void)setDataModel:(ApplyActiver *)dataModel {
     CGFloat allHeight = 380;
-    if (HEIGHT >= 812) {
+    if (KScreenHeight >= 812) {
         allHeight = 480;
     }
     CGFloat close_width = 16.0;

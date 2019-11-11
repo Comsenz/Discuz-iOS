@@ -36,7 +36,7 @@
     self.showsVerticalScrollIndicator = NO;
     
     UIImageView *nameImageV = [[UIImageView alloc] init];
-    nameImageV.image = [UIImage imageNamed:LOGONAME];
+    nameImageV.image = [UIImage imageNamed:DZ_LOGONAME];
     nameImageV.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:nameImageV];
     [nameImageV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -284,9 +284,9 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     if (CGRectGetMaxY(self.thirdView.frame) + 50 > self.frame.size.height) {
-        self.contentSize = CGSizeMake(WIDTH, CGRectGetMaxY(self.thirdView.frame) + 50);
+        self.contentSize = CGSizeMake(KScreenWidth, CGRectGetMaxY(self.thirdView.frame) + 50);
     } else {
-        self.contentSize = CGSizeMake(WIDTH, self.frame.size.height + 50);
+        self.contentSize = CGSizeMake(KScreenWidth, self.frame.size.height + 50);
     }
 }
 

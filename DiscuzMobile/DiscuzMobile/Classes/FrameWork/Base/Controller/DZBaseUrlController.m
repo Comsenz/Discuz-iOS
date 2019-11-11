@@ -17,7 +17,7 @@
 @implementation DZBaseUrlController
 
 - (void)dealloc {
-    NSLog(@"urlController销毁了");
+    DLog(@"urlController销毁了");
     [[NSNotificationCenter defaultCenter] removeObserver:self name:STATUSBARTAP object:nil];
     [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@""]]];
     [self cleanWebChache];
@@ -84,7 +84,7 @@
 
 - (UIWebView *)webView {
     if (_webView == nil) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT - self.navbarMaxY)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - self.navbarMaxY)];
         _webView.backgroundColor = [UIColor whiteColor];
         _webView.userInteractionEnabled = YES;
         [_webView setOpaque:NO];

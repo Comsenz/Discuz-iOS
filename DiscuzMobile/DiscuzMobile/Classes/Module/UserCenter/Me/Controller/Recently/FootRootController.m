@@ -31,7 +31,7 @@
     
     NSArray *ctArr = @[forumVC,threadVC];
     
-    CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
+    CGRect segmentRect = CGRectMake(0, 0, KScreenWidth, 44);
     
     DZContainerController *containerVC = [[DZContainerController alloc] init];
     [containerVC setSubControllers:ctArr parentController:self andSegmentRect:segmentRect];

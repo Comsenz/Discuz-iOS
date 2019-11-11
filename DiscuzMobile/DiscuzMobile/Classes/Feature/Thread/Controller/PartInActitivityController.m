@@ -52,9 +52,9 @@
     }
     
     if ([DataCheck isValidString:credit] && [credit integerValue] ) {
-        UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
+        UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 30)];
         header.backgroundColor = [UIColor whiteColor];
-        UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, WIDTH - 30, 20)];
+        UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, KScreenWidth - 30, 20)];
         tipLab.font = [DZFontSize forumInfoFontSize12];
         tipLab.textColor = [UIColor orangeColor];
         tipLab.text = [NSString stringWithFormat:@"注意：参加此活动将扣除您 %@",creditcost];
@@ -100,14 +100,14 @@
     partModel.title = @"留言";
     [self.dataSourceArr addObject:partModel];
     
-    UIView *footview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 60)];
+    UIView *footview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 60)];
     self.tableView.tableFooterView = footview;
     
     self.allowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.allowBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.allowBtn.backgroundColor = MAIN_COLLOR;
     
-    CGFloat b_width = (WIDTH - 45) / 2;
+    CGFloat b_width = (KScreenWidth - 45) / 2;
     self.allowBtn.frame = CGRectMake(15, 15, b_width, 40);
     [self.allowBtn setTitle:@"提交" forState:UIControlStateNormal];
     [self.allowBtn addTarget:self action:@selector(postAction) forControlEvents:UIControlEventTouchUpInside];
@@ -263,7 +263,7 @@
 
 - (AddressSelectView *)cityPickView {
     if (_cityPickView == nil) {
-        _cityPickView = [[AddressSelectView alloc] initWithFrame:CGRectMake(0, HEIGHT - 260, WIDTH, 260)];
+        _cityPickView = [[AddressSelectView alloc] initWithFrame:CGRectMake(0, KScreenHeight - 260, KScreenWidth, 260)];
         WEAKSELF;
         _cityPickView.addressBlock = ^(NSString *address) {
             [weakSelf selectAddress:address];

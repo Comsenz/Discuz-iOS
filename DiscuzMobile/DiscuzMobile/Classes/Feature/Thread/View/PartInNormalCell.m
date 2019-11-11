@@ -32,7 +32,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.titleLab.frame = CGRectMake(15, 10, 80, 25);
-    self.textField.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 10, CGRectGetMinY(self.titleLab.frame), WIDTH - CGRectGetMaxX(self.titleLab.frame) - 5, CGRectGetHeight(self.titleLab.frame));
+    self.textField.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 10, CGRectGetMinY(self.titleLab.frame), KScreenWidth - CGRectGetMaxX(self.titleLab.frame) - 5, CGRectGetHeight(self.titleLab.frame));
 }
 
 - (void)awakeFromNib {

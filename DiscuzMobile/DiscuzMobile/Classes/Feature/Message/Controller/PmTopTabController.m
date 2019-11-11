@@ -64,7 +64,7 @@
         [ctArr addObject:listVC];
     }
     
-    CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
+    CGRect segmentRect = CGRectMake(0, 0, KScreenWidth, 44);
     DZContainerController *rootVC = [[DZContainerController alloc] init];
     [rootVC setSubControllers:ctArr parentController:self andSegmentRect:segmentRect];
 }

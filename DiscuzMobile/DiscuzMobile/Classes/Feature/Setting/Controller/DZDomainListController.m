@@ -109,7 +109,7 @@ NSString * const domainName = @"name";
     NSString *nowDomain = [userDefault objectForKey:domain];
     if ([detail isEqualToString:nowDomain]) {
         detail = [detail stringByAppendingString:@"(当前)"];
-    } else if (nowDomain == nil && [detail isEqualToString:BASEURL]) {
+    } else if (nowDomain == nil && [detail isEqualToString:DZ_BASEURL]) {
         detail = [detail stringByAppendingString:@"(当前)"];
     }
     cell.textLabel.text = domainDic[domainName];
@@ -126,7 +126,7 @@ NSString * const domainName = @"name";
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSString *nowDomain = [userDefault objectForKey:domain];
     
-    if (![detail isEqualToString:BASEURL] || !([DataCheck isValidString:nowDomain] && [nowDomain isEqualToString:detail])) {
+    if (![detail isEqualToString:DZ_BASEURL] || !([DataCheck isValidString:nowDomain] && [nowDomain isEqualToString:detail])) {
         [userDefault setObject:detail forKey:domain];
         [userDefault synchronize];
         [LoginModule signout];

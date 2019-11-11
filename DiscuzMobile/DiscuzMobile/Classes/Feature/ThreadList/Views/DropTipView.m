@@ -29,7 +29,7 @@
     
     [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@40);
-        make.width.equalTo(@(WIDTH - 80));
+        make.width.equalTo(@(KScreenWidth - 80));
         make.top.bottom.equalTo(self);
     }];
     

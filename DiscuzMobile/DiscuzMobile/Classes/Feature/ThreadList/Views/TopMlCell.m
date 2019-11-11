@@ -26,11 +26,11 @@
     
     [self.contentView addSubview:self.titleLabel];
     
-    self.titleLabel.preferredMaxLayoutWidth = WIDTH-20;
+    self.titleLabel.preferredMaxLayoutWidth = KScreenWidth-20;
 //    self.titleLabel.numberOfLines = 2;
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(@10);
-        make.width.mas_equalTo(WIDTH - 20);
+        make.width.mas_equalTo(KScreenWidth - 20);
     }];
 }
 

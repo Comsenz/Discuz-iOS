@@ -84,7 +84,7 @@
     
     self.canScroll = YES;
     
-    self.tableView = [[LianContainTableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT - self.navbarMaxY) style:UITableViewStylePlain];
+    self.tableView = [[LianContainTableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - self.navbarMaxY) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -97,11 +97,11 @@
     }
     [self.view addSubview:self.tableView];
     
-    self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, self.infoView.height)];
+    self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, self.infoView.height)];
     self.headView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self setForumInfoHeader];
     
-    self.foldTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.infoView.height, WIDTH, 0) style:UITableViewStylePlain];
+    self.foldTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.infoView.height, KScreenWidth, 0) style:UITableViewStylePlain];
     self.foldTableView.delegate = self;
     self.foldTableView.dataSource = self;
     [self.headView addSubview:self.foldTableView];
@@ -133,7 +133,7 @@
     
     UIImageView *postBtn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"writePost"]];
     CGFloat btn_width = 50.0;
-    postBtn.frame = CGRectMake(WIDTH - btn_width - 15, HEIGHT - btn_width - 15 - self.navbarMaxY - 10, btn_width, btn_width);
+    postBtn.frame = CGRectMake(KScreenWidth - btn_width - 15, KScreenHeight - btn_width - 15 - self.navbarMaxY - 10, btn_width, btn_width);
     postBtn.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showTypeView)];
     [postBtn addGestureRecognizer:tap];
@@ -173,7 +173,7 @@
 }
 
 - (void)hideTipView {
-    CGRect orrect = CGRectMake(0, -self.navbarMaxY, WIDTH, 44);
+    CGRect orrect = CGRectMake(0, -self.navbarMaxY, KScreenWidth, 44);
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
                     self.tipView.frame = orrect;
                 } completion:^(BOOL finished){
@@ -182,7 +182,7 @@
 }
 
 - (void)closeTipView {
-    self.tipView.frame = CGRectMake(0, -self.navbarMaxY, WIDTH, 44);
+    self.tipView.frame = CGRectMake(0, -self.navbarMaxY, KScreenWidth, 44);
     self.tipView.tipAnimatefinsh = YES;
 }
 
@@ -195,7 +195,7 @@
 
 - (void)setForumInfoHeader {
     
-    self.infoView = [[ForumInfoView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 75 + 10)];
+    self.infoView = [[ForumInfoView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 75 + 10)];
     [self.infoView.collectionBtn addTarget:self action:@selector(collectAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.headView addSubview:self.infoView];
@@ -373,8 +373,8 @@
         [self.subForumArr removeAllObjects];
     }
     
-    self.foldTableView.frame = CGRectMake(0, self.infoView.height, WIDTH, self.subForumArr.count * 68 + 54);
-    self.headView.frame = CGRectMake(0, 0, WIDTH, self.infoView.height  + CGRectGetHeight(self.foldTableView.frame) + 5);
+    self.foldTableView.frame = CGRectMake(0, self.infoView.height, KScreenWidth, self.subForumArr.count * 68 + 54);
+    self.headView.frame = CGRectMake(0, 0, KScreenWidth, self.infoView.height  + CGRectGetHeight(self.foldTableView.frame) + 5);
     self.tableView.tableHeaderView = self.headView;
     [self.foldTableView reloadData];
 }
@@ -493,7 +493,7 @@
             
             if ([DataCheck isValidArray:vcArr]) {
                 self.ctvArr = vcArr;
-                CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
+                CGRect segmentRect = CGRectMake(0, 0, KScreenWidth, 44);
                 self.contentView = cell.contentView;
                 self.containVC = [[LianCollectionController alloc] init];
                 [self.containVC setSubControllers:self.ctvArr parentController:self andSegmentRect:segmentRect];
@@ -528,14 +528,14 @@
     }
     
     if ([DataCheck isValidArray:[dic objectForKey:@"sublist"]]) { // 子版块列表
-        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, WIDTH, 54);
-        self.headView.frame = CGRectMake(0, 0, WIDTH, self.infoView.height + CGRectGetHeight(self.foldTableView.frame) + 5);
+        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, KScreenWidth, 54);
+        self.headView.frame = CGRectMake(0, 0, KScreenWidth, self.infoView.height + CGRectGetHeight(self.foldTableView.frame) + 5);
         self.tableView.tableHeaderView = self.headView;
         [self.subForumArr removeAllObjects];
         [self.foldTableView reloadData];
     } else {
-        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, WIDTH, 0);
-        self.headView.frame = CGRectMake(0, 0, WIDTH, self.infoView.height);
+        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, KScreenWidth, 0);
+        self.headView.frame = CGRectMake(0, 0, KScreenWidth, self.infoView.height);
         self.tableView.tableHeaderView = self.headView;
     }
     
@@ -668,7 +668,7 @@
 
 - (DropTipView *)tipView {
     if (!_tipView) {
-        _tipView = [[DropTipView alloc] initWithFrame:CGRectMake(0, -self.navbarMaxY, WIDTH, 44)];
+        _tipView = [[DropTipView alloc] initWithFrame:CGRectMake(0, -self.navbarMaxY, KScreenWidth, 44)];
         _tipView.tipAnimatefinsh = YES;
     }
     return _tipView;

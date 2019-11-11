@@ -126,6 +126,6 @@
     if (CGRectGetMaxY(_submitButton.frame) + 50 > contentHeight) {
         contentHeight = CGRectGetMaxY(_submitButton.frame) + 50;
     }
-    self.contentSize = CGSizeMake(WIDTH, contentHeight);
+    self.contentSize = CGSizeMake(KScreenWidth, contentHeight);
 }
 @end

@@ -132,7 +132,7 @@
     CGFloat allHeight = 80 * typeArray.count + 65 + 20;
     CGFloat close_width = 16.0;
     
-    self.contentView.frame = CGRectMake(30, HEIGHT - allHeight - 100, WIDTH - 60, allHeight);
+    self.contentView.frame = CGRectMake(30, KScreenHeight - allHeight - 100, KScreenWidth - 60, allHeight);
     self.contentView.layer.masksToBounds = YES;
     self.contentView.layer.cornerRadius = 8;
     

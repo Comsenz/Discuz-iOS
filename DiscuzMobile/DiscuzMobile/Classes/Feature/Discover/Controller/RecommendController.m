@@ -113,13 +113,13 @@
         for (UIView *v  in self.scrollView.subviews) {
             [v removeFromSuperview];
         }
-        self.scrollView.frame =  CGRectMake(0, 0, WIDTH, 0);
+        self.scrollView.frame =  CGRectMake(0, 0, KScreenWidth, 0);
         [self.scrollView.pageControl removeFromSuperview];
         return;
         
     } else {
         
-        self.scrollView.frame = CGRectMake(0, 0, WIDTH, WIDTH * 9 / 20 + 6);
+        self.scrollView.frame = CGRectMake(0, 0, KScreenWidth, KScreenWidth * 9 / 20 + 6);
     }
     self.tableView.tableHeaderView = self.scrollView;
     [self.scrollView setAddsPicture];

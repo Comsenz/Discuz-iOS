@@ -27,11 +27,11 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"绑定管理";
-    self.userInfoView = [[CenterUserInfoView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 120)];
+    self.userInfoView = [[CenterUserInfoView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 120)];
     [self.userInfoView.identityLab setHidden:YES];
     self.tableView.tableHeaderView = self.userInfoView;
     
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 80)];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 80)];
     
     [self requestData];
 }

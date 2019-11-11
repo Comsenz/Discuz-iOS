@@ -31,7 +31,7 @@
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
     
-    self.contentSize = CGSizeMake(WIDTH, HEIGHT - 63);
+    self.contentSize = CGSizeMake(KScreenWidth, KScreenHeight - 63);
     self.showsVerticalScrollIndicator = NO;
     self.bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"aboutbg"]];
     [self addSubview:self.bgImageView];
@@ -54,7 +54,7 @@
     self.appNameLabel = [[UILabel alloc] init];
     self.appNameLabel.font = [UIFont boldSystemFontOfSize:31.0];
     [self.bgImageView addSubview:self.appNameLabel];
-    self.appNameLabel.text = APPNAME;
+    self.appNameLabel.text = DZ_APPNAME;
     self.appNameLabel.textColor = [UIColor blackColor];
     self.appNameLabel.textAlignment = NSTextAlignmentCenter;
     [self.appNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -90,7 +90,7 @@
         make.bottom.equalTo(self.bgImageView.mas_bottom).offset(-20 - self.appNameLabel.frame.size.height);
     }];
     
-    self.incLabel.text = INCINFO;
+    self.incLabel.text = DZ_INCINFO;
     
     self.companyLabel = [[UILabel alloc] init];
     [self.bgImageView addSubview:self.companyLabel];
@@ -102,7 +102,7 @@
         make.centerX.equalTo(self.bgImageView.mas_centerX);
         make.bottom.equalTo(self.incLabel.mas_top).offset(10);
     }];
-    self.companyLabel.text = COMPANYNAME;
+    self.companyLabel.text = DZ_COMPANYNAME;
     
 }
 /*

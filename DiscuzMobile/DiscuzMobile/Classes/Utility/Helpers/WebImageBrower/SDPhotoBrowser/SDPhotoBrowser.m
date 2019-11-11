@@ -280,7 +280,7 @@
         statusH = 35;
     }
     _indexLabel.center = CGPointMake(self.bounds.size.width * 0.5, statusH);
-    _saveButton.frame = CGRectMake(WIDTH - 100, self.bounds.size.height - 70, 50, 25);
+    _saveButton.frame = CGRectMake(KScreenWidth - 100, self.bounds.size.height - 70, 50, 25);
 }
 
 - (void)show

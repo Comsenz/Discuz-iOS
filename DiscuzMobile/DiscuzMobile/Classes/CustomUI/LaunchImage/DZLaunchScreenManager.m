@@ -50,7 +50,7 @@
 //    return;
     WEAKSELF;
     [self.launchImageView showInWindowWithAnimation:[TYLaunchFadeScaleAnimation fadeAnimationWithDelay:5.0] completion:^(BOOL finished) {
-        NSLog(@"finished");
+        DLog(@"finished");
     }];
     if ([DataCheck isValidString:[[[resp objectForKey:@"Variables"] objectForKey:@"openimage"] objectForKey:@"imgsrc"]]) {
         NSString *openimageStr = [[[resp objectForKey:@"Variables"] objectForKey:@"openimage"] objectForKey:@"imgsrc"];
@@ -70,7 +70,7 @@
 - (void)test {
     WEAKSELF;
     [self.launchImageView showInWindowWithAnimation:[TYLaunchFadeScaleAnimation fadeAnimationWithDelay:5.0] completion:^(BOOL finished) {
-        NSLog(@"finished");
+        DLog(@"finished");
     }];
     NSString *openimageStr = @"http://img1.126.net/channel6/2015/020002/2.jpg?dpi=6401136";
     self.launchImageView.URLString = openimageStr;

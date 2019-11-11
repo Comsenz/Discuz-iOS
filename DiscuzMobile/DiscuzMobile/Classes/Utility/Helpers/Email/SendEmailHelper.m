@@ -31,7 +31,7 @@
         NSString *device = [UIDevice deviceVersion];
         NSString *systemVersion = [UIDevice currentDevice].systemVersion;
         NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-        NSString *appName = APPNAME;
+        NSString *appName = DZ_APPNAME;
         
         MFMailComposeViewController *mailPicker = [[MFMailComposeViewController alloc] init];
         mailPicker.mailComposeDelegate = self;

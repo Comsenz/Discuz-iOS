@@ -38,7 +38,7 @@
     _bgScrollView.pagingEnabled = YES;
     _bgScrollView.delegate = self;
     [self.view addSubview:_bgScrollView];
-    UIView *userView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, WIDTH, 55)];
+    UIView *userView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, KScreenWidth, 55)];
     userView.backgroundColor = [UIColor whiteColor];
     
     UILabel *peopleLable = [[UILabel alloc] initWithFrame:CGRectMake(10, 20, 80, 15)];
@@ -46,7 +46,7 @@
     peopleLable.font = [DZFontSize forumtimeFontSize14];// 14-15
     [userView addSubview:peopleLable];
     
-    self.titleTextField =[[UITextField alloc] initWithFrame:CGRectMake(peopleLable.frame.size.width +peopleLable.frame.origin.x +10,5, WIDTH, 45)];
+    self.titleTextField =[[UITextField alloc] initWithFrame:CGRectMake(peopleLable.frame.size.width +peopleLable.frame.origin.x +10,5, KScreenWidth, 45)];
     self.titleTextField.placeholder = @"请输入用户名";
     self.titleTextField.font = [DZFontSize HomecellTitleFontSize17];
     self.titleTextField.delegate = self;
@@ -58,14 +58,14 @@
     
     [_bgScrollView addSubview:userView];
     
-    UIView * messageView = [[UIView alloc] initWithFrame:CGRectMake(0, userView.frame.size.height +userView.frame.origin.y +10,WIDTH, 160)];
+    UIView * messageView = [[UIView alloc] initWithFrame:CGRectMake(0, userView.frame.size.height +userView.frame.origin.y +10,KScreenWidth, 160)];
     messageView.backgroundColor = [UIColor whiteColor];
     
-    self.messageTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10,WIDTH-20, 140)];
+    self.messageTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10,KScreenWidth-20, 140)];
     self.messageTextView.delegate = self;
     self.messageTextView.font =[DZFontSize HomecellTitleFontSize17];
     
-    self.placeholderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10,10, WIDTH-40, 15)];
+    self.placeholderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10,10, KScreenWidth-40, 15)];
     self.placeholderLabel.numberOfLines =0;
     self.placeholderLabel.textAlignment = NSTextAlignmentLeft;
     self.placeholderLabel.text =@"请输入短消息的内容";
@@ -81,7 +81,7 @@
     [postBtn setTitle:@"发送" forState:UIControlStateNormal];
     [postBtn setBackgroundColor:MAIN_COLLOR];
     [postBtn addTarget:self action:@selector(postData) forControlEvents:UIControlEventTouchUpInside];
-    postBtn.frame = CGRectMake(10, messageView.frame.origin.y +messageView.frame.size.height +20 ,WIDTH -20, 40);
+    postBtn.frame = CGRectMake(10, messageView.frame.origin.y +messageView.frame.size.height +20 ,KScreenWidth -20, 40);
     postBtn.layer.cornerRadius  = 4.0;
     postBtn.layer.borderWidth = 1.0;
     postBtn.layer.borderColor = MAIN_COLLOR.CGColor;

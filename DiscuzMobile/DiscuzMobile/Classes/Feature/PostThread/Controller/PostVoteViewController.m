@@ -53,11 +53,11 @@
     
     [self.tableView removeFromSuperview];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT - self.navbarMaxY) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - self.navbarMaxY) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 80)];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 80)];
     
     for (int i = 0 ; i < 2; i++) {
         [self.dataSourceArr addObject:[self voteContenView]];
@@ -147,7 +147,7 @@ static int i = 0 ;
         tipslabel.font = [UIFont systemFontOfSize:13.0];
         [view addSubview:tipslabel];
         
-        UIView *addView = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(tipslabel.frame) + 5, WIDTH - 20, 40)];
+        UIView *addView = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(tipslabel.frame) + 5, KScreenWidth - 20, 40)];
         addView.backgroundColor = [UIColor whiteColor];
         addView.layer.borderWidth = 1;
         addView.layer.borderColor = MAIN_COLLOR.CGColor;
@@ -163,7 +163,7 @@ static int i = 0 ;
 //        [addBtn addTarget:self action:@selector(addOption) forControlEvents:UIControlEventTouchUpInside];
 //        [addView addSubview:addBtn];
         UILabel *addLab = [[UILabel alloc] init];
-        addLab.frame = CGRectMake((WIDTH - 20) / 2 - 50, 5, 100, 30);
+        addLab.frame = CGRectMake((KScreenWidth - 20) / 2 - 50, 5, 100, 30);
         addLab.text = @"＋ 添加一项";
         addLab.textAlignment = NSTextAlignmentCenter;
         addLab.font = [UIFont boldSystemFontOfSize:18.0];

@@ -131,7 +131,7 @@ static FMDatabase *_db;
     NSData *data = [ArchieverTool Archiever:thread forKey:FootThread];
     NSString *sqlStr = @"insert into t_foot (tid,uid,aData) values (?,?,?)";
     [_db executeUpdate:sqlStr,thread.tid,[Environment sharedEnvironment].member_uid,data];
-    NSLog(@"%@",_db.lastError);
+    DLog(@"%@",_db.lastError);
 }
 
 /**

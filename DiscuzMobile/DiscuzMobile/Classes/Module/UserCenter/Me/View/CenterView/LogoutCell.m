@@ -19,7 +19,7 @@
 
 - (void)p_setupView {
     self.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    self.lab = [[UILabel alloc] initWithFrame:CGRectMake(WIDTH / 2 - 100, 5, 200, 50)];
+    self.lab = [[UILabel alloc] initWithFrame:CGRectMake(KScreenWidth / 2 - 100, 5, 200, 50)];
     self.lab.backgroundColor = [UIColor whiteColor];
     self.lab.textAlignment = NSTextAlignmentCenter;
     self.lab.font = [DZFontSize HomecellTitleFontSize17];
@@ -30,7 +30,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.lab.frame = CGRectMake(15, 5, WIDTH - 30, 50);
+    self.lab.frame = CGRectMake(15, 5, KScreenWidth - 30, 50);
     [self setRadius:self.lab];
 }
 

@@ -45,7 +45,7 @@
     
     if ([DataCheck isValidDictionary:activityfield]) {
         
-        self.titleLab.frame = CGRectMake(15, 18, WIDTH - 30, 20);
+        self.titleLab.frame = CGRectMake(15, 18, KScreenWidth - 30, 20);
         CGFloat selectHeight = 0;
         
         if (activityfield.allKeys.count > 0) {
@@ -56,7 +56,7 @@
             CGFloat addWidth = 30;
             CGFloat btn_h = 30;
             
-            if (WIDTH == 320) {
+            if (KScreenWidth == 320) {
                 space = 10;
                 addWidth = 25;
             }
@@ -67,7 +67,7 @@
                 [button removeFromSuperview];
             }
             
-            self.selectView.frame = CGRectMake(0, CGRectGetMaxY(self.titleLab.frame), WIDTH, selectHeight);
+            self.selectView.frame = CGRectMake(0, CGRectGetMaxY(self.titleLab.frame), KScreenWidth, selectHeight);
             
             
             __block CGFloat maxX = 0;
@@ -81,7 +81,7 @@
                 button.titleLabel.font = [DZFontSize forumtimeFontSize14];
                 button.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
                 [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-                CGSize textSize = [obj sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:CGSizeMake(WIDTH / 2, MAXFLOAT)];
+                CGSize textSize = [obj sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:CGSizeMake(KScreenWidth / 2, MAXFLOAT)];
                 CGFloat b_width = textSize.width + addWidth;
                 
                 // ************
@@ -122,7 +122,7 @@
             
         }
         
-        self.selectView.frame = CGRectMake(0, CGRectGetMaxY(self.titleLab.frame), WIDTH, selectHeight);
+        self.selectView.frame = CGRectMake(0, CGRectGetMaxY(self.titleLab.frame), KScreenWidth, selectHeight);
     }
     
 }

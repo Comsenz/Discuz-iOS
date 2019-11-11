@@ -20,7 +20,7 @@
 }
 
 -(void)createUI {
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, WIDTH-25, 50)];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, KScreenWidth-25, 50)];
     self.titleLabel.font = [DZFontSize HomecellNameFontSize16];//14
     self.titleLabel.textColor = MAIN_TITLE_COLOR;
     self.titleLabel.numberOfLines = 0;
@@ -43,7 +43,7 @@
     
     self.titleLabel.text = [dic objectForKey:@"title"];
     
-    NSLog(@"%@",[dic objectForKey:@"fname"]);
+    DLog(@"%@",[dic objectForKey:@"fname"]);
     if ([DataCheck isValidString:[dic objectForKey:@"author"]])
     {
         self.nameLabel.text = [dic objectForKey:@"author"];

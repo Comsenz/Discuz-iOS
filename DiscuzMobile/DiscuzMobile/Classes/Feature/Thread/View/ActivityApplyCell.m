@@ -32,7 +32,7 @@
 - (void)commitInit {
     self.contentView.backgroundColor = mRGBColor(249, 251, 253);
     
-    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 10, WIDTH - 30, CGRectGetHeight(self.frame)- 10)];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 10, KScreenWidth - 30, CGRectGetHeight(self.frame)- 10)];
     self.bgView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.bgView];
     
@@ -77,7 +77,7 @@
     
     [super layoutSubviews];
     
-    self.bgView.frame = CGRectMake(15, 10, WIDTH - 30, CGRectGetHeight(self.frame)- 10);
+    self.bgView.frame = CGRectMake(15, 10, KScreenWidth - 30, CGRectGetHeight(self.frame)- 10);
     self.bgView.layer.borderColor = LINE_COLOR.CGColor;
     self.bgView.layer.borderWidth = 1;
     self.bgView.layer.masksToBounds = YES;

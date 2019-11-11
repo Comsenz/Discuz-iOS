@@ -36,7 +36,7 @@
     self.segment.backgroundColor = [UIColor whiteColor];
     self.segment.indicatorView.backgroundColor = MAIN_COLLOR;
     
-    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, WIDTH, 0.7)];
+    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, KScreenWidth, 0.7)];
     self.sepLine.backgroundColor = NAV_SEP_COLOR;
     [self addSubview:self.sepLine];
     
@@ -65,7 +65,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.segment.frame = CGRectMake(15, 10, CGRectGetWidth(self.frame) - 30, 35);
-    self.sepLine.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, WIDTH, 0.7);
+    self.sepLine.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, KScreenWidth, 0.7);
 }
 
 /*

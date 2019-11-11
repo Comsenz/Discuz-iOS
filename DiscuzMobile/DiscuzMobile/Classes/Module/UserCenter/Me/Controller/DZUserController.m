@@ -48,12 +48,12 @@
     [self setNavc];
     
     // 135 + 85
-    self.myHeader = [[MYCenterHeader alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 220)];
+    self.myHeader = [[MYCenterHeader alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 220)];
     self.tableView.tableHeaderView = self.myHeader;
     UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(modifyAvatar)];
     [self.myHeader.userInfoView.headView addGestureRecognizer:tapGes];
     
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 40)];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 40)];
     
     [self tooBarAction];
     

@@ -73,7 +73,7 @@
                 
                 imgModel.aid = [NSString stringWithFormat:@"%@",response];
                 
-                NSLog(@"aid ===============> %@,=========== sort =========>%ld",[NSString stringWithFormat:@"%@",response],imgModel.sort);
+                DLog(@"aid ===============> %@,=========== sort =========>%ld",[NSString stringWithFormat:@"%@",response],imgModel.sort);
                 [self.uploadModel.imageModelArray addObject:imgModel];
                 [self.uploadModel.imageModelArray sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
                     WSImageModel *ws1 = obj1;

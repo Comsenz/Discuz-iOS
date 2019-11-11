@@ -31,7 +31,7 @@
 
 - (void)p_setupViews {
     self.contentView.backgroundColor = [UIColor whiteColor];
-    self.titleTextField = [[UITextField alloc] initWithFrame:CGRectMake(15, 5, WIDTH - 20, 45)];
+    self.titleTextField = [[UITextField alloc] initWithFrame:CGRectMake(15, 5, KScreenWidth - 20, 45)];
     self.titleTextField.placeholder = @" 标题(最多只能输入80个字符)";
     self.titleTextField.font = [DZFontSize HomecellTitleFontSize15];
     [self.contentView addSubview:self.titleTextField];
@@ -40,7 +40,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.titleTextField.frame = CGRectMake(10, 5, WIDTH, 45);
+    self.titleTextField.frame = CGRectMake(10, 5, KScreenWidth, 45);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

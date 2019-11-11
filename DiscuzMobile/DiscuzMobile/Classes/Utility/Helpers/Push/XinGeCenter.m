@@ -40,7 +40,7 @@
     } else {
         [XGPush setAccount:[NSString stringWithFormat:@"%@",[Environment sharedEnvironment].member_uid]];
     }
-    NSData * datatoken =  [[NSUserDefaults standardUserDefaults] objectForKey:XGTOKEN];
+    NSData * datatoken =  [[NSUserDefaults standardUserDefaults] objectForKey:DZ_XGTOKEN];
     void (^successBlock)(void) = ^(void){
         //成功处理
         DLog(@"[XGPush]register successBlock");
@@ -97,7 +97,7 @@
 #pragma mark - 信鸽注册
 - (void)Reregistration {
     
-    [XGPush startApp:XG_APPID appKey:XG_APPKEY];
+    [XGPush startApp:DZ_XG_APPID appKey:DZ_XG_APPKEY];
     //注销之后需要再次注册前的准备
     void (^successCallback)(void) = ^(void){
         //如果变成需要注册状态
@@ -157,17 +157,17 @@
     // 回调版本示例
     void (^successBlock)(void) = ^(void){
         //成功之后的处理
-        NSLog(@"[XGPush]handleReceiveNotification successBlock");
+        DLog(@"[XGPush]handleReceiveNotification successBlock");
     };
     
     void (^errorBlock)(void) = ^(void){
         //失败之后的处理
-        NSLog(@"[XGPush]handleReceiveNotification errorBlock");
+        DLog(@"[XGPush]handleReceiveNotification errorBlock");
     };
     
     void (^completion)(void) = ^(void){
         //失败之后的处理
-        NSLog(@"[xg push completion]userInfo is %@",userInfo);
+        DLog(@"[xg push completion]userInfo is %@",userInfo);
     };
     // 推送反馈(app在运行时),支持回调版本
     [XGPush handleReceiveNotification:userInfo successCallback:successBlock errorCallback:errorBlock completion:completion];

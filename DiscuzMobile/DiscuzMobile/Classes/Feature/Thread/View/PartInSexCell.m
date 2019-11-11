@@ -34,7 +34,7 @@
     
     [super layoutSubviews];
     self.titleLab.frame = CGRectMake(10, 10, 80, 30);
-    self.sexSelectView.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 10, CGRectGetMinY(self.titleLab.frame), WIDTH - CGRectGetMaxX(self.titleLab.frame) - 15, CGRectGetHeight(self.titleLab.frame));
+    self.sexSelectView.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 10, CGRectGetMinY(self.titleLab.frame), KScreenWidth - CGRectGetMaxX(self.titleLab.frame) - 15, CGRectGetHeight(self.titleLab.frame));
     self.sexSelectView.layer.borderColor = LINE_COLOR.CGColor;
     self.sexSelectView.layer.borderWidth = 1;
     self.sexSelectView.layer.cornerRadius = 10;

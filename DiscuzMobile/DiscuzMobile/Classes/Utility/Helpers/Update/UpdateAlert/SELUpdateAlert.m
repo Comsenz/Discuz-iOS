@@ -48,7 +48,7 @@
             description = [description stringByAppendingString:@"\n"];
         }
     }
-    NSLog(@"====%@",description);
+    DLog(@"====%@",description);
     SELUpdateAlert *updateAlert = [[SELUpdateAlert alloc]initVersion:version description:description];
     [[UIApplication sharedApplication].delegate.window addSubview:updateAlert];
 }

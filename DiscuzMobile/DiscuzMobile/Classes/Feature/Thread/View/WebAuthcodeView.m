@@ -33,19 +33,19 @@
     [self addGestureRecognizer:singleTap];
 //    [self.view addSubview:_loginView];
     
-    UIView *  bgview = [[UIView alloc]initWithFrame:CGRectMake(40, 116, WIDTH-80, 300)];
+    UIView *  bgview = [[UIView alloc]initWithFrame:CGRectMake(40, 116, KScreenWidth-80, 300)];
     
     if (iPhone320) {
-        bgview.frame = CGRectMake(40, 80, WIDTH-80, 260);
+        bgview.frame = CGRectMake(40, 80, KScreenWidth-80, 260);
     }
     
     bgview.userInteractionEnabled = YES;
     bgview.backgroundColor = mRGBColor(241, 241, 241);
     [self addSubview:bgview];
     
-    _loginBtn.frame = CGRectMake(10, 212, WIDTH-20, 41);
+    _loginBtn.frame = CGRectMake(10, 212, KScreenWidth-20, 41);
     // 验证码field
-    _yanTextField= [[UITextField alloc] initWithFrame:CGRectMake(10, 50, WIDTH-100, 57)];
+    _yanTextField= [[UITextField alloc] initWithFrame:CGRectMake(10, 50, KScreenWidth-100, 57)];
 //    _yanTextField.delegate = self;
     _yanTextField.placeholder = @"请输入验证码";
     _yanTextField.tag=10010;
@@ -94,7 +94,7 @@
     }
     //    _yanTextField.delegate = self;
     UIButton * buttonpost = [UIButton buttonWithType:UIButtonTypeCustom];
-    buttonpost.frame = CGRectMake(11, CGRectGetMaxY(_secTextField.frame) + 15,WIDTH-100, 50);
+    buttonpost.frame = CGRectMake(11, CGRectGetMaxY(_secTextField.frame) + 15,KScreenWidth-100, 50);
     buttonpost.backgroundColor = MAIN_COLLOR;
     [buttonpost addTarget:self action:@selector(postClick) forControlEvents:UIControlEventTouchUpInside];
     buttonpost.layer.cornerRadius = 5;

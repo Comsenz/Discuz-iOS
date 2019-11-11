@@ -26,7 +26,7 @@
     tipSelect.font = [DZFontSize HomecellTitleFontSize15];
     [self.contentView addSubview:tipSelect];
     
-    self.selectNumTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(tipSelect.frame) + 10, 12, WIDTH - CGRectGetWidth(tipSelect.frame) - 20 - 30 - 15, 35)];
+    self.selectNumTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(tipSelect.frame) + 10, 12, KScreenWidth - CGRectGetWidth(tipSelect.frame) - 20 - 30 - 15, 35)];
     self.selectNumTextField.placeholder = @"  最多可选";
     self.selectNumTextField.keyboardType = UIKeyboardTypeNumberPad;
     self.selectNumTextField.layer.borderWidth = 1.0;
@@ -47,7 +47,7 @@
     tipDay.font = [DZFontSize HomecellTitleFontSize15];
     [self.contentView addSubview:tipDay];
     
-    self.dayNumTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(tipSelect.frame) + 10, CGRectGetMaxY(self.selectNumTextField.frame) + 10, WIDTH - CGRectGetWidth(tipSelect.frame) - 20 - 30 - 15, 35)];
+    self.dayNumTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(tipSelect.frame) + 10, CGRectGetMaxY(self.selectNumTextField.frame) + 10, KScreenWidth - CGRectGetWidth(tipSelect.frame) - 20 - 30 - 15, 35)];
     self.dayNumTextField.placeholder = @"  计票天数";
     self.dayNumTextField.keyboardType = UIKeyboardTypeNumberPad;
     self.dayNumTextField.layer.borderWidth = 1.0;
@@ -62,7 +62,7 @@
     label.text =@"天";
     [self.contentView addSubview:label];
     
-    UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(self.dayNumTextField.frame) + 25, WIDTH-20, 1)];
+    UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(self.dayNumTextField.frame) + 25, KScreenWidth-20, 1)];
     lineLabel.backgroundColor = mRGBColor(211, 211, 211);
     [self.contentView addSubview:lineLabel];
     

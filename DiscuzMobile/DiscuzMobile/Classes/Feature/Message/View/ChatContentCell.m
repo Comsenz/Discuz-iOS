@@ -101,7 +101,7 @@
         
     } else {
         [self.headView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(WIDTH-10-35);
+            make.left.mas_equalTo(KScreenWidth-10-35);
         }];
         [self.mcontainView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.headView.mas_left);

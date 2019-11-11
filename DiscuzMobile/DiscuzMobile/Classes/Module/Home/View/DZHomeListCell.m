@@ -159,18 +159,18 @@
         self.grade.layer.cornerRadius = 2;
     }
     
-    self.tipIcon.frame = CGRectMake(WIDTH - 34 - 10, CGRectGetMidY(self.headV.frame) - 7, 34, 17);
+    self.tipIcon.frame = CGRectMake(KScreenWidth - 34 - 10, CGRectGetMidY(self.headV.frame) - 7, 34, 17);
     
     // 标题
-    maxSize = CGSizeMake(WIDTH - 30, 45);
+    maxSize = CGSizeMake(KScreenWidth - 30, 45);
     textSize = [self.desLab.text sizeWithFont:[DZFontSize HomecellTitleFontSize15] maxSize:maxSize];
-    self.sepLine.frame = CGRectMake(0, CGRectGetMaxY(self.headV.frame) + 8, WIDTH, 1);
-    self.desLab.frame = CGRectMake(CGRectGetMinX(self.headV.frame), CGRectGetMaxY(self.sepLine.frame) + 10, WIDTH - 30, textSize.height);
+    self.sepLine.frame = CGRectMake(0, CGRectGetMaxY(self.headV.frame) + 8, KScreenWidth, 1);
+    self.desLab.frame = CGRectMake(CGRectGetMinX(self.headV.frame), CGRectGetMaxY(self.sepLine.frame) + 10, KScreenWidth - 30, textSize.height);
     
     // 内容
-    maxSize = CGSizeMake(WIDTH - 30, 40);
+    maxSize = CGSizeMake(KScreenWidth - 30, 40);
     textSize = [self.messageLab.text sizeWithFont:[DZFontSize messageFontSize14] maxSize:maxSize];
-    self.messageLab.frame = CGRectMake(CGRectGetMinX(self.desLab.frame), CGRectGetMaxY(self.desLab.frame) + 8, WIDTH - 30, textSize.height);
+    self.messageLab.frame = CGRectMake(CGRectGetMinX(self.desLab.frame), CGRectGetMaxY(self.desLab.frame) + 8, KScreenWidth - 30, textSize.height);
     
     if ([DataCheck isValidString:self.messageLab.text]) {
         // 时间
@@ -181,13 +181,13 @@
     }
     
     
-    self.tipLab.frame = CGRectMake(WIDTH - 130, CGRectGetMinY(self.datelineLab.frame), 120, 15);
+    self.tipLab.frame = CGRectMake(KScreenWidth - 130, CGRectGetMinY(self.datelineLab.frame), 120, 15);
     
     NSInteger count = (info.imglist.count > 3)?3:info.imglist.count;
     
     if (count > 0 && [JudgeImageModel graphFreeModel] == NO) { // 有附件图片的, 有图模式的
-        CGFloat picWidth = (WIDTH - 30 - 20) / 3;
-        self.imageBgV.frame = CGRectMake(0, CGRectGetMaxY(self.datelineLab.frame), WIDTH, 90);
+        CGFloat picWidth = (KScreenWidth - 30 - 20) / 3;
+        self.imageBgV.frame = CGRectMake(0, CGRectGetMaxY(self.datelineLab.frame), KScreenWidth, 90);
         
         for (int i = 0; i < count; i ++) {
             UIImageView *imageV = [[UIImageView alloc] init];
@@ -213,11 +213,11 @@
             imageV.frame = CGRectMake(15 + (picWidth + 10) * i, 10, picWidth, CGRectGetHeight(self.imageBgV.frame) - 10);
         }
     } else {
-        self.imageBgV.frame = CGRectMake(0, CGRectGetMaxY(self.datelineLab.frame), WIDTH, 0);
+        self.imageBgV.frame = CGRectMake(0, CGRectGetMaxY(self.datelineLab.frame), KScreenWidth, 0);
     }
     
-    self.lineV.frame = CGRectMake(0, CGRectGetMaxY(self.imageBgV.frame) + 10, WIDTH, 1);
-    self.viewsLab.frame = CGRectMake(0, CGRectGetMaxY(self.lineV.frame), WIDTH / 3, 40);
+    self.lineV.frame = CGRectMake(0, CGRectGetMaxY(self.imageBgV.frame) + 10, KScreenWidth, 1);
+    self.viewsLab.frame = CGRectMake(0, CGRectGetMaxY(self.lineV.frame), KScreenWidth / 3, 40);
     self.repliesLab.frame = CGRectMake(CGRectGetMaxX(self.viewsLab.frame), CGRectGetMinY(self.viewsLab.frame), CGRectGetWidth(self.viewsLab.frame), CGRectGetHeight(self.viewsLab.frame));
     self.priceLab.frame = CGRectMake(CGRectGetMaxX(self.repliesLab.frame), CGRectGetMinY(self.repliesLab.frame), CGRectGetWidth(self.repliesLab.frame), CGRectGetHeight(self.viewsLab.frame));
     

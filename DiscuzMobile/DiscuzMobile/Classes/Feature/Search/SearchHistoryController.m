@@ -48,7 +48,7 @@
     self.hotSearchTags = [self addAndLayoutTagsWithTagsContentView:self.hotSearchView tagTexts:self.hotSearches].mutableCopy;
     [self setHotSearchStyle];
     
-    UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 40)];
+    UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 40)];
     tipLab.textAlignment = NSTextAlignmentCenter;
     tipLab.font = [UIFont systemFontOfSize:14];
     tipLab.textColor = MESSAGE_COLOR;
@@ -71,7 +71,7 @@
         [contentView addSubview:label];
         [tagsM addObject:label];
     }
-    contentView.width = WIDTH - 30;
+    contentView.width = KScreenWidth - 30;
     CGFloat currentX = 0;
     CGFloat currentY = 0;
     CGFloat countRow = 0;
@@ -98,10 +98,10 @@
     contentView.y = 40;
     
     UIView *headView = [[UIView alloc] init];
-    headView.width = WIDTH;
+    headView.width = KScreenWidth;
     headView.height = contentView.height + 40;
     
-    UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(SEARCH_MARGIN, 10, WIDTH - 30, 20)];
+    UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(SEARCH_MARGIN, 10, KScreenWidth - 30, 20)];
     tipLab.textColor = MESSAGE_COLOR;
     tipLab.font = [UIFont systemFontOfSize:14];
     tipLab.text = @"热门搜索";
@@ -175,8 +175,8 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if ([DataCheck isValidArray:self.searchHistories]) {
-        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
-        UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(SEARCH_MARGIN, SEARCH_MARGIN, WIDTH - 30, 15)];
+        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 30)];
+        UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(SEARCH_MARGIN, SEARCH_MARGIN, KScreenWidth - 30, 15)];
         tipLab.font = [UIFont systemFontOfSize:14];
         tipLab.textColor = MESSAGE_COLOR;
         [headView addSubview:tipLab];

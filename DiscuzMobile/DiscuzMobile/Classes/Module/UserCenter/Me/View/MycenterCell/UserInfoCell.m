@@ -63,7 +63,7 @@
     self.groupLabel.layer.cornerRadius = 3.0;
     self.groupLabel.layer.masksToBounds =YES;
     
-    self.editHeadBtn.frame = CGRectMake(WIDTH-65, 20,55, 24);
+    self.editHeadBtn.frame = CGRectMake(KScreenWidth-65, 20,55, 24);
     self.editHeadBtn.layer.borderWidth = 1.0;
     self.editHeadBtn.layer.borderColor = mRGBColor(211, 211, 211).CGColor;
     self.editHeadBtn.layer.cornerRadius = 2.0;

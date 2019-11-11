@@ -64,7 +64,7 @@
     if ([DataCheck isValidString:domain]) {
         urlStr = [NSString stringWithFormat:@"%@%@",domain,urlStr];
     } else {
-        urlStr = [NSString stringWithFormat:@"%@%@",BASEURL,urlStr];
+        urlStr = [NSString stringWithFormat:@"%@%@",DZ_BASEURL,urlStr];
     }
     urlStr = [urlStr stringByAppendingString:@"&mobiletype=IOS"];
     return urlStr;

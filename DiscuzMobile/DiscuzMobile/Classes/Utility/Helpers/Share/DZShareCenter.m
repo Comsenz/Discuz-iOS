@@ -34,41 +34,49 @@
     
     
     //新版本注册方法不在需要进行 appkey的注册
-    [ShareSDK registerActivePlatforms:@[
-                                        @(SSDKPlatformTypeWechat),
-                                        @(SSDKPlatformTypeQQ)]
-                             onImport:^(SSDKPlatformType platformType)
-     {
-         switch (platformType)
-         {
-             case SSDKPlatformTypeWechat:
-                 [ShareSDKConnector connectWeChat:[WXApi class]];
-                 break;
-             case SSDKPlatformTypeQQ:
-                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
-                 break;
-             default:
-                 break;
-         }
-     }
-                      onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
-     {
-         switch (platformType)
-         {
-             case SSDKPlatformTypeWechat:
-                 [appInfo SSDKSetupWeChatByAppId:WX_APPID
-                                       appSecret:WX_APPSECRET];
-                 break;
-             case SSDKPlatformTypeQQ:
-                 [appInfo SSDKSetupQQByAppId:QQ_APPID
-                                      appKey:QQ_APPKEY
-                                    authType:SSDKAuthTypeBoth
-                                      useTIM:YES backUnionID:YES];
-                 break;
-             default:
-                 break;
-         }
-     }];
+    
+    [ShareSDK registPlatforms:^(SSDKRegister *platformsRegister) {
+        //QQ
+        [platformsRegister setupQQWithAppId:DZ_QQ_APPID appkey:DZ_QQ_APPKEY];
+        //微信
+        [platformsRegister setupWeChatWithAppId:DZ_WX_APPID appSecret:DZ_WX_APPSECRET universalLink:DZ_BASEURL];
+
+    }];
+//    [ShareSDK registerActivePlatforms:@[
+//                                        @(SSDKPlatformTypeWechat),
+//                                        @(SSDKPlatformTypeQQ)]
+//                             onImport:^(SSDKPlatformType platformType)
+//     {
+//         switch (platformType)
+//         {
+//             case SSDKPlatformTypeWechat:
+//                 [ShareSDKConnector connectWeChat:[WXApi class]];
+//                 break;
+//             case SSDKPlatformTypeQQ:
+//                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+//                      onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+//     {
+//         switch (platformType)
+//         {
+//             case SSDKPlatformTypeWechat:
+//                 [appInfo SSDKSetupWeChatByAppId:WX_APPID
+//                                       appSecret:WX_APPSECRET];
+//                 break;
+//             case SSDKPlatformTypeQQ:
+//                 [appInfo SSDKSetupQQByAppId:QQ_APPID
+//                                      appKey:QQ_APPKEY
+//                                    authType:SSDKAuthTypeBoth
+//                                      useTIM:YES backUnionID:YES];
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }];
 }
 
 - (void)createShare:(nonnull NSString *)text andImages:(nullable id)images andUrlstr:(nonnull NSString *)urlStr andTitle:(nonnull NSString *)title andView:(nullable UIView *)view andHUD:(nullable MBProgressHUD *)HUD {

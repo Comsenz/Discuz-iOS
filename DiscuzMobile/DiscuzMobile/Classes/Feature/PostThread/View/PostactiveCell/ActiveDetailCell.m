@@ -20,7 +20,7 @@
 -(void)setupViews {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.contentView.backgroundColor = [UIColor whiteColor];
-    self.detailTextView = [[DZPlaceholderTextView alloc] initWithFrame:CGRectMake(5, 10, WIDTH-10, CGRectGetHeight(self.frame) -20)];
+    self.detailTextView = [[DZPlaceholderTextView alloc] initWithFrame:CGRectMake(5, 10, KScreenWidth-10, CGRectGetHeight(self.frame) -20)];
     self.detailTextView.font = [DZFontSize HomecellTitleFontSize15];
     
     [self.contentView addSubview:self.detailTextView];
@@ -30,7 +30,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.detailTextView.frame = CGRectMake(5, 10, WIDTH-10, CGRectGetHeight(self.frame) - 20);
+    self.detailTextView.frame = CGRectMake(5, 10, KScreenWidth-10, CGRectGetHeight(self.frame) - 20);
 }
 
 

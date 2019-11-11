@@ -42,7 +42,7 @@
     [self addItemClass:[NewestListController class] andTitle:@"最新"];
     [self addItemClass:[DigestListController class] andTitle:@"精华"];
     
-    CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
+    CGRect segmentRect = CGRectMake(0, 0, KScreenWidth, 44);
     self.rootVC = [[DZContainerController alloc] init];
     self.rootVC.sendNotify = YES;
     [self.rootVC setSubControllers:self.controllerArr parentController:self andSegmentRect:segmentRect];

@@ -49,7 +49,7 @@
         CGFloat y_space = 10;
         CGFloat addWidth = 30;
         CGFloat btn_h = 30;
-        if (WIDTH == 320) {
+        if (KScreenWidth == 320) {
             x_space = 10;
             addWidth = 25;
         }
@@ -64,9 +64,9 @@
                 [button removeFromSuperview];
             }
             
-            self.selectView.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 5, 0, WIDTH - CGRectGetWidth(self.titleLab.frame) - 25, selectHeight);
+            self.selectView.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 5, 0, KScreenWidth - CGRectGetWidth(self.titleLab.frame) - 25, selectHeight);
             
-            CGFloat allWidth = WIDTH - CGRectGetWidth(self.titleLab.frame) - 25;
+            CGFloat allWidth = KScreenWidth - CGRectGetWidth(self.titleLab.frame) - 25;
             
             __block CGFloat maxX = 0;
             __block NSInteger index = 0;
@@ -122,7 +122,7 @@
         }
         
         self.titleLab.frame = CGRectMake(15, 10, 80, selectHeight - 10);
-        self.selectView.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 5, 0, WIDTH - CGRectGetWidth(self.titleLab.frame) - 25, selectHeight);
+        self.selectView.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 5, 0, KScreenWidth - CGRectGetWidth(self.titleLab.frame) - 25, selectHeight);
     }
     
 }

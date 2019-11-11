@@ -59,7 +59,7 @@
     self.iconV.frame = CGRectMake(15, 10, CGRectGetHeight(self.frame) - 20, CGRectGetHeight(self.frame) - 20);
     self.iconV.layer.masksToBounds = YES;
     self.iconV.layer.cornerRadius = 8;
-    self.titleLab.frame = CGRectMake(CGRectGetMaxX(self.iconV.frame) + 10, CGRectGetMinY(self.iconV.frame), WIDTH - CGRectGetWidth(self.iconV.frame) - 35 - 12 - 5, (CGRectGetHeight(self.iconV.frame)- 10)/3);
+    self.titleLab.frame = CGRectMake(CGRectGetMaxX(self.iconV.frame) + 10, CGRectGetMinY(self.iconV.frame), KScreenWidth - CGRectGetWidth(self.iconV.frame) - 35 - 12 - 5, (CGRectGetHeight(self.iconV.frame)- 10)/3);
     
     self.AccessoryV.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 5, CGRectGetMinY(self.titleLab.frame), 9, 16);
     

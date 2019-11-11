@@ -107,7 +107,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat keyboardHeight = 265;
-    CGFloat detailH = HEIGHT - self.navbarMaxY - keyboardHeight - 55 - SafeAreaBottomHeight;
+    CGFloat detailH = KScreenHeight - self.navbarMaxY - keyboardHeight - 55 - SafeAreaBottomHeight;
     if (self.typeArray.count > 0) {
         detailH -= 55;
     }

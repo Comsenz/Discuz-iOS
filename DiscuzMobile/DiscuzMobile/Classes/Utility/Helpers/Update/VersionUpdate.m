@@ -70,7 +70,7 @@
 //            NSString *releaseNotes = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
             
             if ([appStoreVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending) {
-                NSLog(@"更新");
+                DLog(@"更新");
                 tipUpdate?tipUpdate(appStoreVersion, releaseNotes):nil;
             };
         } failed:^(NSError *error) {

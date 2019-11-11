@@ -23,38 +23,38 @@
     if (@available(iOS 11.0, *)) {
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
-    self.contentSize = CGSizeMake(WIDTH, HEIGHT + 1);
+    self.contentSize = CGSizeMake(KScreenWidth, KScreenHeight + 1);
     
-    _headView = [[UIImageView alloc] initWithFrame:CGRectMake((WIDTH - 98) / 2, 22, 98, 98)];
+    _headView = [[UIImageView alloc] initWithFrame:CGRectMake((KScreenWidth - 98) / 2, 22, 98, 98)];
     _headView.image = [UIImage imageNamed:@"defaultHead"];
     
     [self addSubview:_headView];
     
-    _desclabl = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_headView.frame) + 22, WIDTH - 16, 60)];
+    _desclabl = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_headView.frame) + 22, KScreenWidth - 16, 60)];
     _desclabl.numberOfLines = 0;
     [self addSubview:_desclabl];
     
-    UILabel *notips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_desclabl.frame) + 22, WIDTH - 16, 40)];
+    UILabel *notips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_desclabl.frame) + 22, KScreenWidth - 16, 40)];
     notips.text = @"还没有论坛账户？";
     notips.font = [DZFontSize HomecellTimeFontSize16];
     notips.textColor = LIGHT_TEXT_COLOR;
     [self addSubview:notips];
     
     _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _registerBtn.frame = CGRectMake(10, CGRectGetMaxY(notips.frame) + 10, WIDTH-20, 44);
+    _registerBtn.frame = CGRectMake(10, CGRectGetMaxY(notips.frame) + 10, KScreenWidth-20, 44);
     [_registerBtn setTitle:@"立即注册" forState:UIControlStateNormal];
     _registerBtn.backgroundColor = MAIN_COLLOR;
     _registerBtn.layer.cornerRadius = 5.0;
     [self addSubview:_registerBtn];
     
-    UILabel *havetips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_registerBtn.frame) + 22, WIDTH - 16, 40)];
+    UILabel *havetips = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(_registerBtn.frame) + 22, KScreenWidth - 16, 40)];
     havetips.text = @"已有论坛账号！";
     havetips.font = [DZFontSize HomecellTimeFontSize16];
     havetips.textColor = LIGHT_TEXT_COLOR;
     [self addSubview:havetips];
     
     _boundBtn =[UIButton buttonWithType:UIButtonTypeCustom];
-    _boundBtn.frame = CGRectMake(10, CGRectGetMaxY(havetips.frame) + 10, WIDTH-20, 44);
+    _boundBtn.frame = CGRectMake(10, CGRectGetMaxY(havetips.frame) + 10, KScreenWidth-20, 44);
     [_boundBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
     _boundBtn.layer.borderColor = mRGBColor(210, 210, 210).CGColor;
     _boundBtn.layer.borderWidth = 0.5;

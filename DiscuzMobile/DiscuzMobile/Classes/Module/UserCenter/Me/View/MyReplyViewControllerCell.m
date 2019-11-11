@@ -19,7 +19,7 @@
 }
 
 - (void)createUI {
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, WIDTH-20, 50)];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, KScreenWidth-20, 50)];
     self.titleLabel.font = [UIFont systemFontOfSize:14.0];
     self.titleLabel.numberOfLines = 0;
     [self addSubview:self.titleLabel];

@@ -65,7 +65,7 @@
 -(void)setNavc{
     [self createBarBtn:@"bar_message" type:NavItemImage Direction:NavDirectionLeft];
     [self createBarBtn:@"bar_search" type:NavItemImage Direction:NavDirectionRight];
-    self.navigationItem.title = APPNAME;
+    self.navigationItem.title = DZ_APPNAME;
 }
 
 -(void)initTableView{
@@ -80,13 +80,13 @@
     
     if (self.scrollView.bannerArray.count == 0) {
         
-        self.scrollView.frame =  CGRectMake(0, 0, WIDTH, 0);
+        self.scrollView.frame =  CGRectMake(0, 0, KScreenWidth, 0);
         [self.scrollView.pageControl removeFromSuperview];
         return;
         
     } else {
         
-        self.scrollView.frame = CGRectMake(0, 0, WIDTH, WIDTH * 9 / 20 + 6);
+        self.scrollView.frame = CGRectMake(0, 0, KScreenWidth, KScreenWidth * 9 / 20 + 6);
         
     }
     self.tableView.tableHeaderView = self.scrollView;
@@ -150,15 +150,15 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.urlString = url_Hotforum;
     } success:^(id responseObject, JTLoadType type) {
-        NSLog(@"_hotForumListArray1=%@",responseObject);
+        DLog(@"_hotForumListArray1=%@",responseObject);
         if ([forumType isEqualToString:@"hotforum"]){
             [self setHotData:[[responseObject objectForKey:@"Variables"]objectForKey:@"data" ]];
         }
         [self.tableView reloadData];
-        NSLog(@"下载成功");
+        DLog(@"下载成功");
     } failed:^(NSError *error) {
         [self showServerError:error];
-        NSLog(@"%@",error);
+        DLog(@"%@",error);
     }];
 }
 
@@ -167,7 +167,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.urlString = url_CollectionForum;
     } success:^(id responseObject, JTLoadType type) {
-        NSLog(@"responseObject myfacforum=====%@",responseObject);
+        DLog(@"responseObject myfacforum=====%@",responseObject);
         // 判断 list 表单是否存在   存在则存储
         NSArray *list = [[responseObject objectForKey:@"Variables"]objectForKey:@"list"];
         if ([DataCheck isValidArray:list]) {
@@ -179,7 +179,7 @@
         
     } failed:^(NSError *error) {
         [self showServerError:error];
-        NSLog(@"%@",error);
+        DLog(@"%@",error);
     }];
 }
 

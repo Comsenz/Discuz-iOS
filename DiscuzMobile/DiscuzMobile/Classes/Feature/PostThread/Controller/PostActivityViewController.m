@@ -78,7 +78,7 @@
     
     self.navigationItem.title = @"发起活动";
     
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 40)];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 40)];
     
     _dropSelect = NO;
     
@@ -88,7 +88,7 @@
     }
     
     
-    _dropDownView = [[DropDownView alloc] initWithFrame:CGRectMake(WIDTH-120, 0, 96, 31 * self.activitytypeArr.count)  activityType:self.activitytypeArr];
+    _dropDownView = [[DropDownView alloc] initWithFrame:CGRectMake(KScreenWidth-120, 0, 96, 31 * self.activitytypeArr.count)  activityType:self.activitytypeArr];
 
     _dropDownView.layer.borderColor = [MAIN_COLLOR CGColor];
     _dropDownView.layer.borderWidth = 0.5f;

@@ -49,7 +49,7 @@
     
     [_pageControl removeFromSuperview];
     // 需要将幻灯和pageControl放在同一个容器里
-    _pageControl.frame = CGRectMake(WIDTH  - 60, CGRectGetHeight(self.frame) - 25, 55, 10);
+    _pageControl.frame = CGRectMake(KScreenWidth  - 60, CGRectGetHeight(self.frame) - 25, 55, 10);
     _pageControl.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.7, 0.7);
     if (_pageControl.hidden == YES) {
         self.showsHorizontalScrollIndicator = YES;

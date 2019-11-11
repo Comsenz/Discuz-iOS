@@ -98,14 +98,14 @@
     WEAKSELF;
     // 页数
     self.chatTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        NSLog(@"刷新");
+        DLog(@"刷新");
         [weakSelf.chatTableView.mj_header endRefreshing];
         
         if (weakSelf.isRefresh == YES || weakSelf.page > 0) {
             [weakSelf updateData];
             weakSelf.page -- ;
         } else if (weakSelf.page == 0) {
-            NSLog(@"无数据");
+            DLog(@"无数据");
             [MBProgressHUD showInfo:@"没有更多回复"];
         }
     }];
@@ -117,7 +117,7 @@
     if (_emoKeyboard == nil) {
         //        CGRect fr = CGRectMake(0, 0, WIDTH, HEIGHT - 67);
         CGFloat tabbarH = 50;
-        _emoKeyboard = [[EmoticonKeyboard alloc] initWithFrame:CGRectMake(0, HEIGHT - tabbarH - SafeAreaBottomHeight, WIDTH, tabbarH)];
+        _emoKeyboard = [[EmoticonKeyboard alloc] initWithFrame:CGRectMake(0, KScreenHeight - tabbarH - SafeAreaBottomHeight, KScreenWidth, tabbarH)];
     }
     return _emoKeyboard;
 }
@@ -210,7 +210,7 @@
         if ([self.chatTableView.visibleCells containsObject:lastCell]) {
             
             CGRect lastFrame = lastCell.frame;
-            CGFloat offsetY = CGRectGetMaxY(lastFrame) - (HEIGHT - customKeyboardHeight);
+            CGFloat offsetY = CGRectGetMaxY(lastFrame) - (KScreenHeight - customKeyboardHeight);
             if (offsetY > 0) {
                 [self.chatTableView scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
                 [self chatViewScrollAnimation:animationDuration andOffsetY: -customKeyboardHeight];

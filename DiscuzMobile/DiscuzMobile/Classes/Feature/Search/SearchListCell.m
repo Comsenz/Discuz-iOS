@@ -26,10 +26,10 @@
     self.contentLabel.numberOfLines = 3;
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@10);
-        make.width.mas_equalTo(WIDTH - 20);
+        make.width.mas_equalTo(KScreenWidth - 20);
     }];
     
-    CGFloat textW = (WIDTH - 30) / 2;
+    CGFloat textW = (KScreenWidth - 30) / 2;
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentLabel);
         make.top.equalTo(self.contentLabel.mas_bottom).offset(10);

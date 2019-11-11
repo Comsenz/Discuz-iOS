@@ -100,7 +100,7 @@
     }];
     
     // 标题
-    self.desLab.preferredMaxLayoutWidth = WIDTH - 30;
+    self.desLab.preferredMaxLayoutWidth = KScreenWidth - 30;
     self.desLab.numberOfLines = 2;
     [self.desLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.headV);
@@ -109,7 +109,7 @@
     
     
     // 内容
-    self.messageLab.preferredMaxLayoutWidth = WIDTH - 30;
+    self.messageLab.preferredMaxLayoutWidth = KScreenWidth - 30;
      self.messageLab.numberOfLines = 2;
     [self.messageLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.desLab);
@@ -132,7 +132,7 @@
     
     [self.imageBgV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
-        make.width.mas_equalTo(WIDTH);
+        make.width.mas_equalTo(KScreenWidth);
         make.top.equalTo(self.datelineLab.mas_bottom);
         make.height.equalTo(@90);
     }];
@@ -145,7 +145,7 @@
     
     [self.viewsLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
-        make.width.equalTo(@(WIDTH/3));
+        make.width.equalTo(@(KScreenWidth/3));
         make.top.equalTo(self.lineV.mas_bottom);
         make.height.equalTo(@40);
     }];
@@ -258,7 +258,7 @@
     NSInteger count = (info.imglist.count > 3)?3:info.imglist.count;
     
     if (count > 0 && [JudgeImageModel graphFreeModel] == NO) { // 有附件图片的, 有图模式的
-        CGFloat picWidth = (WIDTH - 30 - 20) / 3;
+        CGFloat picWidth = (KScreenWidth - 30 - 20) / 3;
         
         [self.imageBgV mas_updateConstraints:^(MASConstraintMaker *make) {
              make.height.equalTo(@90);

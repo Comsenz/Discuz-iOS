@@ -108,7 +108,7 @@
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         
-        NSLog(@"userthreadVariables=%@",responseObject);
+        DLog(@"userthreadVariables=%@",responseObject);
         
         [self.HUD hideAnimated:YES];
         [self.tableView.mj_header endRefreshing];

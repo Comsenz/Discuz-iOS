@@ -61,7 +61,7 @@
  *首页热帖作者字体大小
  */
 +(UIFont *)HomecellNameFontSize16{
-    if (WIDTH == 320) {
+    if (KScreenWidth == 320) {
        return [UIFont fontWithName:jtFontName size:14.0];
     }
     return [UIFont fontWithName:jtFontName size:14.5];
@@ -87,10 +87,10 @@
     return [UIFont fontWithName:jtFontName size:11.0];
 }
 +(UIFont *)ForumInfoFontSize{
-    if (WIDTH == 320) {
+    if (KScreenWidth == 320) {
         return [UIFont fontWithName:jtFontName size:9.5];
     }
-    if (WIDTH == 375) {
+    if (KScreenWidth == 375) {
         return [UIFont fontWithName:jtFontName size:11.0];
     }
     return [UIFont fontWithName:jtFontName size:12.0];

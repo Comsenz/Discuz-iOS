@@ -30,12 +30,12 @@
     placeLable.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:placeLable];
     
-    UILabel * lineLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52, WIDTH-25, 1)];
+    UILabel * lineLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52, KScreenWidth-25, 1)];
     lineLabel1.backgroundColor = LINE_COLOR;
     [self.contentView addSubview:lineLabel1];
     
     
-    self.placeTextField =[[UITextField alloc] initWithFrame:CGRectMake(placeLable.frame.size.width +placeLable.frame.origin.x +10, 5, WIDTH - 95, 45)];
+    self.placeTextField =[[UITextField alloc] initWithFrame:CGRectMake(placeLable.frame.size.width +placeLable.frame.origin.x +10, 5, KScreenWidth - 95, 45)];
     self.placeTextField.placeholder = @"请输入活动地点";
     self.placeTextField.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:self.placeTextField];
@@ -45,11 +45,11 @@
     cityLable.text = @"所在城市:";
     cityLable.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:cityLable];
-    self.cityTextField =[[UITextField alloc] initWithFrame:CGRectMake(cityLable.frame.size.width +cityLable.frame.origin.x +10,lineLabel1.frame.origin.y + lineLabel1.frame.size.height + 5, WIDTH - 95, 45)];
+    self.cityTextField =[[UITextField alloc] initWithFrame:CGRectMake(cityLable.frame.size.width +cityLable.frame.origin.x +10,lineLabel1.frame.origin.y + lineLabel1.frame.size.height + 5, KScreenWidth - 95, 45)];
     self.cityTextField.font = [DZFontSize forumtimeFontSize14];
     self.cityTextField.placeholder = @"请输入所在城市";
     [self.contentView addSubview:self.cityTextField];
-    UILabel *lineLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*2, WIDTH-25, 1)];
+    UILabel *lineLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*2, KScreenWidth-25, 1)];
     lineLabel2.backgroundColor = LINE_COLOR;
     [self.contentView addSubview:lineLabel2];
     
@@ -61,13 +61,13 @@
     placeLable3.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:placeLable3];
     
-    self.classTextField =[[UITextField alloc] initWithFrame:CGRectMake(cityLable.frame.size.width +cityLable.frame.origin.x +10,lineLabel2.frame.origin.y + lineLabel2.frame.size.height + 5, WIDTH-100-120, 45)];
+    self.classTextField =[[UITextField alloc] initWithFrame:CGRectMake(cityLable.frame.size.width +cityLable.frame.origin.x +10,lineLabel2.frame.origin.y + lineLabel2.frame.size.height + 5, KScreenWidth-100-120, 45)];
     //    self.classTextField.backgroundColor = [UIColor redColor];
     self.classTextField.placeholder = @"请输入活动类型";
     self.classTextField.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:self.classTextField];
     
-    UILabel * lineLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*3, WIDTH-25, 1)];
+    UILabel * lineLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*3, KScreenWidth-25, 1)];
     lineLabel3.backgroundColor = LINE_COLOR;
     [self.contentView addSubview:lineLabel3];
     
@@ -81,7 +81,7 @@
     
     CGFloat numWidth = 100;
     CGFloat numspace = 20;
-    if (WIDTH == 320) {
+    if (KScreenWidth == 320) {
         numWidth = 80;
         numspace = 10;
     }
@@ -92,7 +92,7 @@
     self.peopleNumTextField.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:self.peopleNumTextField];
     
-    UILabel *lineLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*4, WIDTH-25, 1)];
+    UILabel *lineLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(15, 52*4, KScreenWidth-25, 1)];
     lineLabel4.backgroundColor = LINE_COLOR;
     [self.contentView addSubview:lineLabel4];
     
@@ -102,7 +102,7 @@
     sexNumLable.text = @"性别:";
     sexNumLable.font = [DZFontSize forumtimeFontSize14];
     [self.contentView addSubview:sexNumLable];
-    self.sexSelectView =[[SelectTipView alloc] initWithFrame:CGRectMake(sexNumLable.frame.size.width +sexNumLable.frame.origin.x + 5,CGRectGetMinY(self.peopleNumTextField.frame) + 5, WIDTH - numWidth - numspace - 70 - CGRectGetWidth(self.peopleNumTextField.frame), 33)];
+    self.sexSelectView =[[SelectTipView alloc] initWithFrame:CGRectMake(sexNumLable.frame.size.width +sexNumLable.frame.origin.x + 5,CGRectGetMinY(self.peopleNumTextField.frame) + 5, KScreenWidth - numWidth - numspace - 70 - CGRectGetWidth(self.peopleNumTextField.frame), 33)];
     self.sexSelectView.layer.masksToBounds = YES;
     self.sexSelectView.layer.borderColor = LINE_COLOR.CGColor;
     self.sexSelectView.layer.borderWidth = 1;

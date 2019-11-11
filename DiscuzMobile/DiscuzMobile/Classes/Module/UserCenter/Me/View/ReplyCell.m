@@ -58,14 +58,14 @@
     self.subjectLab.text = info.subject;
     
     self.timeLab.frame = CGRectMake(15, 10, 200, 15);
-    self.floorLab.frame = CGRectMake(WIDTH - 15 - 50, 10, 50, 15);
+    self.floorLab.frame = CGRectMake(KScreenWidth - 15 - 50, 10, 50, 15);
     
-    CGSize maxSize = CGSizeMake(WIDTH - 30, 100);
+    CGSize maxSize = CGSizeMake(KScreenWidth - 30, 100);
     CGSize textSize = [self.messageLab.text sizeWithFont:[DZFontSize HomecellTitleFontSize15] maxSize:maxSize];
     
-    self.messageLab.frame = CGRectMake(15, CGRectGetMaxY(self.timeLab.frame) + 10, WIDTH - 30, textSize.height);
+    self.messageLab.frame = CGRectMake(15, CGRectGetMaxY(self.timeLab.frame) + 10, KScreenWidth - 30, textSize.height);
     
-    self.subjectLab.frame = CGRectMake(15, CGRectGetMaxY(self.messageLab.frame) + 10, WIDTH - 30, 25);
+    self.subjectLab.frame = CGRectMake(15, CGRectGetMaxY(self.messageLab.frame) + 10, KScreenWidth - 30, 25);
 }
 
 - (CGFloat)cellHeight {

@@ -39,7 +39,7 @@
     self.timeLabel.textColor = MAIN_TITLE_COLOR;
     [self addSubview:self.timeLabel];
     
-    self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, WIDTH-(frame.size.width+20+10), 45)];
+    self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, KScreenWidth-(frame.size.width+20+10), 45)];
     self.contenLabel.font =  [DZFontSize forumtimeFontSize14];
     self.contenLabel.textColor = MAIN_TITLE_COLOR;
     self.contenLabel.numberOfLines = 0;
@@ -58,7 +58,7 @@
     NSString *mesg =  [message.note flattenHTMLTrimWhiteSpace:NO];
     self.contenLabel.text = [mesg transformationStr];
     CGRect frame = self.headImageView.frame;
-    CGFloat width = WIDTH-(frame.size.width+20+10);
+    CGFloat width = KScreenWidth-(frame.size.width+20+10);
     
     CGSize maxSize = CGSizeMake(width, CGFLOAT_MAX);
     CGSize textSize = [self.contenLabel.text sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:maxSize];

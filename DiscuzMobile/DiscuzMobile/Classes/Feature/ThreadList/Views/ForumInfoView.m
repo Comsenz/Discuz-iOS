@@ -58,7 +58,7 @@
     [self addSubview:self.bankLab];
     self.bankLab.text = @"排名：暂无";
     
-    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.5, WIDTH, 0.5)];
+    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.5, KScreenWidth, 0.5)];
     self.sepLine.backgroundColor = LINE_COLOR;
     [self addSubview:self.sepLine];
     
@@ -117,13 +117,13 @@
     [self.describLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.IconV.mas_bottom).offset(8);
         make.left.equalTo(self.IconV);
-        make.width.mas_equalTo(WIDTH - 30);
+        make.width.mas_equalTo(KScreenWidth - 30);
     }];
 
     [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@0);
         make.top.equalTo(self.describLab.mas_bottom).offset(10);
-        make.width.mas_equalTo(WIDTH);
+        make.width.mas_equalTo(KScreenWidth);
         make.height.equalTo(@5);
     }];
 //    [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {

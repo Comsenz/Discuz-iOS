@@ -31,7 +31,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.titleLab.frame = CGRectMake(10, 10, 60, 35);
-    self.contentTextfield.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 8, CGRectGetMinY(self.titleLab.frame), WIDTH - 20 - CGRectGetWidth(self.titleLab.frame) - 8 , CGRectGetHeight(self.titleLab.frame));
+    self.contentTextfield.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 8, CGRectGetMinY(self.titleLab.frame), KScreenWidth - 20 - CGRectGetWidth(self.titleLab.frame) - 8 , CGRectGetHeight(self.titleLab.frame));
     self.selectBtn.frame = CGRectMake(CGRectGetMaxX(self.contentTextfield.frame) -  36, 6, 36, 36);
 }
 

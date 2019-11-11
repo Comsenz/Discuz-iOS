@@ -50,8 +50,8 @@
     //    DTCSSStylesheet *mainCss = [[DTCSSStylesheet alloc] initWithStyleBlock:cssSheet];
     //    [[DTCSSStylesheet defaultStyleSheet] mergeStylesheet:mainCss];
     DTCSSStylesheet *baseCss = [[DTCSSStylesheet alloc] initWithStyleBlock:@"html{color:#333;line-height:20px;}"];
-    DTCSSStylesheet *videoCss = [[DTCSSStylesheet alloc] initWithStyleBlock:[NSString stringWithFormat:@"video{width:%fpx:;height:height:%fpx;display:block;}",WIDTH - 20,(WIDTH - 20) * 0.75]];
-    DTCSSStylesheet *iframeCss = [[DTCSSStylesheet alloc] initWithStyleBlock:[NSString stringWithFormat:@"iframe{width:%fpx:;height:%fpx;display:block;}",WIDTH - 20,(WIDTH - 20) * 0.75]];
+    DTCSSStylesheet *videoCss = [[DTCSSStylesheet alloc] initWithStyleBlock:[NSString stringWithFormat:@"video{width:%fpx:;height:height:%fpx;display:block;}",KScreenWidth - 20,(KScreenWidth - 20) * 0.75]];
+    DTCSSStylesheet *iframeCss = [[DTCSSStylesheet alloc] initWithStyleBlock:[NSString stringWithFormat:@"iframe{width:%fpx:;height:%fpx;display:block;}",KScreenWidth - 20,(KScreenWidth - 20) * 0.75]];
     [[DTCSSStylesheet defaultStyleSheet] mergeStylesheet:baseCss];
     [[DTCSSStylesheet defaultStyleSheet] mergeStylesheet:videoCss];
     [[DTCSSStylesheet defaultStyleSheet] mergeStylesheet:iframeCss];
@@ -71,10 +71,10 @@
         NSURL *url = (id)attachment.contentURL;
         UIView *grayView = [[UIView alloc] initWithFrame:frame];
         // we could customize the view that shows before playback starts
-        if (frame.size.width < WIDTH) {
+        if (frame.size.width < KScreenWidth) {
             grayView.frame = frame;
         } else {
-            grayView.frame = CGRectMake(frame.origin.x, frame.origin.y, WIDTH - 50, frame.size.height * ((WIDTH  - 50)/ frame.size.width));
+            grayView.frame = CGRectMake(frame.origin.x, frame.origin.y, KScreenWidth - 50, frame.size.height * ((KScreenWidth  - 50)/ frame.size.width));
         }
         grayView.backgroundColor = [DTColor blackColor];
         
@@ -210,10 +210,10 @@
     for (DTTextAttachment *oneAttachment in [self.attributedTextContextView.layoutFrame textAttachmentsWithPredicate:pred]) {
         // update attachments that have no original size, that also sets the display size
         if (CGSizeEqualToSize(oneAttachment.originalSize, CGSizeZero)) {
-            if (imageSize.width > WIDTH) {
+            if (imageSize.width > KScreenWidth) {
                 CGFloat width = imageSize.width;
-                imageSize.height = (WIDTH - 20) / width * (imageSize.height);
-                imageSize.width = WIDTH - 20;
+                imageSize.height = (KScreenWidth - 20) / width * (imageSize.height);
+                imageSize.width = KScreenWidth - 20;
                 
             }
             oneAttachment.originalSize = imageSize;
@@ -236,7 +236,7 @@
 #pragma mark - getter
 - (DTAttributedTextContentView *)attributedTextContextView {
     if (!_attributedTextContextView) {
-        _attributedTextContextView = [[DTAttributedTextContentView alloc] initWithFrame:CGRectMake(10, 10, WIDTH - 20, CGRectGetHeight(self.contentView.frame) - 10)];
+        _attributedTextContextView = [[DTAttributedTextContentView alloc] initWithFrame:CGRectMake(10, 10, KScreenWidth - 20, CGRectGetHeight(self.contentView.frame) - 10)];
         _attributedTextContextView.edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
         _attributedTextContextView.layoutFrameHeightIsConstrainedByBounds = _hasFixedRowHeight;
         _attributedTextContextView.delegate = self;

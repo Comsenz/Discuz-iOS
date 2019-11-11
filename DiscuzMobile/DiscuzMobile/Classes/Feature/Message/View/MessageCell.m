@@ -34,13 +34,13 @@
     self.nameLabel.font = [DZFontSize HomecellTimeFontSize16];
     [self addSubview:self.nameLabel];
     
-    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(WIDTH-128, 10,120, 15)];
+    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(KScreenWidth-128, 10,120, 15)];
     self.timeLabel.font = [DZFontSize forumInfoFontSize12];
     self.timeLabel.textAlignment = NSTextAlignmentRight;
     self.timeLabel.textColor = MAIN_TITLE_COLOR;
     [self addSubview:self.timeLabel];
     
-    self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, WIDTH-(frame.size.width+20+10), 45)];
+    self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, KScreenWidth-(frame.size.width+20+10), 45)];
     self.contenLabel.font =  [DZFontSize forumtimeFontSize14];
     self.contenLabel.textColor = MAIN_TITLE_COLOR;
     self.contenLabel.numberOfLines = 0;
@@ -56,8 +56,8 @@
     self.timeLabel.text = [content transformationStr];
     self.contenLabel.text = message.message;
     //         self.contenLabel.text = [dic objectForKey:@"message"];
-    NSLog(@"%@",message.vdateline);
-    NSLog(@"%@",message.message);
+    DLog(@"%@",message.vdateline);
+    DLog(@"%@",message.message);
     if ([DataCheck isValidString:message.tousername]) {
         self.nameLabel.text = message.tousername;
     } else {
@@ -65,7 +65,7 @@
     }
     
     CGRect frame = self.headImageView.frame;
-    CGFloat width = WIDTH-(frame.size.width+20+10);
+    CGFloat width = KScreenWidth-(frame.size.width+20+10);
     
     CGSize maxSize = CGSizeMake(width, CGFLOAT_MAX);
     CGSize textSize = [self.contenLabel.text sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:maxSize];

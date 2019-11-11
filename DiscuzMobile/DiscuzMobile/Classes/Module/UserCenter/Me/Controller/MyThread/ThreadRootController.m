@@ -30,7 +30,7 @@
     
     NSArray *ctArr = @[subVC,repVC];
     
-    CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
+    CGRect segmentRect = CGRectMake(0, 0, KScreenWidth, 44);
     
     DZContainerController *containVc = [[DZContainerController alloc] init];
     [containVc setSubControllers:ctArr parentController:self andSegmentRect:segmentRect];

@@ -40,7 +40,7 @@
     self.navigationItem.title = @"通用设置";
     
     [self.tableView removeFromSuperview];
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight) style:UITableViewStyleGrouped];
     if (@available(iOS 11.0, *)) {
         self.tableView.estimatedRowHeight = 0;
         self.tableView.estimatedSectionFooterHeight = 0;
@@ -62,7 +62,7 @@
                         @"评价应用",
                         @"分享应用"];
     
-    NSArray *aboutArr = @[[NSString stringWithFormat:@"关于“%@”",APPNAME],
+    NSArray *aboutArr = @[[NSString stringWithFormat:@"关于“%@”",DZ_APPNAME],
                           @"服务条款"];
     self.dataSourceArr = @[setArr,appArr,aboutArr].mutableCopy;
 }
@@ -187,7 +187,7 @@
 
 - (void)shareAPP {
     NSString *urlStr = AppStorePath;
-    NSString *appName = APPNAME;
+    NSString *appName = DZ_APPNAME;
     [[DZShareCenter shareInstance] createShare:@"Discuz客户端产品，提供方便简洁的发帖与阅读体验" andImages:@[[DZDevice getIconName]] andUrlstr:urlStr andTitle:appName andView:self.view andHUD:nil];
 }
 

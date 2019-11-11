@@ -52,7 +52,7 @@ static CGFloat btn_width = 24.0;
 - (void)initTextBar {
     
     [self addSubview:self.textView];
-    _textView.frame = CGRectMake(8, 7, (WIDTH - 16 - 5) * 0.55, 35);
+    _textView.frame = CGRectMake(8, 7, (KScreenWidth - 16 - 5) * 0.55, 35);
     
     self.toolContainView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_textView.frame) + 8, CGRectGetMinY(self.textView.frame), CGRectGetWidth(self.textView.frame) * 9 / 11, CGRectGetHeight(self.textView.frame))];
     [self addSubview:self.toolContainView];
@@ -83,7 +83,7 @@ static CGFloat btn_width = 24.0;
 - (void)initDetailBar {
     
     [self addSubview:self.textView];
-    self.textView.frame = CGRectMake(8, 7, (WIDTH - 16 - 5) * 0.55, 35);
+    self.textView.frame = CGRectMake(8, 7, (KScreenWidth - 16 - 5) * 0.55, 35);
     
     self.toolContainView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_textView.frame) + 8, CGRectGetMinY(self.textView.frame), CGRectGetWidth(self.textView.frame) * 9 / 11, CGRectGetHeight(self.textView.frame))];
     [self addSubview:self.toolContainView];
@@ -132,7 +132,7 @@ static CGFloat btn_width = 24.0;
     
     self.faceBtn.frame = CGRectMake(5, 12, btn_width, btn_width);
     self.addBtn.frame = CGRectMake(CGRectGetMaxX(self.faceBtn.frame) + 10, 12, btn_width, btn_width);
-    self.textView.frame = CGRectMake(btn_width * 2 + 25, 7, WIDTH - (btn_width * 2 + 25)  - 70, 35);
+    self.textView.frame = CGRectMake(btn_width * 2 + 25, 7, KScreenWidth - (btn_width * 2 + 25)  - 70, 35);
     self.sendBtn.frame = CGRectMake(CGRectGetMaxX(_textView.frame)  + 10, 7, 50, 32);
     
     
@@ -164,7 +164,7 @@ static CGFloat btn_width = 24.0;
            
             self.faceBtn.frame = CGRectMake(5, 12, btn_width, btn_width);
             self.addBtn.frame = CGRectMake(CGRectGetMaxX(_faceBtn.frame) + 10, 12, btn_width, btn_width);
-            self.textView.frame = CGRectMake(btn_width * 2 + 25, 7, WIDTH - (btn_width * 2 + 25)  - 70, height);
+            self.textView.frame = CGRectMake(btn_width * 2 + 25, 7, KScreenWidth - (btn_width * 2 + 25)  - 70, height);
             self.sendBtn.frame = CGRectMake(CGRectGetMaxX(_textView.frame)  + 10, 7, 50, 32);
             self.toolContainView.hidden = YES;
             self.faceBtn.hidden = NO;
@@ -176,7 +176,7 @@ static CGFloat btn_width = 24.0;
             self.keyboardShow = YES;
             self.toolContainView.hidden = YES;
             self.replyContainView.hidden = NO;
-            self.textView.frame = CGRectMake(8, 7, WIDTH - 8 - btn_width - 32  - 60, height);
+            self.textView.frame = CGRectMake(8, 7, KScreenWidth - 8 - btn_width - 32  - 60, height);
             self.replyContainView.frame = CGRectMake(CGRectGetMaxX(_textView.frame), CGRectGetMinY(self.textView.frame), 100 + 5, 35);
         }
         
@@ -192,7 +192,7 @@ static CGFloat btn_width = 24.0;
         self.keyboardShow = NO;
         self.toolContainView.hidden = NO;
         self.replyContainView.hidden = YES;
-        self.textView.frame = CGRectMake(8, 7, (WIDTH - 16 - 5) * 0.55, height);
+        self.textView.frame = CGRectMake(8, 7, (KScreenWidth - 16 - 5) * 0.55, height);
         self.toolContainView.frame = CGRectMake(CGRectGetMaxX(_textView.frame) + 8, CGRectGetMinY(self.textView.frame), CGRectGetWidth(self.textView.frame) * 9 / 11, 35);
     }
 }
@@ -248,7 +248,7 @@ static CGFloat btn_width = 24.0;
 - (YYTextView *)textView {
     if (_textView == nil) {
         _textView = [YYTextView new];
-        _textView.frame = CGRectMake(8, 7, WIDTH - 8 - 20 - 40  - 60, 35);
+        _textView.frame = CGRectMake(8, 7, KScreenWidth - 8 - 20 - 40  - 60, 35);
         _textView.extraAccessoryViewHeight = 140;
         _textView.showsVerticalScrollIndicator = YES;
         _textView.alwaysBounceVertical = YES;
@@ -336,7 +336,7 @@ static CGFloat btn_width = 24.0;
         _sendBtn.titleLabel.textColor = [UIColor whiteColor];
         _sendBtn.frame = CGRectMake(CGRectGetMaxX(_faceBtn.frame)  + 10, 3, 60, 32);
         [_sendBtn setBackgroundImage:[UIImage imageWithColor:DISABLED_COLOR] forState:UIControlStateDisabled];
-        [_sendBtn setBackgroundImage:[UIImage imageWithColor:MAINCOLOR] forState:UIControlStateNormal];
+        [_sendBtn setBackgroundImage:[UIImage imageWithColor:DZ_MAINCOLOR] forState:UIControlStateNormal];
         _sendBtn.enabled = NO;
         _sendBtn.layer.masksToBounds = YES;
         _sendBtn.layer.cornerRadius = 15;

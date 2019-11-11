@@ -52,8 +52,8 @@
 - (CGFloat)cellHeight {
     
     if ([DataCheck isValidString:self.infoLab.text]) {
-        NSLog(@"%@",self.infoLab.text);
-        CGSize maxSize = CGSizeMake(WIDTH - 60 - 20 - 69 - 30, MAXFLOAT);
+        DLog(@"%@",self.infoLab.text);
+        CGSize maxSize = CGSizeMake(KScreenWidth - 60 - 20 - 69 - 30, MAXFLOAT);
         CGSize textSize = [self.infoLab.text sizeWithFont:[DZFontSize forumtimeFontSize14] maxSize:maxSize];
         CGFloat height = 38;
         if (textSize.height > 38) {

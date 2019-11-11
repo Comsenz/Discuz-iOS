@@ -26,7 +26,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.titleLab.frame = CGRectMake(10, 10, 50, 35);
-    self.contentTextfield.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 8, CGRectGetMinY(self.titleLab.frame), WIDTH - CGRectGetMaxX(self.titleLab.frame) - 20, 35);
+    self.contentTextfield.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 8, CGRectGetMinY(self.titleLab.frame), KScreenWidth - CGRectGetMaxX(self.titleLab.frame) - 20, 35);
 }
 
 - (UILabel *)titleLab {

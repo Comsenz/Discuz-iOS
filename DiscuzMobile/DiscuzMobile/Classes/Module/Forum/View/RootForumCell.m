@@ -79,20 +79,20 @@
     }
     [self.button setImage:[UIImage imageTintColorWithName:openStr andImageSuperView:self.button] forState:UIControlStateNormal];
     
-    self.textLab.frame = CGRectMake(15, 15,WIDTH - 85, 30);
+    self.textLab.frame = CGRectMake(15, 15,KScreenWidth - 85, 30);
     _node = node;
-    self.button.frame = CGRectMake(WIDTH - 30 - 10, 15, 30, 30);
+    self.button.frame = CGRectMake(KScreenWidth - 30 - 10, 15, 30, 30);
     self.textLab.text = node.nodeName;
-    self.sepLine.frame = CGRectMake(15, 59.5, WIDTH - 15, 0.5);
+    self.sepLine.frame = CGRectMake(15, 59.5, KScreenWidth - 15, 0.5);
     
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.textLab.frame = CGRectMake(15, (CGRectGetHeight(self.frame) - 30) / 2,WIDTH - 85, 30);
-    self.button.frame = CGRectMake(WIDTH - 30 - 10, (CGRectGetHeight(self.frame) - 30) / 2, 30, 30);
-    self.sepLine.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 0.5, WIDTH , 0.5);
+    self.textLab.frame = CGRectMake(15, (CGRectGetHeight(self.frame) - 30) / 2,KScreenWidth - 85, 30);
+    self.button.frame = CGRectMake(KScreenWidth - 30 - 10, (CGRectGetHeight(self.frame) - 30) / 2, 30, 30);
+    self.sepLine.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 0.5, KScreenWidth , 0.5);
 }
 
 @end

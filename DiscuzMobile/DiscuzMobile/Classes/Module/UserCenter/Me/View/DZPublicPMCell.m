@@ -30,12 +30,12 @@
     self.nameLabel.textColor = MAIN_COLLOR;
     [self addSubview:self.nameLabel];
     
-    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(WIDTH-100, 10,90, 15)];
+    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(KScreenWidth-100, 10,90, 15)];
     self.timeLabel.font = [DZFontSize HomecellmessageNumLFontSize10];//10
     self.timeLabel.textColor = mRGBColor(180, 180, 180);
     [self addSubview:self.timeLabel];
     
-    self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, WIDTH-(frame.size.width+20+10), 45)];
+    self.contenLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width+20, 25, KScreenWidth-(frame.size.width+20+10), 45)];
     self.contenLabel.font =  [DZFontSize forumInfoFontSize12];//12
     self.contenLabel.numberOfLines = 0;
     [self addSubview:self.contenLabel];
@@ -47,8 +47,8 @@
         // 是系统消息
         NSString * timeStr = [NSDate timeStringFromTimestamp:[dic objectForKey:@"dateline"] format:@"yyyy-MM-dd"];
         self.timeLabel.text = [timeStr transformationStr];
-        NSLog(@"%@",[dic objectForKey:@"dateline"]);
-        NSLog(@"%@",[dic objectForKey:@"message"]);
+        DLog(@"%@",[dic objectForKey:@"dateline"]);
+        DLog(@"%@",[dic objectForKey:@"message"]);
         self.contenLabel.text = [dic objectForKey:@"message"];
         self.nameLabel.text =@"系统消息";
     }

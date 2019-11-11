@@ -32,7 +32,7 @@
     [self addSubview:self.nameLabel];
     
     self.messageBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _messageBtn.frame=CGRectMake(WIDTH-95+20, 10+10,60, 30);
+    _messageBtn.frame=CGRectMake(KScreenWidth-95+20, 10+10,60, 30);
     _messageBtn.layer.cornerRadius = 3.0;
     _messageBtn.layer.borderWidth = 1.0;
     [_messageBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];

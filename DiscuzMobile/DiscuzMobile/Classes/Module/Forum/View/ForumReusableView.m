@@ -37,7 +37,7 @@
     [self.textLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@10);
         make.centerY.equalTo(self);
-        make.width.mas_equalTo(WIDTH - 85);
+        make.width.mas_equalTo(KScreenWidth - 85);
     }];
     
     [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,7 +49,7 @@
     [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@0);
         make.bottom.equalTo(self).offset(-0.5);
-        make.width.mas_equalTo(WIDTH);
+        make.width.mas_equalTo(KScreenWidth);
         make.height.equalTo(@0.5);
     }];
 

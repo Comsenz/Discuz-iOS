@@ -28,7 +28,7 @@
     [self.contentView addSubview:self.nameLab];
     
     self.sendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.sendBtn.frame = CGRectMake(WIDTH - 55, 18, 45, 24);
+    self.sendBtn.frame = CGRectMake(KScreenWidth - 55, 18, 45, 24);
     [self.sendBtn setTitleColor:NAVI_BUTTON_COLLOR forState:UIControlStateNormal];
     self.sendBtn.highlighted = YES;
     self.sendBtn.titleLabel.font = [DZFontSize forumInfoFontSize12];
@@ -48,7 +48,7 @@
     self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headV.frame) + 10, CGRectGetMinY(self.headV.frame), 150, CGRectGetHeight(self.headV.frame));
     
     
-    self.sendBtn.frame = CGRectMake(WIDTH - 60, 18, 50, 24);
+    self.sendBtn.frame = CGRectMake(KScreenWidth - 60, 18, 50, 24);
     self.sendBtn.layer.borderWidth = 1.0;
     self.sendBtn.layer.borderColor = NAVI_BUTTON_COLLOR.CGColor;
     self.sendBtn.layer.cornerRadius = 2.0;

@@ -83,7 +83,7 @@
     [self.segmentedControl setSectionTitles:self.titleArray.copy];
     
     
-    CGFloat height = HEIGHT;
+    CGFloat height = KScreenHeight;
     CGFloat navMaxY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     CGFloat tabbarHeight = CGRectGetHeight(self.tabBarController.tabBar.frame);
     if (self.navigationController) {
@@ -93,7 +93,7 @@
         height -= tabbarHeight;
     }
     
-    self.collectonView.frame = CGRectMake(0, CGRectGetMaxY(segmentRect), WIDTH, height - CGRectGetMaxY(segmentRect));
+    self.collectonView.frame = CGRectMake(0, CGRectGetMaxY(segmentRect), KScreenWidth, height - CGRectGetMaxY(segmentRect));
     self.flowLayout.itemSize = self.collectonView.bounds.size;
 }
 

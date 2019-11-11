@@ -31,7 +31,7 @@
     self.backgroundColor = [UIColor whiteColor];
     
     UIImageView *nameImageV = [[UIImageView alloc] init];
-    nameImageV.image = [UIImage imageNamed:LOGONAME];
+    nameImageV.image = [UIImage imageNamed:DZ_LOGONAME];
     nameImageV.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:nameImageV];
     [nameImageV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -192,12 +192,12 @@
 - (void)layoutSubviews {
     
     [super layoutSubviews];
-    _usertermsView.frame = CGRectMake(CGRectGetMinX(_registerButton.frame), CGRectGetMaxY(_registerButton.frame) + 10, WIDTH, 44);
+    _usertermsView.frame = CGRectMake(CGRectGetMinX(_registerButton.frame), CGRectGetMaxY(_registerButton.frame) + 10, KScreenWidth, 44);
     CGFloat contentHeight = self.frame.size.height + 1;
     if (CGRectGetMaxY(_usertermsView.frame) + 50 > contentHeight) {
         contentHeight = CGRectGetMaxY(_usertermsView.frame) + 50;
     }
-    self.contentSize = CGSizeMake(WIDTH, contentHeight);
+    self.contentSize = CGSizeMake(KScreenWidth, contentHeight);
 }
 
 - (UILabel *)thridAuthTipLabl {

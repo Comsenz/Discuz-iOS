@@ -88,7 +88,7 @@
 
 - (void)loadView {
     [super loadView];
-    self.detailView = [[ThreadDetailView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT - SafeAreaBottomHeight)];
+    self.detailView = [[ThreadDetailView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - SafeAreaBottomHeight)];
     self.view = self.detailView;
 }
 
@@ -235,9 +235,9 @@
     [_bridge registerHandler:@"supportDebate" handler:^(id data, WVJBResponseCallback responseCallback) {
         if ([DataCheck isValidString:data]) {
             if ([data isEqualToString:@"0"]) {
-                NSLog(@"支持正方辩手");
+                DLog(@"支持正方辩手");
             } else if ([data isEqualToString:@"1"]) {
-                NSLog(@"支持反方辩手");
+                DLog(@"支持反方辩手");
             }
         }
     }];
@@ -245,15 +245,15 @@
     [_bridge registerHandler:@"joinDebate" handler:^(id data, WVJBResponseCallback responseCallback) {
         if ([DataCheck isValidString:data]) {
             if ([data isEqualToString:@"0"]) {
-                NSLog(@"加入正方辩手");
+                DLog(@"加入正方辩手");
             } else if ([data isEqualToString:@"1"]) {
-                NSLog(@"加入反方辩手");
+                DLog(@"加入反方辩手");
             }
         }
     }];
     
     [_bridge registerHandler:@"endDebate" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"结束辩论");
+        DLog(@"结束辩论");
     }];
     
     [_bridge registerHandler:@"onDiscussUser" handler:^(id data, WVJBResponseCallback responseCallback) {
@@ -781,7 +781,7 @@
                 }
                 self.threadModel.isRequest = NO;
             }
-            webView.frame=CGRectMake(0, 0, WIDTH, HEIGHT - 50);
+            webView.frame=CGRectMake(0, 0, KScreenWidth, KScreenHeight - 50);
             [self.HUD hide];
         }
     }

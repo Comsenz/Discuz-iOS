@@ -22,12 +22,12 @@
 }
 
 - (void)initCommit {
-    self.userInfoView = [[CenterUserInfoView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 135)];
+    self.userInfoView = [[CenterUserInfoView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 135)];
     [self addSubview:self.userInfoView];
     
     self.userInfoView.nameLab.text = @"---";
     
-    self.tooView = [[CenterToolView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.userInfoView.frame) + 5, WIDTH, 85)];
+    self.tooView = [[CenterToolView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.userInfoView.frame) + 5, KScreenWidth, 85)];
     [self addSubview:self.tooView];
 }
 

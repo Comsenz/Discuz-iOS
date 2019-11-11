@@ -35,15 +35,15 @@
 
 - (void)setPerpage:(NSMutableArray<UIImage *> *)imageArr {
     self.pageControl.numberOfPages = imageArr.count;
-    self.contentSize = CGSizeMake(WIDTH * imageArr.count, HEIGHT);
+    self.contentSize = CGSizeMake(KScreenWidth * imageArr.count, KScreenHeight);
     for (int i = 0; i < imageArr.count; i ++ ) {
-        UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(i * WIDTH, 0, WIDTH, HEIGHT)];
+        UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(i * KScreenWidth, 0, KScreenWidth, KScreenHeight)];
         imgV.image= imageArr[i];
         if (i == imageArr.count - 1) {
             imgV.userInteractionEnabled = YES;
             UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
             [button addTarget:self action:@selector(hidInstroduction) forControlEvents:UIControlEventTouchUpInside];
-            button.frame = CGRectMake(WIDTH / 2 - 80, HEIGHT - 105, 160, 50);
+            button.frame = CGRectMake(KScreenWidth / 2 - 80, KScreenHeight - 105, 160, 50);
             [imgV addSubview:button];
             //            button.layer.borderColor = [UIColor redColor].CGColor;
             //            button.backgroundColor = [UIColor redColor];
@@ -73,7 +73,7 @@
 
 - (UIPageControl *)pageControl {
     if (_pageControl == nil) {
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(WIDTH / 2 - 30, HEIGHT - 40, 60, 30)];
+        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(KScreenWidth / 2 - 30, KScreenHeight - 40, 60, 30)];
         _pageControl.currentPage = 0;
         _pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
         _pageControl.currentPageIndicatorTintColor = MAIN_COLLOR;
@@ -83,7 +83,7 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    self.pageControl.currentPage = (NSInteger)(scrollView.contentOffset.x / WIDTH);
+    self.pageControl.currentPage = (NSInteger)(scrollView.contentOffset.x / KScreenWidth);
 }
 
 /*

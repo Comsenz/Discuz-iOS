@@ -22,13 +22,13 @@
 
 @implementation AppDelegate
 
-static AppDelegate *_appDelegate;
+static AppDelegate *m_appDelegate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    _appDelegate = self;
+    m_appDelegate = self;
     
     DZRootTabBarController * rootVC = [[DZRootTabBarController alloc] init];
     self.window.rootViewController = rootVC;
@@ -122,7 +122,7 @@ static AppDelegate *_appDelegate;
 }
 
 + (AppDelegate *)appDelegate {
-    return _appDelegate;
+    return m_appDelegate;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

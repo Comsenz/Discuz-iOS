@@ -114,7 +114,7 @@
     NSData * data1=[NSData dataWithContentsOfFile:filenamePath];
     NSDictionary *data=[ NSKeyedUnarchiver unarchiveObjectWithData:data1];
     
-    //    NSLog(@"%@data",data);
+    //    DLog(@"%@data",data);
     return data;
 }
 
@@ -174,10 +174,10 @@
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dataObj];
     BOOL success = [data writeToFile:path atomically:YES];
     if (success) {
-        NSLog(@"成功写入p");
+        DLog(@"成功写入p");
     }
     if (![fm fileExistsAtPath:path]) {
-        NSLog(@"不存在文件");
+        DLog(@"不存在文件");
     }
 }
 

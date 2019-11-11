@@ -11,8 +11,8 @@
 #define constant_h
 
 #pragma mark - app名称
-#define APPDISPLAYNAME [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
-#define NOWYEAR [[NSDate date] stringFromDateFormat:@"yyyy"]
+#define KAppDisplayName [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+#define KNowYear [[NSDate date] stringFromDateFormat:@"yyyy"]
 
 /** App id */
 #define DZAPPID @"1011658227"
@@ -24,8 +24,8 @@
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 #define STRONGSELF __strong typeof(weakSelf) strongSelf = weakSelf;
 
-#define WIDTH [UIScreen mainScreen].bounds.size.width
-#define HEIGHT [UIScreen mainScreen].bounds.size.height
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
 #define TIME 1.0
 #define ALINE 35
 
@@ -51,13 +51,13 @@
 
 #define phoneScale (int)[UIScreen mainScreen].scale
 #pragma mark - 判断屏幕适配 ============================================
-#define iPhone320 WIDTH == 320
-#define iPhone375 WIDTH == 375
-#define iPhone414 WIDTH == 414
+#define iPhone320 KScreenWidth == 320
+#define iPhone375 KScreenWidth == 375
+#define iPhone414 KScreenWidth == 414
 
 #define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
-#define SafeAreaTopHeight ((HEIGHT >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"] ? 88 : 64)
-#define SafeAreaBottomHeight ((HEIGHT >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"]  ? 30 : 0)
+#define SafeAreaTopHeight ((KScreenHeight >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"] ? 88 : 64)
+#define SafeAreaBottomHeight ((KScreenHeight >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"]  ? 30 : 0)
 
 #pragma mark - 通知 ================================================
 
