@@ -33,7 +33,7 @@
 #import "DataCheck.h"
 #import "Environment.h"
 #import "FileManager.h"
-#import "AuthcodeView.h"
+#import "DZAuthCodeView.h"
 #import "NSDictionarySR.h"
 #import "UIDevice+Extension.h"
 #import "UITableViewCell+GetReuseID.h"

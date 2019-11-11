@@ -28,7 +28,7 @@
 #import "PostActivityModel.h"
 
 
-@class JTPlaceholderTextView;
+@class DZPlaceholderTextView;
 
 //启动活动MVC
 @interface PostActivityViewController ()<UITextFieldDelegate,UITextViewDelegate,DropDownViewDelegate,ZHPickViewDelegate>

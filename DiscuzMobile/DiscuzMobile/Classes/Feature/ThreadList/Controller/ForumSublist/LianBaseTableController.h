@@ -6,9 +6,9 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "DZBaseTableViewController.h"
 
-@interface LianBaseTableController : BaseTableViewController
+@interface LianBaseTableController : DZBaseTableViewController
 
 @property (nonatomic, assign) BOOL canScroll;
 

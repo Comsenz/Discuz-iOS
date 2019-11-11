@@ -3,11 +3,11 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/5.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "DZBaseTableViewController.h"
 
-@interface SettingViewController : BaseTableViewController
+@interface SettingViewController : DZBaseTableViewController
 
 @end

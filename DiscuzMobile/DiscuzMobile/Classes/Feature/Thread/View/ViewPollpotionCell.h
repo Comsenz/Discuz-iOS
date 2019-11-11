@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/8/25.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

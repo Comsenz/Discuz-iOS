@@ -3,12 +3,12 @@
 //  DiscuzMobile
 //
 //  Created by HB on 17/3/8.
-//  Copyright © 2017年 Cjk. All rights reserved.
+//  Copyright © 2017年 comsenz-service.com. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "DZBaseViewController.h"
 
-@interface UsertermsController : BaseViewController
+@interface UsertermsController : DZBaseViewController
 
 @property (nonatomic, strong) NSString *bbrulestxt;
 

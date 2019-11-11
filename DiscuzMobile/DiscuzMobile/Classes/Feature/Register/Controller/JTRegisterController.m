@@ -10,9 +10,9 @@
 #import "UsertermsController.h"
 
 #import "JTRegisterView.h"
-#import "AuthcodeView.h"
+#import "DZAuthCodeView.h"
 #import "LoginCustomView.h"
-#import "Web2AuthcodeView.h"
+#import "Web2AuthCodeView.h"
 
 #import "XinGeCenter.h"
 #import "CheckHelper.h"
@@ -43,7 +43,7 @@
     [_registerView.registerButton addTarget:self action:@selector(registerBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     WEAKSELF;
-    self.registerView.authcodeView.refreshAuthCodeBlock = ^{
+    self.registerView.authCodeView.refreshAuthCodeBlock = ^{
         [weakSelf downlodyan];
     };
     
@@ -74,10 +74,10 @@
 - (void)downlodyan {
     [self.verifyView downSeccode:@"register" success:^{
         if (self.verifyView.isyanzhengma) {
-            [self.registerView.authcodeView mas_updateConstraints:^(MASConstraintMaker *make) {
+            [self.registerView.authCodeView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.height.mas_equalTo(50);
             }];
-            self.registerView.authcodeView.hidden = NO;
+            self.registerView.authCodeView.hidden = NO;
         }
         
         self.bbrulestxt = [self.verifyView.secureData objectForKey:@"bbrulestxt"];
@@ -92,7 +92,7 @@
 - (void)loadSeccodeImage {
     
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:[self.verifyView.secureData objectForKey:@"seccode"]]];
-    [self.registerView.authcodeView.webview loadRequest:request];
+    [self.registerView.authCodeView.webview loadRequest:request];
     
 }
 
@@ -155,13 +155,13 @@
                                       }.mutableCopy;
     NSMutableDictionary *getData = [NSMutableDictionary dictionary];
     if (self.verifyView.isyanzhengma) {
-        if ([DataCheck isValidString:self.registerView.authcodeView.textField.text]) {
-            [postData setValue:self.registerView.authcodeView.textField.text forKey:@"seccodeverify"];
+        if ([DataCheck isValidString:self.registerView.authCodeView.textField.text]) {
+            [postData setValue:self.registerView.authCodeView.textField.text forKey:@"seccodeverify"];
             [postData setValue:[self.verifyView.secureData objectForKey:@"sechash"] forKey:@"sechash"];
         }
     }
     
-    TTLoginModel *bloginModel = [ShareCenter shareInstance].bloginModel;
+    TTLoginModel *bloginModel = [DZShareCenter shareInstance].bloginModel;
     if (bloginModel != nil) { // 三方登录过来的注册
         [getData setValue:bloginModel.logintype forKey:@"type"];
         [postData setValue:bloginModel.openid forKey:@"openid"];

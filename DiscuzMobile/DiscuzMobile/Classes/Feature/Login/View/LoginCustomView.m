@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 16/9/17.
-//  Copyright © 2016年 Cjk. All rights reserved.
+//  Copyright © 2016年 comsenz-service.com. All rights reserved.
 // 这个textfiled高度55
 
 #import "LoginCustomView.h"

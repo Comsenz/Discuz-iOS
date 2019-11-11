@@ -9,7 +9,7 @@
 #import "XinGeCenter.h"
 #import "UIAlertController+Extension.h"
 
-#import "TTUrlController.h"
+#import "DZBaseUrlController.h"
 #import "ThreadViewController.h"
 
 @interface XinGeCenter()

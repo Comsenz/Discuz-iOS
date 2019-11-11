@@ -6,8 +6,8 @@
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "DZBaseTableViewController.h"
 
-@interface DomainListController : BaseTableViewController
+@interface DomainListController : DZBaseTableViewController
 
 @end

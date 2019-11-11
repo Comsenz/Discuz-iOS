@@ -3,12 +3,12 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/7.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
 #import "LoginModule.h"
 #import "XinGeCenter.h"
-#import "ShareCenter.h"
+#import "DZShareCenter.h"
 
 NSString * const LoginFileName = @"LoginFile";
 NSString * const CookieValue = @"COOKIEVALU";
@@ -83,7 +83,7 @@ NSString * const CookieValue = @"COOKIEVALU";
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:LoginFileName];
     
     [Environment sharedEnvironment].authKey = nil;
-    [ShareCenter shareInstance].bloginModel = nil;
+    [DZShareCenter shareInstance].bloginModel = nil;
     
 }
 

@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginCustomView.h"
-#import "Web2AuthcodeView.h"
+#import "Web2AuthCodeView.h"
 #import "ZHPickView.h"
-@class LoginCustomView, Web2AuthcodeView, ZHPickView;
+@class LoginCustomView, Web2AuthCodeView, ZHPickView;
 
 @interface JTLoginView : UIScrollView
 
@@ -18,7 +18,7 @@
 @property (nonatomic, strong) LoginCustomView *pwordView;
 @property (nonatomic, strong) LoginCustomView *securityView;
 @property (nonatomic, strong) LoginCustomView *answerView;
-@property (nonatomic, strong) Web2AuthcodeView *authcodeView;
+@property (nonatomic, strong) Web2AuthCodeView *authCodeView;
 @property (nonatomic, strong) UIButton *loginBtn;
 @property (nonatomic, strong) UIButton *forgetBtn;
 

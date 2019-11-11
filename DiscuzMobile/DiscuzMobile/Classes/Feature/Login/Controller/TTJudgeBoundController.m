@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by HB on 16/9/18.
-//  Copyright © 2016年 Cjk. All rights reserved.
+//  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
 #import "TTJudgeBoundController.h"
@@ -34,9 +34,9 @@
 
 - (void)setAction {
     
-    NSMutableAttributedString *describe = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"亲爱的用户：%@为了给您更好的服务，请关联一个掌上论坛账号",[ShareCenter shareInstance].bloginModel.username]];
+    NSMutableAttributedString *describe = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"亲爱的用户：%@为了给您更好的服务，请关联一个掌上论坛账号",[DZShareCenter shareInstance].bloginModel.username]];
     NSRange dearRange = {0,5};
-    NSInteger nameLength = [[NSString stringWithFormat:@"%@",[ShareCenter shareInstance].bloginModel.username] length];
+    NSInteger nameLength = [[NSString stringWithFormat:@"%@",[DZShareCenter shareInstance].bloginModel.username] length];
     NSRange nameRange = {6,nameLength};
     
     NSRange allRange = {0,[describe length]};

@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/5.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
 #import "SettingViewController.h"
@@ -16,7 +16,7 @@
 #import "UsertermsController.h"
 #import "DomainListController.h"
 #import "SendEmailHelper.h"
-#import "ShareCenter.h"
+#import "DZShareCenter.h"
 #import "JudgeImageModel.h"
 #import "DZDevice.h"
 
@@ -188,7 +188,7 @@
 - (void)shareAPP {
     NSString *urlStr = AppStorePath;
     NSString *appName = APPNAME;
-    [[ShareCenter shareInstance] createShare:@"Discuz客户端产品，提供方便简洁的发帖与阅读体验" andImages:@[[DZDevice getIconName]] andUrlstr:urlStr andTitle:appName andView:self.view andHUD:nil];
+    [[DZShareCenter shareInstance] createShare:@"Discuz客户端产品，提供方便简洁的发帖与阅读体验" andImages:@[[DZDevice getIconName]] andUrlstr:urlStr andTitle:appName andView:self.view andHUD:nil];
 }
 
 - (void)aboutAPP {

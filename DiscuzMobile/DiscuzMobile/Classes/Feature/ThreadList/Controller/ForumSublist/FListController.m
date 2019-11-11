@@ -16,7 +16,7 @@
 
 #import "ThreadListModel.h"
 #import "ThreadListModel+Forumdisplay.h"
-#import "ShareCenter.h"
+#import "DZShareCenter.h"
 #import "ResponseMessage.h"
 #import "AsyncAppendency.h"
 

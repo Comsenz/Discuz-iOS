@@ -20,7 +20,7 @@
 -(void)setupViews {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.contentView.backgroundColor = [UIColor whiteColor];
-    self.detailTextView = [[JTPlaceholderTextView alloc] initWithFrame:CGRectMake(5, 10, WIDTH-10, CGRectGetHeight(self.frame) -20)];
+    self.detailTextView = [[DZPlaceholderTextView alloc] initWithFrame:CGRectMake(5, 10, WIDTH-10, CGRectGetHeight(self.frame) -20)];
     self.detailTextView.font = [FontSize HomecellTitleFontSize15];
     
     [self.contentView addSubview:self.detailTextView];

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JTPlaceholderTextView.h"
-#import "BaseTextField.h"
+#import "DZPlaceholderTextView.h"
+#import "DZBaseTextField.h"
 
 @interface VoteTitleCell : UITableViewCell
 

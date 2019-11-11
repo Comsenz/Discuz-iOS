@@ -6,10 +6,10 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "DZBaseTableViewController.h"
 @class PmTypeModel;
 
-@interface PmSublistController : BaseTableViewController
+@interface PmSublistController : DZBaseTableViewController
 
 @property (nonatomic, strong) PmTypeModel *typeModel;
 

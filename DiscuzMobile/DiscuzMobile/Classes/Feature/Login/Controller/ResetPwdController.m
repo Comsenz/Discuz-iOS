@@ -10,9 +10,9 @@
 #import "UsertermsController.h"
 
 #import "JTResetPwdView.h"
-#import "AuthcodeView.h"
+#import "DZAuthCodeView.h"
 #import "LoginCustomView.h"
-#import "Web2AuthcodeView.h"
+#import "Web2AuthCodeView.h"
 
 #import "XinGeCenter.h"
 
@@ -38,7 +38,7 @@
     [_resetView.submitButton addTarget:self action:@selector(submitButtonClick) forControlEvents:UIControlEventTouchUpInside];
     
     WEAKSELF;
-    self.resetView.authcodeView.refreshAuthCodeBlock = ^{
+    self.resetView.authCodeView.refreshAuthCodeBlock = ^{
         [weakSelf downlodyan];
     };
     
@@ -60,10 +60,10 @@
     
     [self.verifyView downSeccode:@"password" success:^{
         if (self.verifyView.isyanzhengma) {
-            [self.resetView.authcodeView mas_updateConstraints:^(MASConstraintMaker *make) {
+            [self.resetView.authCodeView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.height.mas_equalTo(50);
             }];
-            self.resetView.authcodeView.hidden = NO;
+            self.resetView.authCodeView.hidden = NO;
         }
         
         [self loadSeccodeImage];
@@ -77,7 +77,7 @@
 - (void)loadSeccodeImage {
     
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:[self.verifyView.secureData objectForKey:@"seccode"]]];
-    [self.resetView.authcodeView.webview loadRequest:request];
+    [self.resetView.authCodeView.webview loadRequest:request];
     
 }
 
@@ -120,7 +120,7 @@
                                      @"formhash":[Environment sharedEnvironment].formhash
                                      }.mutableCopy;
     if (self.verifyView.isyanzhengma) {
-        [postDic setValue:self.resetView.authcodeView.textField.text forKey:@"seccodeverify"];
+        [postDic setValue:self.resetView.authCodeView.textField.text forKey:@"seccodeverify"];
         [postDic setValue:[self.verifyView.secureData objectForKey:@"sechash"] forKey:@"sechash"];
     }
     [self.HUD showLoadingMessag:@"正在提交" toView:self.view];

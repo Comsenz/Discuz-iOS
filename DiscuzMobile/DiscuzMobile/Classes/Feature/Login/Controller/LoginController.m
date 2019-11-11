@@ -19,7 +19,7 @@
 #import "LoginCustomView.h"
 #import "ZHPickView.h"
 
-#import "ShareCenter.h"
+#import "DZShareCenter.h"
 #import "XinGeCenter.h"  // 信鸽
 #import "CheckHelper.h"
 
@@ -56,7 +56,7 @@ NSString * const debugPassword = @"debugPassword";
     [self createBarBtn];
     [[CheckHelper shareInstance] checkRequest];
     WEAKSELF;
-    self.logView.authcodeView.refreshAuthCodeBlock = ^{
+    self.logView.authCodeView.refreshAuthCodeBlock = ^{
         [weakSelf downlodyan];
     };
     
@@ -64,7 +64,7 @@ NSString * const debugPassword = @"debugPassword";
     [self setViewDelegate];
     [self setViewAction];
     // 新进来的时候初始化下
-    [ShareCenter shareInstance].bloginModel = nil;
+    [DZShareCenter shareInstance].bloginModel = nil;
     
     isQCreateView = NO;
     
@@ -107,7 +107,7 @@ NSString * const debugPassword = @"debugPassword";
     self.logView.pwordView.userNameTextField.delegate = self;
     self.logView.securityView.userNameTextField.delegate = self;
     self.logView.answerView.userNameTextField.delegate = self;
-    self.logView.authcodeView.textField.delegate = self;
+    self.logView.authCodeView.textField.delegate = self;
 }
 
 - (void)setViewAction {
@@ -139,7 +139,7 @@ NSString * const debugPassword = @"debugPassword";
     [dic setValue:password forKey:@"password"];
     [dic setValue:@"yes" forKey:@"loginsubmit"];
     if (self.verifyView.isyanzhengma) {
-        [dic setValue:self.logView.authcodeView.textField.text forKey:@"seccodeverify"];
+        [dic setValue:self.logView.authCodeView.textField.text forKey:@"seccodeverify"];
         [dic setValue:[self.verifyView.secureData objectForKey:@"sechash"] forKey:@"sechash"];
     }
     if (isQCreateView) {
@@ -157,13 +157,13 @@ NSString * const debugPassword = @"debugPassword";
     [dic setValue:[Environment sharedEnvironment].formhash forKey:@"formhash"];
     
     NSMutableDictionary *getData = [NSMutableDictionary dictionary];
-    if ([ShareCenter shareInstance].bloginModel.openid != nil) { // 三方登录过来的注册
-        [getData setValue:[ShareCenter shareInstance].bloginModel.logintype forKey:@"type"];
-        [dic setValue:[ShareCenter shareInstance].bloginModel.openid forKey:@"openid"];
+    if ([DZShareCenter shareInstance].bloginModel.openid != nil) { // 三方登录过来的注册
+        [getData setValue:[DZShareCenter shareInstance].bloginModel.logintype forKey:@"type"];
+        [dic setValue:[DZShareCenter shareInstance].bloginModel.openid forKey:@"openid"];
         
-        if ([[ShareCenter shareInstance].bloginModel.logintype isEqualToString:@"weixin"]
-            && [DataCheck isValidString:[ShareCenter shareInstance].bloginModel.unionid]) {
-            [dic setValue:[ShareCenter shareInstance].bloginModel.unionid forKey:@"unionid"];
+        if ([[DZShareCenter shareInstance].bloginModel.logintype isEqualToString:@"weixin"]
+            && [DataCheck isValidString:[DZShareCenter shareInstance].bloginModel.unionid]) {
+            [dic setValue:[DZShareCenter shareInstance].bloginModel.unionid forKey:@"unionid"];
         }
     }
     [self.HUD showLoadingMessag:@"登录中" toView:self.view];
@@ -206,7 +206,7 @@ NSString * const debugPassword = @"debugPassword";
 #pragma mark - qq登录
 - (void)loginWithQQ {
     [self.HUD showLoadingMessag:@"" toView:self.view];
-    [[ShareCenter shareInstance] loginWithQQSuccess:^(id  _Nullable postData, id  _Nullable getData) {
+    [[DZShareCenter shareInstance] loginWithQQSuccess:^(id  _Nullable postData, id  _Nullable getData) {
         [self thirdConnectWithService:postData getData:getData];
     } finish:^{
         [self.HUD hide];
@@ -216,7 +216,7 @@ NSString * const debugPassword = @"debugPassword";
 #pragma mark - 微信登录
 - (void)loginWithWeiXin {
     [self.HUD showLoadingMessag:@"" toView:self.view];
-    [[ShareCenter shareInstance] loginWithWeiXinSuccess:^(id  _Nullable postData, id  _Nullable getData) {
+    [[DZShareCenter shareInstance] loginWithWeiXinSuccess:^(id  _Nullable postData, id  _Nullable getData) {
         [self thirdConnectWithService:postData getData:getData];
     } finish:^{
         [self.HUD hide];
@@ -239,7 +239,7 @@ NSString * const debugPassword = @"debugPassword";
         
         if ([[getData objectForKey:@"type"] isEqualToString:@"weixin"]) {
             if ([ShareSDK hasAuthorized:SSDKPlatformTypeWechat]) {
-                [ShareSDK cancelAuthorize:SSDKPlatformTypeWechat];
+                [ShareSDK cancelAuthorize:SSDKPlatformTypeWechat result:nil];
             }
         }
     }];
@@ -278,7 +278,7 @@ NSString * const debugPassword = @"debugPassword";
 
 - (void)registerNavview {
     // 重置一下
-//    [ShareCenter shareInstance].bloginModel = nil;
+//    [DZShareCenter shareInstance].bloginModel = nil;
     JTRegisterController * rvc =[[JTRegisterController alloc] init];
     [self.navigationController pushViewController:rvc animated:YES];
 }
@@ -300,10 +300,10 @@ NSString * const debugPassword = @"debugPassword";
     [self.verifyView downSeccode:@"login" success:^{
         
         if (self.verifyView.isyanzhengma) {
-            [self.logView.authcodeView mas_updateConstraints:^(MASConstraintMaker *make) {
+            [self.logView.authCodeView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.height.mas_equalTo(TEXTHEIGHT);
             }];
-            self.logView.authcodeView.hidden = NO;
+            self.logView.authCodeView.hidden = NO;
             [self loadSeccodeImage];
         }
         
@@ -320,7 +320,7 @@ NSString * const debugPassword = @"debugPassword";
 
 - (void)loadSeccodeWebView {
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:[self.verifyView.secureData objectForKey:@"seccode"]]];
-    [self.logView.authcodeView.webview loadRequest:request];
+    [self.logView.authCodeView.webview loadRequest:request];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {

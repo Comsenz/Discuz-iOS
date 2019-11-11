@@ -6,8 +6,8 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "DZBaseViewController.h"
 
-@interface DiscoverManagerController : BaseViewController
+@interface DiscoverManagerController : DZBaseViewController
 
 @end

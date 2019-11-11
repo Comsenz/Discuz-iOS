@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class ForumInfoModel;
+@class DZForumInfoModel;
 
 @interface SubForumCell : UITableViewCell
 
@@ -20,6 +20,6 @@
 /**
  * 设置直接显示的cell数据
  */
-- (void)setInfo:(ForumInfoModel *)node;
+- (void)setInfo:(DZForumInfoModel *)node;
 
 @end

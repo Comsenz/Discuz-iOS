@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseFloatingView.h"
+#import "DZBaseFloatingView.h"
 #import "PostTypeModel.h"
 //typedef NS_ENUM(NSUInteger, PostType) {
 //    post_normal,
@@ -18,7 +18,7 @@
 
 typedef void(^SelectTypeBlock)(PostType type);
 
-@interface PostTypeSelectView : BaseFloatingView
+@interface PostTypeSelectView : DZBaseFloatingView
 
 @property (nonatomic, strong) NSMutableArray *typeArray;
 

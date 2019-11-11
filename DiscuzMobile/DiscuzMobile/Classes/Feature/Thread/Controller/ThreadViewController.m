@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/14.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
 #import "ThreadViewController.h"
@@ -28,7 +28,7 @@
 #import "JudgeImageModel.h"
 #import "DZDevice.h"
 
-#import "ShareCenter.h"
+#import "DZShareCenter.h"
 #import "JTWebImageBrowerHelper.h"
 
 @interface ThreadViewController ()<UITextFieldDelegate, UIWebViewDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate, UIScrollViewDelegate>
@@ -591,7 +591,7 @@
     NSString *dateline = self.threadModel.dateline;
     NSString *authorname = self.threadModel.author;
     NSString *shareContent = [NSString stringWithFormat:@"作者：%@ 发表于：%@",authorname,dateline];
-    [[ShareCenter shareInstance] createShare:shareContent
+    [[DZShareCenter shareInstance] createShare:shareContent
                                    andImages:imageArray
                                    andUrlstr:self.threadModel.shareUrl
                                     andTitle:threadtitle

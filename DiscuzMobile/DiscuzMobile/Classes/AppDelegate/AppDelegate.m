@@ -9,11 +9,11 @@
 #import "AppDelegate.h"
 #import "LoginModule.h"
 #import "RNCachingURLProtocol.h"
-#import "TabbarController.h"
-#import "ShareCenter.h"
-#import "LaunchImageManager.h"
+#import "DZRootTabBarController.h"
+#import "DZShareCenter.h"
+#import "DZLaunchScreenManager.h"
 #import "ThreadViewController.h"
-#import "WebImageCacheNSURLProtocol.h"
+#import "WebImageCacheUrlProtocol.h"
 
 #import "VersionUpdate.h"
 #import "SELUpdateAlert.h"
@@ -30,7 +30,7 @@ static AppDelegate *_appDelegate;
     self.window.backgroundColor = [UIColor whiteColor];
     _appDelegate = self;
     
-    TabbarController * rootVC = [[TabbarController alloc] init];
+    DZRootTabBarController * rootVC = [[DZRootTabBarController alloc] init];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     
@@ -52,11 +52,11 @@ static AppDelegate *_appDelegate;
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
     // 分享平台参数配置
-    [[ShareCenter shareInstance] setupShareConfigure];
+    [[DZShareCenter shareInstance] setupShareConfigure];
     
 //    // 设置开机启动画面
 //    [self setLaunchView];
-//    [[LaunchImageManager shareInstance] setLaunchView];
+//    [[DZLaunchScreenManager shareInstance] setLaunchView];
     
     [self initCacheConfigure];
     
@@ -79,7 +79,7 @@ static AppDelegate *_appDelegate;
 - (void)initCacheConfigure {
     // 离线缓存
     [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
-//    [NSURLProtocol registerClass:[WebImageCacheNSURLProtocol class]];
+//    [NSURLProtocol registerClass:[WebImageCacheUrlProtocol class]];
     
 //    SDWebImageDownloaderConfig *coonfig = [[SDWebImageDownloaderConfig alloc] init];
 //    coonfig.downloadTimeout = 10;
@@ -141,7 +141,7 @@ static AppDelegate *_appDelegate;
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"COOKIEVALU"];
         //        // 首次打开APP
-        //        InstroductionView *helpView = [[InstroductionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        //        DZInstroductionView *helpView = [[DZInstroductionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         //        [self.window addSubview:helpView];
         //
         //        NSMutableArray *imageArr = [NSMutableArray array];

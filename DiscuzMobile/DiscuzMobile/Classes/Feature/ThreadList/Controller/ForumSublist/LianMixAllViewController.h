@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
+#import "DZBaseViewController.h"
 
 typedef void(^CForumBlock)(BOOL isCollection);
 
-@interface LianMixAllViewController : BaseViewController
+@interface LianMixAllViewController : DZBaseViewController
 
 @property (nonatomic, strong) UIView *contentView;
 

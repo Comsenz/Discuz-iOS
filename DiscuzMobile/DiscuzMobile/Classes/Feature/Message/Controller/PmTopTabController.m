@@ -7,7 +7,7 @@
 //
 
 #import "PmTopTabController.h"
-#import "JTContainerController.h"
+#import "DZContainerController.h"
 #import "SendMessageViewController.h"
 #import "PmSublistController.h"
 
@@ -65,7 +65,7 @@
     }
     
     CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
-    JTContainerController *rootVC = [[JTContainerController alloc] init];
+    DZContainerController *rootVC = [[DZContainerController alloc] init];
     [rootVC setSubControllers:ctArr parentController:self andSegmentRect:segmentRect];
 }
 

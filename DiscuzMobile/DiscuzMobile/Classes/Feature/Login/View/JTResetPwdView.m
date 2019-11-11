@@ -8,7 +8,6 @@
 
 #import "JTResetPwdView.h"
 #import "LoginCustomView.h"
-#import "Web2AuthcodeView.h"
 
 #define TEXTHEIGHT 50
 
@@ -84,11 +83,11 @@
     
     
     // 验证码 有无
-    self.authcodeView = [[Web2AuthcodeView alloc] init];
-    self.authcodeView.hidden = YES;
-    self.authcodeView.textField.delegate = self;
-    [contentView addSubview:self.authcodeView];
-    [self.authcodeView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.authCodeView = [[Web2AuthCodeView alloc] init];
+    self.authCodeView.hidden = YES;
+    self.authCodeView.textField.delegate = self;
+    [contentView addSubview:self.authCodeView];
+    [self.authCodeView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.equalTo(self.repassView);
         make.top.equalTo(self.repassView.mas_bottom);
@@ -97,7 +96,7 @@
     }];
     
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.authcodeView);
+        make.bottom.equalTo(self.authCodeView);
     }];
     
     self.submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -107,7 +106,7 @@
     self.submitButton.backgroundColor = MAIN_COLLOR;
     [self.submitButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contentView);
-        make.top.equalTo(self.authcodeView.mas_bottom).offset(16);
+        make.top.equalTo(self.authCodeView.mas_bottom).offset(16);
         make.width.mas_equalTo(contentView.mas_width);
         make.height.mas_equalTo(45);
     }];

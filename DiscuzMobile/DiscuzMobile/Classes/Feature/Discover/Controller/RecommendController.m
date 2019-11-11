@@ -7,13 +7,13 @@
 //
 
 #import "RecommendController.h"
-#import "SlideShowScrollView.h"
-#import "TTUrlController.h"
+#import "DZSlideShowScrollView.h"
+#import "DZBaseUrlController.h"
 #import "OtherUserController.h"
 #import "ThreadViewController.h"
 #import "LianMixAllViewController.h"
 
-#import "JTBannerModel.h"
+#import "DZHomeBannerModel.h"
 #import "RecommendModel.h"
 
 #import "BaseStyleCell.h"
@@ -22,7 +22,7 @@
 
 @interface RecommendController ()
 
-@property (nonatomic, strong) SlideShowScrollView *scrollView;
+@property (nonatomic, strong) DZSlideShowScrollView *scrollView;
 
 @end
 
@@ -37,7 +37,7 @@
 }
 
 -(void)initTableView {
-    _scrollView = [[SlideShowScrollView alloc] init];
+    _scrollView = [[DZSlideShowScrollView alloc] init];
     WEAKSELF;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf.tableView.mj_header endRefreshing];
@@ -80,7 +80,7 @@
         request.loadType = type;
     } success:^(id responseObject, JTLoadType type) {
         
-        self.scrollView.bannerArray = [NSMutableArray arrayWithArray:[JTBannerModel setBannerData:responseObject]];
+        self.scrollView.bannerArray = [NSMutableArray arrayWithArray:[DZHomeBannerModel setBannerData:responseObject]];
         [self setBanner];
         dispatch_group_leave(asyGroup);
     } failed:^(NSError *error) {
@@ -126,7 +126,7 @@
     WEAKSELF;
     [self.scrollView touchInSlideShow:^(NSInteger currentPage) {
         if ([DataCheck isValidString:weakSelf.scrollView.bannerArray[currentPage].link]) {
-            JTBannerModel *banner = weakSelf.scrollView.bannerArray[currentPage];
+            DZHomeBannerModel *banner = weakSelf.scrollView.bannerArray[currentPage];
             if ([banner.link_type isEqualToString:@"1"]) {
                 [weakSelf pushToDetail:banner.link];
                 return;
@@ -195,7 +195,7 @@
 }
 
 - (void)pushToWebView:(NSString *)link {
-    TTUrlController *urlCt = [[TTUrlController alloc] init];
+    DZBaseUrlController *urlCt = [[DZBaseUrlController alloc] init];
     urlCt.hidesBottomBarWhenPushed = YES;
     urlCt.urlString = link;
     [self.navigationController pushViewController:urlCt animated:YES];

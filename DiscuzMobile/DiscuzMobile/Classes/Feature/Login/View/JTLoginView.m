@@ -10,11 +10,11 @@
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 #import <ShareSDKExtension/ShareSDK+Extension.h>
-#import "ShareCenter.h"
+#import "DZShareCenter.h"
 
 #import "WXApi.h"
 #import "LoginCustomView.h"
-#import "Web2AuthcodeView.h"
+#import "Web2AuthCodeView.h"
 #import "ZHPickView.h"
 
 #define TEXTHEIGHT 50
@@ -114,11 +114,11 @@
     }];
     
     // 验证码 有无
-    self.authcodeView = [[Web2AuthcodeView alloc] init];
-    self.authcodeView.hidden = YES;
+    self.authCodeView = [[Web2AuthCodeView alloc] init];
+    self.authCodeView.hidden = YES;
     
-    [contentView addSubview:self.authcodeView];
-    [self.authcodeView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [contentView addSubview:self.authCodeView];
+    [self.authCodeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.answerView);
         make.top.equalTo(self.answerView.mas_bottom);
         make.width.equalTo(self.answerView.mas_width);
@@ -126,7 +126,7 @@
     }];
     
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.authcodeView);
+        make.bottom.equalTo(self.authCodeView);
     }];
     
     self.loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -258,10 +258,10 @@
 }
 
 - (void)thirdPlatformAuth {
-    if ([ShareCenter shareInstance].bloginModel) {
-        NSMutableAttributedString *describe = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"亲爱的%@ 关联掌上论坛账号即可一键登录",[ShareCenter shareInstance].bloginModel.username]];
+    if ([DZShareCenter shareInstance].bloginModel) {
+        NSMutableAttributedString *describe = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"亲爱的%@ 关联掌上论坛账号即可一键登录",[DZShareCenter shareInstance].bloginModel.username]];
         NSRange dearRange = {0,3};
-        NSInteger nameLength = [[NSString stringWithFormat:@"%@",[ShareCenter shareInstance].bloginModel.username] length];
+        NSInteger nameLength = [[NSString stringWithFormat:@"%@",[DZShareCenter shareInstance].bloginModel.username] length];
         NSRange nameRange = {3,nameLength};
         NSRange allRange = {0,[describe length]};
         [describe addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:allRange];

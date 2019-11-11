@@ -6,7 +6,7 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "DZBaseTableViewController.h"
 #import "UITextView+EmojiCheck.h"
 #import "UITextField+EmojiCheck.h"
 
@@ -14,7 +14,7 @@
 
 typedef void(^PushDetailBlock)(NSString *tid);
 
-@interface PostBaseController : BaseTableViewController
+@interface PostBaseController : DZBaseTableViewController
 
 @property (nonatomic, strong) NSDictionary *dataForumTherad;
 @property (nonatomic, copy) PushDetailBlock pushDetailBlock;

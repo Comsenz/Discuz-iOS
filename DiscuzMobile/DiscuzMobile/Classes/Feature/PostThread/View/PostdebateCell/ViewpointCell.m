@@ -55,14 +55,14 @@
     return _oppositeLab;
 }
 
-- (JTPlaceholderTextView *)positiveTextView {
+- (DZPlaceholderTextView *)positiveTextView {
     if (_positiveTextView == nil) {
         _positiveTextView = [self getTypeTextview];
     }
     return _positiveTextView;
 }
 
-- (JTPlaceholderTextView *)oppositeTextView {
+- (DZPlaceholderTextView *)oppositeTextView {
     if (_oppositeTextView == nil) {
         _oppositeTextView = [self getTypeTextview];
     }
@@ -75,8 +75,8 @@
     lab.textAlignment = NSTextAlignmentLeft;
     return lab;
 }
-- (JTPlaceholderTextView *)getTypeTextview {
-    JTPlaceholderTextView *textview = [[JTPlaceholderTextView alloc] init];
+- (DZPlaceholderTextView *)getTypeTextview {
+    DZPlaceholderTextView *textview = [[DZPlaceholderTextView alloc] init];
     textview.placeholder = @"  请输入投票选项";
     textview.layer.borderWidth = 1;
     textview.layer.masksToBounds = YES;

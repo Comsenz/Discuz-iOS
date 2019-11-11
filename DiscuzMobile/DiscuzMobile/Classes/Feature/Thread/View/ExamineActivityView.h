@@ -6,10 +6,10 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseFloatingView.h"
+#import "DZBaseFloatingView.h"
 #import "ApplyActiver.h"
 
-@interface ExamineActivityView : BaseFloatingView
+@interface ExamineActivityView : DZBaseFloatingView
 
 @property (nonatomic, strong) ApplyActiver *dataModel;
 @property (nonatomic, strong) UIButton *allowBtn;

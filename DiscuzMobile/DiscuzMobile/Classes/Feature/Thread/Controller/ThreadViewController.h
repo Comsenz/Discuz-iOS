@@ -3,12 +3,12 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/14.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "DZBaseViewController.h"
 
-@interface ThreadViewController : BaseViewController
+@interface ThreadViewController : DZBaseViewController
 
 @property (nonatomic, strong) NSString * tid;
 @property (nonatomic, strong) NSString * forumtitle;

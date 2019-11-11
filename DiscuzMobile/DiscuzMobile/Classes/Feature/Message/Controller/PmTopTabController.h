@@ -6,7 +6,7 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "DZBaseViewController.h"
 
 typedef NS_ENUM(NSUInteger, PMTYPE) {
     pm_mypm = 0,
@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, PMTYPE) {
     pm_interactive,
 };
 
-@interface PmTopTabController : BaseViewController
+@interface PmTopTabController : DZBaseViewController
 
 @property (nonatomic, assign) PMTYPE pmType;
 

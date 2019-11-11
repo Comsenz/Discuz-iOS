@@ -6,9 +6,9 @@
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "DZBaseViewController.h"
 
-@interface ChatDetailController : BaseViewController
+@interface ChatDetailController : DZBaseViewController
 @property (nonatomic, strong) NSString *touid;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *nametitle;

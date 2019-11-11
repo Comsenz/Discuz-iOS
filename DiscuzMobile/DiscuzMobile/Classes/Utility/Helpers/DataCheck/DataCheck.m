@@ -3,11 +3,10 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/7.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
 #import "DataCheck.h"
-#import "LiveDetailModel.h"
 
 @implementation DataCheck
 //判断是否 有效 或者 是健全的 数组 字典 字符串 
@@ -83,18 +82,18 @@
     if (arrayA.count != arrayB.count) {
         return NO;
     }
-    for (NSInteger i = 0; i < arrayA.count; i++ ) {
-        if ([arrayA[i] isKindOfClass:[LiveDetailModel class]] && [arrayB[i] isKindOfClass:[LiveDetailModel class]]) {
-            LiveDetailModel *A = arrayA[i];
-            LiveDetailModel *B = arrayB[i];
-            if (![A.dbdateline isEqualToString:B.dbdateline]) {
-                return NO;
-            }
-        } else {
-            return NO;
-        }
-        
-    }
+//    for (NSInteger i = 0; i < arrayA.count; i++ ) {
+//        if ([arrayA[i] isKindOfClass:[LiveDetailModel class]] && [arrayB[i] isKindOfClass:[LiveDetailModel class]]) {
+//            LiveDetailModel *A = arrayA[i];
+//            LiveDetailModel *B = arrayB[i];
+//            if (![A.dbdateline isEqualToString:B.dbdateline]) {
+//                return NO;
+//            }
+//        } else {
+//            return NO;
+//        }
+//
+//    }
     
     return YES;
 }

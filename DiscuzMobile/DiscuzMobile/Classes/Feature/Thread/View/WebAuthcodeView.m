@@ -1,5 +1,5 @@
 //
-//  WebAuthcodeView.m
+//  WebDZAuthCodeView.m
 //  DiscuzMobile
 //
 //  Created by HB on 16/11/25.

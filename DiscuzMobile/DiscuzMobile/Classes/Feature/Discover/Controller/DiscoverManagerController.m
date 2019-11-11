@@ -7,9 +7,8 @@
 //
 
 #import "DiscoverManagerController.h"
-#import "JTContainerController.h"
+#import "DZContainerController.h"
 #import "RecommendController.h"
-#import "LiveController.h"
 #import "DigestListController.h"
 #import "NewestListController.h"
 #import "FootmarkController.h"
@@ -20,7 +19,7 @@
 @interface DiscoverManagerController ()
 
 @property (nonatomic, strong) NSMutableArray *controllerArr;
-@property (nonatomic, strong) JTContainerController *rootVC;
+@property (nonatomic, strong) DZContainerController *rootVC;
 
 @end
 
@@ -40,13 +39,12 @@
 
 - (void)setPageView {
     
-//    [self addItemClass:[RecommendController class] andTitle:@"推荐"];
-//    [self addItemClass:[LiveController class] andTitle:@"直播"];
+    [self addItemClass:[RecommendController class] andTitle:@"推荐"];
     [self addItemClass:[NewestListController class] andTitle:@"最新"];
     [self addItemClass:[DigestListController class] andTitle:@"精华"];
     
     CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
-    self.rootVC = [[JTContainerController alloc] init];
+    self.rootVC = [[DZContainerController alloc] init];
     self.rootVC.sendNotify = YES;
     [self.rootVC setSubControllers:self.controllerArr parentController:self andSegmentRect:segmentRect];
 }

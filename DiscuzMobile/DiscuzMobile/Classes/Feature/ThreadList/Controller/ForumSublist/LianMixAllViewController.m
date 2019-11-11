@@ -26,7 +26,7 @@
 #import "ForumInfoView.h"
 #import "ThreadViewController.h"
 
-#import "ForumInfoModel.h"
+#import "DZForumInfoModel.h"
 #import "RootForumCell.h"
 #import "SubForumCell.h"
 #import "JudgeImageModel.h"
@@ -50,12 +50,12 @@
 
 @property (nonatomic, strong) NSMutableArray <ForumListModel *> *titleArr;
 
-@property (nonatomic, strong) ForumInfoModel *forumInfo;
+@property (nonatomic, strong) DZForumInfoModel *forumInfo;
 
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) UITableView *foldTableView;
 
-@property (nonatomic, strong) NSMutableArray<ForumInfoModel *> *subForumArr;
+@property (nonatomic, strong) NSMutableArray<DZForumInfoModel *> *subForumArr;
 
 @property (nonatomic, strong) PostTypeSelectView *selectView;
 @property (nonatomic, strong) DropTipView *tipView;
@@ -363,7 +363,7 @@
             if (self.subForumArr.count == 0) {
                 NSArray *arr = [self.Variables objectForKey:@"sublist"];
                 for (NSDictionary *dic in arr) {
-                    ForumInfoModel *model = [[ForumInfoModel alloc] init];
+                    DZForumInfoModel *model = [[DZForumInfoModel alloc] init];
                     [model setValuesForKeysWithDictionary:dic];
                     [self.subForumArr addObject:model];
                 }
@@ -451,7 +451,7 @@
             
         }
         
-        ForumInfoModel *model = self.subForumArr[indexPath.row];
+        DZForumInfoModel *model = self.subForumArr[indexPath.row];
         [cell setInfo:model];
         
         return cell;
@@ -513,7 +513,7 @@
     
     if ([DataCheck isValidDictionary:[dic objectForKey:@"forum"]]) { // 版块信息设置
         
-        self.forumInfo = [[ForumInfoModel alloc] init];
+        self.forumInfo = [[DZForumInfoModel alloc] init];
         [self.forumInfo setValuesForKeysWithDictionary:[dic objectForKey:@"forum"]];
         
         if ([DataCheck isValidString:self.forumInfo.favorited]) {
@@ -609,7 +609,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.foldTableView) {
         
-        ForumInfoModel *node = self.subForumArr[indexPath.row];
+        DZForumInfoModel *node = self.subForumArr[indexPath.row];
         LianMixAllViewController *foVC = [[LianMixAllViewController alloc] init];
         foVC.forumFid = node.fid;
         [self.navigationController pushViewController:foVC animated:YES];
@@ -660,7 +660,7 @@
     return _titleArr;
 }
 
-- (NSMutableArray<ForumInfoModel *> *)subForumArr {
+- (NSMutableArray<DZForumInfoModel *> *)subForumArr {
     if (!_subForumArr) {
         _subForumArr = [NSMutableArray array];
     }

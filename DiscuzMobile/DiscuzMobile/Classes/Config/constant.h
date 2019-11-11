@@ -76,7 +76,7 @@
 
 // 首次请求帖子列表的时候通知
 #define THREADLISTFISTREQUEST @"THREADLISTFISTREQUEST"
-// 使用JTContainerController控件，请求的时候
+// 使用DZContainerController控件，请求的时候
 #define JTCONTAINERQUEST @"JTCONTAINERQUEST"
 
 // 登录后刷新一些页面，获取cookie或者formhash

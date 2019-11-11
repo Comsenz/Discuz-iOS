@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Web2AuthCodeView.h"
 
-@class LoginCustomView,AuthcodeView,Web2AuthcodeView;
+@class LoginCustomView,DZAuthCodeView;
 
 @interface JTResetPwdView : UIScrollView <UITextFieldDelegate>
 
 @property (nonatomic, strong) LoginCustomView *passwordView;
 @property (nonatomic, strong) LoginCustomView *repassView;
 @property (nonatomic, strong) LoginCustomView *newpasswordView;
-@property (nonatomic, strong) Web2AuthcodeView *authcodeView;
+@property (nonatomic, strong) Web2AuthCodeView *authCodeView;
 
 @property (nonatomic, strong) UIButton *submitButton;
 @end
