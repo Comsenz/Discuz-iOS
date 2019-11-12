@@ -73,7 +73,7 @@
 
 // 通知方法
 - (void)threadListFirstRequest {
-    [[NSNotificationCenter defaultCenter] postNotificationName:THREADLISTFISTREQUEST object:nil userInfo:@{@"selectIndex":[NSNumber numberWithInteger:self.selectIndex]}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DZ_ThreadListFirstReload_Notify object:nil userInfo:@{@"selectIndex":[NSNumber numberWithInteger:self.selectIndex]}];
 }
 
 // 防止拖动collection的时候，tableview乱动

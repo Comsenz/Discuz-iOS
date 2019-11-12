@@ -267,7 +267,7 @@ NSString * const debugPassword = @"debugPassword";
 - (void)leftBarBtnClick {
     [self.view endEditing:YES];
     NSDictionary *userInfo = @{@"type":@"cancel"};
-    [[NSNotificationCenter defaultCenter] postNotificationName:SETSELECTINDEX object:nil userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DZ_configSelectedIndex_Notify object:nil userInfo:userInfo];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 #pragma mark - 注册

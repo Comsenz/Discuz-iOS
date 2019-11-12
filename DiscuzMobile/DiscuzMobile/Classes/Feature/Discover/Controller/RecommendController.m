@@ -9,8 +9,7 @@
 #import "RecommendController.h"
 #import "DZSlideShowScrollView.h"
 #import "DZBaseUrlController.h"
-#import "OtherUserController.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 #import "LianMixAllViewController.h"
 
 #import "DZHomeBannerModel.h"
@@ -183,7 +182,7 @@
 
 #pragma mark - jump controller
 - (void)pushToDetail:(NSString *)tid {
-    ThreadViewController * tvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
     tvc.tid = tid;
     [self.navigationController pushViewController:tvc animated:YES];
 }
@@ -208,9 +207,8 @@
     }
     NSInteger tag = sender.view.tag;
     NSString *authorId = [NSString stringWithFormat:@"%ld",tag];
-    OtherUserController * ovc = [[OtherUserController alloc] init];
-    ovc.authorid = authorId;
-    [self.navigationController pushViewController:ovc animated:YES];
+    
+    [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
 }
 
 @end

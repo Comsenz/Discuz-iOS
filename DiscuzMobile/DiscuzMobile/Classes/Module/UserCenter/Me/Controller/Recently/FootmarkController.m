@@ -10,8 +10,7 @@
 
 #import "ThreadListModel.h"
 #import "DZHomeListCell.h"
-#import "ThreadViewController.h"
-#import "OtherUserController.h"
+#import "DZForumThreadController.h"
 
 @interface FootmarkController ()
 
@@ -124,15 +123,13 @@
     }
     NSInteger tag = sender.view.tag;
     NSString *authorId = [NSString stringWithFormat:@"%ld",tag];
-    OtherUserController * ovc = [[OtherUserController alloc] init];
-    ovc.authorid = authorId;
-    [self.navigationController pushViewController:ovc animated:YES];
+     [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ThreadListModel *model = self.dataSourceArr[indexPath.row];
-    ThreadViewController * tvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
     tvc.tid = model.tid;
     [self.navigationController pushViewController:tvc animated:YES];
 }

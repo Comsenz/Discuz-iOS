@@ -10,7 +10,7 @@
 #import "SearchHistoryController.h"
 
 #import "TTSearchModel.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 #import "SearchListCell.h"
 #import "CustomSearchBarView.h"
 #import "UIAlertController+Extension.h"
@@ -107,7 +107,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (self.dataSourceArr.count > 0) {
         TTSearchModel *model = self.dataSourceArr[indexPath.row];
-        ThreadViewController * tvc = [[ThreadViewController alloc] init];
+        DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
         tvc.tid = model.tid;
         tvc.threadtitle = model.subject;
         [self.navigationController pushViewController:tvc animated:YES];

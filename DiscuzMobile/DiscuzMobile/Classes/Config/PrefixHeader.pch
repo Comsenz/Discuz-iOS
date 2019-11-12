@@ -18,6 +18,8 @@
 #import "DZApiRequest.h"
 #import "DZURLStrings.h"
 
+#import "DZMobileHeader.h"
+
 #import <FMDB.h>
 #import <YYKit.h>
 #import <MJRefresh.h>
@@ -33,6 +35,7 @@
 #import "UIControl+DelayEnable.h"
 #import "UIImage+DrawCricleImage.h"
 #import "DataCheck.h"
+#import "UIColor+More.h"
 #import "Environment.h"
 #import "FileManager.h"
 #import "DZAuthCodeView.h"

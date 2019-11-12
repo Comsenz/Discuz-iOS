@@ -133,7 +133,7 @@
             [MBProgressHUD showInfo:@"修改密码成功，请重新登录"];
             [LoginModule signout];
             [self.navigationController popViewControllerAnimated:NO];
-            [[NSNotificationCenter defaultCenter] postNotificationName:SIGNOUTNOTIFY object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:DZ_UserSignOut_Notify object:nil];
         } else {
             [MBProgressHUD showInfo:[responseObject messagestr]];
         }

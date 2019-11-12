@@ -111,7 +111,6 @@
 {
     if (self == nil) {
         return NO;
-        
     }
     //判断window是否在窗口上
     if (self.window == nil) {

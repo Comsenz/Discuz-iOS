@@ -18,7 +18,7 @@
 #import "PostVoteViewController.h"
 #import "PostDebateController.h"
 #import "PostActivityViewController.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 
 #import "UIImageView+FindHairline.h"
 
@@ -256,13 +256,13 @@
 }
 
 - (void)postSucceedToDetail:(NSString *)tid {
-    ThreadViewController * tdvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tdvc = [[DZForumThreadController alloc] init];
     tdvc.tid = tid;
     [self.navigationController pushViewController:tdvc animated:NO];
 }
 
 - (void)closeBtnClick {
-    [[NSNotificationCenter defaultCenter] postNotificationName:SETSELECTINDEX object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DZ_configSelectedIndex_Notify object:nil];
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 

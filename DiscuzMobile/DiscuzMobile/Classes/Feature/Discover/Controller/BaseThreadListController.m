@@ -7,8 +7,7 @@
 //
 
 #import "BaseThreadListController.h"
-#import "OtherUserController.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 #import "BaseStyleCell.h"
 #import "DiscoverModel.h"
 #import "ThreadListCell.h"
@@ -39,11 +38,11 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(firstRequest:)
-                                                 name:JTCONTAINERQUEST
+                                                 name:DZ_CONTAINERQUEST_Notify
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshData)
-                                                 name:DOMAINCHANGE
+                                                 name:DZ_DomainUrlChange_Notify
                                                object:nil];
     
     [self cacheRequest];
@@ -185,7 +184,7 @@
 
 #pragma mark - Action
 - (void)pushThreadDetail:(ThreadListModel *)listModel {
-    ThreadViewController * tvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
     tvc.tid = listModel.tid;
     [self.navigationController pushViewController:tvc animated:YES];
 }
@@ -197,9 +196,8 @@
     }
     NSInteger tag = sender.view.tag;
     NSString *authorId = [NSString stringWithFormat:@"%ld",(long)tag];
-    OtherUserController * ovc = [[OtherUserController alloc] init];
-    ovc.authorid = authorId;
-    [self.navigationController pushViewController:ovc animated:YES];
+    
+    [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
 }
 
 @end

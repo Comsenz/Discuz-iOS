@@ -226,7 +226,7 @@
         [self.HUD hide];
         if ([[responseObject messageval] isEqualToString:@"activity_completion"]) {
             [MBProgressHUD showInfo:@"报名成功"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:REFRESHWEB object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:DZ_RefreshWeb_Notify object:nil];
             
             [self.navigationController popViewControllerAnimated:YES];
         } else {

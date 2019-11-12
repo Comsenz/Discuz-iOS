@@ -8,7 +8,7 @@
 
 #import "CollectionThreadController.h"
 #import "CollectionViewCell.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 
 @interface CollectionThreadController ()
 
@@ -114,7 +114,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    ThreadViewController * tvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
     tvc.tid = [[self.dataSourceArr objectAtIndex:indexPath.row]objectForKey:@"id"];
     [self.navigationController pushViewController:tvc animated:YES];
 }

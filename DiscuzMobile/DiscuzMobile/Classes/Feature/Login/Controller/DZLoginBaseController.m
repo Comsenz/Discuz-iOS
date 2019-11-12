@@ -24,8 +24,8 @@
     [LoginModule loginAnylyeData:responseObject andView:self.view andHandle:^{ // 登录成功操作
         [[XinGeCenter shareInstance] setXG]; // 设置信鸽推送
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:LOGINEDREFRESHGETINFO object:nil];
-        [[NSNotificationCenter defaultCenter] postNotificationName:REFRESHCENTER object:nil]; // 获取资料
+        [[NSNotificationCenter defaultCenter] postNotificationName:DZ_LoginedRefreshInfo_Notify object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DZ_REFRESHCENTER_Notify object:nil]; // 获取资料
         [[NSNotificationCenter defaultCenter] postNotificationName:COLLECTIONFORUMREFRESH object:nil]; // 板块列表刷新
         [self dismissViewControllerAnimated:YES completion:nil];
         
@@ -33,7 +33,7 @@
         UINavigationController *navVC = tabbBarVC.childViewControllers[tabbBarVC.selectedIndex];
         if (navVC.childViewControllers.count == 1 && !self.isKeepTabbarSelected) {
             NSDictionary *userInfo = @{@"type":@"loginSuccess"};
-            [[NSNotificationCenter defaultCenter] postNotificationName:SETSELECTINDEX object:nil userInfo:userInfo];
+            [[NSNotificationCenter defaultCenter] postNotificationName:DZ_configSelectedIndex_Notify object:nil userInfo:userInfo];
         }
     }];
 }

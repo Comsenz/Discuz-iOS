@@ -81,7 +81,7 @@ NSString * const domainName = @"name";
         [self.dataSourceArr addObject:dic];
         [[FileManager shareInstance] writeDocumentPlist:@{domain:self.dataSourceArr} fileName:@"domainList"];
         [LoginModule signout];
-        [[NSNotificationCenter defaultCenter] postNotificationName:DOMAINCHANGE object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DZ_DomainUrlChange_Notify object:nil];
         [self.tableView reloadData];
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -130,7 +130,7 @@ NSString * const domainName = @"name";
         [userDefault setObject:detail forKey:domain];
         [userDefault synchronize];
         [LoginModule signout];
-        [[NSNotificationCenter defaultCenter] postNotificationName:DOMAINCHANGE object:Nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DZ_DomainUrlChange_Notify object:Nil];
         [tableView reloadData];
     }
 }

@@ -7,8 +7,7 @@
 //
 
 #import "FListController.h"
-#import "ThreadViewController.h"
-#import "OtherUserController.h"
+#import "DZForumThreadController.h"
 #import "LianCollectionController.h"
 #import "MySubjectViewController.h"
 #import "UIAlertController+Extension.h"
@@ -52,7 +51,7 @@
     
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(firstRequest:) name:THREADLISTFISTREQUEST object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(firstRequest:) name:DZ_ThreadListFirstReload_Notify object:nil];
     
     if (self.order == 0) {
         self.isRequest = YES;
@@ -412,9 +411,8 @@
     }
     NSInteger tag = sender.view.tag;
     NSString *authorId = [NSString stringWithFormat:@"%ld",(long)tag];
-    OtherUserController * ovc = [[OtherUserController alloc] init];
-    ovc.authorid = authorId;
-    [self.navigationController pushViewController:ovc animated:YES];
+    
+    [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -439,7 +437,7 @@
 
 - (void)pushThreadDetail:(ThreadListModel *)listModel {
     
-    ThreadViewController * tvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
     tvc.dataForumTherad = self.Variables;
     tvc.tid = listModel.tid;
     [self.navigationController pushViewController:tvc animated:YES];

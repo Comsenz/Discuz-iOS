@@ -12,7 +12,7 @@
 #import "DZRootTabBarController.h"
 #import "DZShareCenter.h"
 #import "DZLaunchScreenManager.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 #import "WebImageCacheUrlProtocol.h"
 
 #import "VersionUpdate.h"
@@ -100,7 +100,7 @@ static AppDelegate *m_appDelegate;
     CGPoint location = [[[event allTouches] anyObject] locationInView:self.window];
     CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
     if (CGRectContainsPoint(statusBarFrame, location)) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:STATUSBARTAP object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DZ_STATUSBARTAP_Notify object:nil];
     }
 }
 
@@ -150,7 +150,7 @@ static AppDelegate *m_appDelegate;
         //        }
         //        [helpView setPerpage:imageArr];
         //        helpView.dismissBlock = ^ {
-        //            [[NSNotificationCenter defaultCenter] postNotificationName:FIRSTAPP object:nil];
+        //            [[NSNotificationCenter defaultCenter] postNotificationName:DZ_FIRSTAPP_Notify object:nil];
         //        };
     } else {
         if (!self.isOpenUrl) {

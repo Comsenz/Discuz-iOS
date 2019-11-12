@@ -10,7 +10,7 @@
 #import "UIAlertController+Extension.h"
 
 #import "DZBaseUrlController.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 
 @interface XinGeCenter()
 

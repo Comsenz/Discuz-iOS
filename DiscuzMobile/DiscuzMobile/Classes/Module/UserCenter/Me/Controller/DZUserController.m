@@ -20,7 +20,7 @@
 #import "DZLoginController.h"
 #import "BoundManageController.h"
 #import "PmListController.h"
-#import "DZSettingViewController.h"
+#import "DZSettingController.h"
 #import "FootRootController.h"
 #import "DZResetPwdController.h"
 
@@ -69,9 +69,9 @@
 }
 
 - (void)addNotify {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiReloadData) name:REFRESHCENTER object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signout) name:SIGNOUTNOTIFY object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiReloadData) name:DOMAINCHANGE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiReloadData) name:DZ_REFRESHCENTER_Notify object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signout) name:DZ_UserSignOut_Notify object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiReloadData) name:DZ_DomainUrlChange_Notify object:nil];
 }
 
 - (void)dealloc {
@@ -88,7 +88,7 @@
 
 - (void)rightBarBtnClick {
     
-    DZSettingViewController * svc = [[DZSettingViewController alloc] init];
+    DZSettingController * svc = [[DZSettingController alloc] init];
     [self.navigationController pushViewController:svc animated:YES];
 }
 

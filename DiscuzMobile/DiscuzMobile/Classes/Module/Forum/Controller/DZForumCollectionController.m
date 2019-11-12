@@ -40,9 +40,9 @@ static NSString * headerSection = @"CellHeader";
     
     [self cacheRequest];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:TABBARREFRESH object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadImage) name:IMAGEORNOT object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:DOMAINCHANGE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:DZ_TABBARREFRESH_Notify object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadImage) name:DZ_IMAGEORNOT_Notify object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:DZ_DomainUrlChange_Notify object:nil];
 }
 
 - (void)dealloc {

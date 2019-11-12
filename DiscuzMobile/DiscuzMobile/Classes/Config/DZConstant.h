@@ -7,6 +7,7 @@
 //
 
 // 常量文件
+#import "PRLayouter.h"
 #ifndef constant_h
 #define constant_h
 
@@ -24,10 +25,41 @@
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 #define STRONGSELF __strong typeof(weakSelf) strongSelf = weakSelf;
 
+#define KScreenBounds [[UIScreen mainScreen] bounds]
+#define KWidthScale(value)  ((value)*(KScreenWidth/375))
+#define KHeightScale(value) ((value)*(KScreenHeight/667))
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
 #define TIME 1.0
 #define ALINE 35
+
+/**
+ * iPhone X Screen Insets
+ */
+#define IS_iPhoneX [PRLayouter is_iPhoneX]
+#define IS_Iphone4S  (KScreenHeight == 480 ? YES : NO)
+#define IS_Iphone5S (KScreenHeight==568)
+#define IS_Iphone6 (KScreenHeight==667)
+#define IS_IphonePlus (KScreenHeight==736)
+#define IS_IphoneXMax (KScreenHeight==896)
+// nav
+#define KStatusBarHeight [PRLayouter statusBarHeight]  //  竖屏 状态条 X: 44 N: 20
+#define KNavigation_Bar_Height [PRLayouter navigation_Bar_Height_Portrait] // X: 横竖屏44 N: 横竖屏44
+#define KNavigation_ContainStatusBar_Height [PRLayouter navigation_Bar_ContainStatusBar_Height] // X: 竖屏88 横屏64 N: 横竖屏64
+#define KNavigation_Bar_Gap  [PRLayouter navigation_Bar_Gap_2X] // X: 竖屏24
+#define KContent_OringY (KNavigation_ContainStatusBar_Height + 1)// vc里面内容Y坐标
+
+
+// tab
+#define KTabbar_Height  [PRLayouter tabbar_Height] // X: 竖屏83 横屏70
+#define KTabbar_Gap  [PRLayouter tabbar_Gap_2X] // X: 竖屏34 横屏21
+#define KTabbar_Gap_top  KScreenHeight - [PRLayouter tabbar_Gap_2X] //
+#define KTabbar_Height_top  KScreenHeight - [PRLayouter tabbar_Height] //
+
+#define KImageNamed(NamePointer) [UIImage imageNamed:(NamePointer)]
+#define KNibName(name)   [UINib nibWithNibName:(name) bundle:[NSBundle mainBundle]]
+#define KURLString(urlString) [NSURL URLWithString:[NSString stringWithFormat:@"%@",urlString]]
 
 
 //G－C－D
@@ -39,6 +71,11 @@
 #else
 #define DLog( s, ... )
 #endif
+
+// 国际化 字符创
+#define _(x) [LocalStringUtil localString:x]
+#define checkInteger(__X__)        [NSString stringWithFormat:@"%ld",__X__]
+#define checkNull(__X__)        (__X__) == nil || [(__X__) isEqual:[NSNull null]] ? @"" : [NSString stringWithFormat:@"%@", (__X__)]
 
 #pragma mark - 网络请求超时时间
 #define TIMEOUT 30.0
@@ -62,28 +99,28 @@
 #pragma mark - 通知 ================================================
 
 // tabbar个人中心选中
-#define SETSELECTINDEX @"selectIndex"
+#define DZ_configSelectedIndex_Notify @"selec7tIndex"
 // 连续点击tabbar刷新
-#define TABBARREFRESH @"TabbarButtonClickDidRepeatNotification"
+#define DZ_TABBARREFRESH_Notify @"TabbarButt3onClickDidRepeatNotification"
 // 刷新个人中心资料
-#define REFRESHCENTER @"getZiliao"
-#define IMAGEORNOT @"imageOrNot"
-#define SIGNOUTNOTIFY @"SIGNOUTNOTIFY"
+#define DZ_REFRESHCENTER_Notify     @"get6Ziliao"
+#define DZ_IMAGEORNOT_Notify        @"IMGOR3NOT_Notify"
+#define DZ_UserSignOut_Notify       @"SIGNOUT4NOTIFY"
 // 点中statusbar
-#define STATUSBARTAP @"statusBarTappedNotification"
+#define DZ_STATUSBARTAP_Notify @"statuBarTappedNotification"
 // 防止首次加载APP的时候没有数据，划过导航页面的时候刷新一次
-#define FIRSTAPP @"FIRSTAPP"
+#define DZ_FIRSTAPP_Notify @"APPFIRSTLanch"
 
 // 首次请求帖子列表的时候通知
-#define THREADLISTFISTREQUEST @"THREADLISTFISTREQUEST"
+#define DZ_ThreadListFirstReload_Notify @"THREADLIST3FISTREQUEST"
 // 使用DZContainerController控件，请求的时候
-#define JTCONTAINERQUEST @"JTCONTAINERQUEST"
+#define DZ_CONTAINERQUEST_Notify @"DZCONTAINERQUEST"
 
 // 登录后刷新一些页面，获取cookie或者formhash
-#define LOGINEDREFRESHGETINFO @"LOGINEDREFRESHGETINFO"
-#define COLLECTIONFORUMREFRESH @"COLLECTIONFORUMREFRESH"
-#define REFRESHWEB @"refreshWeb"
+#define DZ_LoginedRefreshInfo_Notify @"LOGINEndRefreshGetInfo"
+#define COLLECTIONFORUMREFRESH @"COLLECTIO6NFORUMREFRESH"
+#define DZ_RefreshWeb_Notify @"refreshL9ocalWeb"
 
-#define DOMAINCHANGE @"DOMAINCHANGE"
+#define DZ_DomainUrlChange_Notify @"DomainN4ameChange"
 
 #endif /* const_h */

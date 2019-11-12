@@ -12,7 +12,7 @@
 #import "LoginModule.h"
 #import "ChatContentCell.h"
 
-#import "OtherUserController.h"
+#import "DZOtherUserController.h"
 
 @interface ChatDetailController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -356,7 +356,7 @@
     
     UIView *view = sender.view;
     MessageModel *model = self.messageModelArr[view.tag];
-    OtherUserController *ovc = [[OtherUserController alloc] init];
+    DZOtherUserController *ovc = [[DZOtherUserController alloc] init];
     ovc.authorid = model.authorid;
     [self showViewController:ovc sender:nil];
     

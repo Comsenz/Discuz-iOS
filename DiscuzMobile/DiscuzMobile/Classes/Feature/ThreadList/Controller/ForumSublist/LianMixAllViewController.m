@@ -23,7 +23,7 @@
 #import "ForumListModel.h"
 #import "PostTypeSelectView.h"
 #import "ForumInfoView.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 
 #import "DZForumInfoModel.h"
 #import "RootForumCell.h"
@@ -187,7 +187,7 @@
 }
 
 - (void)postSucceedToDetail:(NSString *)tid {
-    ThreadViewController * tdvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tdvc = [[DZForumThreadController alloc] init];
     tdvc.tid = tid;
     [self.navigationController pushViewController:tdvc animated:NO];
 }
@@ -381,7 +381,7 @@
 
 -(void)dl_addNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onOtherScrollToTop:) name:@"kLeaveTopNtf" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginedRefresh) name:LOGINEDREFRESHGETINFO object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginedRefresh) name:DZ_LoginedRefreshInfo_Notify object:nil];
 }
 
 

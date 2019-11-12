@@ -8,7 +8,7 @@
 
 #import "MyFriendViewController.h"
 #import "SendMessageViewController.h"
-#import "OtherUserController.h"
+#import "DZOtherUserController.h"
 #import "ChatDetailController.h"
 #import "FriendCell.h"
 
@@ -99,7 +99,7 @@
     if ([DataCheck isValidArray:self.dataSourceArr]) {
         dic = [self.dataSourceArr objectAtIndex:indexPath.row];
     }
-    OtherUserController * ovc = [[OtherUserController alloc] init];
+    DZOtherUserController * ovc = [[DZOtherUserController alloc] init];
     ovc.authorid = [dic objectForKey:@"uid"];
     [self showViewController:ovc sender:nil];
     

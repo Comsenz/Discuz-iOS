@@ -8,7 +8,7 @@
 
 #import "MySubjectViewController.h"
 #import "SubjectCell.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 
 @interface MySubjectViewController ()
 
@@ -83,7 +83,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString * tid = [[self.dataSourceArr objectAtIndex:indexPath.row] objectForKey:@"tid"];
-    ThreadViewController * tvc = [[ThreadViewController alloc] init];
+    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
     tvc.tid = tid;
     [self.navigationController pushViewController:tvc animated:YES];
 }

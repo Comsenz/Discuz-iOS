@@ -12,7 +12,7 @@
 #import "MessageCell.h"
 #import "SystemNoteCell.h"
 #import "MsglistCell.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 
 #import "ChatDetailController.h"
 #import "SendMessageViewController.h"
@@ -198,7 +198,7 @@
     if ([DataCheck isValidString:self.typeModel.view] && [self.typeModel.view isEqualToString:@"mypost"]) {
         if ([DataCheck isValidDictionary:model.notevar]) {
             if ([DataCheck isValidString:[model.notevar objectForKey:@"tid"]]) {
-                ThreadViewController *threadVC = [[ThreadViewController alloc] init];
+                DZForumThreadController *threadVC = [[DZForumThreadController alloc] init];
                 threadVC.tid = [model.notevar objectForKey:@"tid"];
                 [self showViewController:threadVC sender:nil];
             }
@@ -207,7 +207,7 @@
             //                model.note
             NSArray *arr = [model.note componentsSeparatedByString:@"tid="];
             if (arr.count >= 2) {
-                ThreadViewController *threadVC = [[ThreadViewController alloc] init];
+                DZForumThreadController *threadVC = [[DZForumThreadController alloc] init];
                 NSString *containTid = arr[1];
                 
                 NSString *tid = [containTid componentsSeparatedByString:@"\" "][0];

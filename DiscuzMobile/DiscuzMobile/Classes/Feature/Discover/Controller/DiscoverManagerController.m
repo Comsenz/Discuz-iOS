@@ -13,7 +13,7 @@
 #import "NewestListController.h"
 #import "FootmarkController.h"
 #import "TTSearchController.h"
-#import "DZSettingViewController.h"
+#import "DZSettingController.h"
 
 @interface DiscoverManagerController ()
 
@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     [self setNavc];
-    [self setPageView];
+    [self configDiscoverPageView];
 }
 
 -(void)setNavc {
@@ -36,7 +36,7 @@
     [self createBarBtn:@"bar_search" type:NavItemImage Direction:NavDirectionRight];
 }
 
-- (void)setPageView {
+- (void)configDiscoverPageView {
     
     [self addItemClass:[RecommendController class] andTitle:@"推荐"];
     [self addItemClass:[NewestListController class] andTitle:@"最新"];
@@ -55,7 +55,7 @@
 }
 
 - (void)leftBarBtnClick {
-    DZSettingViewController *setVC = [[DZSettingViewController alloc] init];
+    DZSettingController *setVC = [[DZSettingController alloc] init];
     [self showViewController:setVC sender:nil];
 }
 

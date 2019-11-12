@@ -7,19 +7,19 @@
 //
 
 #import "DZHomeController.h"
-#import "DZSettingViewController.h"
-#import "ThreadViewController.h"
+#import "DZSettingController.h"
 #import "RNCachingURLProtocol.h"
-#import "LoginModule.h"
-#import "DZSlideShowScrollView.h"
+#import "DZForumThreadController.h"
 #import "ForumCell.h"
-#import "DZForumInfoModel.h"
+#import "LoginModule.h"
 #import "DZHomeListCell.h"
 #import "ThreadListModel.h"
-#import "LianMixAllViewController.h"
+#import "DZForumInfoModel.h"
 #import "TTSearchController.h"
 #import "DZHomeBannerModel.h"
 #import "DZBaseUrlController.h"
+#import "DZSlideShowScrollView.h"
+#import "LianMixAllViewController.h"
 
 #import "RootForumCell.h"
 
@@ -79,15 +79,11 @@
 - (void)setBanner {
     
     if (self.scrollView.bannerArray.count == 0) {
-        
         self.scrollView.frame =  CGRectMake(0, 0, KScreenWidth, 0);
         [self.scrollView.pageControl removeFromSuperview];
         return;
-        
     } else {
-        
         self.scrollView.frame = CGRectMake(0, 0, KScreenWidth, KScreenWidth * 9 / 20 + 6);
-        
     }
     self.tableView.tableHeaderView = self.scrollView;
 //    self.scrollView.isPlaceholder = YES;
@@ -107,18 +103,17 @@
 
 - (void)initRequest {
     // 热帖
-    [self downLoadData];
-    [self downLoadBanner];
+    [self downLoadHotThreadData];
+    [self downLoadForumHomeBanner];
     
     if ([LoginModule isLogged]) { // 收藏版块
         [self downLoadFavForumData];
-        
     } else { // 热门版块
-        [self downLoadData:@"hotforum"];
+        [self downLoadDataWtihForumType:@"hotforum"];
     }
 }
 
-- (void)downLoadBanner {
+- (void)downLoadForumHomeBanner {
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.urlString = url_RecommendBanner;
@@ -145,7 +140,7 @@
 }
 
 //  下载热门版块 hotforum（常去的版块）-- 未登录时候
--(void)downLoadData:(NSString *)forumType {
+-(void)downLoadDataWtihForumType:(NSString *)forumType {
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.urlString = url_Hotforum;
@@ -174,7 +169,7 @@
             [self setHotData:list];
             [self.tableView reloadData];
         } else {
-            [self downLoadData:@"hotforum"];
+            [self downLoadDataWtihForumType:@"hotforum"];
         }
         
     } failed:^(NSError *error) {
@@ -184,7 +179,7 @@
 }
 
 // 下载热门主题（热帖）
--(void)downLoadData {
+-(void)downLoadHotThreadData {
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         //获取热门主题
         [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
@@ -202,7 +197,6 @@
                 [home setValuesForKeysWithDictionary:dic];
                 [self.hotSource addObject:home];
             }
-            
         }
     } failed:^(NSError *error) {
         [self.HUD hideAnimated:YES];
@@ -234,7 +228,6 @@
     if (indexPath.section ==0) {
         return 90.0;
     }else {
-        
         UITableViewCell * cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
         return [(DZHomeListCell *)cell cellHeight];
     }
@@ -248,11 +241,9 @@
             return 2;
         }
         return 0;
-        
     } else {
         return self.hotSource.count;
     }
-    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -323,11 +314,9 @@
         LianMixAllViewController *fvc = [[LianMixAllViewController alloc] init];
         fvc.forumFid = infoModel.fid;
         [self.navigationController pushViewController:fvc animated:YES];
-        
     } else {
-        
         ThreadListModel *model = self.hotSource[indexPath.row];
-        ThreadViewController * tvc = [[ThreadViewController alloc] init];
+        DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
         tvc.tid = model.tid;
         [self.navigationController pushViewController:tvc animated:YES];
     }
