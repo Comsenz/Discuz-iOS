@@ -1,5 +1,5 @@
 //
-//  PostBaseController.h
+//  DZPostBaseController.h
 //  DiscuzMobile
 //
 //  Created by HB on 2017/6/29.
@@ -14,7 +14,7 @@
 
 typedef void(^PushDetailBlock)(NSString *tid);
 
-@interface PostBaseController : DZBaseTableViewController
+@interface DZPostBaseController : DZBaseTableViewController
 
 @property (nonatomic, strong) NSDictionary *dataForumTherad;
 @property (nonatomic, copy) PushDetailBlock pushDetailBlock;

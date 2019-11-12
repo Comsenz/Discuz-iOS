@@ -31,7 +31,6 @@
     self.selectField.font = [DZFontSize HomecellTitleFontSize15];
     self.selectField.tag = 103;
     [self.contentView addSubview:self.selectField];
-    
 }
 
 - (void)layoutSubviews {

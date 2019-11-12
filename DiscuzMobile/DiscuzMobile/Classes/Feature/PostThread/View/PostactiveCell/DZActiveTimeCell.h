@@ -1,5 +1,5 @@
 //
-//  ActiveTimeCell.h
+//  DZActiveTimeCell.h
 //  DiscuzMobile
 //
 //  Created by HB on 16/11/30.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UUDatePicker.h"
 
-@interface ActiveTimeCell : UITableViewCell
+@interface DZActiveTimeCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *postImageView;
 @property (nonatomic, strong) UITextField *beginTimeField;

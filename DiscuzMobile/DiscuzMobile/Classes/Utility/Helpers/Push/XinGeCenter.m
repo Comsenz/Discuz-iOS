@@ -9,9 +9,6 @@
 #import "XinGeCenter.h"
 #import "UIAlertController+Extension.h"
 
-#import "DZBaseUrlController.h"
-#import "DZForumThreadController.h"
-
 @interface XinGeCenter()
 
 @property (nonatomic, strong) NSString *xgts;

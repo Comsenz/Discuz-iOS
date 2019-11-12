@@ -16,8 +16,7 @@
 
 #import "MyFriendViewController.h"
 #import "CollectionRootController.h"
-#import "ThreadRootController.h"
-#import "DZLoginController.h"
+#import "DZThreadRootController.h"
 #import "BoundManageController.h"
 #import "PmListController.h"
 #import "DZSettingController.h"
@@ -131,7 +130,7 @@
                 break;
             case 3:          //我的主题
             {
-                ThreadRootController *trVc = [[ThreadRootController alloc] init];
+                DZThreadRootController *trVc = [[DZThreadRootController alloc] init];
                 trVc.hidesBottomBarWhenPushed = YES;
                 [weakSelf.navigationController pushViewController:trVc animated:YES];
             }
@@ -354,10 +353,7 @@
 }
 
 - (void)initLogin {
-    
-    DZLoginController *login = [[DZLoginController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:login];
-    [self presentViewController:nc animated:YES completion:nil];
+    [[DZMobileCtrl sharedCtrl] PresentLoginController:self];
 }
 
 - (ImagePickerView *)pickerView {

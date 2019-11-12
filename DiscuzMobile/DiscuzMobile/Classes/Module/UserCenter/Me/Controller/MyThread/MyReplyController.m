@@ -8,7 +8,6 @@
 
 #import "MyReplyController.h"
 #import "OtherUserPostReplyCell.h"
-#import "DZForumThreadController.h"
 #import "ReplyCell.h"
 #import "SubjectCell.h"
 
@@ -94,10 +93,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSString * tid = [[self.dataSourceArr objectAtIndex:indexPath.row] objectForKey:@"tid"];
-    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
-    tvc.tid = tid;
-    [self.navigationController pushViewController:tvc animated:YES];
+    NSString * tidStr = [[self.dataSourceArr objectAtIndex:indexPath.row] objectForKey:@"tid"];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:tidStr];
 }
 
 - (void)downLoadData {

@@ -1,37 +1,36 @@
 //
-//  DiscoverManagerController.m
+//  DZDiscoverManagerController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/5/4.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "DiscoverManagerController.h"
+#import "DZDiscoverManagerController.h"
 #import "DZContainerController.h"
 #import "RecommendController.h"
 #import "DigestListController.h"
 #import "NewestListController.h"
 #import "FootmarkController.h"
-#import "TTSearchController.h"
 #import "DZSettingController.h"
 
-@interface DiscoverManagerController ()
+@interface DZDiscoverManagerController ()
 
 @property (nonatomic, strong) NSMutableArray *controllerArr;
 @property (nonatomic, strong) DZContainerController *rootVC;
 
 @end
 
-@implementation DiscoverManagerController
+@implementation DZDiscoverManagerController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setNavc];
+    [self configNaviBar];
     [self configDiscoverPageView];
 }
 
--(void)setNavc {
+-(void)configNaviBar {
     [self createBarBtn:@"setting" type:NavItemImage Direction:NavDirectionLeft];
     [self createBarBtn:@"bar_search" type:NavItemImage Direction:NavDirectionRight];
 }
@@ -60,9 +59,7 @@
 }
 
 - (void)rightBarBtnClick {
-    TTSearchController *searchVC = [[TTSearchController alloc] init];
-    searchVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:searchVC animated:YES];
+    [[DZMobileCtrl sharedCtrl]PushToSearchController];
 }
 
 - (NSMutableArray *)controllerArr {

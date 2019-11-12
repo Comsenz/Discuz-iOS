@@ -1,12 +1,12 @@
 //
-//  PostNormalViewController.m
+//  DZPostNormalViewController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/6/7.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "PostNormalViewController.h"
+#import "DZPostNormalViewController.h"
 #import "AudioModel.h"
 #import "AudioTool.h"
 #import "UploadTool.h"
@@ -17,14 +17,13 @@
 #import "NewThreadTypeModel.h"
 #import "PostSelectTypeCell.h"
 #import "VoteTitleCell.h"
-//#import "ActiveDetailCell.h"
 #import "NormalDetailCell.h"
 #import "NormalThreadToolCell.h"
-#import "audioListCell.h"
+#import "DZAudioListCell.h"
 
 #import "ZHPickView.h"
 
-@interface PostNormalViewController () <ZHPickViewDelegate, UITextFieldDelegate, UITextViewDelegate,WBStatusComposeEmoticonViewDelegate,YYTextViewDelegate>
+@interface DZPostNormalViewController () <ZHPickViewDelegate, UITextFieldDelegate, UITextViewDelegate,WBStatusComposeEmoticonViewDelegate,YYTextViewDelegate>
 
 @property (nonatomic, strong) PostNormalModel *normalModel;
 
@@ -39,7 +38,7 @@
 
 @end
 
-@implementation PostNormalViewController
+@implementation DZPostNormalViewController
 
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -188,9 +187,9 @@
             if ([AudioTool shareInstance].audioArray.count > 0) {
                 AudioModel *model = [AudioTool shareInstance].audioArray[indexPath.row];
                 NSString *toolId = @"audioId";
-                audioListCell *audioCell = [tableView dequeueReusableCellWithIdentifier:toolId];
+                DZAudioListCell *audioCell = [tableView dequeueReusableCellWithIdentifier:toolId];
                 if (audioCell == nil) {
-                    audioCell = [[audioListCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:toolId];
+                    audioCell = [[DZAudioListCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:toolId];
                     audioCell.selectionStyle = UITableViewCellSelectionStyleNone;
                 }
                 audioCell.timeLabel.text = [NSString stringWithFormat:@"%ld秒",model.time];

@@ -1,5 +1,5 @@
 //
-//  TTBoundController.h
+//  DZUserBoundController.h
 //  DiscuzMobile
 //
 //  Created by HB on 16/9/18.
@@ -8,6 +8,6 @@
 
 #import "DZLoginBaseController.h"
 
-@interface TTBoundController : DZLoginBaseController
+@interface DZUserBoundController : DZLoginBaseController
 
 @end

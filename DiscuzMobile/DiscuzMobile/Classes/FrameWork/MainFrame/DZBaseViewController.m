@@ -7,9 +7,7 @@
 //
 
 #import "DZBaseViewController.h"
-
-#import "DZLoginController.h"
-#import "PostVoteViewController.h"
+#import "DZPostVoteViewController.h"
 #import "Environment.h"
 #import "UIImageView+FindHairline.h"
 #import "WBEmoticonInputView.h"
@@ -85,9 +83,9 @@
 
 // 弹出登录界面
 - (void)initLogin {
-    DZLoginController *login = [[DZLoginController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:login];
-    [self presentViewController:nc animated:YES completion:nil];
+    
+    [[DZMobileCtrl sharedCtrl] PresentLoginController:self];
+    
 }
 // 界面是否登录
 - (BOOL)isLogin {

@@ -7,7 +7,6 @@
 //
 
 #import "BaseThreadListController.h"
-#import "DZForumThreadController.h"
 #import "BaseStyleCell.h"
 #import "DiscoverModel.h"
 #import "ThreadListCell.h"
@@ -179,25 +178,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ThreadListModel *listModel = self.dataSourceArr[indexPath.row];
-    [self pushThreadDetail:listModel];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:listModel.tid];
 }
 
 #pragma mark - Action
-- (void)pushThreadDetail:(ThreadListModel *)listModel {
-    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
-    tvc.tid = listModel.tid;
-    [self.navigationController pushViewController:tvc animated:YES];
-}
-
 - (void)toOtherCenter:(UITapGestureRecognizer *)sender {
     
     if (![self isLogin]) {
         return;
     }
-    NSInteger tag = sender.view.tag;
-    NSString *authorId = [NSString stringWithFormat:@"%ld",(long)tag];
-    
-    [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
+    [[DZMobileCtrl sharedCtrl] PushToOtherUserController:checkInteger(sender.view.tag)];
 }
 
 @end

@@ -1,14 +1,14 @@
 //
-//  audioListCell.m
+//  DZAudioListCell.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/6/8.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "audioListCell.h"
+#import "DZAudioListCell.h"
 
-@implementation audioListCell
+@implementation DZAudioListCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {

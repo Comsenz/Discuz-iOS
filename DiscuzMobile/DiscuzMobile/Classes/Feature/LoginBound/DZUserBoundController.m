@@ -1,28 +1,28 @@
 //
-//  TTBoundController.m
+//  DZUserBoundController.m
 //  DiscuzMobile
 //
 //  Created by HB on 16/9/18.
 //  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
-#import "TTBoundController.h"
+#import "DZUserBoundController.h"
 #import "LoginCustomView.h"
 #import "DZAuthCodeView.h"
-#import "BoundView.h"
+#import "DZUserBoundView.h"
 #import "XinGeCenter.h"
 
-@interface TTBoundController () <UITextFieldDelegate>
+@interface DZUserBoundController () <UITextFieldDelegate>
 
-@property (nonatomic,strong) BoundView *boundView;
+@property (nonatomic,strong) DZUserBoundView *boundView;
 
 @end
 
-@implementation TTBoundController
+@implementation DZUserBoundController
 
 - (void)loadView {
     [super loadView];
-    _boundView = [[BoundView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _boundView = [[DZUserBoundView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.view = _boundView;
 }
 

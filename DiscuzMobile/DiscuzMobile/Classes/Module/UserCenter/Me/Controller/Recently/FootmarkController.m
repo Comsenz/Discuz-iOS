@@ -10,7 +10,6 @@
 
 #import "ThreadListModel.h"
 #import "DZHomeListCell.h"
-#import "DZForumThreadController.h"
 
 @interface FootmarkController ()
 
@@ -121,17 +120,23 @@
     if (![self isLogin]) {
         return;
     }
-    NSInteger tag = sender.view.tag;
-    NSString *authorId = [NSString stringWithFormat:@"%ld",tag];
-     [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
+    [[DZMobileCtrl sharedCtrl] PushToOtherUserController:checkInteger(sender.view.tag)];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ThreadListModel *model = self.dataSourceArr[indexPath.row];
-    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
-    tvc.tid = model.tid;
-    [self.navigationController pushViewController:tvc animated:YES];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:model.tid];
 }
 
+
+
 @end
+
+
+
+
+
+
+
+

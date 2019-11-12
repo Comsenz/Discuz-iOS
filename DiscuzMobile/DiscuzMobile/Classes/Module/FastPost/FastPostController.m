@@ -14,11 +14,10 @@
 #import "PostTypeSelectView.h"
 #import "PostTypeModel.h"
 
-#import "PostNormalViewController.h"
-#import "PostVoteViewController.h"
-#import "PostDebateController.h"
-#import "PostActivityViewController.h"
-#import "DZForumThreadController.h"
+#import "DZPostNormalViewController.h"
+#import "DZPostVoteViewController.h"
+#import "DZPostDebateController.h"
+#import "DZPostActivityViewController.h"
 
 #import "UIImageView+FindHairline.h"
 
@@ -225,7 +224,7 @@
     }
 }
 
-- (void)publicPostControllerSet:(PostBaseController *)controller {
+- (void)publicPostControllerSet:(DZPostBaseController *)controller {
     WEAKSELF;
     controller.dataForumTherad = self.Variables;
     controller.fid = self.selectFid;
@@ -236,29 +235,27 @@
 }
 
 - (void)postNormal {
-    PostNormalViewController * tvc = [[PostNormalViewController alloc] init];
+    DZPostNormalViewController * tvc = [[DZPostNormalViewController alloc] init];
     [self publicPostControllerSet:tvc];
 }
 
 - (void)postVote {
-    PostVoteViewController * vcv = [[PostVoteViewController alloc] init];
+    DZPostVoteViewController * vcv = [[DZPostVoteViewController alloc] init];
     [self publicPostControllerSet:vcv];
 }
 
 - (void)postActivity {
-    PostActivityViewController * ivc = [[PostActivityViewController alloc] init];
+    DZPostActivityViewController * ivc = [[DZPostActivityViewController alloc] init];
     [self publicPostControllerSet:ivc];
 }
 
 - (void)postDebate {
-    PostDebateController *debateVC = [[PostDebateController alloc] init];
+    DZPostDebateController *debateVC = [[DZPostDebateController alloc] init];
     [self publicPostControllerSet:debateVC];
 }
 
 - (void)postSucceedToDetail:(NSString *)tid {
-    DZForumThreadController * tdvc = [[DZForumThreadController alloc] init];
-    tdvc.tid = tid;
-    [self.navigationController pushViewController:tdvc animated:NO];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:tid];
 }
 
 - (void)closeBtnClick {

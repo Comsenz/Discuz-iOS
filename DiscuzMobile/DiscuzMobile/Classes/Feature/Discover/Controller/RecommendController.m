@@ -8,15 +8,9 @@
 
 #import "RecommendController.h"
 #import "DZSlideShowScrollView.h"
-#import "DZBaseUrlController.h"
-#import "DZForumThreadController.h"
-#import "LianMixAllViewController.h"
-
 #import "DZHomeBannerModel.h"
 #import "RecommendModel.h"
-
 #import "BaseStyleCell.h"
-
 #import "AsyncAppendency.h"
 
 @interface RecommendController ()
@@ -66,12 +60,12 @@
 
 // 根据请求方式请求
 - (void)requestWithLoadType:(JTLoadType)type {
-    [self downLoadBanner:type];
-    [self downLoadData:type];
+    [self downLoadHomeBanner:type];
+    [self downLoadRecommendData:type];
 }
 
 // 下载banner
-- (void)downLoadBanner:(JTLoadType)type {
+- (void)downLoadHomeBanner:(JTLoadType)type {
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.urlString = url_RecommendBanner;
@@ -88,7 +82,7 @@
 }
 
 // 下载推荐
--(void)downLoadData:(JTLoadType)type {
+-(void)downLoadRecommendData:(JTLoadType)type {
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.urlString = url_RecommendList;
@@ -127,13 +121,13 @@
         if ([DataCheck isValidString:weakSelf.scrollView.bannerArray[currentPage].link]) {
             DZHomeBannerModel *banner = weakSelf.scrollView.bannerArray[currentPage];
             if ([banner.link_type isEqualToString:@"1"]) {
-                [weakSelf pushToDetail:banner.link];
+                [[DZMobileCtrl sharedCtrl] PushToDetailController:banner.link];
                 return;
             } else if ([banner.link_type isEqualToString:@"2"]) {
-                [weakSelf pushToForumlist:banner.link];
+                    [[DZMobileCtrl sharedCtrl] PushToForumlistController:banner.link];
                 return;
             }
-            [weakSelf pushToWebView:banner.link];
+            [[DZMobileCtrl sharedCtrl] PushToWebViewController:banner.link];
         }
     }];
     
@@ -177,38 +171,15 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ThreadListModel *model = self.dataSourceArr[indexPath.row];
-    [self pushToDetail:model.tid];
-}
-
-#pragma mark - jump controller
-- (void)pushToDetail:(NSString *)tid {
-    DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
-    tvc.tid = tid;
-    [self.navigationController pushViewController:tvc animated:YES];
-}
-
-- (void)pushToForumlist:(NSString *)fid {
-    LianMixAllViewController *flVc = [[LianMixAllViewController alloc] init];
-    flVc.forumFid = fid;
-    [self.navigationController pushViewController:flVc animated:YES];
-}
-
-- (void)pushToWebView:(NSString *)link {
-    DZBaseUrlController *urlCt = [[DZBaseUrlController alloc] init];
-    urlCt.hidesBottomBarWhenPushed = YES;
-    urlCt.urlString = link;
-    [self.navigationController pushViewController:urlCt animated:YES];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:model.tid];
 }
 
 - (void)toOtherCenter:(UITapGestureRecognizer *)sender {
-    
+
     if (![self isLogin]) {
         return;
     }
-    NSInteger tag = sender.view.tag;
-    NSString *authorId = [NSString stringWithFormat:@"%ld",tag];
-    
-    [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
+    [[DZMobileCtrl sharedCtrl] PushToOtherUserController:checkInteger(sender.view.tag)];
 }
 
 @end

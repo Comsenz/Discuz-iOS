@@ -409,10 +409,8 @@
     if (![self isLogin]) {
         return;
     }
-    NSInteger tag = sender.view.tag;
-    NSString *authorId = [NSString stringWithFormat:@"%ld",(long)tag];
     
-    [[DZMobileCtrl sharedCtrl] transToOtherUserController:authorId];
+    [[DZMobileCtrl sharedCtrl] PushToOtherUserController:checkInteger(sender.view.tag)];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

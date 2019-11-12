@@ -8,13 +8,11 @@
 
 #import "DZRootTabBarController.h"
 #import "DZBaseNavigationController.h"
-#import "DiscoverManagerController.h"
+#import "DZDiscoverManagerController.h"
 #import "DZForumManagerController.h"
-#import "DZLoginController.h"
 #import "DZUserController.h"
 #import "DZHomeController.h"
 #import "DZFastPlaceController.h"
-#import "TTSearchController.h"
 #import "DZMobileCtrl.h"
 
 @interface DZRootTabBarController () <UITabBarControllerDelegate>
@@ -109,18 +107,14 @@
 }
 
 - (void)login {
-    DZLoginController * lvc = [[DZLoginController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:lvc];
-    [self presentViewController:nc animated:YES completion:nil];
+    
+    [[DZMobileCtrl sharedCtrl] PresentLoginController:self];
 }
 
 - (void)addChildViewControllers {
-    // 国际化方法
-    // DLog(@"%@",NSLocaleCountryCode);
-    // [self addChildVc:dicoverVC title:NSLocalizedStringFromTable(@"tab1", @"DZLocalized", nil) image:@"homem" selectedImage:@"homes" andTag:0];
     
     DZHomeController *homeVC = [[DZHomeController alloc] init];
-    DiscoverManagerController *dicoverVC = [[DiscoverManagerController alloc] init];
+    DZDiscoverManagerController *dicoverVC = [[DZDiscoverManagerController alloc] init];
     DZForumManagerController *forumVC = [[DZForumManagerController alloc] init];
 //    DZFastPlaceController *fastVC = [[DZFastPlaceController alloc] init];
     DZUserController *userVC = [[DZUserController alloc] init];

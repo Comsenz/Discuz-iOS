@@ -1,12 +1,12 @@
 //
-//  PostDebateController.m
+//  DZPostDebateController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/6/23.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "PostDebateController.h"
+#import "DZPostDebateController.h"
 #import "UIAlertController+Extension.h"
 #import "NewThreadTypeModel.h"
 #import "AllOneButtonCell.h"
@@ -22,7 +22,7 @@
 #import "PostDebateModel.h"
 
 
-@interface PostDebateController () <ZHPickViewDelegate, UITextFieldDelegate, UITextViewDelegate>
+@interface DZPostDebateController () <ZHPickViewDelegate, UITextFieldDelegate, UITextViewDelegate>
 
 @property (nonatomic, strong) NSString *detail;
 
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation PostDebateController
+@implementation DZPostDebateController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

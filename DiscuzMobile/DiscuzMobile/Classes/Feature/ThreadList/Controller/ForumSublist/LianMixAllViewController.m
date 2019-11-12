@@ -14,16 +14,15 @@
 #import "FListController.h"
 #import "LianContainTableView.h"
 
-#import "PostNormalViewController.h"
-#import "PostVoteViewController.h"
-#import "PostDebateController.h"
-#import "PostActivityViewController.h"
+#import "DZPostNormalViewController.h"
+#import "DZPostVoteViewController.h"
+#import "DZPostDebateController.h"
+#import "DZPostActivityViewController.h"
 #import "MySubjectViewController.h"
 
 #import "ForumListModel.h"
 #import "PostTypeSelectView.h"
 #import "ForumInfoView.h"
-#import "DZForumThreadController.h"
 
 #import "DZForumInfoModel.h"
 #import "RootForumCell.h"
@@ -187,9 +186,7 @@
 }
 
 - (void)postSucceedToDetail:(NSString *)tid {
-    DZForumThreadController * tdvc = [[DZForumThreadController alloc] init];
-    tdvc.tid = tid;
-    [self.navigationController pushViewController:tdvc animated:NO];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:tid];
 }
 
 
@@ -298,7 +295,7 @@
 
 - (void)postNormal {
     WEAKSELF;
-    PostNormalViewController * tvc = [[PostNormalViewController alloc] init];
+    DZPostNormalViewController * tvc = [[DZPostNormalViewController alloc] init];
     tvc.dataForumTherad = self.Variables;
     tvc.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];
@@ -308,7 +305,7 @@
 
 - (void)postVote {
     WEAKSELF;
-    PostVoteViewController * vcv = [[PostVoteViewController alloc] init];
+    DZPostVoteViewController * vcv = [[DZPostVoteViewController alloc] init];
     vcv.dataForumTherad = self.Variables;
     vcv.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];
@@ -319,7 +316,7 @@
 - (void)postActivity {
     WEAKSELF;
     
-    PostActivityViewController * ivc = [[PostActivityViewController alloc] init];
+    DZPostActivityViewController * ivc = [[DZPostActivityViewController alloc] init];
     ivc.dataForumTherad = self.Variables;
     ivc.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];
@@ -331,7 +328,7 @@
 - (void)postDebate {
     
     WEAKSELF;
-    PostDebateController *debateVC = [[PostDebateController alloc] init];
+    DZPostDebateController *debateVC = [[DZPostDebateController alloc] init];
     debateVC.dataForumTherad = self.Variables;
     debateVC.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];

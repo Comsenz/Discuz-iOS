@@ -1,14 +1,14 @@
 //
-//  ActiveTimeCell.m
+//  DZActiveTimeCell.m
 //  DiscuzMobile
 //
 //  Created by HB on 16/11/30.
 //  Copyright © 2016年 comsenz-service.com.  All rights reserved.
 //
 
-#import "ActiveTimeCell.h"
+#import "DZActiveTimeCell.h"
 
-@interface ActiveTimeCell()
+@interface DZActiveTimeCell()
 
 @property (nonatomic,strong) UILabel *startLabel;
 @property (nonatomic,strong) UIView *lineView;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation ActiveTimeCell
+@implementation DZActiveTimeCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {

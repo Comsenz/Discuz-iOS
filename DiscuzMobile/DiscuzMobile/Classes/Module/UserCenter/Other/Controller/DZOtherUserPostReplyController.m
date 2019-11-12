@@ -8,7 +8,6 @@
 
 #import "DZOtherUserPostReplyController.h"
 #import "OtherUserPostReplyCell.h"
-#import "DZForumThreadController.h"
 #import "ReplyModel.h"
 #import "ReplyCell.h"
 
@@ -107,9 +106,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (self.dataSourceArr.count > 0) {
         ReplyModel *model = self.replyArr[indexPath.row];
-        DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
-        tvc.tid = model.tid;
-        [self.navigationController pushViewController:tvc animated:YES];
+        [[DZMobileCtrl sharedCtrl] PushToDetailController:model.tid];
     }
 }
 - (void)downLoadData {

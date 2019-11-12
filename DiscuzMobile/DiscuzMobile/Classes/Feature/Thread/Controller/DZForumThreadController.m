@@ -44,9 +44,7 @@
 
 // 验证码
 @property (nonatomic, strong) SeccodeverifyView *verifyView;
-
 @property (nonatomic, strong) NSString *preSalkey;
-
 @property (nonatomic, strong) ThreadModel *threadModel;
 
 @end
@@ -469,7 +467,7 @@
     }
     
     if ([DataCheck isValidString:data]) {
-        [[DZMobileCtrl sharedCtrl] transToOtherUserController:checkNull(data)];
+        [[DZMobileCtrl sharedCtrl] PushToOtherUserController:checkNull(data)];
     }
 }
 

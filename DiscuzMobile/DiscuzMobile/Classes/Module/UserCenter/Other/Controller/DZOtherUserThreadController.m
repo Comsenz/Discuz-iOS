@@ -8,7 +8,6 @@
 
 #import "DZOtherUserThreadController.h"
 #import "OtherUserThearCell.h"
-#import "DZForumThreadController.h"
 
 @interface DZOtherUserThreadController()
 
@@ -93,10 +92,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (self.dataSourceArr.count > 0) {
-        NSString * tid = [[self.dataSourceArr objectAtIndex:indexPath.row] objectForKey:@"tid"];
-        DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
-        tvc.tid = tid;
-        [self.navigationController pushViewController:tvc animated:YES];
+        NSString * tidStr = [[self.dataSourceArr objectAtIndex:indexPath.row] objectForKey:@"tid"];
+        [[DZMobileCtrl sharedCtrl] PushToDetailController:tidStr];
     }
 }
 

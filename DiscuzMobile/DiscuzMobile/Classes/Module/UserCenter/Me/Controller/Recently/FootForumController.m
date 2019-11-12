@@ -64,7 +64,6 @@ static NSString * headerSection = @"CellHeader";
 - (void)initCollectionView {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    //    UIEdgeInsetsMake(<#CGFloat top#>, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
     flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     flowLayout.minimumLineSpacing = 10;
     flowLayout.minimumInteritemSpacing = 4;

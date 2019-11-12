@@ -1,14 +1,14 @@
 //
-//  BoundView.m
+//  DZUserBoundView.m
 //  DiscuzMobile
 //
 //  Created by HB on 16/10/27.
 //  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
-#import "BoundView.h"
+#import "DZUserBoundView.h"
 
-@implementation BoundView
+@implementation DZUserBoundView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

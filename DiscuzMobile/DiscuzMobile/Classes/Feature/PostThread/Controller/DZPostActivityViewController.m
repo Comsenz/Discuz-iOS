@@ -1,12 +1,12 @@
 //
-//  PostActivityViewController.m
+//  DZPostActivityViewController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/27.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "PostActivityViewController.h"
+#import "DZPostActivityViewController.h"
 
 #import "UploadTool.h"
 
@@ -16,7 +16,7 @@
 #import "ImagePickerView.h"
 
 #import "VoteTitleCell.h"
-#import "ActiveTimeCell.h"
+#import "DZActiveTimeCell.h"
 #import "ActiveContentCell.h"
 #import "ActiveDetailCell.h"
 #import "AllOneButtonCell.h"
@@ -31,7 +31,7 @@
 @class DZPlaceholderTextView;
 
 //启动活动MVC
-@interface PostActivityViewController ()<UITextFieldDelegate,UITextViewDelegate,DropDownViewDelegate,ZHPickViewDelegate>
+@interface DZPostActivityViewController ()<UITextFieldDelegate,UITextViewDelegate,DropDownViewDelegate,ZHPickViewDelegate>
 {
     DropDownView *_dropDownView;
     
@@ -52,7 +52,7 @@
 
 @end
 
-@implementation PostActivityViewController
+@implementation DZPostActivityViewController
 
 - (NSMutableDictionary *)userFieldDic {
     if (!_userFieldDic) {
@@ -200,7 +200,7 @@
             self.activityModel.aidArray = [NSMutableArray array];
         }
         [self.activityModel.aidArray addObject:aidStr];
-        ActiveTimeCell *timeCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+        DZActiveTimeCell *timeCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
         //加在视图中
         timeCell.postImageView.image = image;
     } failure:^(NSError *error) {
@@ -485,9 +485,9 @@
         }
             break;
         case 1: {
-            ActiveTimeCell *timeCell = [tableView dequeueReusableCellWithIdentifier:CellId];
+            DZActiveTimeCell *timeCell = [tableView dequeueReusableCellWithIdentifier:CellId];
             if (timeCell == nil) {
-                timeCell = [[ActiveTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellId];
+                timeCell = [[DZActiveTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellId];
             }
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTapped)];
             [timeCell.postImageView addGestureRecognizer:tap];

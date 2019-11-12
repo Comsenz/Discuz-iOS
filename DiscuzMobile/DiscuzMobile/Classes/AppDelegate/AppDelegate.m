@@ -12,7 +12,6 @@
 #import "DZRootTabBarController.h"
 #import "DZShareCenter.h"
 #import "DZLaunchScreenManager.h"
-#import "DZForumThreadController.h"
 #import "WebImageCacheUrlProtocol.h"
 
 #import "VersionUpdate.h"

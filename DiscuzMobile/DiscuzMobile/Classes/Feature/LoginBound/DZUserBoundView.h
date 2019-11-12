@@ -1,5 +1,5 @@
 //
-//  BoundView.h
+//  DZUserBoundView.h
 //  DiscuzMobile
 //
 //  Created by HB on 16/10/27.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BoundView : UIScrollView
+@interface DZUserBoundView : UIScrollView
 
 @property (nonatomic,strong) UITextField *nameField;
 @property (nonatomic,strong) UITextField *passwordField;

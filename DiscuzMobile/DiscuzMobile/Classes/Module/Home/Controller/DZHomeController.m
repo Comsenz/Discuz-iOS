@@ -9,13 +9,11 @@
 #import "DZHomeController.h"
 #import "DZSettingController.h"
 #import "RNCachingURLProtocol.h"
-#import "DZForumThreadController.h"
 #import "ForumCell.h"
 #import "LoginModule.h"
 #import "DZHomeListCell.h"
 #import "ThreadListModel.h"
 #import "DZForumInfoModel.h"
-#import "TTSearchController.h"
 #import "DZHomeBannerModel.h"
 #import "DZBaseUrlController.h"
 #import "DZSlideShowScrollView.h"
@@ -41,9 +39,7 @@
 }
 
 - (void)rightBarBtnClick {
-    TTSearchController *searchVC = [[TTSearchController alloc] init];
-    searchVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:searchVC animated:YES];
+    [[DZMobileCtrl sharedCtrl]PushToSearchController];
 }
 
 - (void)viewDidLoad {
@@ -316,9 +312,7 @@
         [self.navigationController pushViewController:fvc animated:YES];
     } else {
         ThreadListModel *model = self.hotSource[indexPath.row];
-        DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
-        tvc.tid = model.tid;
-        [self.navigationController pushViewController:tvc animated:YES];
+        [[DZMobileCtrl sharedCtrl] PushToDetailController:model.tid];
     }
 }
 

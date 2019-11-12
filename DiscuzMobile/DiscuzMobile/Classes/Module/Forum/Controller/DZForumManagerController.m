@@ -12,8 +12,6 @@
 #import "DZForumIndexListController.h"
 #import "DZContainerController.h"
 
-#import "TTSearchController.h"
-
 static NSString *isFourmList = @"isFourmList";
 
 @interface DZForumManagerController()
@@ -104,9 +102,7 @@ static NSString *isFourmList = @"isFourmList";
 }
 
 - (void)rightBarBtnClick {
-    TTSearchController *searchVC = [[TTSearchController alloc] init];
-    searchVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:searchVC animated:YES];
+    [[DZMobileCtrl sharedCtrl]PushToSearchController];
 }
 
 #pragma mark - getter

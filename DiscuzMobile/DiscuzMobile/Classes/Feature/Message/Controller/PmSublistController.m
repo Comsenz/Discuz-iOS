@@ -198,23 +198,17 @@
     if ([DataCheck isValidString:self.typeModel.view] && [self.typeModel.view isEqualToString:@"mypost"]) {
         if ([DataCheck isValidDictionary:model.notevar]) {
             if ([DataCheck isValidString:[model.notevar objectForKey:@"tid"]]) {
-                DZForumThreadController *threadVC = [[DZForumThreadController alloc] init];
-                threadVC.tid = [model.notevar objectForKey:@"tid"];
-                [self showViewController:threadVC sender:nil];
+                [[DZMobileCtrl sharedCtrl] ShowDetailControllerFromVC:self tid:[model.notevar objectForKey:@"tid"]];
             }
             
         } else {
             //                model.note
             NSArray *arr = [model.note componentsSeparatedByString:@"tid="];
             if (arr.count >= 2) {
-                DZForumThreadController *threadVC = [[DZForumThreadController alloc] init];
                 NSString *containTid = arr[1];
-                
                 NSString *tid = [containTid componentsSeparatedByString:@"\" "][0];
-                
                 if ([tid isNum:tid]) {
-                    threadVC.tid = tid;
-                    [self showViewController:threadVC sender:nil];
+                    [[DZMobileCtrl sharedCtrl] ShowDetailControllerFromVC:self tid:tid];
                 }
                
             }

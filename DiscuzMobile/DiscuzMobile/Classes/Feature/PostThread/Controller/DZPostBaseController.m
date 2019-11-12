@@ -1,23 +1,23 @@
 //
-//  PostBaseController.m
+//  DZPostBaseController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/6/29.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "PostBaseController.h"
+#import "DZPostBaseController.h"
 #import "UIAlertController+Extension.h"
 #import "SeccodeverifyView.h"
 #import "ZHPickView.h"
 #import "ImagePickerView.h"
 #import "NewThreadTypeModel.h"
 
-@interface PostBaseController ()
+@interface DZPostBaseController ()
 
 @end
 
-@implementation PostBaseController
+@implementation DZPostBaseController
 
 - (void)viewWillDisappear:(BOOL)animated {
     if (self.typeArray.count > 0) {
