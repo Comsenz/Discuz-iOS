@@ -5,7 +5,6 @@
 //  Created by changle on 2017/11/9.
 //
 
-#import <Foundation/Foundation.h>
 #import "UIView+PRLayouter.h"
 
 FOUNDATION_EXTERN const CGSize PRLayouterDesignedSizeForPhonePortrait;
