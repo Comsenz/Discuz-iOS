@@ -312,7 +312,6 @@
 		706213DE23793E1900130B9D /* DZUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213DC23793E1900130B9D /* DZUserController.m */; };
 		706213E123793E7200130B9D /* DZPublicPMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213E023793E7100130B9D /* DZPublicPMCell.m */; };
 		706AB8D1237BF63700BE649F /* RecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8CF237BF63600BE649F /* RecommendController.m */; };
-		706AB8D7237BFD7100BE649F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706AB8D6237BFD7100BE649F /* Launch.storyboard */; };
 		70DFD79A237A95DE00A13F0F /* DZBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DFD76B237A95DD00A13F0F /* DZBaseNavigationController.m */; };
 		70DFD79B237A95DE00A13F0F /* DZRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DFD76D237A95DD00A13F0F /* DZRootTabBarController.m */; };
 		70DFD79C237A95DE00A13F0F /* DZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DFD76F237A95DD00A13F0F /* DZBaseViewController.m */; };
@@ -998,7 +997,6 @@
 		706213E023793E7100130B9D /* DZPublicPMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPublicPMCell.m; sourceTree = "<group>"; };
 		706AB8CF237BF63600BE649F /* RecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendController.m; sourceTree = "<group>"; };
 		706AB8D0237BF63600BE649F /* RecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendController.h; sourceTree = "<group>"; };
-		706AB8D6237BFD7100BE649F /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		706F3E2623742B75003C55AD /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFD76B237A95DD00A13F0F /* DZBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZBaseNavigationController.m; sourceTree = "<group>"; };
 		70DFD76C237A95DD00A13F0F /* DZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZBaseViewController.h; sourceTree = "<group>"; };
@@ -1547,7 +1545,6 @@
 				706AB8CE237BF55E00BE649F /* DemoVC */,
 				27D1C8F71DD2BE8E00B835B7 /* Info.plist */,
 				27D1C8F21DD2BE8E00B835B7 /* Assets.xcassets */,
-				706AB8D6237BFD7100BE649F /* Launch.storyboard */,
 				27D1C8E61DD2BE8E00B835B7 /* Supporting Files */,
 			);
 			path = DiscuzMobile;
@@ -3501,7 +3498,6 @@
 				271161B91F3C127700791B68 /* complain.png in Resources */,
 				27F6158C1ED42ACD0066CD4C /* alert.png in Resources */,
 				27CD9D7B1DDEB29E0075831B /* thread_temp_common.html in Resources */,
-				706AB8D7237BFD7100BE649F /* Launch.storyboard in Resources */,
 				27F615A31ED42ACD0066CD4C /* right-icon.png in Resources */,
 				94A3E65F20E6172A0039C560 /* ResourceJT.bundle in Resources */,
 				2781BE011EF1380F004BF984 /* audioPlay.gif in Resources */,

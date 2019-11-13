@@ -157,8 +157,6 @@
 	<array>
 		<string>苹方 细体.ttf</string>
 	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>Launch</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
