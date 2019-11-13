@@ -1,12 +1,12 @@
 //
-//  PmSublistController.m
+//  DZMsgSubListController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/17.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "PmSublistController.h"
+#import "DZMsgSubListController.h"
 #import "PmTypeModel.h"
 #import "MessageListModel.h"
 #import "MessageCell.h"
@@ -14,14 +14,14 @@
 #import "MsglistCell.h"
 #import "DZForumThreadController.h"
 
-#import "ChatDetailController.h"
-#import "SendMessageViewController.h"
+#import "DZMsgChatDetailController.h"
+#import "DZSendMsgViewController.h"
 #import "MessageNoticeCenter.h"
 
-@interface PmSublistController ()
+@interface DZMsgSubListController ()
 @end
 
-@implementation PmSublistController
+@implementation DZMsgSubListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,7 +46,7 @@
 }
 
 -(void)rightBarBtnClick{
-    SendMessageViewController *sendVC = [[SendMessageViewController alloc] init];
+    DZSendMsgViewController *sendVC = [[DZSendMsgViewController alloc] init];
     [self.navigationController pushViewController:sendVC animated:YES];
 }
 
@@ -187,7 +187,7 @@
     
     if ([DataCheck isValidString:self.typeModel.filter] && [self.typeModel.filter isEqualToString:@"privatepm"]) {
         
-        ChatDetailController *mvc = [[ChatDetailController alloc] init];
+        DZMsgChatDetailController *mvc = [[DZMsgChatDetailController alloc] init];
         mvc.touid = model.touid;
         mvc.nametitle = model.tousername;
         mvc.username = model.tousername;

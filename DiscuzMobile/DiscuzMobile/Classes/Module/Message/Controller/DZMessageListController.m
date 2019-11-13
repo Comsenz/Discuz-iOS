@@ -1,26 +1,26 @@
 //
-//  PmListController.m
+//  DZMessageListController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/17.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "PmListController.h"
-#import "PmTopTabController.h"
-#import "PmSublistController.h"
-#import "PmSublistController.h"
+#import "DZMessageListController.h"
+#import "DZUserMsgBoxTabController.h"
+#import "DZMsgSubListController.h"
+#import "DZMsgSubListController.h"
 
 #import "PmlistCell.h"
 
 #import "PmTypeModel.h"
 #import "MessageNoticeCenter.h"
 
-@interface PmListController ()
+@interface DZMessageListController ()
 
 @end
 
-@implementation PmListController
+@implementation DZMessageListController
 
 - (instancetype)init
 {
@@ -93,11 +93,11 @@
     
     PmTypeModel *m;
     if (indexPath.row < 3) {
-        PmTopTabController *topBabVc = [[PmTopTabController alloc] init];
+        DZUserMsgBoxTabController *topBabVc = [[DZUserMsgBoxTabController alloc] init];
         switch (indexPath.row) {
             case 0: {
                 m = [[PmTypeModel alloc] initWithTitle:@"我的消息" andModule:@"mypm" anFilter:@"privatepm" andView:nil andType:nil];
-                PmSublistController *psVc = [[PmSublistController alloc] init];
+                DZMsgSubListController *psVc = [[DZMsgSubListController alloc] init];
                 psVc.typeModel = m;
                 psVc.title = self.dataSourceArr[indexPath.row];
                 [self showViewController:psVc sender:nil];
@@ -123,7 +123,7 @@
              m = [[PmTypeModel alloc] initWithTitle:@"管理工作" andModule:@"mynotelist" anFilter:@"" andView:@"manage" andType:@""];
         }
         
-        PmSublistController *psVc = [[PmSublistController alloc] init];
+        DZMsgSubListController *psVc = [[DZMsgSubListController alloc] init];
         psVc.typeModel = m;
         psVc.title = self.dataSourceArr[indexPath.row];
         [self showViewController:psVc sender:nil];

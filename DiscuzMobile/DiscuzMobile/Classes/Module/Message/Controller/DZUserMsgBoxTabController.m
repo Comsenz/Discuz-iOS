@@ -1,23 +1,23 @@
 //
-//  PmTopTabController.m
+//  DZUserMsgBoxTabController.m
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/17.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "PmTopTabController.h"
+#import "DZUserMsgBoxTabController.h"
 #import "DZContainerController.h"
-#import "SendMessageViewController.h"
-#import "PmSublistController.h"
+#import "DZSendMsgViewController.h"
+#import "DZMsgSubListController.h"
 
 #import "PmTypeModel.h"
 
-@interface PmTopTabController ()
+@interface DZUserMsgBoxTabController ()
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @end
 
-@implementation PmTopTabController
+@implementation DZUserMsgBoxTabController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,7 +58,7 @@
     
     NSMutableArray *ctArr = [NSMutableArray array];
     for (PmTypeModel *pm in self.dataArray) {
-        PmSublistController *listVC = [[PmSublistController alloc] init];
+        DZMsgSubListController *listVC = [[DZMsgSubListController alloc] init];
         listVC.title = pm.title;
         listVC.typeModel = pm;
         [ctArr addObject:listVC];
@@ -70,7 +70,7 @@
 }
 
 - (void)rightBarBtnClick {
-    SendMessageViewController *sendVC = [[SendMessageViewController alloc] init];
+    DZSendMsgViewController *sendVC = [[DZSendMsgViewController alloc] init];
     [self.navigationController pushViewController:sendVC animated:YES];
 }
 

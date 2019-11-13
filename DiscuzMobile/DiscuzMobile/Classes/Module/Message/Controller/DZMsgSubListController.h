@@ -1,5 +1,5 @@
 //
-//  PmListController.h
+//  DZMsgSubListController.h
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/17.
@@ -7,7 +7,10 @@
 //
 
 #import "DZBaseTableViewController.h"
+@class PmTypeModel;
 
-@interface PmListController : DZBaseTableViewController
+@interface DZMsgSubListController : DZBaseTableViewController
+
+@property (nonatomic, strong) PmTypeModel *typeModel;
 
 @end

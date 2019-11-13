@@ -1,20 +1,20 @@
 //
-//  SendMessageViewController.m
+//  DZSendMsgViewController.m
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/12.
 //  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
-#import "SendMessageViewController.h"
+#import "DZSendMsgViewController.h"
 
-@interface SendMessageViewController ()<UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate>
+@interface DZSendMsgViewController ()<UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate>
 @property (nonatomic, strong) UITextView *messageTextView;
 @property (nonatomic, strong) UILabel *placeholderLabel;
 @property (nonatomic, strong) UIScrollView *bgScrollView;
 @end
 
-@implementation SendMessageViewController
+@implementation DZSendMsgViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

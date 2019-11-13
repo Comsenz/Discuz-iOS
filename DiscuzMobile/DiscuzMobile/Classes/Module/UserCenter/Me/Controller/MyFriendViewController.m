@@ -7,9 +7,9 @@
 //
 
 #import "MyFriendViewController.h"
-#import "SendMessageViewController.h"
+#import "DZSendMsgViewController.h"
 #import "DZOtherUserController.h"
-#import "ChatDetailController.h"
+#import "DZMsgChatDetailController.h"
 #import "FriendCell.h"
 
 @implementation MyFriendViewController
@@ -84,7 +84,7 @@
         dic = [self.dataSourceArr objectAtIndex:btn.tag];
     }
     
-    ChatDetailController *mvc = [[ChatDetailController alloc] init];
+    DZMsgChatDetailController *mvc = [[DZMsgChatDetailController alloc] init];
     mvc.touid = [dic objectForKey:@"uid"];
     mvc.nametitle = [dic objectForKey:@"username"];
     mvc.username = [dic objectForKey:@"username"];

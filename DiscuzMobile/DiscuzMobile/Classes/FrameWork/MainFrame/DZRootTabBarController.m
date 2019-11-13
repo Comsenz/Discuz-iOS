@@ -10,10 +10,11 @@
 #import "DZBaseNavigationController.h"
 #import "DZDiscoverManagerController.h"
 #import "DZForumManagerController.h"
-#import "DZUserController.h"
-#import "DZHomeController.h"
+#import "DZUserManagerController.h"
+#import "DZHomeManagerController.h"
 #import "DZFastPlaceController.h"
 #import "DZMobileCtrl.h"
+#import "DZMessageListController.h"
 
 @interface DZRootTabBarController () <UITabBarControllerDelegate>
 @property (nonatomic, assign) NSInteger oldSelected;
@@ -113,16 +114,18 @@
 
 - (void)addChildViewControllers {
     
-    DZHomeController *homeVC = [[DZHomeController alloc] init];
+    DZHomeManagerController *homeVC = [[DZHomeManagerController alloc] init];
     DZDiscoverManagerController *dicoverVC = [[DZDiscoverManagerController alloc] init];
     DZForumManagerController *forumVC = [[DZForumManagerController alloc] init];
 //    DZFastPlaceController *fastVC = [[DZFastPlaceController alloc] init];
-    DZUserController *userVC = [[DZUserController alloc] init];
+    DZMessageListController *msgVC = [[DZMessageListController alloc] init];
+    DZUserManagerController *userVC = [[DZUserManagerController alloc] init];
     
     [self addChildVc:homeVC title:@"首页" image:@"homem" selectedImage:@"homes"];
     [self addChildVc:dicoverVC title:@"发现" image:@"homem" selectedImage:@"homes"];
     [self addChildVc:forumVC title:@"版块" image:@"forumm" selectedImage:@"fourms"];
 //    [self addChildVc:fastVC title:@"" image:@"clarity" selectedImage:@""];
+    [self addChildVc:msgVC title:@"消息" image:@"forumm" selectedImage:@"fourms"];
     [self addChildVc:userVC title:@"我的" image:@"my" selectedImage:@"mys"];
 }
 

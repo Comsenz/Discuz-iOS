@@ -183,24 +183,6 @@
 		706212A7237936C900130B9D /* UploadAttachModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621114237936C800130B9D /* UploadAttachModel.m */; };
 		706212A8237936C900130B9D /* UploadAttachView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621117237936C800130B9D /* UploadAttachView.m */; };
 		706212A9237936C900130B9D /* UploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621119237936C800130B9D /* UploadTool.m */; };
-		706212AA237936C900130B9D /* PmListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062111C237936C800130B9D /* PmListController.m */; };
-		706212AB237936C900130B9D /* PmSublistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062111D237936C800130B9D /* PmSublistController.m */; };
-		706212AC237936C900130B9D /* ChatDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062111E237936C800130B9D /* ChatDetailController.m */; };
-		706212AD237936C900130B9D /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621123237936C800130B9D /* SendMessageViewController.m */; };
-		706212AE237936C900130B9D /* PmTopTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621125237936C800130B9D /* PmTopTabController.m */; };
-		706212AF237936C900130B9D /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621128237936C800130B9D /* MessageModel.m */; };
-		706212B0237936C900130B9D /* MessageNoticeCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062112C237936C800130B9D /* MessageNoticeCenter.m */; };
-		706212B1237936C900130B9D /* CellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062112D237936C800130B9D /* CellFrameModel.m */; };
-		706212B2237936C900130B9D /* MessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062112E237936C800130B9D /* MessageListModel.m */; };
-		706212B3237936C900130B9D /* PmTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062112F237936C800130B9D /* PmTypeModel.m */; };
-		706212B4237936C900130B9D /* ChatContainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621132237936C800130B9D /* ChatContainScrollView.m */; };
-		706212B5237936C900130B9D /* MessageDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621134237936C800130B9D /* MessageDetailCell.m */; };
-		706212B6237936C900130B9D /* MsglistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621135237936C800130B9D /* MsglistCell.m */; };
-		706212B7237936C900130B9D /* SystemNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621136237936C800130B9D /* SystemNoteCell.m */; };
-		706212B8237936C900130B9D /* ChatYYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621137237936C800130B9D /* ChatYYLabel.m */; };
-		706212B9237936C900130B9D /* ChatContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621138237936C800130B9D /* ChatContentCell.m */; };
-		706212BA237936C900130B9D /* PmlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7062113B237936C800130B9D /* PmlistCell.m */; };
-		706212BB237936C900130B9D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621140237936C800130B9D /* MessageCell.m */; };
 		706212BC237936C900130B9D /* SearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621143237936C800130B9D /* SearchListCell.m */; };
 		706212BD237936C900130B9D /* TTSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621145237936C800130B9D /* TTSearchModel.m */; };
 		706212BE237936C900130B9D /* SearchHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70621146237936C800130B9D /* SearchHistoryController.m */; };
@@ -250,7 +232,7 @@
 		706212EA237936C900130B9D /* LoginCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211B1237936C800130B9D /* LoginCustomView.m */; };
 		706212EB237936C900130B9D /* DZResetPwdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211B2237936C800130B9D /* DZResetPwdView.m */; };
 		706212EC237936C900130B9D /* Web2AuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211B3237936C800130B9D /* Web2AuthCodeView.m */; };
-		706212ED237936C900130B9D /* DZHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211B7237936C800130B9D /* DZHomeController.m */; };
+		706212ED237936C900130B9D /* DZHomeManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211B7237936C800130B9D /* DZHomeManagerController.m */; };
 		706212EE237936C900130B9D /* DZHomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211BA237936C800130B9D /* DZHomeBannerModel.m */; };
 		706212EF237936C900130B9D /* DZHomeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211BD237936C800130B9D /* DZHomeListCell.m */; };
 		706212F0237936C900130B9D /* DZHomeIconTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 706211BE237936C800130B9D /* DZHomeIconTextView.m */; };
@@ -309,9 +291,27 @@
 		706213D823793DB700130B9D /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213B323793DB700130B9D /* UserInfoCell.m */; };
 		706213D923793DB700130B9D /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213B623793DB700130B9D /* FriendCell.m */; };
 		706213DB23793DB700130B9D /* ReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213BA23793DB700130B9D /* ReplyCell.m */; };
-		706213DE23793E1900130B9D /* DZUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213DC23793E1900130B9D /* DZUserController.m */; };
+		706213DE23793E1900130B9D /* DZUserManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213DC23793E1900130B9D /* DZUserManagerController.m */; };
 		706213E123793E7200130B9D /* DZPublicPMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706213E023793E7100130B9D /* DZPublicPMCell.m */; };
 		706AB8D1237BF63700BE649F /* RecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8CF237BF63600BE649F /* RecommendController.m */; };
+		706AB906237C06B800BE649F /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8E7237C06B800BE649F /* MessageModel.m */; };
+		706AB907237C06B800BE649F /* MessageNoticeCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8EB237C06B800BE649F /* MessageNoticeCenter.m */; };
+		706AB908237C06B800BE649F /* CellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8EC237C06B800BE649F /* CellFrameModel.m */; };
+		706AB909237C06B800BE649F /* MessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8ED237C06B800BE649F /* MessageListModel.m */; };
+		706AB90A237C06B800BE649F /* PmTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8EE237C06B800BE649F /* PmTypeModel.m */; };
+		706AB90B237C06B800BE649F /* ChatContainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8F1237C06B800BE649F /* ChatContainScrollView.m */; };
+		706AB90C237C06B800BE649F /* MessageDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8F3237C06B800BE649F /* MessageDetailCell.m */; };
+		706AB90D237C06B800BE649F /* MsglistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8F4237C06B800BE649F /* MsglistCell.m */; };
+		706AB90E237C06B800BE649F /* SystemNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8F5237C06B800BE649F /* SystemNoteCell.m */; };
+		706AB90F237C06B800BE649F /* ChatYYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8F6237C06B800BE649F /* ChatYYLabel.m */; };
+		706AB910237C06B800BE649F /* ChatContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8F7237C06B800BE649F /* ChatContentCell.m */; };
+		706AB911237C06B800BE649F /* PmlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8FA237C06B800BE649F /* PmlistCell.m */; };
+		706AB912237C06B800BE649F /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB8FF237C06B800BE649F /* MessageCell.m */; };
+		706AB915237C071D00BE649F /* DZMessageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB914237C071C00BE649F /* DZMessageListController.m */; };
+		706AB918237C077000BE649F /* DZMsgSubListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB916237C077000BE649F /* DZMsgSubListController.m */; };
+		706AB91B237C07A500BE649F /* DZMsgChatDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB919237C07A500BE649F /* DZMsgChatDetailController.m */; };
+		706AB91E237C085F00BE649F /* DZUserMsgBoxTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB91D237C085F00BE649F /* DZUserMsgBoxTabController.m */; };
+		706AB921237C08B000BE649F /* DZSendMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AB920237C08B000BE649F /* DZSendMsgViewController.m */; };
 		70DFD79A237A95DE00A13F0F /* DZBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DFD76B237A95DD00A13F0F /* DZBaseNavigationController.m */; };
 		70DFD79B237A95DE00A13F0F /* DZRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DFD76D237A95DD00A13F0F /* DZRootTabBarController.m */; };
 		70DFD79C237A95DE00A13F0F /* DZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DFD76F237A95DD00A13F0F /* DZBaseViewController.m */; };
@@ -740,42 +740,6 @@
 		70621117237936C800130B9D /* UploadAttachView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAttachView.m; sourceTree = "<group>"; };
 		70621118237936C800130B9D /* UploadAttachView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAttachView.h; sourceTree = "<group>"; };
 		70621119237936C800130B9D /* UploadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadTool.m; sourceTree = "<group>"; };
-		7062111C237936C800130B9D /* PmListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PmListController.m; sourceTree = "<group>"; };
-		7062111D237936C800130B9D /* PmSublistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PmSublistController.m; sourceTree = "<group>"; };
-		7062111E237936C800130B9D /* ChatDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetailController.m; sourceTree = "<group>"; };
-		7062111F237936C800130B9D /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageViewController.h; sourceTree = "<group>"; };
-		70621120237936C800130B9D /* PmTopTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PmTopTabController.h; sourceTree = "<group>"; };
-		70621121237936C800130B9D /* PmSublistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PmSublistController.h; sourceTree = "<group>"; };
-		70621122237936C800130B9D /* PmListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PmListController.h; sourceTree = "<group>"; };
-		70621123237936C800130B9D /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
-		70621124237936C800130B9D /* ChatDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetailController.h; sourceTree = "<group>"; };
-		70621125237936C800130B9D /* PmTopTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PmTopTabController.m; sourceTree = "<group>"; };
-		70621127237936C800130B9D /* MessageNoticeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageNoticeCenter.h; sourceTree = "<group>"; };
-		70621128237936C800130B9D /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
-		70621129237936C800130B9D /* PmTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PmTypeModel.h; sourceTree = "<group>"; };
-		7062112A237936C800130B9D /* MessageListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListModel.h; sourceTree = "<group>"; };
-		7062112B237936C800130B9D /* CellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFrameModel.h; sourceTree = "<group>"; };
-		7062112C237936C800130B9D /* MessageNoticeCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageNoticeCenter.m; sourceTree = "<group>"; };
-		7062112D237936C800130B9D /* CellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFrameModel.m; sourceTree = "<group>"; };
-		7062112E237936C800130B9D /* MessageListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListModel.m; sourceTree = "<group>"; };
-		7062112F237936C800130B9D /* PmTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PmTypeModel.m; sourceTree = "<group>"; };
-		70621130237936C800130B9D /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
-		70621132237936C800130B9D /* ChatContainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatContainScrollView.m; sourceTree = "<group>"; };
-		70621133237936C800130B9D /* PmlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PmlistCell.h; sourceTree = "<group>"; };
-		70621134237936C800130B9D /* MessageDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailCell.m; sourceTree = "<group>"; };
-		70621135237936C800130B9D /* MsglistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsglistCell.m; sourceTree = "<group>"; };
-		70621136237936C800130B9D /* SystemNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemNoteCell.m; sourceTree = "<group>"; };
-		70621137237936C800130B9D /* ChatYYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatYYLabel.m; sourceTree = "<group>"; };
-		70621138237936C800130B9D /* ChatContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatContentCell.m; sourceTree = "<group>"; };
-		70621139237936C800130B9D /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
-		7062113A237936C800130B9D /* ChatContainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatContainScrollView.h; sourceTree = "<group>"; };
-		7062113B237936C800130B9D /* PmlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PmlistCell.m; sourceTree = "<group>"; };
-		7062113C237936C800130B9D /* ChatYYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatYYLabel.h; sourceTree = "<group>"; };
-		7062113D237936C800130B9D /* SystemNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemNoteCell.h; sourceTree = "<group>"; };
-		7062113E237936C800130B9D /* MsglistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsglistCell.h; sourceTree = "<group>"; };
-		7062113F237936C800130B9D /* MessageDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailCell.h; sourceTree = "<group>"; };
-		70621140237936C800130B9D /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
-		70621141237936C800130B9D /* ChatContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatContentCell.h; sourceTree = "<group>"; };
 		70621143237936C800130B9D /* SearchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchListCell.m; sourceTree = "<group>"; };
 		70621144237936C800130B9D /* TTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSearchBar.h; sourceTree = "<group>"; };
 		70621145237936C800130B9D /* TTSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSearchModel.m; sourceTree = "<group>"; };
@@ -874,8 +838,8 @@
 		706211B1237936C800130B9D /* LoginCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCustomView.m; sourceTree = "<group>"; };
 		706211B2237936C800130B9D /* DZResetPwdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZResetPwdView.m; sourceTree = "<group>"; };
 		706211B3237936C800130B9D /* Web2AuthCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Web2AuthCodeView.m; sourceTree = "<group>"; };
-		706211B7237936C800130B9D /* DZHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZHomeController.m; sourceTree = "<group>"; };
-		706211B8237936C800130B9D /* DZHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZHomeController.h; sourceTree = "<group>"; };
+		706211B7237936C800130B9D /* DZHomeManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZHomeManagerController.m; sourceTree = "<group>"; };
+		706211B8237936C800130B9D /* DZHomeManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZHomeManagerController.h; sourceTree = "<group>"; };
 		706211BA237936C800130B9D /* DZHomeBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZHomeBannerModel.m; sourceTree = "<group>"; };
 		706211BB237936C800130B9D /* DZHomeBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZHomeBannerModel.h; sourceTree = "<group>"; };
 		706211BD237936C800130B9D /* DZHomeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZHomeListCell.m; sourceTree = "<group>"; };
@@ -991,12 +955,48 @@
 		706213B823793DB700130B9D /* MyReplyViewControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyReplyViewControllerCell.h; sourceTree = "<group>"; };
 		706213B923793DB700130B9D /* SubjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectCell.h; sourceTree = "<group>"; };
 		706213BA23793DB700130B9D /* ReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyCell.m; sourceTree = "<group>"; };
-		706213DC23793E1900130B9D /* DZUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZUserController.m; sourceTree = "<group>"; };
-		706213DD23793E1900130B9D /* DZUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUserController.h; sourceTree = "<group>"; };
+		706213DC23793E1900130B9D /* DZUserManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZUserManagerController.m; sourceTree = "<group>"; };
+		706213DD23793E1900130B9D /* DZUserManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUserManagerController.h; sourceTree = "<group>"; };
 		706213DF23793E7100130B9D /* DZPublicPMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPublicPMCell.h; sourceTree = "<group>"; };
 		706213E023793E7100130B9D /* DZPublicPMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPublicPMCell.m; sourceTree = "<group>"; };
 		706AB8CF237BF63600BE649F /* RecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendController.m; sourceTree = "<group>"; };
 		706AB8D0237BF63600BE649F /* RecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendController.h; sourceTree = "<group>"; };
+		706AB8E6237C06B800BE649F /* MessageNoticeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageNoticeCenter.h; sourceTree = "<group>"; };
+		706AB8E7237C06B800BE649F /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		706AB8E8237C06B800BE649F /* PmTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PmTypeModel.h; sourceTree = "<group>"; };
+		706AB8E9237C06B800BE649F /* MessageListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListModel.h; sourceTree = "<group>"; };
+		706AB8EA237C06B800BE649F /* CellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFrameModel.h; sourceTree = "<group>"; };
+		706AB8EB237C06B800BE649F /* MessageNoticeCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageNoticeCenter.m; sourceTree = "<group>"; };
+		706AB8EC237C06B800BE649F /* CellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFrameModel.m; sourceTree = "<group>"; };
+		706AB8ED237C06B800BE649F /* MessageListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListModel.m; sourceTree = "<group>"; };
+		706AB8EE237C06B800BE649F /* PmTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PmTypeModel.m; sourceTree = "<group>"; };
+		706AB8EF237C06B800BE649F /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		706AB8F1237C06B800BE649F /* ChatContainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatContainScrollView.m; sourceTree = "<group>"; };
+		706AB8F2237C06B800BE649F /* PmlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PmlistCell.h; sourceTree = "<group>"; };
+		706AB8F3237C06B800BE649F /* MessageDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailCell.m; sourceTree = "<group>"; };
+		706AB8F4237C06B800BE649F /* MsglistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsglistCell.m; sourceTree = "<group>"; };
+		706AB8F5237C06B800BE649F /* SystemNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemNoteCell.m; sourceTree = "<group>"; };
+		706AB8F6237C06B800BE649F /* ChatYYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatYYLabel.m; sourceTree = "<group>"; };
+		706AB8F7237C06B800BE649F /* ChatContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatContentCell.m; sourceTree = "<group>"; };
+		706AB8F8237C06B800BE649F /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		706AB8F9237C06B800BE649F /* ChatContainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatContainScrollView.h; sourceTree = "<group>"; };
+		706AB8FA237C06B800BE649F /* PmlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PmlistCell.m; sourceTree = "<group>"; };
+		706AB8FB237C06B800BE649F /* ChatYYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatYYLabel.h; sourceTree = "<group>"; };
+		706AB8FC237C06B800BE649F /* SystemNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemNoteCell.h; sourceTree = "<group>"; };
+		706AB8FD237C06B800BE649F /* MsglistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsglistCell.h; sourceTree = "<group>"; };
+		706AB8FE237C06B800BE649F /* MessageDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailCell.h; sourceTree = "<group>"; };
+		706AB8FF237C06B800BE649F /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		706AB900237C06B800BE649F /* ChatContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatContentCell.h; sourceTree = "<group>"; };
+		706AB913237C071C00BE649F /* DZMessageListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMessageListController.h; sourceTree = "<group>"; };
+		706AB914237C071C00BE649F /* DZMessageListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZMessageListController.m; sourceTree = "<group>"; };
+		706AB916237C077000BE649F /* DZMsgSubListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZMsgSubListController.m; sourceTree = "<group>"; };
+		706AB917237C077000BE649F /* DZMsgSubListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMsgSubListController.h; sourceTree = "<group>"; };
+		706AB919237C07A500BE649F /* DZMsgChatDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZMsgChatDetailController.m; sourceTree = "<group>"; };
+		706AB91A237C07A500BE649F /* DZMsgChatDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMsgChatDetailController.h; sourceTree = "<group>"; };
+		706AB91C237C085F00BE649F /* DZUserMsgBoxTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUserMsgBoxTabController.h; sourceTree = "<group>"; };
+		706AB91D237C085F00BE649F /* DZUserMsgBoxTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZUserMsgBoxTabController.m; sourceTree = "<group>"; };
+		706AB91F237C08B000BE649F /* DZSendMsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSendMsgViewController.h; sourceTree = "<group>"; };
+		706AB920237C08B000BE649F /* DZSendMsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSendMsgViewController.m; sourceTree = "<group>"; };
 		706F3E2623742B75003C55AD /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFD76B237A95DD00A13F0F /* DZBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZBaseNavigationController.m; sourceTree = "<group>"; };
 		70DFD76C237A95DD00A13F0F /* DZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZBaseViewController.h; sourceTree = "<group>"; };
@@ -1681,7 +1681,6 @@
 				7062116A237936C800130B9D /* Thread */,
 				7062114F237936C800130B9D /* Register */,
 				7062107B237936C800130B9D /* Discover */,
-				7062111A237936C800130B9D /* Message */,
 				7062108C237936C800130B9D /* ThreadList */,
 				706210B8237936C800130B9D /* PostThread */,
 				7062115A237936C800130B9D /* LoginBound */,
@@ -2018,73 +2017,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7062111A237936C800130B9D /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				7062111B237936C800130B9D /* Controller */,
-				70621126237936C800130B9D /* Model */,
-				70621131237936C800130B9D /* View */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
-		7062111B237936C800130B9D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				70621122237936C800130B9D /* PmListController.h */,
-				7062111C237936C800130B9D /* PmListController.m */,
-				70621121237936C800130B9D /* PmSublistController.h */,
-				7062111D237936C800130B9D /* PmSublistController.m */,
-				70621120237936C800130B9D /* PmTopTabController.h */,
-				70621125237936C800130B9D /* PmTopTabController.m */,
-				70621124237936C800130B9D /* ChatDetailController.h */,
-				7062111E237936C800130B9D /* ChatDetailController.m */,
-				7062111F237936C800130B9D /* SendMessageViewController.h */,
-				70621123237936C800130B9D /* SendMessageViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		70621126237936C800130B9D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				70621129237936C800130B9D /* PmTypeModel.h */,
-				7062112F237936C800130B9D /* PmTypeModel.m */,
-				70621130237936C800130B9D /* MessageModel.h */,
-				70621128237936C800130B9D /* MessageModel.m */,
-				7062112B237936C800130B9D /* CellFrameModel.h */,
-				7062112D237936C800130B9D /* CellFrameModel.m */,
-				7062112A237936C800130B9D /* MessageListModel.h */,
-				7062112E237936C800130B9D /* MessageListModel.m */,
-				70621127237936C800130B9D /* MessageNoticeCenter.h */,
-				7062112C237936C800130B9D /* MessageNoticeCenter.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		70621131237936C800130B9D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				70621133237936C800130B9D /* PmlistCell.h */,
-				7062113B237936C800130B9D /* PmlistCell.m */,
-				7062113E237936C800130B9D /* MsglistCell.h */,
-				70621135237936C800130B9D /* MsglistCell.m */,
-				70621139237936C800130B9D /* MessageCell.h */,
-				70621140237936C800130B9D /* MessageCell.m */,
-				7062113C237936C800130B9D /* ChatYYLabel.h */,
-				70621137237936C800130B9D /* ChatYYLabel.m */,
-				7062113D237936C800130B9D /* SystemNoteCell.h */,
-				70621136237936C800130B9D /* SystemNoteCell.m */,
-				70621141237936C800130B9D /* ChatContentCell.h */,
-				70621138237936C800130B9D /* ChatContentCell.m */,
-				7062113F237936C800130B9D /* MessageDetailCell.h */,
-				70621134237936C800130B9D /* MessageDetailCell.m */,
-				7062113A237936C800130B9D /* ChatContainScrollView.h */,
-				70621132237936C800130B9D /* ChatContainScrollView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		70621142237936C800130B9D /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -2294,6 +2226,7 @@
 				706211B5237936C800130B9D /* Home */,
 				70621241237936C800130B9D /* Forum */,
 				7062125F237936C800130B9D /* FastPost */,
+				706AB8D9237C06B800BE649F /* Message */,
 				706211E6237936C800130B9D /* UserCenter */,
 			);
 			path = Module;
@@ -2312,8 +2245,8 @@
 		706211B6237936C800130B9D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				706211B8237936C800130B9D /* DZHomeController.h */,
-				706211B7237936C800130B9D /* DZHomeController.m */,
+				706211B8237936C800130B9D /* DZHomeManagerController.h */,
+				706211B7237936C800130B9D /* DZHomeManagerController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2509,12 +2442,12 @@
 		7062136F23793DB700130B9D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				706213DD23793E1900130B9D /* DZUserController.h */,
-				706213DC23793E1900130B9D /* DZUserController.m */,
+				706213DD23793E1900130B9D /* DZUserManagerController.h */,
+				706213DC23793E1900130B9D /* DZUserManagerController.m */,
 				7062137923793DB700130B9D /* Recently */,
 				7062137123793DB700130B9D /* MyCollection */,
-				7062138023793DB700130B9D /* MyFriendViewController.m */,
 				7062138223793DB700130B9D /* MyFriendViewController.h */,
+				7062138023793DB700130B9D /* MyFriendViewController.m */,
 				7062137823793DB700130B9D /* BoundManageController.h */,
 				7062138323793DB700130B9D /* BoundManageController.m */,
 				7062138423793DB700130B9D /* MyThread */,
@@ -2656,6 +2589,73 @@
 				706AB8CF237BF63600BE649F /* RecommendController.m */,
 			);
 			path = DemoVC;
+			sourceTree = "<group>";
+		};
+		706AB8D9237C06B800BE649F /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				706AB8DA237C06B800BE649F /* Controller */,
+				706AB8E5237C06B800BE649F /* Model */,
+				706AB8F0237C06B800BE649F /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		706AB8DA237C06B800BE649F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				706AB913237C071C00BE649F /* DZMessageListController.h */,
+				706AB914237C071C00BE649F /* DZMessageListController.m */,
+				706AB917237C077000BE649F /* DZMsgSubListController.h */,
+				706AB916237C077000BE649F /* DZMsgSubListController.m */,
+				706AB91F237C08B000BE649F /* DZSendMsgViewController.h */,
+				706AB920237C08B000BE649F /* DZSendMsgViewController.m */,
+				706AB91A237C07A500BE649F /* DZMsgChatDetailController.h */,
+				706AB919237C07A500BE649F /* DZMsgChatDetailController.m */,
+				706AB91C237C085F00BE649F /* DZUserMsgBoxTabController.h */,
+				706AB91D237C085F00BE649F /* DZUserMsgBoxTabController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		706AB8E5237C06B800BE649F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				706AB8E6237C06B800BE649F /* MessageNoticeCenter.h */,
+				706AB8E7237C06B800BE649F /* MessageModel.m */,
+				706AB8E8237C06B800BE649F /* PmTypeModel.h */,
+				706AB8E9237C06B800BE649F /* MessageListModel.h */,
+				706AB8EA237C06B800BE649F /* CellFrameModel.h */,
+				706AB8EB237C06B800BE649F /* MessageNoticeCenter.m */,
+				706AB8EC237C06B800BE649F /* CellFrameModel.m */,
+				706AB8ED237C06B800BE649F /* MessageListModel.m */,
+				706AB8EE237C06B800BE649F /* PmTypeModel.m */,
+				706AB8EF237C06B800BE649F /* MessageModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		706AB8F0237C06B800BE649F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				706AB8F2237C06B800BE649F /* PmlistCell.h */,
+				706AB8F3237C06B800BE649F /* MessageDetailCell.m */,
+				706AB8F4237C06B800BE649F /* MsglistCell.m */,
+				706AB8F5237C06B800BE649F /* SystemNoteCell.m */,
+				706AB8F6237C06B800BE649F /* ChatYYLabel.m */,
+				706AB8F7237C06B800BE649F /* ChatContentCell.m */,
+				706AB8F8237C06B800BE649F /* MessageCell.h */,
+				706AB8F9237C06B800BE649F /* ChatContainScrollView.h */,
+				706AB8F1237C06B800BE649F /* ChatContainScrollView.m */,
+				706AB8FA237C06B800BE649F /* PmlistCell.m */,
+				706AB8FB237C06B800BE649F /* ChatYYLabel.h */,
+				706AB8FC237C06B800BE649F /* SystemNoteCell.h */,
+				706AB8FD237C06B800BE649F /* MsglistCell.h */,
+				706AB8FE237C06B800BE649F /* MessageDetailCell.h */,
+				706AB8FF237C06B800BE649F /* MessageCell.m */,
+				706AB900237C06B800BE649F /* ChatContentCell.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7081DB50237AC019007A2513 /* ListCell */ = {
@@ -3607,8 +3607,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706AB911237C06B800BE649F /* PmlistCell.m in Sources */,
 				706212F0237936C900130B9D /* DZHomeIconTextView.m in Sources */,
-				706212AE237936C900130B9D /* PmTopTabController.m in Sources */,
 				706212EA237936C900130B9D /* LoginCustomView.m in Sources */,
 				7062132E237936C900130B9D /* ForumReusableView.m in Sources */,
 				7062127E237936C900130B9D /* TopMlCell.m in Sources */,
@@ -3653,7 +3653,7 @@
 				273F30261ECE8AB900C78A6C /* DZDatabaseHandle.m in Sources */,
 				7062136C23793D8A00130B9D /* DZBannerImageView.m in Sources */,
 				70F9F8E5237AA72C0067B308 /* NSMutableAttributedString+JsEmotion.m in Sources */,
-				706213DE23793E1900130B9D /* DZUserController.m in Sources */,
+				706213DE23793E1900130B9D /* DZUserManagerController.m in Sources */,
 				277EDC6A1E6D5B8D00E8F0E1 /* DZInstroductionView.m in Sources */,
 				70621268237936C800130B9D /* BaseThreadListController.m in Sources */,
 				70621298237936C900130B9D /* DZAudioListCell.m in Sources */,
@@ -3662,7 +3662,6 @@
 				706212EE237936C900130B9D /* DZHomeBannerModel.m in Sources */,
 				947ECB022064D403002D3536 /* JFImageManager.m in Sources */,
 				94A3E64E20E611740039C560 /* WBStatusHelper.m in Sources */,
-				706212B7237936C900130B9D /* SystemNoteCell.m in Sources */,
 				7062127C237936C900130B9D /* TopLabel.m in Sources */,
 				9494508B21196F8B0074C79E /* AudioTool.m in Sources */,
 				706213D623793DB700130B9D /* HorizontalImageTextView.m in Sources */,
@@ -3673,11 +3672,9 @@
 				706212C8237936C900130B9D /* DZAboutController.m in Sources */,
 				944A015F22E16C68003266FA /* DZMonitorKeyboard.m in Sources */,
 				277EDC6D1E6D5B8D00E8F0E1 /* DZLaunchImageView.m in Sources */,
-				706212B8237936C900130B9D /* ChatYYLabel.m in Sources */,
 				70621331237936C900130B9D /* ForumRightCell.m in Sources */,
 				7062128A237936C900130B9D /* PostActivityModel.m in Sources */,
 				70F9F8DA237AA72B0067B308 /* PaletteColorModel.m in Sources */,
-				706212B6237936C900130B9D /* MsglistCell.m in Sources */,
 				277EDC6F1E6D5B8D00E8F0E1 /* QCheckBox.m in Sources */,
 				706212E1237936C900130B9D /* ThreadDetailView.m in Sources */,
 				273F302C1ECE92EA00C78A6C /* DZArchieverTool.m in Sources */,
@@ -3691,7 +3688,6 @@
 				706212A4237936C900130B9D /* MyPerson.m in Sources */,
 				70621074237935ED00130B9D /* UIImage+TYLaunchImage.m in Sources */,
 				706212C2237936C900130B9D /* DZRegisterController.m in Sources */,
-				706212AC237936C900130B9D /* ChatDetailController.m in Sources */,
 				7062129E237936C900130B9D /* ActiveUserFieldCell.m in Sources */,
 				94B1066E22F165D800D40827 /* VersionUpdate.m in Sources */,
 				706213BD23793DB700130B9D /* CollectionThreadController.m in Sources */,
@@ -3701,9 +3697,12 @@
 				7062127D237936C900130B9D /* BaseStyleCell.m in Sources */,
 				7062128B237936C900130B9D /* PostTextFieldView.m in Sources */,
 				94A3E65020E611740039C560 /* WBStatusLayout.m in Sources */,
+				706AB90A237C06B800BE649F /* PmTypeModel.m in Sources */,
 				27473AC41DD30C380024375F /* AppDelegate.m in Sources */,
 				7062106D237935ED00130B9D /* UUDatePicker.m in Sources */,
 				706212C7237936C900130B9D /* DZUserBoundView.m in Sources */,
+				706AB909237C06B800BE649F /* MessageListModel.m in Sources */,
+				706AB906237C06B800BE649F /* MessageModel.m in Sources */,
 				706212BF237936C900130B9D /* TTSearchBar.m in Sources */,
 				706212E7237936C900130B9D /* TTLoginModel.m in Sources */,
 				70F9F8F2237AA7580067B308 /* DZMobileCtrl+Navi.m in Sources */,
@@ -3716,9 +3715,8 @@
 				70F9F8E1237AA72C0067B308 /* UITextField+EmojiCheck.m in Sources */,
 				706213C423793DB700130B9D /* MySubjectViewController.m in Sources */,
 				94A3E64C20E611740039C560 /* WBModel.m in Sources */,
-				706212ED237936C900130B9D /* DZHomeController.m in Sources */,
+				706212ED237936C900130B9D /* DZHomeManagerController.m in Sources */,
 				70DFD7B0237A967700A13F0F /* DZRootTabBar.m in Sources */,
-				706212B5237936C900130B9D /* MessageDetailCell.m in Sources */,
 				70DFD7A5237A95DE00A13F0F /* DZBaseUrlController.m in Sources */,
 				70F9F8E7237AA72C0067B308 /* NSString+EmojiCheck.m in Sources */,
 				706212DA237936C900130B9D /* PartInSelectCell.m in Sources */,
@@ -3735,14 +3733,13 @@
 				70621078237935ED00130B9D /* RNCachingURLProtocol.m in Sources */,
 				277EDC701E6D5B8D00E8F0E1 /* QRadioButton.m in Sources */,
 				706212CC237936C900130B9D /* ViewPollpotionViewController.m in Sources */,
-				706212BB237936C900130B9D /* MessageCell.m in Sources */,
 				70F9F8D1237AA72B0067B308 /* NSDictionarySR.m in Sources */,
 				94F36BD220804221002AEF9E /* JTWebImageBrowerHelper.m in Sources */,
 				7062126C237936C800130B9D /* DiscoverModel.m in Sources */,
 				27E481601E8A369000AE0E02 /* DZLaunchScreenManager.m in Sources */,
+				706AB910237C06B800BE649F /* ChatContentCell.m in Sources */,
 				7062126B237936C800130B9D /* NewestListController.m in Sources */,
 				7062129F237936C900130B9D /* NSDictionary+ResMessage.m in Sources */,
-				706212B9237936C900130B9D /* ChatContentCell.m in Sources */,
 				70DFD79C237A95DE00A13F0F /* DZBaseViewController.m in Sources */,
 				706212E5237936C900130B9D /* DZResetPwdController.m in Sources */,
 				9494508821196F8B0074C79E /* AudioModel.m in Sources */,
@@ -3762,22 +3759,21 @@
 				706212D5237936C900130B9D /* ActivityApplyCell.m in Sources */,
 				9492087E20243A8B00543C09 /* JTURLRequest.m in Sources */,
 				706213CC23793DB700130B9D /* CollectionViewCell.m in Sources */,
-				706212B0237936C900130B9D /* MessageNoticeCenter.m in Sources */,
 				70621282237936C900130B9D /* DZPostVoteViewController.m in Sources */,
 				943430A32022EB2F009C0102 /* AppDelegate+Local.m in Sources */,
-				706212AA237936C900130B9D /* PmListController.m in Sources */,
 				706212E0237936C900130B9D /* ApplyItemView.m in Sources */,
 				706213D923793DB700130B9D /* FriendCell.m in Sources */,
 				70621297237936C900130B9D /* SelectTypeButton.m in Sources */,
 				706213D023793DB700130B9D /* VerticalImageTextView.m in Sources */,
+				706AB915237C071D00BE649F /* DZMessageListController.m in Sources */,
 				70DFD7A8237A95DE00A13F0F /* DZBaseVarModel.m in Sources */,
 				706212C4237936C900130B9D /* UsertermsView.m in Sources */,
 				706212DC237936C900130B9D /* ViewPollpotionCell.m in Sources */,
-				706212B1237936C900130B9D /* CellFrameModel.m in Sources */,
 				7062126F237936C800130B9D /* FListController.m in Sources */,
 				70F9F8EA237AA72C0067B308 /* NSDate+Extension.m in Sources */,
 				706212BE237936C900130B9D /* SearchHistoryController.m in Sources */,
 				706212C6237936C900130B9D /* DZUserBoundController.m in Sources */,
+				706AB91E237C085F00BE649F /* DZUserMsgBoxTabController.m in Sources */,
 				94A3E64820E611740039C560 /* WBStatusComposeTextParser.m in Sources */,
 				70DFD7A9237A95DE00A13F0F /* DZBaseModel.m in Sources */,
 				273CCEFF1DD98E7100116331 /* DataCheck.m in Sources */,
@@ -3801,7 +3797,6 @@
 				70621077237935ED00130B9D /* NSString+Sha1.m in Sources */,
 				270FF4071E8E27A000FC8613 /* JTSegmentView.m in Sources */,
 				70F19E5C237A8E9900499BED /* TPNavigationBar.m in Sources */,
-				706212B3237936C900130B9D /* PmTypeModel.m in Sources */,
 				70621293237936C900130B9D /* VoteSelectCell.m in Sources */,
 				70621072237935ED00130B9D /* TYLaunchFadeScaleAnimation.m in Sources */,
 				94D44F6D2079BA5D000DA603 /* JudgeImageModel.m in Sources */,
@@ -3809,6 +3804,7 @@
 				70621287237936C900130B9D /* PostVoteModel.m in Sources */,
 				70621334237936C900130B9D /* DZFastPlaceController.m in Sources */,
 				70621283237936C900130B9D /* DZPostDebateController.m in Sources */,
+				706AB921237C08B000BE649F /* DZSendMsgViewController.m in Sources */,
 				277EDC6B1E6D5B8D00E8F0E1 /* JTSegmentedCell.m in Sources */,
 				706212E6237936C900130B9D /* DZLoginBaseController.m in Sources */,
 				275BABCA1F346EF500DB804B /* addressModel.m in Sources */,
@@ -3819,24 +3815,22 @@
 				27D7E0A01E07829E00A933D5 /* XinGeCenter.m in Sources */,
 				2732E7A71DDD623600B2A57D /* DZFileManager.m in Sources */,
 				706212CE237936C900130B9D /* ManageActivityController.m in Sources */,
-				706212B2237936C900130B9D /* MessageListModel.m in Sources */,
 				70DFD79E237A95DE00A13F0F /* DZBaseFloatingView.m in Sources */,
 				706213CF23793DB700130B9D /* BoundManageCell.m in Sources */,
 				70621281237936C900130B9D /* DZPostBaseController.m in Sources */,
 				70621302237936C900130B9D /* DZOtherUserThreadController.m in Sources */,
 				2700AF161DEBE25300C50D0C /* DZShareCenter.m in Sources */,
 				706212BD237936C900130B9D /* TTSearchModel.m in Sources */,
-				706212AB237936C900130B9D /* PmSublistController.m in Sources */,
-				706212BA237936C900130B9D /* PmlistCell.m in Sources */,
+				706AB90E237C06B800BE649F /* SystemNoteCell.m in Sources */,
 				70621303237936C900130B9D /* OtherUserThearCell.m in Sources */,
 				706212EB237936C900130B9D /* DZResetPwdView.m in Sources */,
+				706AB90C237C06B800BE649F /* MessageDetailCell.m in Sources */,
 				94B1067522F1678700D40827 /* SELUpdateAlertConst.m in Sources */,
-				706212AF237936C900130B9D /* MessageModel.m in Sources */,
-				706212AD237936C900130B9D /* SendMessageViewController.m in Sources */,
 				27CD9D2A1DDEA87F0075831B /* SDBrowserImageView.m in Sources */,
 				706212D8237936C900130B9D /* WebAuthcodeView.m in Sources */,
 				947ECAFC2064D403002D3536 /* JFAssetHelper.m in Sources */,
 				70621278237936C900130B9D /* PostTypeCell.m in Sources */,
+				706AB908237C06B800BE649F /* CellFrameModel.m in Sources */,
 				706213C923793DB700130B9D /* ReplyModel.m in Sources */,
 				70DFD7B3237A96AA00A13F0F /* DZBaseTableView.m in Sources */,
 				70F9F8D9237AA72B0067B308 /* UIImage+Palette.m in Sources */,
@@ -3860,11 +3854,11 @@
 				70F9F8D3237AA72B0067B308 /* UIButton+EnlargeEdge.m in Sources */,
 				70F9F8DB237AA72B0067B308 /* PriorityBoxArray.m in Sources */,
 				706212EF237936C900130B9D /* DZHomeListCell.m in Sources */,
+				706AB918237C077000BE649F /* DZMsgSubListController.m in Sources */,
 				706AB8D1237BF63700BE649F /* RecommendController.m in Sources */,
 				7062128F237936C900130B9D /* EndtimeCell.m in Sources */,
 				706212D3237936C900130B9D /* ApplyActiver.m in Sources */,
 				70621280237936C900130B9D /* ThreadListCell.m in Sources */,
-				706212B4237936C900130B9D /* ChatContainScrollView.m in Sources */,
 				7062132A237936C900130B9D /* DZForumInfoModel.m in Sources */,
 				706213BE23793DB700130B9D /* FootForumController.m in Sources */,
 				70621296237936C900130B9D /* PostSelectTypeCell.m in Sources */,
@@ -3878,7 +3872,9 @@
 				277EDC881E6D5BD700E8F0E1 /* DZPlaceholderTextView.m in Sources */,
 				277EDC681E6D5B8D00E8F0E1 /* DropDownView.m in Sources */,
 				706212D7237936C900130B9D /* ExamineActivityView.m in Sources */,
+				706AB90F237C06B800BE649F /* ChatYYLabel.m in Sources */,
 				706213C323793DB700130B9D /* BoundManageController.m in Sources */,
+				706AB912237C06B800BE649F /* MessageCell.m in Sources */,
 				70F9F8E2237AA72C0067B308 /* UIDevice+Extension.m in Sources */,
 				70DFD7A4237A95DE00A13F0F /* DZBaseTableViewController.m in Sources */,
 				706212CA237936C900130B9D /* DZSettingController.m in Sources */,
@@ -3900,6 +3896,7 @@
 				70F9F8E8237AA72C0067B308 /* MBProgressHUD+Add.m in Sources */,
 				706212DB237936C900130B9D /* PartInNormalCell.m in Sources */,
 				706213E123793E7200130B9D /* DZPublicPMCell.m in Sources */,
+				706AB90D237C06B800BE649F /* MsglistCell.m in Sources */,
 				70F9F8DD237AA72C0067B308 /* UIAlertController+Extension.m in Sources */,
 				706212E8237936C900130B9D /* DZLoginView.m in Sources */,
 				706212DD237936C900130B9D /* PartInSexCell.m in Sources */,
@@ -3921,9 +3918,11 @@
 				70621073237935ED00130B9D /* UIView+TYLaunchAnimation.m in Sources */,
 				706212A8237936C900130B9D /* UploadAttachView.m in Sources */,
 				275BABC71F346EE100DB804B /* AddressSelectView.m in Sources */,
+				706AB90B237C06B800BE649F /* ChatContainScrollView.m in Sources */,
 				706213CB23793DB700130B9D /* CollectionForumCell.m in Sources */,
 				70DFD79D237A95DE00A13F0F /* DZAuthCodeView.m in Sources */,
 				706213BB23793DB700130B9D /* CollectionRootController.m in Sources */,
+				706AB907237C06B800BE649F /* MessageNoticeCenter.m in Sources */,
 				7062126E237936C800130B9D /* LianCollectionController.m in Sources */,
 				7062128E237936C900130B9D /* NormalThreadToolCell.m in Sources */,
 				70F9F8E4237AA72C0067B308 /* UITableViewCell+GetReuseID.m in Sources */,
@@ -3935,6 +3934,7 @@
 				7062106E237935ED00130B9D /* UUDatePicker_DateModel.m in Sources */,
 				70621326237936C900130B9D /* DZForumCollectionController.m in Sources */,
 				706213D423793DB700130B9D /* CenterToolView.m in Sources */,
+				706AB91B237C07A500BE649F /* DZMsgChatDetailController.m in Sources */,
 				70F9F8DF237AA72C0067B308 /* UIView+Extension.m in Sources */,
 				947ECB0B2064D403002D3536 /* JFPhotoView.m in Sources */,
 				940BB6ED2079F799001BC1D1 /* SendEmailHelper.m in Sources */,

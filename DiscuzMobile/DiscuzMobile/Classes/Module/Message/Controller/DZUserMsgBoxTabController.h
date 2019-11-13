@@ -1,5 +1,5 @@
 //
-//  PmTopTabController.h
+//  DZUserMsgBoxTabController.h
 //  DiscuzMobile
 //
 //  Created by HB on 2017/7/17.
@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, PMTYPE) {
     pm_interactive,
 };
 
-@interface PmTopTabController : DZBaseViewController
+@interface DZUserMsgBoxTabController : DZBaseViewController
 
 @property (nonatomic, assign) PMTYPE pmType;
 

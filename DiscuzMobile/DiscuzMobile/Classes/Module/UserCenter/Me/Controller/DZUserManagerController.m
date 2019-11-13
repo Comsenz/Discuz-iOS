@@ -1,12 +1,12 @@
 //
-//  DZUserController.m
+//  DZUserManagerController.m
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/19.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "DZUserController.h"
+#import "DZUserManagerController.h"
 #import "UIAlertController+Extension.h"
 #import "CenterToolView.h"
 #import "VerticalImageTextView.h"
@@ -18,7 +18,7 @@
 #import "CollectionRootController.h"
 #import "DZThreadRootController.h"
 #import "BoundManageController.h"
-#import "PmListController.h"
+#import "DZMessageListController.h"
 #import "DZSettingController.h"
 #import "FootRootController.h"
 #import "DZResetPwdController.h"
@@ -31,7 +31,7 @@
 #import "MessageNoticeCenter.h"
 #import "UIImage+Limit.h"
 
-@interface DZUserController ()
+@interface DZUserManagerController ()
 
 @property (nonatomic, strong) MYCenterHeader *myHeader;
 @property (nonatomic, strong) CenterManageModel *centerModel;
@@ -39,7 +39,7 @@
 
 @end
 
-@implementation DZUserController
+@implementation DZUserManagerController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -124,7 +124,7 @@
             case 2:          //我的提醒
             {
 
-                PmListController *pmVC = [[PmListController alloc] init];
+                DZMessageListController *pmVC = [[DZMessageListController alloc] init];
                 [weakSelf.navigationController pushViewController:pmVC animated:YES];
             }
                 break;

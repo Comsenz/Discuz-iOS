@@ -8,7 +8,7 @@
 
 #import "ViewPollpotionViewController.h"
 #import "ViewPollpotionCell.h"
-#import "SendMessageViewController.h"
+#import "DZSendMsgViewController.h"
 #import "ResponseMessage.h"
 #import "UIAlertController+Extension.h"
 
@@ -63,7 +63,7 @@
     if (![self isLogin]) {
         return;
     }
-    SendMessageViewController * senVC=[[SendMessageViewController alloc]init];
+    DZSendMsgViewController * senVC=[[DZSendMsgViewController alloc]init];
     if ([DataCheck isValidString:cell.nameLabel.text]) {
          senVC.uid = cell.nameLabel.text;
     }

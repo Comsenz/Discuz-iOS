@@ -1,12 +1,12 @@
 //
-//  DZHomeController.m
+//  DZHomeManagerController.m
 //  DiscuzMobile
 //
 //  Created by HB on 17/1/13.
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "DZHomeController.h"
+#import "DZHomeManagerController.h"
 #import "DZSettingController.h"
 #import "RNCachingURLProtocol.h"
 #import "ForumCell.h"
@@ -21,7 +21,7 @@
 
 #import "RootForumCell.h"
 
-@interface DZHomeController ()
+@interface DZHomeManagerController ()
 
 @property (nonatomic, strong) NSMutableArray *offenSource;
 @property (nonatomic, strong) NSMutableArray *hotSource;
@@ -30,7 +30,7 @@
 @end
 
 
-@implementation DZHomeController
+@implementation DZHomeManagerController
 
 - (void)leftBarBtnClick {
     if (![self isLogin]) {

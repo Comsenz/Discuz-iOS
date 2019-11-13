@@ -1,5 +1,5 @@
 //
-//  ChatDetailController.h
+//  DZMsgChatDetailController.h
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/7/2.
@@ -8,7 +8,7 @@
 
 #import "DZBaseViewController.h"
 
-@interface ChatDetailController : DZBaseViewController
+@interface DZMsgChatDetailController : DZBaseViewController
 @property (nonatomic, strong) NSString *touid;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *nametitle;

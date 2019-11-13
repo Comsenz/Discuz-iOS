@@ -1,5 +1,5 @@
 //
-//  SendMessageViewController.h
+//  DZSendMsgViewController.h
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/5/12.
@@ -8,7 +8,7 @@
 
 #import "DZBaseViewController.h"
 
-@interface SendMessageViewController : DZBaseViewController
+@interface DZSendMsgViewController : DZBaseViewController
 
 @property (nonatomic , strong) NSString * uid;
 @property (nonatomic , strong) NSString * otherusername;

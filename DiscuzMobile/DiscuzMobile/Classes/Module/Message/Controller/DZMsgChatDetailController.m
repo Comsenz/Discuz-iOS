@@ -1,12 +1,12 @@
 //
-//  ChatDetailController.m
+//  DZMsgChatDetailController.m
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/7/2.
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "ChatDetailController.h"
+#import "DZMsgChatDetailController.h"
 #import "MessageModel.h"
 #import "EmoticonKeyboard.h"
 #import "LoginModule.h"
@@ -14,7 +14,7 @@
 
 #import "DZOtherUserController.h"
 
-@interface ChatDetailController ()<UITableViewDelegate,UITableViewDataSource>
+@interface DZMsgChatDetailController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat kToolBarH;
 }
@@ -33,7 +33,7 @@
 
 @end
 
-@implementation ChatDetailController
+@implementation DZMsgChatDetailController
 
 - (void)willMoveToParentViewController:(UIViewController *)parent {
     if (parent == nil) {
