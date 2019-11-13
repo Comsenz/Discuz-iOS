@@ -78,7 +78,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     NSDictionary *dic = @{@"tid":self.tid,@"page":[NSString stringWithFormat:@"%d",self.currentPageId]};
-    [DZApiRequest cancelRequest:url_ThreadDetail getParameter:dic completion:^(NSString *urlString) {
+    [DZApiRequest cancelRequest:DZ_Url_ThreadDetail getParameter:dic completion:^(NSString *urlString) {
         DLog(@"取消请求：%@",urlString);
     }];
 }
@@ -357,7 +357,7 @@
                                   @"formhash":[Environment sharedEnvironment].formhash
                                   };
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_ActivityApplies;
+        request.urlString = DZ_Url_ActivityApplies;
         request.parameters = postDic;
         request.getParam = dic;
     } success:^(id responseObject, JTLoadType type) {
@@ -439,7 +439,7 @@
                                @"fid":self.threadModel.fid,
                                @"inajax":@1,
                                };
-        request.urlString = url_Report;
+        request.urlString = DZ_Url_Report;
         request.parameters = dic;
         request.methodType = JTMethodTypePOST;
     } success:^(id responseObject, JTLoadType type) {
@@ -495,7 +495,7 @@
                                  };
         
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_Pollvote;
+        request.urlString = DZ_Url_Pollvote;
         request.parameters = postdic;
         request.getParam = getDic;
     } success:^(id responseObject, JTLoadType type) {
@@ -531,7 +531,7 @@
         NSDictionary * dic =@{@"tid":self.tid,
                               @"repquote":(NSString*)data
                               };
-        request.urlString = url_ReplyContent;
+        request.urlString = DZ_Url_ReplyContent;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         
@@ -663,7 +663,7 @@
             [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
         }
         self.threadModel.tid = self.tid;
-        request.urlString = url_ThreadDetail;
+        request.urlString = DZ_Url_ThreadDetail;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         requestCount = 0;
@@ -851,7 +851,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"发帖中..." toView:self.view];
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_Sendreply;
+        request.urlString = DZ_Url_Sendreply;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];

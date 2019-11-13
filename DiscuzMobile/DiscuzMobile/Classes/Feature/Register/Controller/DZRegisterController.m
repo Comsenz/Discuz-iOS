@@ -48,14 +48,14 @@
     };
     
     [self downlodyan];
-    [self checkRequest];
+    [self checkAPIModuleRequest];
     
     self.registerView.usertermsView.readTermBlock = ^ {
         [weakSelf readTerms];
     };
 }
 
-- (void)checkRequest {
+- (void)checkAPIModuleRequest {
     [self.HUD showLoadingMessag:@"" toView:self.view];
     [[CheckHelper shareInstance] checkRegisterRequestSuccess:^{
         [self.HUD hide];
@@ -141,7 +141,7 @@
     
     NSDictionary *regKeyDic = [CheckHelper shareInstance].regKeyDic;
     if (![DataCheck isValidDictionary:regKeyDic]) {
-        [self checkRequest];
+        [self checkAPIModuleRequest];
         [MBProgressHUD showInfo:@"正在获取注册配置，请稍候"];
         return;
     }

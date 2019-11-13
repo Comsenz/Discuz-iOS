@@ -113,7 +113,7 @@
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *dic = @{@"uid":self.uidstr,@"page":[NSString stringWithFormat:@"%ld",self.page]};
-        request.urlString = url_UserPost;
+        request.urlString = DZ_Url_UserPost;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         DLog(@"userpostreplyVariables=%@",responseObject);

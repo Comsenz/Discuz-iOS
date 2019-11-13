@@ -101,7 +101,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *dic = @{@"type":@"reply",
                               @"page":[NSString stringWithFormat:@"%ld",self.page]};
-        request.urlString = url_Mythread;
+        request.urlString = DZ_Url_Mythread;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         [self.tableView.mj_header endRefreshing];

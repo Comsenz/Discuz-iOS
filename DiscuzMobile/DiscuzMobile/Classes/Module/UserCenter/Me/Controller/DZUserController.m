@@ -149,7 +149,7 @@
     static NSInteger requestCount = 0;
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_UserInfo;
+        request.urlString = DZ_Url_UserInfo;
     } success:^(id responseObject, JTLoadType type) {
         requestCount = 0;
         [self.HUD hide];
@@ -324,7 +324,7 @@
         NSString *fileName = [NSString stringWithFormat:@"%@.png", nowTime];
         [request addFormDataWithName:@"Filedata" fileName:fileName mimeType:@"image/png" fileData:data];
         
-        request.urlString = url_UploadHead;
+        request.urlString = DZ_Url_UploadHead;
         request.methodType = JTMethodTypeUpload;
     } progress:^(NSProgress *progress) {
         if (100.f * progress.completedUnitCount/progress.totalUnitCount == 100) {

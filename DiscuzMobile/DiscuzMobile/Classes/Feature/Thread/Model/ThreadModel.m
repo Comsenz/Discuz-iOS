@@ -177,7 +177,7 @@
     if (self.currentPage == 1) {
         BACK(^{
             if ([LoginModule isLogged] && [DataCheck isValidString:listModel.tid]) {
-//                [[DatabaseHandle defaultDataHelper] footThread:listModel];
+//                [[DZDatabaseHandle defaultDataHelper] footThread:listModel];
             }
         });
 

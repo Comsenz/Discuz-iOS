@@ -39,7 +39,7 @@
 - (void)requestData {
     [self.HUD showLoadingMessag:@"" toView:nil];
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_oauths;
+        request.urlString = DZ_Url_Oauths;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];
         NSDictionary * info = [responseObject objectForKey:@"Variables"];
@@ -144,7 +144,7 @@
     [self.HUD showLoadingMessag:@"解除绑定" toView:self.view];
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_unBindThird;
+        request.urlString = DZ_Url_UnBindThird;
         request.parameters = postData;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];
@@ -173,7 +173,7 @@
     [dic setValue:@"yes" forKey:@"loginsubmit"];
     [self.HUD showLoadingMessag:@"" toView:self.view];
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_Login;
+        request.urlString = DZ_Url_Login;
         request.methodType = JTMethodTypePOST;
         request.parameters = dic;
         request.getParam = getData;

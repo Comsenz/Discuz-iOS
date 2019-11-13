@@ -54,7 +54,7 @@ NSString * const debugPassword = @"debugPassword";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createBarBtn];
-    [[CheckHelper shareInstance] checkRequest];
+    [[CheckHelper shareInstance] checkAPIRequest];
     WEAKSELF;
     self.logView.authCodeView.refreshAuthCodeBlock = ^{
         [weakSelf downlodyan];
@@ -170,7 +170,7 @@ NSString * const debugPassword = @"debugPassword";
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_Login;
+        request.urlString = DZ_Url_Login;
         request.parameters = dic;
         request.getParam = getData;
     } success:^(id responseObject, JTLoadType type) {
@@ -226,7 +226,7 @@ NSString * const debugPassword = @"debugPassword";
 - (void)thirdConnectWithService:(NSDictionary *)dic getData:(NSDictionary *)getData {
     [self.HUD showLoadingMessag:@"" toView:self.view];
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_Login;
+        request.urlString = DZ_Url_Login;
         request.methodType = JTMethodTypePOST;
         request.parameters = dic;
         request.getParam = getData;

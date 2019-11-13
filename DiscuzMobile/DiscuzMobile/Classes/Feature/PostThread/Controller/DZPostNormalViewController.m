@@ -319,7 +319,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"发送中" toView:self.view];
         self.HUD.userInteractionEnabled = YES;
-        request.urlString = url_PostCommonThread;
+        request.urlString = DZ_Url_PostCommonThread;
         request.methodType = JTMethodTypePOST;
         request.parameters = postdic;
         request.getParam = getdic;
@@ -437,7 +437,7 @@
 - (void)deleteAudio:(NSIndexPath *)indexPath {
     // 删除本地文件
     AudioModel *audio = [AudioTool shareInstance].audioArray[indexPath.row];
-    [[FileManager shareInstance] removeFileWithPath:audio.mp3Url.absoluteString];
+    [[DZFileManager shareInstance] removeFileWithPath:audio.mp3Url.absoluteString];
     // 删除列表数据源
     [[AudioTool shareInstance].audioArray removeObjectAtIndex:indexPath.row];
     

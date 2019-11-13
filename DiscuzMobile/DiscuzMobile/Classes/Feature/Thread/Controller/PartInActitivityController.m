@@ -218,7 +218,7 @@
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"正在请求。。" toView:self.view];
-        request.urlString = url_ActivityApplies;
+        request.urlString = DZ_Url_ActivityApplies;
         request.methodType = JTMethodTypePOST;
         request.parameters = dic;
         request.getParam = getdic;

@@ -111,7 +111,7 @@
         
         NSDictionary * getdic = @{@"touid":@"0",
                                   @"pmid":@"0"};
-        request.urlString = url_Sendpm;
+        request.urlString = DZ_Url_Sendpm;
         request.methodType = JTMethodTypePOST;
         request.parameters = dic;
         request.getParam = getdic;

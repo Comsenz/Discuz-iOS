@@ -76,7 +76,7 @@
         NSDictionary *postDic = @{@"tid":self.tid,
                                   @"polloptionid":self.pollid
                                   };
-        request.urlString = url_VoteOptionDetail;
+        request.urlString = DZ_Url_VoteOptionDetail;
         request.parameters = postDic;
         [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
     } success:^(id responseObject, JTLoadType type) {

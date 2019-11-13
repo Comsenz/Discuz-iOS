@@ -57,22 +57,22 @@
         
         parameter = @{@"page":[NSString stringWithFormat:@"%ld",self.page],
                       @"filter":self.typeModel.filter}.mutableCopy;
-        urlString = url_MsgList;
+        urlString = DZ_Url_MsgList;
     } else if ([self.typeModel.view isEqualToString:@"mypost"]) {// 我的帖子
         parameter = @{@"page":[NSString stringWithFormat:@"%ld",self.page],
                       @"type":self.typeModel.type}.mutableCopy;
-        urlString = url_ThreadMsgList;
+        urlString = DZ_Url_ThreadMsgList;
         
     } else if ([self.typeModel.view isEqualToString:@"interactive"]) {// 坛友互动
         parameter = @{@"page":[NSString stringWithFormat:@"%ld",self.page],
                       @"type":self.typeModel.type}.mutableCopy;
-        urlString = url_InteractiveMsgList;
+        urlString = DZ_Url_InteractiveMsgList;
         
     } else if ([self.typeModel.view isEqualToString:@"system"] || [self.typeModel.view isEqualToString:@"manage"]) {// 系统提醒 | 管理工作
         
         parameter = @{@"page":[NSString stringWithFormat:@"%ld",self.page],
                       @"view":self.typeModel.view}.mutableCopy;
-        urlString = url_SystemMsgList;
+        urlString = DZ_Url_SystemMsgList;
     }
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
@@ -249,7 +249,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         MessageListModel *model = self.dataSourceArr[indexPath.row];
         NSDictionary *parameters = @{@"id":model.touid,@"formhash":[Environment sharedEnvironment].formhash};
-        request.urlString = url_DeleteMessage;
+        request.urlString = DZ_Url_DeleteMessage;
         request.methodType = JTMethodTypePOST;
         request.parameters = parameters;
     } success:^(id responseObject, JTLoadType type) {

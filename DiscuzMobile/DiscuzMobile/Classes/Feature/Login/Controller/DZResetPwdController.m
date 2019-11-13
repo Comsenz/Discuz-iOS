@@ -125,7 +125,7 @@
     [self.HUD showLoadingMessag:@"正在提交" toView:self.view];
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_resetPwd;
+        request.urlString = DZ_Url_ResetPwd;
         request.parameters = postDic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];

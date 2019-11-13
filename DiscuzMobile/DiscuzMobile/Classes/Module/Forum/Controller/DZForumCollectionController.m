@@ -107,7 +107,7 @@ static NSString * headerSection = @"CellHeader";
 - (void)cacheRequest {
     [self.HUD showLoadingMessag:@"正在刷新" toView:self.view];
     [self loadData:self.currentType andLoadType:JTRequestTypeCache]; // 读缓存，没有缓存的话自己会请求网络
-    NSString *urlStr = self.type == Forum_hot ? url_Hotforum : url_Forumindex;
+    NSString *urlStr = self.type == Forum_hot ? DZ_Url_Hotforum : DZ_Url_Forumindex;
     if ([JTRequestManager isCache:urlStr andParameters:nil]) { // 缓存有的话，要刷新一次。缓存没有的话，不请求了，上面那个方法已经请求了
         [self loadData:self.currentType andLoadType:JTRequestTypeRefresh];
     }
@@ -117,7 +117,7 @@ static NSString * headerSection = @"CellHeader";
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         
-        request.urlString = (self.type == Forum_hot) ? url_Hotforum : url_Forumindex;
+        request.urlString = (self.type == Forum_hot) ? DZ_Url_Hotforum : DZ_Url_Forumindex;
         request.isCache = YES;
         request.loadType = type;
         

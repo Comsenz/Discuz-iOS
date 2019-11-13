@@ -204,7 +204,7 @@
         NSDictionary *dic = @{@"srchtxt":self.searchView.searchBar.text,
                               @"page":[NSString stringWithFormat:@"%ld",self.page],
                               };
-        request.urlString = url_Search;
+        request.urlString = DZ_Url_Search;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];

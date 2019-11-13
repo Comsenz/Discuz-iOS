@@ -112,7 +112,7 @@
 - (void)cacheAndRequest {
     [self.HUD showLoadingMessag:@"正在刷新" toView:self.view];
     [self loadDataWithType:JTRequestTypeCache];
-    if ([DZApiRequest isCache:url_Forumindex andParameters:nil]) {
+    if ([DZApiRequest isCache:DZ_Url_Forumindex andParameters:nil]) {
         [self loadDataWithType:JTRequestTypeRefresh];
     }
 }
@@ -130,7 +130,7 @@
 //         [self.HUD hideAnimated:YES];
 //        return;
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_Forumindex;
+        request.urlString = DZ_Url_Forumindex;
         request.loadType = loadType;
         request.isCache = YES;
     } success:^(id responseObject, JTLoadType type) {
@@ -436,7 +436,7 @@
                               };
         [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
             [self.HUD showLoadingMessag:@"验证发帖权限" toView:self.view];
-            request.urlString = url_CheckPostAuth;
+            request.urlString = DZ_Url_CheckPostAuth;
             request.parameters = dic;
             
             // ------------------ 这个地方，请求加个缓存 ------------

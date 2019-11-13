@@ -20,7 +20,7 @@
 
 - (void)collectionForum:(id)getDic andPostdic:(id)postDic success:(void(^)(void))success failure:(void(^)(NSError *error))failure {
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_CollectionForum;
+        request.urlString = DZ_Url_CollectionForum;
         request.methodType = JTMethodTypePOST;
         request.getParam = getDic;
         request.parameters = postDic;
@@ -48,7 +48,7 @@
 - (void)deleCollection:(id)getDic andPostdic:(id)postDic success:(void(^)(void))success failure:(void(^)(NSError *error))failure {
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_unCollection;
+        request.urlString = DZ_Url_unCollection;
         request.methodType = JTMethodTypePOST;
         request.getParam = getDic;
         request.parameters = postDic;
@@ -72,7 +72,7 @@
 
 - (void)collectionThread:(id)getDic andPostdic:(id)postDic success:(void(^)(void))success failure:(void(^)(NSError *error))failure {
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_CollectionThread;
+        request.urlString = DZ_Url_CollectionThread;
         request.methodType = JTMethodTypePOST;
         request.getParam = getDic;
         request.parameters = postDic;

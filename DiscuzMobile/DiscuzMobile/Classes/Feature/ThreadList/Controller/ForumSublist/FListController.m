@@ -112,7 +112,7 @@
     if ([self.title isEqualToString:@"全部"]) {
         [self downLoadData:self.page andLoadType:JTRequestTypeCache];
         [self.HUD showLoadingMessag:@"正在刷新" toView:self.view];
-        if ([DZApiRequest isCache:url_ForumTlist andParameters:@{@"fid":[NSString stringWithFormat:@"%@",_fid],@"page":[NSString stringWithFormat:@"%ld",(long)self.page]}]) {
+        if ([DZApiRequest isCache:DZ_Url_ForumTlist andParameters:@{@"fid":[NSString stringWithFormat:@"%@",_fid],@"page":[NSString stringWithFormat:@"%ld",(long)self.page]}]) {
             [self downLoadData:self.page andLoadType:JTRequestTypeRefresh];
         }
     } else {
@@ -148,10 +148,10 @@
         [dic setValue:@"1" forKey:@"digest"];
     }
     
-    BOOL isCache = [DZApiRequest isCache:url_ForumTlist andParameters:dic];
+    BOOL isCache = [DZApiRequest isCache:DZ_Url_ForumTlist andParameters:dic];
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_ForumTlist;
+        request.urlString = DZ_Url_ForumTlist;
         request.parameters = dic.mutableCopy;
         request.loadType = loadType;
         if ([self.title isEqualToString:@"全部"] && self.page == 1) {

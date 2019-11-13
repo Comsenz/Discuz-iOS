@@ -30,9 +30,9 @@
     [self initTableView];
     
     if (self.listType == SThreadListTypeDigest) {
-        self.urlString = url_DigestAll;
+        self.urlString = DZ_Url_DigestAll;
     } else if (self.listType == SThreadListTypeNewest) {
-        self.urlString = url_newAll;
+        self.urlString = DZ_Url_NewAll;
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self

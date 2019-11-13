@@ -90,7 +90,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"获取信息" toView:self.view];
         NSDictionary *dic= @{@"uid":self.authorid};
-        request.urlString = url_UserInfo;
+        request.urlString = DZ_Url_UserInfo;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];
@@ -199,7 +199,7 @@
         [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
             [self.HUD showLoadingMessag:@"正在请求" toView:self.view];
             NSDictionary *dic = @{@"uid":[[self.centerModel.myInfoDic objectForKey:@"space"] objectForKey:@"uid"],@"type":@"1"};
-            request.urlString = url_AddFriend;
+            request.urlString = DZ_Url_AddFriend;
             request.parameters = dic;
         } success:^(id responseObject, JTLoadType type) {
             [self.HUD hide];

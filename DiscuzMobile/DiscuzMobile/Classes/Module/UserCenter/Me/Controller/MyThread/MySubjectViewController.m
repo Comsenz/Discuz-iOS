@@ -93,7 +93,7 @@
                               @"page":[NSString stringWithFormat:@"%ld",self.page],
                               @"type":@"thread"
                               };
-        request.urlString = url_Mythread;
+        request.urlString = DZ_Url_Mythread;
         request.methodType = JTMethodTypeGET;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {

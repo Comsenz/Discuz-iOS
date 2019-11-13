@@ -19,7 +19,7 @@
     return helper;
 }
 
-- (void)checkRequest {
+- (void)checkAPIRequest {
     [self checkRequestSuccess:nil failure:nil];
 }
 
@@ -41,11 +41,11 @@
 
 - (void)checkRequestSuccess:(void(^)(void))success failure:(void(^)(void))failure {
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_Check;
+        request.urlString = DZ_Url_BaseCheck;
     } success:^(id responseObject, JTLoadType type) {
         NSString *regname = [responseObject objectForKey:@"regname"];
         if ([DataCheck isValidString:regname]) {
-            NSString *regUrl = [NSString stringWithFormat:@"%@&mod=%@",url_Register,regname];
+            NSString *regUrl = [NSString stringWithFormat:@"%@&mod=%@",DZ_Url_Register,regname];
             if ([DataCheck isValidString:[responseObject objectForKey:@"formhash"]]) {
                 [Environment sharedEnvironment].formhash = [responseObject objectForKey:@"formhash"];
             }

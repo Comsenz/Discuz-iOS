@@ -292,7 +292,7 @@
     [self.HUD showLoadingMessag:@"发送中" toView:self.view];
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"发送中" toView:self.view];
-        request.urlString = url_PostCommonThread;
+        request.urlString = DZ_Url_PostCommonThread;
         request.methodType = JTMethodTypePOST;
         request.parameters = postdic;
         request.getParam = getdic;

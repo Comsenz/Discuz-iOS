@@ -238,7 +238,7 @@
         [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
         NSDictionary * postdic = @{@"touid":self.touid,
                                    @"page":[NSString stringWithFormat:@"%ld",(long)_page]};
-        request.urlString = url_MessageDetail;
+        request.urlString = DZ_Url_MessageDetail;
         request.methodType = JTMethodTypePOST;
         request.parameters = postdic;
     } success:^(id responseObject, JTLoadType type) {
@@ -303,7 +303,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"" toView:nil];
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_Sendpm;
+        request.urlString = DZ_Url_Sendpm;
         request.parameters = dic;
         request.getParam = getdic;
     } success:^(id responseObject, JTLoadType type) {
@@ -403,7 +403,7 @@
         NSDictionary *parameters = @{@"id":message.touid,
                                      @"formhash":[Environment sharedEnvironment].formhash,
                                      @"pid":message.pmid};
-        request.urlString = url_DeleteOneMessage;
+        request.urlString = DZ_Url_DeleteOneMessage;
         request.methodType = JTMethodTypePOST;
         request.parameters = parameters;
     } success:^(id responseObject, JTLoadType type) {

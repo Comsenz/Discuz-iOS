@@ -104,7 +104,7 @@
             cell.accessoryView = sw;
         } else if (indexPath.row == 1) {
             
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2fM",[[FileManager shareInstance] filePathSize]];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2fM",[[DZFileManager shareInstance] filePathSize]];
         }
     }
     
@@ -267,7 +267,7 @@
         
         // 清除完，重新创建文件夹、重新创建数据库
         [[JTCacheManager sharedInstance] createDirectoryAtPath:[JTCacheManager sharedInstance].JTAppCachePath];
-        [[DatabaseHandle defaultDataHelper] openDB];
+        [[DZDatabaseHandle defaultDataHelper] openDB];
         
         MAIN(^{
             UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];

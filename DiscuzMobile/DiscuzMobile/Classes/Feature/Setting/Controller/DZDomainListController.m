@@ -25,7 +25,7 @@ NSString * const domainName = @"name";
     
     [self createBarBtn:@"添加" type:NavItemText Direction:NavDirectionRight];
     
-    NSDictionary *dic = [[FileManager shareInstance] readDocumentPlist:domainList];
+    NSDictionary *dic = [[DZFileManager shareInstance] readDocumentPlist:domainList];
     if ([DataCheck isValidDictionary:dic] && [DataCheck isValidArray:dic[domain]]) {
         self.dataSourceArr = [NSMutableArray arrayWithArray:dic[domain]];
     } else {
@@ -43,7 +43,7 @@ NSString * const domainName = @"name";
                                domainName:@"鸟网",
                                };
         NSArray *domainArray = @[disDz,devDz,bird,wbDZ];
-        [[FileManager shareInstance] writeDocumentPlist:@{domain:domainArray} fileName:@"domainList"];
+        [[DZFileManager shareInstance] writeDocumentPlist:@{domain:domainArray} fileName:@"domainList"];
         self.dataSourceArr = domainArray.mutableCopy;
     }
 }
@@ -79,7 +79,7 @@ NSString * const domainName = @"name";
                               domain:domainString
                               };
         [self.dataSourceArr addObject:dic];
-        [[FileManager shareInstance] writeDocumentPlist:@{domain:self.dataSourceArr} fileName:@"domainList"];
+        [[DZFileManager shareInstance] writeDocumentPlist:@{domain:self.dataSourceArr} fileName:@"domainList"];
         [LoginModule signout];
         [[NSNotificationCenter defaultCenter] postNotificationName:DZ_DomainUrlChange_Notify object:nil];
         [self.tableView reloadData];
@@ -163,7 +163,7 @@ NSString * const domainName = @"name";
         [userDefault synchronize];
     }
     [self.dataSourceArr removeObjectAtIndex:indexPath.row];
-    [[FileManager shareInstance] writeDocumentPlist:@{domain:self.dataSourceArr} fileName:@"domainList"];
+    [[DZFileManager shareInstance] writeDocumentPlist:@{domain:self.dataSourceArr} fileName:@"domainList"];
     
     [self.tableView beginUpdates];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];

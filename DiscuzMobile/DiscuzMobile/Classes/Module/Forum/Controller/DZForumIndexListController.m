@@ -72,7 +72,7 @@
 - (void)cacheAndRequest {
     [self.HUD showLoadingMessag:@"正在刷新" toView:self.view];
     [self loadDataWithType:JTRequestTypeCache];
-    if ([DZApiRequest isCache:url_Forumindex andParameters:nil]) {
+    if ([DZApiRequest isCache:DZ_Url_Forumindex andParameters:nil]) {
         [self loadDataWithType:JTRequestTypeRefresh];
     }
 }
@@ -95,7 +95,7 @@
 //            return;
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_Forumindex;
+        request.urlString = DZ_Url_Forumindex;
         request.loadType = loadType;
         request.isCache = YES;
     } success:^(id responseObject, JTLoadType type) {

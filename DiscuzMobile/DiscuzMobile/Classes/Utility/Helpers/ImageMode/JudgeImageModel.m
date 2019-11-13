@@ -8,7 +8,7 @@
 
 #import "JudgeImageModel.h"
 
-NSString * const boolNoImage = @"noimage";
+NSString * const boolNoImage = @"dz_NoImage";
 
 @implementation JudgeImageModel
 

@@ -45,7 +45,7 @@
                 [request addFormDataWithName:@"Filedata" fileName:fileName mimeType:@"audio/mp3" fileData:audioData];
             }
         }
-        request.urlString = url_upload;
+        request.urlString = DZ_Url_UploadFile;
         request.getParam = getParam;
         request.parameters = postDic;
         request.methodType = JTMethodTypeUpload;

@@ -80,7 +80,7 @@
                               };
         [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
             [self.HUD showLoadingMessag:@"检查发帖权限" toView:self.view];
-            request.urlString = url_CheckPostAuth;
+            request.urlString = DZ_Url_CheckPostAuth;
             request.parameters = dic;
         } success:^(id responseObject, JTLoadType type) {
             [self.HUD hide];

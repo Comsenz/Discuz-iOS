@@ -8,7 +8,7 @@
 
 #import "DZDiscoverManagerController.h"
 #import "DZContainerController.h"
-#import "RecommendController.h"
+//#import "RecommendController.h"
 #import "DigestListController.h"
 #import "NewestListController.h"
 #import "FootmarkController.h"
@@ -37,7 +37,7 @@
 
 - (void)configDiscoverPageView {
     
-    [self addItemClass:[RecommendController class] andTitle:@"推荐"];
+//    [self addItemClass:[RecommendController class] andTitle:@"推荐"];
     [self addItemClass:[NewestListController class] andTitle:@"最新"];
     [self addItemClass:[DigestListController class] andTitle:@"精华"];
     

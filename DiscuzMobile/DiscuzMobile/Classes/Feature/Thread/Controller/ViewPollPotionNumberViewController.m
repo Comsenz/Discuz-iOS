@@ -71,7 +71,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *getDic = @{@"tid":self.tid};
         request.parameters = getDic;
-        request.urlString = url_VoteOptionDetail;
+        request.urlString = DZ_Url_VoteOptionDetail;
         [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];

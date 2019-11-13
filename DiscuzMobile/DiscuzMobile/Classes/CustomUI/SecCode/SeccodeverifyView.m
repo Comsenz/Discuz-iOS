@@ -26,7 +26,7 @@
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *dic = @{@"type":type};
-        request.urlString = url_secureCode;
+        request.urlString = DZ_Url_SecureCode;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         downYan_count = 0;

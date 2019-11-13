@@ -454,7 +454,7 @@ static int i = 0 ;
         [self.HUD showLoadingMessag:@"发布中" toView:self.view];
         self.HUD.userInteractionEnabled = YES;
         request.methodType = JTMethodTypePOST;
-        request.urlString = url_PostCommonThread;
+        request.urlString = DZ_Url_PostCommonThread;
         request.parameters = postDic;
         request.getParam = getDic;
     } success:^(id responseObject, JTLoadType type) {

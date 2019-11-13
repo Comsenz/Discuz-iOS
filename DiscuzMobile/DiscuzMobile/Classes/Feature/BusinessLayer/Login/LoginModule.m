@@ -178,7 +178,7 @@ NSString * const CookieValue = @"COOKIEVALU";
     if ([self isLogged]) {
         [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
             request.methodType = JTMethodTypePOST;
-            request.urlString = url_UserInfo;
+            request.urlString = DZ_Url_UserInfo;
         } success:^(id responseObject, JTLoadType type) {
             if ([[[responseObject objectForKey:@"Message"] objectForKey:@"messagestr"] isEqualToString:@"请先登录后才能继续浏览"]) {
                 [LoginModule signout];

@@ -26,7 +26,7 @@
     
     self.page = 1;
     self.perPage = 10;
-    self.count = [[DatabaseHandle defaultDataHelper] countForFootUid:[Environment sharedEnvironment].member_uid];
+    self.count = [[DZDatabaseHandle defaultDataHelper] countForFootUid:[Environment sharedEnvironment].member_uid];
     
     [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
     [self refreshFoot];
@@ -47,7 +47,7 @@
     self.page = 1;
     WEAKSELF;
     BACK(^{
-        weakSelf.dataSourceArr = [NSMutableArray arrayWithArray:[[DatabaseHandle defaultDataHelper] searchFootWithUid:[Environment sharedEnvironment].member_uid andPage:weakSelf.page andPerpage:weakSelf.perPage]];
+        weakSelf.dataSourceArr = [NSMutableArray arrayWithArray:[[DZDatabaseHandle defaultDataHelper] searchFootWithUid:[Environment sharedEnvironment].member_uid andPage:weakSelf.page andPerpage:weakSelf.perPage]];
         MAIN(^{
             if (weakSelf.dataSourceArr.count >= weakSelf.count) {
                 [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
@@ -67,7 +67,7 @@
     WEAKSELF;
     BACK(^{
         weakSelf.page ++;
-        [weakSelf.dataSourceArr addObjectsFromArray:[[DatabaseHandle defaultDataHelper] searchFootWithUid:[Environment sharedEnvironment].member_uid andPage:weakSelf.page andPerpage:weakSelf.perPage]];
+        [weakSelf.dataSourceArr addObjectsFromArray:[[DZDatabaseHandle defaultDataHelper] searchFootWithUid:[Environment sharedEnvironment].member_uid andPage:weakSelf.page andPerpage:weakSelf.perPage]];
         MAIN(^{
             if (weakSelf.dataSourceArr.count >= weakSelf.count) {
                 [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];

@@ -18,7 +18,7 @@
                                   @"hash":[Environment sharedEnvironment].formhash
                                   };
         [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-            request.urlString = url_Praise;
+            request.urlString = DZ_Url_Praise;
             request.parameters = paramter;
         } success:^(id responseObject, JTLoadType type) {
             NSString *messageval = [responseObject messageval];

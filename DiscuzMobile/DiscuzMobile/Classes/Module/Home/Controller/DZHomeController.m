@@ -100,7 +100,8 @@
 - (void)initRequest {
     // 热帖
     [self downLoadHotThreadData];
-    [self downLoadForumHomeBanner];
+    // 注释banner接口，该模块暂不可用
+//    [self downLoadForumHomeBanner];
     
     if ([LoginModule isLogged]) { // 收藏版块
         [self downLoadFavForumData];
@@ -109,37 +110,37 @@
     }
 }
 
-- (void)downLoadForumHomeBanner {
-    
-    [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_RecommendBanner;
-    } success:^(id responseObject, JTLoadType type) {
-        NSArray *list = [[responseObject objectForKey:@"Variables"] objectForKey:@"list"];
-        if ([DataCheck isValidArray:list]) {
-            if (self.scrollView.bannerArray.count > 0) {
-                self.scrollView.bannerArray = [NSMutableArray array];
-                for (UIView *v  in self.scrollView.subviews) {
-                    [v removeFromSuperview];
-                }
-            }
-            for (NSDictionary *dic in list) {
-                DZHomeBannerModel *banner = [[DZHomeBannerModel alloc] init];
-                [banner setValuesForKeysWithDictionary:dic];
-                [self.scrollView.bannerArray addObject:banner];
-            }
-            
-            [self setBanner];
-        }
-    } failed:^(NSError *error) {
-        [self showServerError:error];
-    }];
-}
+//- (void)downLoadForumHomeBanner {
+//
+//    [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
+//        request.urlString = DZ_Url_RecommendBanner;
+//    } success:^(id responseObject, JTLoadType type) {
+//        NSArray *list = [[responseObject objectForKey:@"Variables"] objectForKey:@"list"];
+//        if ([DataCheck isValidArray:list]) {
+//            if (self.scrollView.bannerArray.count > 0) {
+//                self.scrollView.bannerArray = [NSMutableArray array];
+//                for (UIView *v  in self.scrollView.subviews) {
+//                    [v removeFromSuperview];
+//                }
+//            }
+//            for (NSDictionary *dic in list) {
+//                DZHomeBannerModel *banner = [[DZHomeBannerModel alloc] init];
+//                [banner setValuesForKeysWithDictionary:dic];
+//                [self.scrollView.bannerArray addObject:banner];
+//            }
+//
+//            [self setBanner];
+//        }
+//    } failed:^(NSError *error) {
+//        [self showServerError:error];
+//    }];
+//}
 
 //  下载热门版块 hotforum（常去的版块）-- 未登录时候
 -(void)downLoadDataWtihForumType:(NSString *)forumType {
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_Hotforum;
+        request.urlString = DZ_Url_Hotforum;
     } success:^(id responseObject, JTLoadType type) {
         DLog(@"_hotForumListArray1=%@",responseObject);
         if ([forumType isEqualToString:@"hotforum"]){
@@ -156,7 +157,7 @@
 // 下载收藏版块（常去的版块）-- 登录时候
 -(void)downLoadFavForumData{
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
-        request.urlString = url_CollectionForum;
+        request.urlString = DZ_Url_CollectionForum;
     } success:^(id responseObject, JTLoadType type) {
         DLog(@"responseObject myfacforum=====%@",responseObject);
         // 判断 list 表单是否存在   存在则存储

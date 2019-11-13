@@ -39,7 +39,7 @@
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *getDic = @{@"page":[NSString stringWithFormat:@"%ld",(long)self.page]};
-        request.urlString = url_FavoriteThread;
+        request.urlString = DZ_Url_FavoriteThread;
         request.parameters = getDic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hideAnimated:YES];

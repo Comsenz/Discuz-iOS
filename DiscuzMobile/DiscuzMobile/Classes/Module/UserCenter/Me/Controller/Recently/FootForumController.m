@@ -86,7 +86,7 @@ static NSString * headerSection = @"CellHeader";
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         request.isCache = YES;
-        request.urlString = url_Forumindex;
+        request.urlString = DZ_Url_Forumindex;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];
         [self.collectionView.mj_header endRefreshing];

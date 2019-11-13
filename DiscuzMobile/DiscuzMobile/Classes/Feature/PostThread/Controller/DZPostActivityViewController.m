@@ -253,7 +253,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"活动发起中" toView:self.view];
         self.HUD.userInteractionEnabled = YES;
-        request.urlString = url_PostCommonThread;
+        request.urlString = DZ_Url_PostCommonThread;
         request.parameters = dic;
         request.getParam = getDic;
         request.methodType = JTMethodTypePOST;

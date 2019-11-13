@@ -108,7 +108,7 @@
 - (void)downLoadData {
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *getDic = @{@"page":[NSString stringWithFormat:@"%ld",(long)self.page]};
-        request.urlString = url_FriendList;
+        request.urlString = DZ_Url_FriendList;
         request.parameters = getDic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hideAnimated:YES];
