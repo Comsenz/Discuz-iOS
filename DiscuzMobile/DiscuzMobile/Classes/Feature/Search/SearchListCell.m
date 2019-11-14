@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 2018/7/11.
-//  Copyright © 2018年 Cjk. All rights reserved.
+//  Copyright © 2018年 comsenz-service.com. All rights reserved.
 //
 
 #import "SearchListCell.h"
@@ -26,10 +26,10 @@
     self.contentLabel.numberOfLines = 3;
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@10);
-        make.width.mas_equalTo(WIDTH - 20);
+        make.width.mas_equalTo(KScreenWidth - 20);
     }];
     
-    CGFloat textW = (WIDTH - 30) / 2;
+    CGFloat textW = (KScreenWidth - 30) / 2;
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentLabel);
         make.top.equalTo(self.contentLabel.mas_bottom).offset(10);
@@ -46,7 +46,7 @@
 - (void)setInfo:(TTSearchModel *)info {
     NSRange range = [info.subject rangeOfString:info.keyword];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:info.subject];
-    [str addAttribute:NSForegroundColorAttributeName value:MAIN_COLLOR range:range];
+    [str addAttribute:NSForegroundColorAttributeName value:K_Color_Theme range:range];
     [str addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:17] range:range];
     self.contentLabel.attributedText = str;
     self.timeLabel.text = info.dateline;
@@ -65,7 +65,7 @@
 - (UILabel *)contentLabel {
     if (_contentLabel == nil) {
         _contentLabel = [[UILabel alloc] init];
-        _contentLabel.font = [FontSize HomecellTitleFontSize17];
+        _contentLabel.font = [DZFontSize HomecellTitleFontSize17];
     }
     return _contentLabel;
 }
@@ -73,8 +73,8 @@
 - (UILabel *)timeLabel {
     if (_timeLabel == nil) {
         _timeLabel = [[UILabel alloc] init];
-        _timeLabel.font = [FontSize forumtimeFontSize14];
-        _timeLabel.textColor = LIGHT_TEXT_COLOR;
+        _timeLabel.font = [DZFontSize forumtimeFontSize14];
+        _timeLabel.textColor = K_Color_LightText;
     }
     return  _timeLabel;
 }
@@ -82,8 +82,8 @@
 - (UILabel *)evaluateLabel {
     if (_evaluateLabel == nil) {
         _evaluateLabel = [[UILabel alloc] init];
-        _evaluateLabel.font = [FontSize forumtimeFontSize14];
-        _evaluateLabel.textColor = LIGHT_TEXT_COLOR;
+        _evaluateLabel.font = [DZFontSize forumtimeFontSize14];
+        _evaluateLabel.textColor = K_Color_LightText;
     }
     return _evaluateLabel;
 }

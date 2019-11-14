@@ -3,13 +3,12 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/8/24.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
 #import "ViewPollpotionViewController.h"
 #import "ViewPollpotionCell.h"
-#import "LoginController.h"
-#import "SendMessageViewController.h"
+#import "DZSendMsgViewController.h"
 #import "ResponseMessage.h"
 #import "UIAlertController+Extension.h"
 
@@ -64,7 +63,7 @@
     if (![self isLogin]) {
         return;
     }
-    SendMessageViewController * senVC=[[SendMessageViewController alloc]init];
+    DZSendMsgViewController * senVC=[[DZSendMsgViewController alloc]init];
     if ([DataCheck isValidString:cell.nameLabel.text]) {
          senVC.uid = cell.nameLabel.text;
     }
@@ -77,7 +76,7 @@
         NSDictionary *postDic = @{@"tid":self.tid,
                                   @"polloptionid":self.pollid
                                   };
-        request.urlString = url_VoteOptionDetail;
+        request.urlString = DZ_Url_VoteOptionDetail;
         request.parameters = postDic;
         [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
     } success:^(id responseObject, JTLoadType type) {

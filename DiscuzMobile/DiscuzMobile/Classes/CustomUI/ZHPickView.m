@@ -179,7 +179,7 @@
     
     UIPickerView *pickView=[[UIPickerView alloc] init];
 //    pickView.backgroundColor=[UIColor lightGrayColor];
-    pickView.backgroundColor = TOOL_BACK_COLOR;
+    pickView.backgroundColor = K_Color_ToolBack;
     _pickerView=pickView;
     pickView.delegate=self;
     pickView.dataSource=self;
@@ -192,7 +192,7 @@
     UIDatePicker *datePicker=[[UIDatePicker alloc] init];
     datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
     datePicker.datePickerMode = datePickerMode;
-    datePicker.backgroundColor= TOOL_BACK_COLOR;
+    datePicker.backgroundColor= K_Color_ToolBack;
     if (_defaulDate) {
         [datePicker setDate:_defaulDate];
         

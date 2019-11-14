@@ -22,7 +22,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.textView = [YYTextView new];
-    _textView.frame = CGRectMake(5, 10, WIDTH-10, CGRectGetHeight(self.frame) -20);
+    _textView.frame = CGRectMake(5, 10, KScreenWidth-10, CGRectGetHeight(self.frame) -20);
     _textView.showsVerticalScrollIndicator = YES;
     _textView.alwaysBounceVertical = YES;
     _textView.allowsCopyAttributedString = NO;
@@ -42,7 +42,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.textView.frame = CGRectMake(5, 10, WIDTH-10, CGRectGetHeight(self.frame) - 20);
+    self.textView.frame = CGRectMake(5, 10, KScreenWidth-10, CGRectGetHeight(self.frame) - 20);
 }
 
 @end

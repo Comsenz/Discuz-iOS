@@ -8,16 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface CheckHelper : NSObject
 
-@property (nonatomic, strong) NSDictionary *regKeyDic;
 @property (nonatomic, strong) NSString *regUrl;
+@property (nonatomic, strong) NSDictionary *regKeyDic;
 
 + (instancetype)shareInstance;
 
-- (void)checkRequest;
+- (void)checkAPIRequest;
 
 - (void)checkRegisterRequestSuccess:(void(^)(void))success failure:(void(^)(void))failure;
 
@@ -25,4 +23,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END

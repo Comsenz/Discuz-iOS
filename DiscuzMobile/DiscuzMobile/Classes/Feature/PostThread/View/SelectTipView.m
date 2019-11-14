@@ -22,7 +22,7 @@
     self.tipLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame) - 30 - 5, CGRectGetHeight(self.frame))];
     [self addSubview:self.tipLab];
     self.tipLab.textAlignment = NSTextAlignmentCenter;
-    self.tipLab.font = [FontSize forumtimeFontSize14];
+    self.tipLab.font = [DZFontSize forumtimeFontSize14];
     self.tipLab.text = @"不限";
     
     self.button.frame = CGRectMake(CGRectGetWidth(self.frame) - 30 - 5, (CGRectGetHeight(self.frame) - 30) / 2, 30, 30);

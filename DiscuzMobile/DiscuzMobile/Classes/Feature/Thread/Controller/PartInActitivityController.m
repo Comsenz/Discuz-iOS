@@ -52,10 +52,10 @@
     }
     
     if ([DataCheck isValidString:credit] && [credit integerValue] ) {
-        UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
+        UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 30)];
         header.backgroundColor = [UIColor whiteColor];
-        UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, WIDTH - 30, 20)];
-        tipLab.font = [FontSize forumInfoFontSize12];
+        UILabel *tipLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, KScreenWidth - 30, 20)];
+        tipLab.font = [DZFontSize forumInfoFontSize12];
         tipLab.textColor = [UIColor orangeColor];
         tipLab.text = [NSString stringWithFormat:@"注意：参加此活动将扣除您 %@",creditcost];
         [header addSubview:tipLab];
@@ -100,14 +100,14 @@
     partModel.title = @"留言";
     [self.dataSourceArr addObject:partModel];
     
-    UIView *footview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 60)];
+    UIView *footview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 60)];
     self.tableView.tableFooterView = footview;
     
     self.allowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.allowBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.allowBtn.backgroundColor = MAIN_COLLOR;
+    self.allowBtn.backgroundColor = K_Color_Theme;
     
-    CGFloat b_width = (WIDTH - 45) / 2;
+    CGFloat b_width = (KScreenWidth - 45) / 2;
     self.allowBtn.frame = CGRectMake(15, 15, b_width, 40);
     [self.allowBtn setTitle:@"提交" forState:UIControlStateNormal];
     [self.allowBtn addTarget:self action:@selector(postAction) forControlEvents:UIControlEventTouchUpInside];
@@ -117,14 +117,14 @@
     
     
     self.rejectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.rejectBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [self.rejectBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     self.rejectBtn.backgroundColor = [UIColor whiteColor];
     self.rejectBtn.frame = CGRectMake(CGRectGetMaxX(self.allowBtn.frame) + 15, CGRectGetMinY(self.allowBtn.frame), b_width, CGRectGetHeight(self.allowBtn.frame));
     [self.rejectBtn setTitle:@"取消" forState:UIControlStateNormal];
     [self.rejectBtn addTarget:self action:@selector(cancelAction) forControlEvents:UIControlEventTouchUpInside];
     self.rejectBtn.layer.masksToBounds = YES;
     self.rejectBtn.layer.borderWidth = 1;
-    self.rejectBtn.layer.borderColor = MAIN_COLLOR.CGColor;
+    self.rejectBtn.layer.borderColor = K_Color_Theme.CGColor;
     self.rejectBtn.layer.cornerRadius = 5;
     [footview addSubview:self.rejectBtn];
     
@@ -218,7 +218,7 @@
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"正在请求。。" toView:self.view];
-        request.urlString = url_ActivityApplies;
+        request.urlString = DZ_Url_ActivityApplies;
         request.methodType = JTMethodTypePOST;
         request.parameters = dic;
         request.getParam = getdic;
@@ -226,7 +226,7 @@
         [self.HUD hide];
         if ([[responseObject messageval] isEqualToString:@"activity_completion"]) {
             [MBProgressHUD showInfo:@"报名成功"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:REFRESHWEB object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:DZ_RefreshWeb_Notify object:nil];
             
             [self.navigationController popViewControllerAnimated:YES];
         } else {
@@ -245,7 +245,7 @@
         _datePickView = [[ZHPickView alloc] initDatePickWithMaxDate:[NSDate date] datePickerMode:UIDatePickerModeDate isHaveNavControler:NO];
         _datePickView.isIntextfield = NO;
         _datePickView.delegate = self;
-        [_datePickView setToolbarTintColor:TOOLBAR_BACK_COLOR];
+        [_datePickView setToolbarTintColor:K_Color_ToolBar];
     }
     return _datePickView;
 }
@@ -256,14 +256,14 @@
         _oneSelectPickView = [[ZHPickView alloc] initPickviewWithArray:arr isHaveNavControler:NO];
         _oneSelectPickView.isIntextfield = NO;
         _oneSelectPickView.delegate = self;
-        [_oneSelectPickView setToolbarTintColor:TOOLBAR_BACK_COLOR];
+        [_oneSelectPickView setToolbarTintColor:K_Color_ToolBar];
     }
     return _oneSelectPickView;
 }
 
 - (AddressSelectView *)cityPickView {
     if (_cityPickView == nil) {
-        _cityPickView = [[AddressSelectView alloc] initWithFrame:CGRectMake(0, HEIGHT - 260, WIDTH, 260)];
+        _cityPickView = [[AddressSelectView alloc] initWithFrame:CGRectMake(0, KScreenHeight - 260, KScreenWidth, 260)];
         WEAKSELF;
         _cityPickView.addressBlock = ^(NSString *address) {
             [weakSelf selectAddress:address];
@@ -394,7 +394,7 @@
         PartInSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:selectID];
         if (cell == nil) {
             cell = [[PartInSelectCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:selectID];
-            cell.detailTextLabel.font = [FontSize HomecellTimeFontSize14];
+            cell.detailTextLabel.font = [DZFontSize HomecellTimeFontSize14];
             cell.detailTextLabel.text = @"请选择";
             if ([partModel.fieldid isEqualToString:@"gender"]) {
                 cell.detailTextLabel.text = @"保密";
@@ -419,7 +419,7 @@
 //            PartInSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:selectID];
 //            if (cell == nil) {
 //                cell = [[PartInSelectCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:selectID];
-//                cell.detailTextLabel.font = [FontSize HomecellTimeFontSize14];
+//                cell.detailTextLabel.font = [DZFontSize HomecellTimeFontSize14];
 //                cell.detailTextLabel.text = @"请选择";
 //            }
 //            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

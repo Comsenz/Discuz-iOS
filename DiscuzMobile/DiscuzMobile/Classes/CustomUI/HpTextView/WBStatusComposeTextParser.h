@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YYKit.h"
 
 @interface WBStatusComposeTextParser : NSObject <YYTextParser>
 @property (nonatomic, strong) UIFont *font;

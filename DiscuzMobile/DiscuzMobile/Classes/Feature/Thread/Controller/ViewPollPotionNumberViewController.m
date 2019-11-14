@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by gensinimac1 on 15/8/24.
-//  Copyright (c) 2015年 Cjk. All rights reserved.
+//  Copyright (c) 2015年 comsenz-service.com. All rights reserved.
 //
 
 #import "ViewPollPotionNumberViewController.h"
@@ -47,10 +47,10 @@
     NSDictionary *dic = self.dataSourceArr[indexPath.row];
 
     cell.textLabel.text=[NSString stringWithFormat:@"选择第%ld项的人",indexPath.row+1];
-    cell.textLabel.font=[FontSize HomecellTitleFontSize15];
+    cell.textLabel.font=[DZFontSize HomecellTitleFontSize15];
     cell.detailTextLabel.text = [dic objectForKey:@"votes"];
-    cell.detailTextLabel.font = [FontSize messageFontSize14];
-    cell.detailTextLabel.textColor = MAIN_COLLOR;
+    cell.detailTextLabel.font = [DZFontSize messageFontSize14];
+    cell.detailTextLabel.textColor = K_Color_Theme;
     return cell;
 }
 
@@ -71,7 +71,7 @@
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *getDic = @{@"tid":self.tid};
         request.parameters = getDic;
-        request.urlString = url_VoteOptionDetail;
+        request.urlString = DZ_Url_VoteOptionDetail;
         [self.HUD showLoadingMessag:@"正在加载" toView:self.view];
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];

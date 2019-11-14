@@ -35,38 +35,38 @@
     [self addSubview:self.IconV];
     
     self.titleLab = [[UILabel alloc] init];
-    self.titleLab.textColor = MAIN_COLLOR;
-    self.titleLab.font = [FontSize HomecellTitleFontSize17];
+    self.titleLab.textColor = K_Color_Theme;
+    self.titleLab.font = [DZFontSize HomecellTitleFontSize17];
     [self addSubview:self.titleLab];
     self.titleLab.text = @"";
     
     self.todayPostLab = [[UILabel alloc] init];
-    self.todayPostLab.textColor = LIGHT_TEXT_COLOR;
-    self.todayPostLab.font = [FontSize forumInfoFontSize12];
+    self.todayPostLab.textColor = K_Color_LightText;
+    self.todayPostLab.font = [DZFontSize forumInfoFontSize12];
     [self addSubview:self.todayPostLab];
     self.todayPostLab.text = @"今日：0";
     
     self.threadsLab = [[UILabel alloc] init];
-    self.threadsLab.textColor = LIGHT_TEXT_COLOR;
-    self.threadsLab.font = [FontSize forumInfoFontSize12];
+    self.threadsLab.textColor = K_Color_LightText;
+    self.threadsLab.font = [DZFontSize forumInfoFontSize12];
     [self addSubview:self.threadsLab];
     self.threadsLab.text = @"主题：0";
     
     self.bankLab = [[UILabel alloc] init];
-    self.bankLab.textColor = LIGHT_TEXT_COLOR;
-    self.bankLab.font = [FontSize forumInfoFontSize12];
+    self.bankLab.textColor = K_Color_LightText;
+    self.bankLab.font = [DZFontSize forumInfoFontSize12];
     [self addSubview:self.bankLab];
     self.bankLab.text = @"排名：暂无";
     
-    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.5, WIDTH, 0.5)];
-    self.sepLine.backgroundColor = LINE_COLOR;
+    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.5, KScreenWidth, 0.5)];
+    self.sepLine.backgroundColor = K_Color_Line;
     [self addSubview:self.sepLine];
     
     
     //收藏按钮
     self.collectionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_collectionBtn setImage:[UIImage imageTintColorWithName:@"collection" andImageSuperView:_collectionBtn] forState:UIControlStateNormal];
-    _collectionBtn.tintColor = MAIN_COLLOR;
+    _collectionBtn.tintColor = K_Color_Theme;
     _collectionBtn.tag =1000;
     _collectionBtn.cs_acceptEventInterval = 1;
     [self addSubview:self.collectionBtn];
@@ -117,13 +117,13 @@
     [self.describLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.IconV.mas_bottom).offset(8);
         make.left.equalTo(self.IconV);
-        make.width.mas_equalTo(WIDTH - 30);
+        make.width.mas_equalTo(KScreenWidth - 30);
     }];
 
     [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@0);
         make.top.equalTo(self.describLab.mas_bottom).offset(10);
-        make.width.mas_equalTo(WIDTH);
+        make.width.mas_equalTo(KScreenWidth);
         make.height.equalTo(@5);
     }];
 //    [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -147,8 +147,8 @@
 - (UILabel *)describLab {
     if (!_describLab) {
         _describLab = [[UILabel alloc] init];
-        _describLab.textColor = DARK_TEXT_COLOR;
-        _describLab.font = [FontSize forumtimeFontSize14];
+        _describLab.textColor = K_Color_DarkText;
+        _describLab.font = [DZFontSize forumtimeFontSize14];
     }
     return _describLab;
 }

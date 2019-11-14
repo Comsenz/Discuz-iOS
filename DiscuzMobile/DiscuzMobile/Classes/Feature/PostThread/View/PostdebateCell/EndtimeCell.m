@@ -31,7 +31,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.titleLab.frame = CGRectMake(10, 10, 60, 35);
-    self.contentTextfield.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 8, CGRectGetMinY(self.titleLab.frame), WIDTH - 20 - CGRectGetWidth(self.titleLab.frame) - 8 , CGRectGetHeight(self.titleLab.frame));
+    self.contentTextfield.frame = CGRectMake(CGRectGetMaxX(self.titleLab.frame) + 8, CGRectGetMinY(self.titleLab.frame), KScreenWidth - 20 - CGRectGetWidth(self.titleLab.frame) - 8 , CGRectGetHeight(self.titleLab.frame));
     self.selectBtn.frame = CGRectMake(CGRectGetMaxX(self.contentTextfield.frame) -  36, 6, 36, 36);
 }
 
@@ -82,7 +82,7 @@
     if (_titleLab == nil) {
         _titleLab = [[UILabel alloc] init];
         _titleLab.text = @"结束时间";
-        _titleLab.font = [FontSize forumtimeFontSize14];
+        _titleLab.font = [DZFontSize forumtimeFontSize14];
         _titleLab.textAlignment = NSTextAlignmentLeft;
     }
     return _titleLab;
@@ -92,7 +92,7 @@
     if (_contentTextfield == nil) {
         _contentTextfield = [[UITextField alloc] init];
         _contentTextfield.placeholder = @"请选择时间";
-        _contentTextfield.font = [FontSize HomecellTitleFontSize15];
+        _contentTextfield.font = [DZFontSize HomecellTitleFontSize15];
     }
     return _contentTextfield;
 }

@@ -6,13 +6,13 @@
 //  Copyright © 2018年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "DZBaseTableViewController.h"
 
 typedef NS_ENUM(NSUInteger, SThreadListType) {
     SThreadListTypeDigest,
     SThreadListTypeNewest,
 };
 
-@interface BaseThreadListController : BaseTableViewController
+@interface BaseThreadListController : DZBaseTableViewController
 - (SThreadListType)listType;
 @end

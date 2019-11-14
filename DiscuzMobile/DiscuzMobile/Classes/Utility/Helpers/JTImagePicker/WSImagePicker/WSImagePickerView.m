@@ -11,7 +11,6 @@
 #import "JFImagePickerController.h"
 #import "JTImagePickerCell.h"
 #import "LoginModule.h"
-#import "LoginController.h"
 
 static NSString *imagePickerCellIdentifier = @"imagePickerCellIdentifier";
 
@@ -139,9 +138,7 @@ static NSString *imagePickerCellIdentifier = @"imagePickerCellIdentifier";
 {
 //    NSMutableArray *tmpArray = [NSMutableArray new];
     if (![LoginModule isLogged]) {
-        LoginController *loginVc = [[LoginController alloc] init];
-        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:loginVc];
-        [self.navigationController presentViewController:navVC animated:YES completion:nil];
+        [[DZMobileCtrl sharedCtrl] PresentLoginController:nil];
         return;
     }
     if(indexPath.row < _photosArray.count) {

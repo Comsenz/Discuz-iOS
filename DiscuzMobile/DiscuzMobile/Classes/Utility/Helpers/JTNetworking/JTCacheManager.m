@@ -298,7 +298,7 @@ static const NSInteger timeOut = 60*60;
         NSError *error=nil;
         NSDictionary *dic = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[self homePath] error:&error];
         if (error) {
-            NSLog(@"error: %@", error.localizedDescription);
+            DLog(@"error: %@", error.localizedDescription);
         }else{
             NSNumber *systemNumber = [dic objectForKey:NSFileSystemSize];
             size = [systemNumber floatValue];
@@ -315,7 +315,7 @@ static const NSInteger timeOut = 60*60;
         NSError *error=nil;
         NSDictionary *dic = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[self homePath] error:&error];
         if (error) {
-            NSLog(@"error: %@", error.localizedDescription);
+            DLog(@"error: %@", error.localizedDescription);
         }else{
             NSNumber *freeSystemNumber = [dic objectForKey:NSFileSystemFreeSize];
             size = [freeSystemNumber floatValue];

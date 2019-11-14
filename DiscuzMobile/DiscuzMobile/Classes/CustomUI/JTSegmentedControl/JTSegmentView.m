@@ -31,13 +31,13 @@
     self.segment.userInteractionEnabled = YES;
     [self addSubview:self.segment];
     
-    self.segment.layer.borderColor = MAIN_COLLOR.CGColor;
+    self.segment.layer.borderColor = K_Color_Theme.CGColor;
     self.segment.layer.borderWidth = 0.8;
     self.segment.backgroundColor = [UIColor whiteColor];
-    self.segment.indicatorView.backgroundColor = MAIN_COLLOR;
+    self.segment.indicatorView.backgroundColor = K_Color_Theme;
     
-    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, WIDTH, 0.7)];
-    self.sepLine.backgroundColor = NAV_SEP_COLOR;
+    self.sepLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, KScreenWidth, 0.7)];
+    self.sepLine.backgroundColor = K_Color_NaviBack;
     [self addSubview:self.sepLine];
     
 }
@@ -56,8 +56,8 @@
     
     JTSegmentedCell *cell = [[JTSegmentedCell alloc] init];
     cell.label.text = text;
-    cell.label.font = [FontSize HomecellTitleFontSize17];
-    cell.label.textColor = MAIN_TITLE_COLOR;
+    cell.label.font = [DZFontSize HomecellTitleFontSize17];
+    cell.label.textColor = K_Color_MainTitle;
     cell.imageView.image = image;
     return cell;
 }
@@ -65,7 +65,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.segment.frame = CGRectMake(15, 10, CGRectGetWidth(self.frame) - 30, 35);
-    self.sepLine.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, WIDTH, 0.7);
+    self.sepLine.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 0.7, KScreenWidth, 0.7);
 }
 
 /*

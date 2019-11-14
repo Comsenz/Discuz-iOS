@@ -18,20 +18,20 @@
 }
 
 - (void)commitInit {
-    self.tipLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, (WIDTH - 35) / 3, 20)];
-    self.tipLab.textColor = MESSAGE_COLOR;
-    self.tipLab.font = [FontSize HomecellmessageNumLFontSize10];
+    self.tipLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, (KScreenWidth - 35) / 3, 20)];
+    self.tipLab.textColor = K_Color_Message;
+    self.tipLab.font = [DZFontSize HomecellmessageNumLFontSize10];
     [self addSubview:self.tipLab];
     
     self.infoLab = [[ApplyStatusView alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.tipLab.frame), CGRectGetMaxY(self.tipLab.frame) + 10, CGRectGetWidth(self.tipLab.frame), 20)];
-    self.infoLab.statusLab.font = [FontSize ActiveListFontSize11];
+    self.infoLab.statusLab.font = [DZFontSize ActiveListFontSize11];
     [self addSubview:self.infoLab];
     
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.tipLab.frame = CGRectMake(10, 10, (WIDTH - 30 - 30) / 3, 20);
+    self.tipLab.frame = CGRectMake(10, 10, (KScreenWidth - 30 - 30) / 3, 20);
     self.infoLab.frame = CGRectMake(CGRectGetMinX(self.tipLab.frame), CGRectGetMaxY(self.tipLab.frame), CGRectGetWidth(self.tipLab.frame), 20);
 }
 

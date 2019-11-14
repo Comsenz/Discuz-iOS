@@ -17,7 +17,9 @@
     [self requestWithConfig:config progress:nil success:^(id responseObject, JTLoadType type) {
         [self publicDo:responseObject];
         success(responseObject,type);
-    } failed:failed];
+    } failed:^(NSError *error) {
+        failed(error);
+    }];
 }
 
 + (void)requestWithConfig:(JTRequestConfig)config progress:(JTProgressBlock)progress success:(JTRequestSuccess)success failed:(JTRequestFailed)failed{
@@ -25,14 +27,12 @@
     [JTRequestManager requestWithConfig:^(JTURLRequest *request) {
         config ? config(request) : nil;
         request.urlString = [self checkUrl:request.urlString];
-    } progress:progress success:success failed:failed];
+    } progress:progress success:^(id responseObject, JTLoadType type) {
+        success(responseObject,type);
+    } failed:^(NSError *error) {
+        failed(error);
+    }];
 }
-
-/**
- 是否缓存过了
- 
- @param request 请求对象
- */
 
 /**
  是否缓存过了
@@ -64,7 +64,7 @@
     if ([DataCheck isValidString:domain]) {
         urlStr = [NSString stringWithFormat:@"%@%@",domain,urlStr];
     } else {
-        urlStr = [NSString stringWithFormat:@"%@%@",BASEURL,urlStr];
+        urlStr = [NSString stringWithFormat:@"%@%@",DZ_BASEURL,urlStr];
     }
     urlStr = [urlStr stringByAppendingString:@"&mobiletype=IOS"];
     return urlStr;

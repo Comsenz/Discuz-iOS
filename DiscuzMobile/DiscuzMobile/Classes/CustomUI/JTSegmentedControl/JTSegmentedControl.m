@@ -269,7 +269,7 @@
 }
 
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    NSLog(@"点击了Tracking");
+    DLog(@"点击了Tracking");
     CGPoint location = [touch locationInView:self];
     
     NSInteger calculatedIndex = 0;

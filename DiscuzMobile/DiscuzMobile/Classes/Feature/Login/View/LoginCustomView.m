@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by ZhangJitao on 16/9/17.
-//  Copyright © 2016年 Cjk. All rights reserved.
+//  Copyright © 2016年 comsenz-service.com. All rights reserved.
 // 这个textfiled高度55
 
 #import "LoginCustomView.h"
@@ -42,11 +42,11 @@
     [_leftview addSubview:_imgView];
     _userNameTextField.leftView = _leftview;
     _userNameTextField.leftViewMode = UITextFieldViewModeAlways;
-    _userNameTextField.font = [FontSize HomecellNameFontSize16];//14
+    _userNameTextField.font = [DZFontSize HomecellNameFontSize16];//14
     ;
     
    _lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.frame) - 1, CGRectGetWidth(self.frame), 1)];
-    _lineLabel.backgroundColor = LINE_COLOR;
+    _lineLabel.backgroundColor = K_Color_Line;
     [self addSubview:_lineLabel];
 }
 

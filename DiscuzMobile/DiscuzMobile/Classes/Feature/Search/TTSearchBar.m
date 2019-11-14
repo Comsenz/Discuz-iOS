@@ -21,12 +21,12 @@
 
 - (void)setupView {
     self.layer.borderWidth = 1;
-    self.layer.borderColor = FORUM_GRAY_COLOR.CGColor;
-    self.backgroundColor = FORUM_GRAY_COLOR;
+    self.layer.borderColor = K_Color_ForumGray.CGColor;
+    self.backgroundColor = K_Color_ForumGray;
     self.layer.cornerRadius = 14;
     self.layer.masksToBounds = YES;
     self.placeholder = @"关键字";
-    UIImage* searchBarBg = [UIImage createImageWithColor:FORUM_GRAY_COLOR andHeight:30.0f];
+    UIImage* searchBarBg = [UIImage createImageWithColor:K_Color_ForumGray andHeight:30.0f];
     //设置背景图片
     [self setBackgroundImage:searchBarBg];
     //设置文本框背景

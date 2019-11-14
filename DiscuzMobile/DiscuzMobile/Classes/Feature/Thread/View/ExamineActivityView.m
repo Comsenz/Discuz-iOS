@@ -38,11 +38,11 @@
     
     CGFloat maxNavMaxY = 64;
     
-    if (HEIGHT >= 812) {
+    if (KScreenHeight >= 812) {
         maxNavMaxY = 108;
         allHeight = 480;
     }
-    self.contentView.frame = CGRectMake(30, maxNavMaxY + 10, WIDTH - 60, allHeight + 90 + 20);
+    self.contentView.frame = CGRectMake(30, maxNavMaxY + 10, KScreenWidth - 60, allHeight + 90 + 20);
     self.closeBtn.frame = CGRectMake(CGRectGetWidth(self.contentView.frame) - close_width - 16, 16, close_width, close_width);
     
     self.listTableView = [[UITableView alloc] initWithFrame:CGRectMake(8, close_width + 20, CGRectGetWidth(self.contentView.frame) - 20, allHeight) style:UITableViewStylePlain];
@@ -53,7 +53,7 @@
     
     self.allowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.allowBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.allowBtn.backgroundColor = MAIN_COLLOR;
+    self.allowBtn.backgroundColor = K_Color_Theme;
     
     CGFloat b_width = (CGRectGetWidth(self.listTableView.frame) - 15) / 2;
     self.allowBtn.frame = CGRectMake(CGRectGetMinX(self.listTableView.frame), CGRectGetMaxY(self.listTableView.frame) + 15, b_width, 40);
@@ -64,13 +64,13 @@
     
     
     self.rejectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.rejectBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [self.rejectBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     self.rejectBtn.backgroundColor = [UIColor whiteColor];
      self.rejectBtn.frame = CGRectMake(CGRectGetMaxX(self.allowBtn.frame) + 15, CGRectGetMinY(self.allowBtn.frame), b_width, CGRectGetHeight(self.allowBtn.frame));
     [self.rejectBtn setTitle:@"拒绝" forState:UIControlStateNormal];
     self.rejectBtn.layer.masksToBounds = YES;
     self.rejectBtn.layer.borderWidth = 1;
-    self.rejectBtn.layer.borderColor = MAIN_COLLOR.CGColor;
+    self.rejectBtn.layer.borderColor = K_Color_Theme.CGColor;
     self.rejectBtn.layer.cornerRadius = 5;
     [self.contentView addSubview:self.rejectBtn];
     
@@ -78,7 +78,7 @@
 
 - (void)setDataModel:(ApplyActiver *)dataModel {
     CGFloat allHeight = 380;
-    if (HEIGHT >= 812) {
+    if (KScreenHeight >= 812) {
         allHeight = 480;
     }
     CGFloat close_width = 16.0;

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JTPlaceholderTextView.h"
+#import "DZPlaceholderTextView.h"
 
 @interface ActiveDetailCell : UITableViewCell
 
-@property (nonatomic,strong) JTPlaceholderTextView *detailTextView;
+@property (nonatomic,strong) DZPlaceholderTextView *detailTextView;
 
 @end

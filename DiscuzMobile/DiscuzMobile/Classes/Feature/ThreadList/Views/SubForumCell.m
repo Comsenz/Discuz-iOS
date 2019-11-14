@@ -7,8 +7,8 @@
 //
 
 #import "SubForumCell.h"
-#import "TreeViewNode.h"
-#import "ForumInfoModel.h"
+#import "DZTreeViewNode.h"
+#import "DZForumInfoModel.h"
 #import "NSString+MoreMethod.h"
 
 @interface SubForumCell()
@@ -33,17 +33,17 @@
     [self.contentView addSubview:self.iconV];
     
     self.titleLab = [[UILabel alloc] init];
-    self.titleLab.font = [FontSize HomecellTitleFontSize15];
+    self.titleLab.font = [DZFontSize HomecellTitleFontSize15];
     [self.contentView addSubview:self.titleLab];
     
     self.numLab = [[UILabel alloc] init];
-    self.numLab.font = [FontSize forumtimeFontSize14];
-    self.numLab.textColor = LIGHT_TEXT_COLOR;
+    self.numLab.font = [DZFontSize forumtimeFontSize14];
+    self.numLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.numLab];
     
     self.postsLab = [[UILabel alloc] init];
-    self.postsLab.font = [FontSize forumtimeFontSize14];
-    self.postsLab.textColor = LIGHT_TEXT_COLOR;
+    self.postsLab.font = [DZFontSize forumtimeFontSize14];
+    self.postsLab.textColor = K_Color_LightText;
     [self.contentView addSubview:self.postsLab];
     
     self.AccessoryV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"to"]];
@@ -86,7 +86,7 @@
 /**
  * 设置数据
  */
-- (void)setInfo:(ForumInfoModel *)infoModel {
+- (void)setInfo:(DZForumInfoModel *)infoModel {
     //    self.textLabel.text = node.infoModel.name;
     if ([DataCheck isValidString:infoModel.title]) {
         self.titleLab.text = infoModel.title;

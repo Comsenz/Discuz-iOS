@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by HB on 16/4/29.
-//  Copyright © 2016年 Cjk. All rights reserved.
+//  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
 #import "TTSearchModel.h"

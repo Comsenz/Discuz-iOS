@@ -13,20 +13,18 @@
 #import "LianCollectionController.h"
 #import "FListController.h"
 #import "LianContainTableView.h"
-#import "LoginController.h"
 
-#import "PostNormalViewController.h"
-#import "PostVoteViewController.h"
-#import "PostDebateController.h"
-#import "PostActivityViewController.h"
+#import "DZPostNormalViewController.h"
+#import "DZPostVoteViewController.h"
+#import "DZPostDebateController.h"
+#import "DZPostActivityViewController.h"
 #import "MySubjectViewController.h"
 
 #import "ForumListModel.h"
 #import "PostTypeSelectView.h"
 #import "ForumInfoView.h"
-#import "ThreadViewController.h"
 
-#import "ForumInfoModel.h"
+#import "DZForumInfoModel.h"
 #import "RootForumCell.h"
 #import "SubForumCell.h"
 #import "JudgeImageModel.h"
@@ -50,12 +48,12 @@
 
 @property (nonatomic, strong) NSMutableArray <ForumListModel *> *titleArr;
 
-@property (nonatomic, strong) ForumInfoModel *forumInfo;
+@property (nonatomic, strong) DZForumInfoModel *forumInfo;
 
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) UITableView *foldTableView;
 
-@property (nonatomic, strong) NSMutableArray<ForumInfoModel *> *subForumArr;
+@property (nonatomic, strong) NSMutableArray<DZForumInfoModel *> *subForumArr;
 
 @property (nonatomic, strong) PostTypeSelectView *selectView;
 @property (nonatomic, strong) DropTipView *tipView;
@@ -85,7 +83,7 @@
     
     self.canScroll = YES;
     
-    self.tableView = [[LianContainTableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT - self.navbarMaxY) style:UITableViewStylePlain];
+    self.tableView = [[LianContainTableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - self.navbarMaxY) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -98,11 +96,11 @@
     }
     [self.view addSubview:self.tableView];
     
-    self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, self.infoView.height)];
+    self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, self.infoView.height)];
     self.headView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self setForumInfoHeader];
     
-    self.foldTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.infoView.height, WIDTH, 0) style:UITableViewStylePlain];
+    self.foldTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.infoView.height, KScreenWidth, 0) style:UITableViewStylePlain];
     self.foldTableView.delegate = self;
     self.foldTableView.dataSource = self;
     [self.headView addSubview:self.foldTableView];
@@ -134,7 +132,7 @@
     
     UIImageView *postBtn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"writePost"]];
     CGFloat btn_width = 50.0;
-    postBtn.frame = CGRectMake(WIDTH - btn_width - 15, HEIGHT - btn_width - 15 - self.navbarMaxY - 10, btn_width, btn_width);
+    postBtn.frame = CGRectMake(KScreenWidth - btn_width - 15, KScreenHeight - btn_width - 15 - self.navbarMaxY - 10, btn_width, btn_width);
     postBtn.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showTypeView)];
     [postBtn addGestureRecognizer:tap];
@@ -174,7 +172,7 @@
 }
 
 - (void)hideTipView {
-    CGRect orrect = CGRectMake(0, -self.navbarMaxY, WIDTH, 44);
+    CGRect orrect = CGRectMake(0, -self.navbarMaxY, KScreenWidth, 44);
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
                     self.tipView.frame = orrect;
                 } completion:^(BOOL finished){
@@ -183,20 +181,18 @@
 }
 
 - (void)closeTipView {
-    self.tipView.frame = CGRectMake(0, -self.navbarMaxY, WIDTH, 44);
+    self.tipView.frame = CGRectMake(0, -self.navbarMaxY, KScreenWidth, 44);
     self.tipView.tipAnimatefinsh = YES;
 }
 
 - (void)postSucceedToDetail:(NSString *)tid {
-    ThreadViewController * tdvc = [[ThreadViewController alloc] init];
-    tdvc.tid = tid;
-    [self.navigationController pushViewController:tdvc animated:NO];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:tid];
 }
 
 
 - (void)setForumInfoHeader {
     
-    self.infoView = [[ForumInfoView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 75 + 10)];
+    self.infoView = [[ForumInfoView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 75 + 10)];
     [self.infoView.collectionBtn addTarget:self action:@selector(collectAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.headView addSubview:self.infoView];
@@ -299,7 +295,7 @@
 
 - (void)postNormal {
     WEAKSELF;
-    PostNormalViewController * tvc = [[PostNormalViewController alloc] init];
+    DZPostNormalViewController * tvc = [[DZPostNormalViewController alloc] init];
     tvc.dataForumTherad = self.Variables;
     tvc.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];
@@ -309,7 +305,7 @@
 
 - (void)postVote {
     WEAKSELF;
-    PostVoteViewController * vcv = [[PostVoteViewController alloc] init];
+    DZPostVoteViewController * vcv = [[DZPostVoteViewController alloc] init];
     vcv.dataForumTherad = self.Variables;
     vcv.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];
@@ -320,7 +316,7 @@
 - (void)postActivity {
     WEAKSELF;
     
-    PostActivityViewController * ivc = [[PostActivityViewController alloc] init];
+    DZPostActivityViewController * ivc = [[DZPostActivityViewController alloc] init];
     ivc.dataForumTherad = self.Variables;
     ivc.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];
@@ -332,7 +328,7 @@
 - (void)postDebate {
     
     WEAKSELF;
-    PostDebateController *debateVC = [[PostDebateController alloc] init];
+    DZPostDebateController *debateVC = [[DZPostDebateController alloc] init];
     debateVC.dataForumTherad = self.Variables;
     debateVC.pushDetailBlock = ^(NSString *tid) {
         [weakSelf postSucceedToDetail:tid];
@@ -363,7 +359,7 @@
             if (self.subForumArr.count == 0) {
                 NSArray *arr = [self.Variables objectForKey:@"sublist"];
                 for (NSDictionary *dic in arr) {
-                    ForumInfoModel *model = [[ForumInfoModel alloc] init];
+                    DZForumInfoModel *model = [[DZForumInfoModel alloc] init];
                     [model setValuesForKeysWithDictionary:dic];
                     [self.subForumArr addObject:model];
                 }
@@ -374,15 +370,15 @@
         [self.subForumArr removeAllObjects];
     }
     
-    self.foldTableView.frame = CGRectMake(0, self.infoView.height, WIDTH, self.subForumArr.count * 68 + 54);
-    self.headView.frame = CGRectMake(0, 0, WIDTH, self.infoView.height  + CGRectGetHeight(self.foldTableView.frame) + 5);
+    self.foldTableView.frame = CGRectMake(0, self.infoView.height, KScreenWidth, self.subForumArr.count * 68 + 54);
+    self.headView.frame = CGRectMake(0, 0, KScreenWidth, self.infoView.height  + CGRectGetHeight(self.foldTableView.frame) + 5);
     self.tableView.tableHeaderView = self.headView;
     [self.foldTableView reloadData];
 }
 
 -(void)dl_addNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onOtherScrollToTop:) name:@"kLeaveTopNtf" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginedRefresh) name:LOGINEDREFRESHGETINFO object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginedRefresh) name:DZ_LoginedRefreshInfo_Notify object:nil];
 }
 
 
@@ -451,7 +447,7 @@
             
         }
         
-        ForumInfoModel *model = self.subForumArr[indexPath.row];
+        DZForumInfoModel *model = self.subForumArr[indexPath.row];
         [cell setInfo:model];
         
         return cell;
@@ -494,7 +490,7 @@
             
             if ([DataCheck isValidArray:vcArr]) {
                 self.ctvArr = vcArr;
-                CGRect segmentRect = CGRectMake(0, 0, WIDTH, 44);
+                CGRect segmentRect = CGRectMake(0, 0, KScreenWidth, 44);
                 self.contentView = cell.contentView;
                 self.containVC = [[LianCollectionController alloc] init];
                 [self.containVC setSubControllers:self.ctvArr parentController:self andSegmentRect:segmentRect];
@@ -513,7 +509,7 @@
     
     if ([DataCheck isValidDictionary:[dic objectForKey:@"forum"]]) { // 版块信息设置
         
-        self.forumInfo = [[ForumInfoModel alloc] init];
+        self.forumInfo = [[DZForumInfoModel alloc] init];
         [self.forumInfo setValuesForKeysWithDictionary:[dic objectForKey:@"forum"]];
         
         if ([DataCheck isValidString:self.forumInfo.favorited]) {
@@ -529,14 +525,14 @@
     }
     
     if ([DataCheck isValidArray:[dic objectForKey:@"sublist"]]) { // 子版块列表
-        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, WIDTH, 54);
-        self.headView.frame = CGRectMake(0, 0, WIDTH, self.infoView.height + CGRectGetHeight(self.foldTableView.frame) + 5);
+        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, KScreenWidth, 54);
+        self.headView.frame = CGRectMake(0, 0, KScreenWidth, self.infoView.height + CGRectGetHeight(self.foldTableView.frame) + 5);
         self.tableView.tableHeaderView = self.headView;
         [self.subForumArr removeAllObjects];
         [self.foldTableView reloadData];
     } else {
-        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, WIDTH, 0);
-        self.headView.frame = CGRectMake(0, 0, WIDTH, self.infoView.height);
+        self.foldTableView.frame  = CGRectMake(0, self.infoView.height, KScreenWidth, 0);
+        self.headView.frame = CGRectMake(0, 0, KScreenWidth, self.infoView.height);
         self.tableView.tableHeaderView = self.headView;
     }
     
@@ -609,7 +605,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.foldTableView) {
         
-        ForumInfoModel *node = self.subForumArr[indexPath.row];
+        DZForumInfoModel *node = self.subForumArr[indexPath.row];
         LianMixAllViewController *foVC = [[LianMixAllViewController alloc] init];
         foVC.forumFid = node.fid;
         [self.navigationController pushViewController:foVC animated:YES];
@@ -660,7 +656,7 @@
     return _titleArr;
 }
 
-- (NSMutableArray<ForumInfoModel *> *)subForumArr {
+- (NSMutableArray<DZForumInfoModel *> *)subForumArr {
     if (!_subForumArr) {
         _subForumArr = [NSMutableArray array];
     }
@@ -669,7 +665,7 @@
 
 - (DropTipView *)tipView {
     if (!_tipView) {
-        _tipView = [[DropTipView alloc] initWithFrame:CGRectMake(0, -self.navbarMaxY, WIDTH, 44)];
+        _tipView = [[DropTipView alloc] initWithFrame:CGRectMake(0, -self.navbarMaxY, KScreenWidth, 44)];
         _tipView.tipAnimatefinsh = YES;
     }
     return _tipView;

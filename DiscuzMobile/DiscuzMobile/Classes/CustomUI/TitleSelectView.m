@@ -22,7 +22,7 @@
 - (void)p_setupViews {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 2, 80,20)];
     self.titleLabel.text = @"全部版块";
-    _titleLabel.font = [FontSize HomecellTitleFontSize17];
+    _titleLabel.font = [DZFontSize HomecellTitleFontSize17];
     [_titleLabel setTextColor:[UIColor colorWithRed:95 green:190 blue:125 alpha:1]];
     [self addSubview:self.titleLabel];
     

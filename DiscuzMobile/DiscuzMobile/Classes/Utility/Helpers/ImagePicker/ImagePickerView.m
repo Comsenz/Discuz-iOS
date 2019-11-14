@@ -43,7 +43,7 @@
         self.pickerCT.sourceType = sourceType;
         [self present];
     } else {
-        DLog(@"模拟其中无法打开照相机，请在真机中使用");
+        DLog(@"模拟器中无法打开照相机，请在真机中使用");
     }
 }
 

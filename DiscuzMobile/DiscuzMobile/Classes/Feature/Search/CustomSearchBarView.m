@@ -30,7 +30,7 @@
 - (UIButton *)cancelBtn {
     if (_cancelBtn == nil) {
         _cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_cancelBtn setTitleColor:MAIN_TITLE_COLOR forState:UIControlStateNormal];
+        [_cancelBtn setTitleColor:K_Color_MainTitle forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15.0];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
     }

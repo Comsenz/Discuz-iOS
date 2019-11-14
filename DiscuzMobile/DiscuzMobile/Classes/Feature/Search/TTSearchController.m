@@ -3,14 +3,14 @@
 //  DiscuzMobile
 //
 //  Created by HB on 16/4/15.
-//  Copyright © 2016年 Cjk. All rights reserved.
+//  Copyright © 2016年 comsenz-service.com. All rights reserved.
 //
 
 #import "TTSearchController.h"
 #import "SearchHistoryController.h"
 
 #import "TTSearchModel.h"
-#import "ThreadViewController.h"
+#import "DZForumThreadController.h"
 #import "SearchListCell.h"
 #import "CustomSearchBarView.h"
 #import "UIAlertController+Extension.h"
@@ -59,12 +59,12 @@
     [self createBarBtn:@"" type:NavItemText Direction:NavDirectionLeft];
     [self.navigationItem setHidesBackButton:YES];
     
-    self.searchView = [[CustomSearchBarView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
+    self.searchView = [[CustomSearchBarView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 30)];
     self.searchView.searchBar.delegate = self;
     self.navigationItem.titleView = self.searchView;
     [self.searchView.cancelBtn addTarget:self action:@selector(rightBarBtnClick) forControlEvents:UIControlEventTouchUpInside];
     if (self.type == searchPostionTypeTabbar) {
-        self.searchView.searchBar.frame = CGRectMake(5, 1, WIDTH - 30, 28);
+        self.searchView.searchBar.frame = CGRectMake(5, 1, KScreenWidth - 30, 28);
         [self.searchView.cancelBtn setHidden:YES];
     }
     
@@ -107,7 +107,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (self.dataSourceArr.count > 0) {
         TTSearchModel *model = self.dataSourceArr[indexPath.row];
-        ThreadViewController * tvc = [[ThreadViewController alloc] init];
+        DZForumThreadController * tvc = [[DZForumThreadController alloc] init];
         tvc.tid = model.tid;
         tvc.threadtitle = model.subject;
         [self.navigationController pushViewController:tvc animated:YES];
@@ -119,11 +119,11 @@
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor whiteColor];
     
-    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, WIDTH - 20, 39)];
+    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, KScreenWidth - 20, 39)];
     lab.textColor = [UIColor darkGrayColor];
     lab.font = [UIFont systemFontOfSize:14.0];
     lab.textAlignment = NSTextAlignmentLeft;
-    UIView *lineView  = [[UIView alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(lab.frame), WIDTH - 15, 0.5)];
+    UIView *lineView  = [[UIView alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(lab.frame), KScreenWidth - 15, 0.5)];
     lineView.backgroundColor = [UIColor lightGrayColor]; 
     if (section == 0) {
         lab.text = @"相关帖子";
@@ -204,7 +204,7 @@
         NSDictionary *dic = @{@"srchtxt":self.searchView.searchBar.text,
                               @"page":[NSString stringWithFormat:@"%ld",self.page],
                               };
-        request.urlString = url_Search;
+        request.urlString = DZ_Url_Search;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];

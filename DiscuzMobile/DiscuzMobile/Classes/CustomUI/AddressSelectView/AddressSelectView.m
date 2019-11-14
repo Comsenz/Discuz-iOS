@@ -37,14 +37,14 @@
 
 - (void)commitInit {
     
-    self.backgroundColor = TOOLBAR_BACK_COLOR;
+    self.backgroundColor = K_Color_ToolBar;
     
     NSData *JSONData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area" ofType:@"json"]];
     
     NSDictionary *dataDic = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingAllowFragments error:nil];
     
     NSMutableArray *dataArray=dataDic[@"result"][0][@"son"];
-    //    NSLog(@"%@",dataArray);
+    //    DLog(@"%@",dataArray);
     
     shengArray=[NSMutableArray array];
     shiArray=[NSMutableArray array];
@@ -70,24 +70,24 @@
     self.cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.cancelBtn.frame = CGRectMake(5, 5, 40, 30);
     [self.cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [self.cancelBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [self.cancelBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     [self.cancelBtn addTarget:self action:@selector(remove) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.cancelBtn];
     
     self.doneBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.doneBtn.frame = CGRectMake(WIDTH - 5 - 40, 5, 40, 30);
+    self.doneBtn.frame = CGRectMake(KScreenWidth - 5 - 40, 5, 40, 30);
     [self.doneBtn setTitle:@"确定" forState:UIControlStateNormal];
     [self.doneBtn addTarget:self action:@selector(doneAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.doneBtn setTitleColor:MAIN_COLLOR forState:UIControlStateNormal];
+    [self.doneBtn setTitleColor:K_Color_Theme forState:UIControlStateNormal];
     [self addSubview:self.doneBtn];
     
-    UIView *sepView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 0.5)];
+    UIView *sepView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 0.5)];
     [self addSubview:sepView];
-    sepView.backgroundColor = NAV_SEP_COLOR;
+    sepView.backgroundColor = K_Color_NaviBack;
     
     // 选择框
     myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 40, self.width, 220)];
-    myPickerView.backgroundColor = TOOL_BACK_COLOR;
+    myPickerView.backgroundColor = K_Color_ToolBack;
     // 显示选中框
     myPickerView.showsSelectionIndicator=YES;
     myPickerView.dataSource = self;
@@ -146,7 +146,7 @@
 // 返回选中的行
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSLog(@"选中%ld列---%ld行",(long)component,(long)row);
+    DLog(@"选中%ld列---%ld行",(long)component,(long)row);
     if (component==0) {
         addressModel *model=shengArray[row];
         shiArray=[addressModel mj_objectArrayWithKeyValuesArray:model.son];
@@ -175,7 +175,7 @@
         addressModel *model2=xianArray[row];
         [chooseDic setValue:model2.area_id forKey:@"xian"];
     }
-    NSLog(@"%@",chooseDic);
+    DLog(@"%@",chooseDic);
 }
 
 //返回当前行的内容,此处是将数组中数值添加到滚动的那个显示栏上

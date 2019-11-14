@@ -25,18 +25,17 @@
 - (void)p_setupViews {
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    self.selectField = [[UITextField alloc] initWithFrame:CGRectMake(15, 5, WIDTH - 20, 45)];
+    self.selectField = [[UITextField alloc] initWithFrame:CGRectMake(15, 5, KScreenWidth - 20, 45)];
     self.selectField.font = [UIFont systemFontOfSize:16.0];
     self.selectField.placeholder = @" 选择分类";
-    self.selectField.font = [FontSize HomecellTitleFontSize15];
+    self.selectField.font = [DZFontSize HomecellTitleFontSize15];
     self.selectField.tag = 103;
     [self.contentView addSubview:self.selectField];
-    
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.selectField.frame = CGRectMake(10, 5, WIDTH, 45);
+    self.selectField.frame = CGRectMake(10, 5, KScreenWidth, 45);
 }
 
 

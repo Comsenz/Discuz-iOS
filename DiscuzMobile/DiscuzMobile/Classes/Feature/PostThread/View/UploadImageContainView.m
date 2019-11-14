@@ -31,7 +31,7 @@ static CGFloat b_space = 15.0;
         self.aidArray = [NSMutableArray array];
         self.images = [NSMutableArray array];
         self.iamgevViews = [NSMutableArray array];
-        viewWidth = (WIDTH - b_space * 2) / ROWCOUNT - b_space;
+        viewWidth = (KScreenWidth - b_space * 2) / ROWCOUNT - b_space;
         [self p_setupViews];
     }
     return self;

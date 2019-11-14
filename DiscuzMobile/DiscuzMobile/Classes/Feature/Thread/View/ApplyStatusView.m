@@ -30,7 +30,7 @@
     self.iconV.contentMode = UIViewContentModeScaleAspectFit;
     self.iconV.frame = CGRectZero;
     self.statusLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.iconV.frame), 0, CGRectGetWidth(self.frame) - 20, CGRectGetHeight(self.frame))];
-    self.statusLab.font = [FontSize HomecellTimeFontSize14];
+    self.statusLab.font = [DZFontSize HomecellTimeFontSize14];
     [self addSubview:self.iconV];
     [self addSubview:self.statusLab];
 }

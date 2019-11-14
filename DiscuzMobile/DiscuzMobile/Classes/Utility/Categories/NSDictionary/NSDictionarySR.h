@@ -3,7 +3,7 @@
 //  Discuz2
 //
 //  Created by rexshi on 9/27/11.
-//  Copyright 2011 rexshi. All rights reserved.
+//  Copyright 2011 comsenz-service.com. All rights reserved.
 //
 
 @interface NSDictionary (NSDictionarySR)

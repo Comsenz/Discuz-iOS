@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by HB on 17/3/8.
-//  Copyright © 2017年 Cjk. All rights reserved.
+//  Copyright © 2017年 comsenz-service.com. All rights reserved.
 //
 
 #import "UsertermsController.h"
@@ -26,14 +26,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"%@ 服务条款",APPNAME];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ 服务条款",DZ_APPNAME];
     
     self.contentLabel = [[UILabel alloc] init];
     self.contentLabel.numberOfLines = 0;
-    self.contentLabel.font = [FontSize HomecellNameFontSize16];
+    self.contentLabel.font = [DZFontSize HomecellNameFontSize16];
     [self.view addSubview:self.contentLabel];
     
-    NSString *fileName = BBSRULE;
+    NSString *fileName = DZ_BBSRULE;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"txt"];
     NSString *strp = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     
@@ -43,9 +43,9 @@
         self.contentLabel.text = strp;
     }
     
-    CGSize messageSize = [self.contentLabel.text sizeWithFont:[FontSize HomecellNameFontSize16] maxSize:CGSizeMake(WIDTH - 40, CGFLOAT_MAX)];
+    CGSize messageSize = [self.contentLabel.text sizeWithFont:[DZFontSize HomecellNameFontSize16] maxSize:CGSizeMake(KScreenWidth - 40, CGFLOAT_MAX)];
     self.contentLabel.frame = CGRectMake(20, 15, messageSize.width, messageSize.height);
-    self.scrollview.contentSize = CGSizeMake(WIDTH, CGRectGetMaxY(self.contentLabel.frame) + 40);
+    self.scrollview.contentSize = CGSizeMake(KScreenWidth, CGRectGetMaxY(self.contentLabel.frame) + 40);
 }
 
 

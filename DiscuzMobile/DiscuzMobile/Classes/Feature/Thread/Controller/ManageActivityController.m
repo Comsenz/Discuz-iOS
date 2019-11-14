@@ -64,7 +64,7 @@
                              @"applylistsubmit":@"yes"};
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"处理中，请稍候" toView:self.view];
-        request.urlString = url_ManageActivity;
+        request.urlString = DZ_Url_ManageActivity;
         request.parameters = postDic;
         request.getParam = getDic;
         request.methodType = JTMethodTypePOST;
@@ -94,7 +94,7 @@
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         [self.HUD showLoadingMessag:@"加载中" toView:self.view];
-        request.urlString = url_ManageActivity;
+        request.urlString = DZ_Url_ManageActivity;
         request.parameters = getDic;
     } success:^(id responseObject, JTLoadType type) {
         [self.HUD hide];

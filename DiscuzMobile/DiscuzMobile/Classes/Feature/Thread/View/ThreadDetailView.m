@@ -50,7 +50,7 @@
 - (void)createHPGrowingTextView {
     
     [self addSubview:self.emoKeyboard];
-    self.emoKeyboard.backgroundColor = MAIN_GRAY_COLOR;
+    self.emoKeyboard.backgroundColor = K_Color_MainGray;
     self.emoKeyboard.textBarView.style = detail_textBar;
     WEAKSELF;
     __block CGFloat height = 0;
@@ -69,7 +69,7 @@
 - (EmoticonKeyboard *)emoKeyboard {
     if (_emoKeyboard == nil) {
         CGFloat tabbarH = 50;
-        _emoKeyboard = [[EmoticonKeyboard alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.frame) - tabbarH, WIDTH, tabbarH)];
+        _emoKeyboard = [[EmoticonKeyboard alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.frame) - tabbarH, KScreenWidth, tabbarH)];
     }
     return _emoKeyboard;
 }

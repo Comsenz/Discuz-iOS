@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "InstroductionView.h"
+#import "DZInstroductionView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,UIScrollViewDelegate>
 

@@ -47,7 +47,7 @@
     NSError *sessionError;
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
     if (session == nil) {
-        NSLog(@"Error create session:%@", [sessionError description]);
+        DLog(@"Error create session:%@", [sessionError description]);
     } else {
         [session setActive:YES error:nil];
     }
@@ -82,7 +82,7 @@
         [_recorder record];
         
     } else {
-        NSLog(@"音频格式和文件存储格式不匹配,无法初始化Recorder");
+        DLog(@"音频格式和文件存储格式不匹配,无法初始化Recorder");
         
     }
     return self.recordPath;
@@ -93,7 +93,7 @@
  停止录音
  */
 - (void)stopRecord {
-    NSLog(@"停止录音");
+    DLog(@"停止录音");
     if ([self.recorder isRecording]) {
         [self.recorder stop];
     }
@@ -157,10 +157,10 @@
         fclose(pcm);
     }
     @catch (NSException *exception) {
-        NSLog(@"%@",[exception description]);
+        DLog(@"%@",[exception description]);
     }
     @finally {
-        NSLog(@"MP3生成成功!!!");
+        DLog(@"MP3生成成功!!!");
         // 删除源文件
         [self removeFileWithPath:self.recordPath];
     }
@@ -178,7 +178,7 @@
         [self.player stop];
     }
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    NSLog(@"%li",self.player.data.length/1024);
+    DLog(@"%li",self.player.data.length/1024);
     [self.session setCategory:AVAudioSessionCategoryPlayback error:nil];
     [self.player play];
 }
@@ -201,13 +201,13 @@
  停止播放
  */
 - (void)stopPlayRecord {
-    NSLog(@"停止播放");
+    DLog(@"停止播放");
     self.status = r_stop;
     [self.player stop];
 }
 
 - (void)pausePlayRecord {
-    NSLog(@"停止播放");
+    DLog(@"停止播放");
     self.status = r_pause;
     [self.player pause];
 }
@@ -225,7 +225,7 @@
  重录
  */
 - (void)resetRecord {
-    NSLog(@"重录");
+    DLog(@"重录");
     [self removeFileWithPath:self.recordPath];
     [self initAudio];
 }

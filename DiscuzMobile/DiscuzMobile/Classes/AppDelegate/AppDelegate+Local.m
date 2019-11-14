@@ -45,7 +45,7 @@ static const char *CLLocation_manager = "CLLocation_manager";
 - (void)resevseGeocode:(CLLocation *)location {
     CLGeocoder *revBeo = [[CLGeocoder alloc] init];
     [revBeo reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        NSLog(@"%@",placemarks[0].addressDictionary);
+        DLog(@"%@",placemarks[0].addressDictionary);
         NSMutableString *str = [[NSMutableString alloc] init];
         for (NSString *key in placemarks[0].addressDictionary) {
             if ([key isEqualToString:@"FormattedAddressLines"]) {

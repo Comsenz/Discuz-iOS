@@ -47,9 +47,9 @@
     
     self.titleLab = [[UILabel alloc] init];
     self.titleLab.text = @"请选择发帖类型";
-    self.titleLab.font = [FontSize NavTitleFontSize18];
+    self.titleLab.font = [DZFontSize NavTitleFontSize18];
     self.titleLab.textAlignment = NSTextAlignmentCenter;
-    self.titleLab.textColor = MAIN_TITLE_COLOR;
+    self.titleLab.textColor = K_Color_MainTitle;
     [self.contentView addSubview:self.titleLab];
     
     self.selectTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, 10, 10) style:UITableViewStylePlain];
@@ -132,7 +132,7 @@
     CGFloat allHeight = 80 * typeArray.count + 65 + 20;
     CGFloat close_width = 16.0;
     
-    self.contentView.frame = CGRectMake(30, HEIGHT - allHeight - 100, WIDTH - 60, allHeight);
+    self.contentView.frame = CGRectMake(30, KScreenHeight - allHeight - 100, KScreenWidth - 60, allHeight);
     self.contentView.layer.masksToBounds = YES;
     self.contentView.layer.cornerRadius = 8;
     

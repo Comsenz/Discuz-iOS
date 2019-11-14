@@ -33,12 +33,6 @@
 /**
  是否缓存过了
  
- @param request 请求对象
- */
-
-/**
- 是否缓存过了
- 
  @param urlString 地址
  @param parameters 传递的参数
  @return 是否

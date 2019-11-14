@@ -7,9 +7,6 @@
 //
 
 #import "BaseThreadListController.h"
-#import "LoginController.h"
-#import "OtherUserController.h"
-#import "ThreadViewController.h"
 #import "BaseStyleCell.h"
 #import "DiscoverModel.h"
 #import "ThreadListCell.h"
@@ -33,18 +30,18 @@
     [self initTableView];
     
     if (self.listType == SThreadListTypeDigest) {
-        self.urlString = url_DigestAll;
+        self.urlString = DZ_Url_DigestAll;
     } else if (self.listType == SThreadListTypeNewest) {
-        self.urlString = url_newAll;
+        self.urlString = DZ_Url_NewAll;
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(firstRequest:)
-                                                 name:JTCONTAINERQUEST
+                                                 name:DZ_CONTAINERQUEST_Notify
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshData)
-                                                 name:DOMAINCHANGE
+                                                 name:DZ_DomainUrlChange_Notify
                                                object:nil];
     
     [self cacheRequest];
@@ -181,26 +178,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ThreadListModel *listModel = self.dataSourceArr[indexPath.row];
-    [self pushThreadDetail:listModel];
+    [[DZMobileCtrl sharedCtrl] PushToDetailController:listModel.tid];
 }
 
 #pragma mark - Action
-- (void)pushThreadDetail:(ThreadListModel *)listModel {
-    ThreadViewController * tvc = [[ThreadViewController alloc] init];
-    tvc.tid = listModel.tid;
-    [self.navigationController pushViewController:tvc animated:YES];
-}
-
 - (void)toOtherCenter:(UITapGestureRecognizer *)sender {
     
     if (![self isLogin]) {
         return;
     }
-    NSInteger tag = sender.view.tag;
-    NSString *authorId = [NSString stringWithFormat:@"%ld",(long)tag];
-    OtherUserController * ovc = [[OtherUserController alloc] init];
-    ovc.authorid = authorId;
-    [self.navigationController pushViewController:ovc animated:YES];
+    [[DZMobileCtrl sharedCtrl] PushToOtherUserController:checkInteger(sender.view.tag)];
 }
 
 @end

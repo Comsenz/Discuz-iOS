@@ -41,7 +41,7 @@
             self.pid = [[varDic objectForKey:@"postlist"][0] objectForKey:@"pid"];
         }
     }
-    self.shareUrl = [NSString stringWithFormat:@"%@forum.php?mod=viewthread&tid=%@",BASEURL,self.tid];
+    self.shareUrl = [NSString stringWithFormat:@"%@forum.php?mod=viewthread&tid=%@",DZ_BASEURL,self.tid];
     
     NSDictionary *jsonDic = [self manageJsonWitnAttchment:threadDic];
     self.jsonData = [NSJSONSerialization dataWithJSONObject:jsonDic options:NSJSONWritingPrettyPrinted error:nil];
@@ -177,7 +177,7 @@
     if (self.currentPage == 1) {
         BACK(^{
             if ([LoginModule isLogged] && [DataCheck isValidString:listModel.tid]) {
-//                [[DatabaseHandle defaultDataHelper] footThread:listModel];
+//                [[DZDatabaseHandle defaultDataHelper] footThread:listModel];
             }
         });
 

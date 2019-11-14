@@ -3,7 +3,7 @@
 //  DiscuzMobile
 //
 //  Created by HB on 2017/6/27.
-//  Copyright © 2017年 Cjk. All rights reserved.
+//  Copyright © 2017年 comsenz-service.com. All rights reserved.
 //
 
 #import "SeccodeverifyView.h"
@@ -26,7 +26,7 @@
     
     [DZApiRequest requestWithConfig:^(JTURLRequest *request) {
         NSDictionary *dic = @{@"type":type};
-        request.urlString = url_secureCode;
+        request.urlString = DZ_Url_SecureCode;
         request.parameters = dic;
     } success:^(id responseObject, JTLoadType type) {
         downYan_count = 0;
@@ -107,23 +107,23 @@
     _isCreate = YES;
 
     self.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
-    UIView *  bgview = [[UIView alloc]initWithFrame:CGRectMake(40, 116, WIDTH-80, 300)];
+    UIView *  bgview = [[UIView alloc]initWithFrame:CGRectMake(40, 116, KScreenWidth-80, 300)];
     if (iPhone320) {
-        bgview.frame = CGRectMake(40, 80, WIDTH-80, 260);
+        bgview.frame = CGRectMake(40, 80, KScreenWidth-80, 260);
     }
     
     bgview.backgroundColor = mRGBColor(241, 241, 241);
     [self addSubview:bgview];
     
     // 验证码field
-    _yanTextField= [[UITextField alloc] initWithFrame:CGRectMake(10, 50, WIDTH-100, 57)];
+    _yanTextField= [[UITextField alloc] initWithFrame:CGRectMake(10, 50, KScreenWidth-100, 57)];
     _yanTextField.placeholder = @"请输入验证码";
     _yanTextField.tag=10010;
     _yanTextField.borderStyle= UITextBorderStyleRoundedRect;
     _yanTextField.layer.borderWidth = 2.0f;
     _yanTextField.layer.cornerRadius = 5;
-    _yanTextField.layer.borderColor = MAIN_COLLOR.CGColor;
-    _yanTextField.font = [FontSize forumtimeFontSize14];//14
+    _yanTextField.layer.borderColor = K_Color_Theme.CGColor;
+    _yanTextField.font = [DZFontSize forumtimeFontSize14];//14
     [bgview addSubview:_yanTextField];
     
     //验证码webview
@@ -148,7 +148,7 @@
     [bgview addSubview:_secTextField];
     if ([DataCheck isValidString:[self.secureData objectForKey:@"secqaa"]]) {
         _secqaaLabel.frame = CGRectMake(CGRectGetMinX(_identWebView.frame), CGRectGetMaxY(_identWebView.frame) + 15,CGRectGetWidth(_identWebView.frame), 40);
-        _secqaaLabel.font = [FontSize forumtimeFontSize14];
+        _secqaaLabel.font = [DZFontSize forumtimeFontSize14];
         _secqaaLabel.textAlignment = NSTextAlignmentCenter;
         
         _secTextField.frame = CGRectMake(CGRectGetMinX(buttonSeccode.frame), CGRectGetMaxY(_identWebView.frame) + 15, CGRectGetWidth(buttonSeccode.frame), 40);
@@ -157,19 +157,19 @@
         _secTextField.borderStyle= UITextBorderStyleRoundedRect;
         _secTextField.layer.borderWidth = 2.0f;
         _secTextField.layer.cornerRadius = 5;
-        _secTextField.layer.borderColor = MAIN_COLLOR.CGColor;
-        _secTextField.font = [FontSize forumtimeFontSize14];//14
+        _secTextField.layer.borderColor = K_Color_Theme.CGColor;
+        _secTextField.font = [DZFontSize forumtimeFontSize14];//14
     }
     //    _yanTextField.delegate = self;
     UIButton * buttonpost = [UIButton buttonWithType:UIButtonTypeCustom];
-    buttonpost.frame = CGRectMake(11, CGRectGetMaxY(_secTextField.frame) + 15,WIDTH-100, 50);
-    buttonpost.backgroundColor = MAIN_COLLOR;
+    buttonpost.frame = CGRectMake(11, CGRectGetMaxY(_secTextField.frame) + 15,KScreenWidth-100, 50);
+    buttonpost.backgroundColor = K_Color_Theme;
     [buttonpost addTarget:self action:@selector(postClick) forControlEvents:UIControlEventTouchUpInside];
     buttonpost.layer.cornerRadius = 5;
     [buttonpost setTitle:@"提交" forState:UIControlStateNormal];
     [buttonpost setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [buttonpost setTitleColor:[UIColor darkGrayColor] forState:UIControlStateSelected];
-    //    buttonSeccode.layer.borderColor = MAIN_COLLOR.CGColor;
+    //    buttonSeccode.layer.borderColor = K_Color_Theme.CGColor;
     [bgview addSubview:buttonpost];
     
     [self creatSecureView];

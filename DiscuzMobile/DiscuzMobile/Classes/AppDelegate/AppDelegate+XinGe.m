@@ -65,7 +65,7 @@
 //按钮点击事件回调
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (^)(void))completionHandler{
     if([identifier isEqualToString:@"ACCEPT_IDENTIFIER"]){
-        NSLog(@"ACCEPT_IDENTIFIER is clicked");
+        DLog(@"ACCEPT_IDENTIFIER is clicked");
     }
     completionHandler();
 }
@@ -88,7 +88,7 @@
         DLog(@"[XGPush]register errorBlock");
     };
     NSString * deviceTokenStr = [XGPush registerDevice:deviceToken successCallback:successBlock errorCallback:errorBlock];
-    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:XGTOKEN];
+    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:DZ_XGTOKEN];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     DLog(@"deviceTokenStr=%@",deviceTokenStr);

@@ -7,11 +7,10 @@
 //
 
 #import "BaseStyleCell.h"
-#import "HomeIconTextView.h"
+#import "DZHomeIconTextView.h"
 #import "LoginModule.h"
 #import "UIView+WebCache.h"
 #import "PraiseHelper.h"
-#import "LoginController.h"
 #import "JudgeImageModel.h"
 
 @interface BaseStyleCell()
@@ -100,7 +99,7 @@
     }];
     
     // 标题
-    self.desLab.preferredMaxLayoutWidth = WIDTH - 30;
+    self.desLab.preferredMaxLayoutWidth = KScreenWidth - 30;
     self.desLab.numberOfLines = 2;
     [self.desLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.headV);
@@ -109,7 +108,7 @@
     
     
     // 内容
-    self.messageLab.preferredMaxLayoutWidth = WIDTH - 30;
+    self.messageLab.preferredMaxLayoutWidth = KScreenWidth - 30;
      self.messageLab.numberOfLines = 2;
     [self.messageLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.desLab);
@@ -132,7 +131,7 @@
     
     [self.imageBgV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
-        make.width.mas_equalTo(WIDTH);
+        make.width.mas_equalTo(KScreenWidth);
         make.top.equalTo(self.datelineLab.mas_bottom);
         make.height.equalTo(@90);
     }];
@@ -145,7 +144,7 @@
     
     [self.viewsLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
-        make.width.equalTo(@(WIDTH/3));
+        make.width.equalTo(@(KScreenWidth/3));
         make.top.equalTo(self.lineV.mas_bottom);
         make.height.equalTo(@40);
     }];
@@ -200,7 +199,7 @@
             if ([subjectStr hasPrefix:spaceCharater]) {
                 typeRange = NSMakeRange(spaceCharater.length, info.typeName.length + 2);
             }
-            [describe addAttribute:NSForegroundColorAttributeName value:MAIN_COLLOR range:typeRange];
+            [describe addAttribute:NSForegroundColorAttributeName value:K_Color_Theme range:typeRange];
             self.desLab.attributedText = describe;
         } else {
             self.desLab.text = info.useSubject;
@@ -209,7 +208,7 @@
         
         NSMutableAttributedString *describe = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",subjectStr]];
         NSRange typeRange = NSMakeRange(0, info.typeName.length + 2);
-        [describe addAttribute:NSForegroundColorAttributeName value:MAIN_COLLOR range:typeRange];
+        [describe addAttribute:NSForegroundColorAttributeName value:K_Color_Theme range:typeRange];
         self.desLab.attributedText = describe;
         
     } else {
@@ -258,7 +257,7 @@
     NSInteger count = (info.imglist.count > 3)?3:info.imglist.count;
     
     if (count > 0 && [JudgeImageModel graphFreeModel] == NO) { // 有附件图片的, 有图模式的
-        CGFloat picWidth = (WIDTH - 30 - 20) / 3;
+        CGFloat picWidth = (KScreenWidth - 30 - 20) / 3;
         
         [self.imageBgV mas_updateConstraints:^(MASConstraintMaker *make) {
              make.height.equalTo(@90);
@@ -326,10 +325,8 @@
     
     if (![LoginModule isLogged]) {
         UIViewController *controller = [self jtGetViewController];
-        LoginController *loginVc = [[LoginController alloc] init];
-        loginVc.isKeepTabbarSelected = YES;
-        UINavigationController *navVc = [[UINavigationController alloc] initWithRootViewController:loginVc];
-        [controller presentViewController:navVc animated:YES completion:nil];
+        [[DZMobileCtrl sharedCtrl] PresentLoginController:controller tabSelect:YES];
+        
         return;
     }
     
@@ -341,13 +338,13 @@
         self.info.recommend = @"1";
         self.info.recommend_add = [NSString stringWithFormat:@"%ld",[self.info.recommend_add integerValue] + 1];
         [self setPriceSelected];
-        self.priceLab.iconV.tintColor = MAIN_COLLOR;
+        self.priceLab.iconV.tintColor = K_Color_Theme;
         self.priceLab.textLab.text = self.info.recommend_add;
         [PraiseHelper praiseRequestTid:self.info.tid successBlock:^{
             if (self.info.isRecently) {
                 BACK(^{
                     if ([DataCheck isValidString:self.info.tid]) {
-                        [[DatabaseHandle defaultDataHelper] footThread:self.info];
+                        [[DZDatabaseHandle defaultDataHelper] footThread:self.info];
                     }
                 });
             }
@@ -387,8 +384,8 @@
 - (UILabel *)nameLab {
     if (_nameLab == nil) {
         _nameLab = [[UILabel alloc] init];
-        _nameLab.font = [FontSize HomecellNameFontSize16];
-        _nameLab.textColor = LIGHT_TEXT_COLOR;
+        _nameLab.font = [DZFontSize HomecellNameFontSize16];
+        _nameLab.textColor = K_Color_LightText;
     }
     return _nameLab;
 }
@@ -396,10 +393,10 @@
 - (UILabel *)grade {
     if (_grade == nil) {
         _grade = [[UILabel alloc] init];
-        _grade.font = [FontSize gradeFontSize9];
+        _grade.font = [DZFontSize gradeFontSize9];
         _grade.textAlignment = NSTextAlignmentCenter;
-        _grade.textColor = NAVI_BAR_COLOR;
-        _grade.backgroundColor = MAIN_COLLOR;
+        _grade.textColor = K_Color_NaviBar;
+        _grade.backgroundColor = K_Color_Theme;
     }
     return _grade;
 }
@@ -414,8 +411,8 @@
 - (UILabel *)desLab {
     if (_desLab == nil) {
         _desLab = [[UILabel alloc] init];
-        _desLab.font = [FontSize HomecellTitleFontSize15];
-        _desLab.textColor = MAIN_TITLE_COLOR;
+        _desLab.font = [DZFontSize HomecellTitleFontSize15];
+        _desLab.textColor = K_Color_MainTitle;
         _desLab.textAlignment = NSTextAlignmentLeft;
         _desLab.numberOfLines = 0;
     }
@@ -425,8 +422,8 @@
 - (UILabel *)messageLab {
     if (_messageLab == nil) {
         _messageLab = [[UILabel alloc] init];
-        _messageLab.font = [FontSize messageFontSize14];
-        _messageLab.textColor = MESSAGE_COLOR;
+        _messageLab.font = [DZFontSize messageFontSize14];
+        _messageLab.textColor = K_Color_Message;
         _messageLab.textAlignment = NSTextAlignmentLeft;
         _messageLab.numberOfLines = 0;
     }
@@ -436,8 +433,8 @@
 - (UILabel *)datelineLab {
     if (_datelineLab == nil) {
         _datelineLab = [[UILabel alloc] init];
-        _datelineLab.font = [FontSize HomecellTimeFontSize14];
-        _datelineLab.textColor = LIGHT_TEXT_COLOR;
+        _datelineLab.font = [DZFontSize HomecellTimeFontSize14];
+        _datelineLab.textColor = K_Color_LightText;
     }
     return _datelineLab;
 }
@@ -445,32 +442,32 @@
 - (UILabel *)tipLab {
     if (_tipLab == nil) {
         _tipLab = [[UILabel alloc] init];
-        _tipLab.font = [FontSize HomecellTimeFontSize14];
-        _tipLab.textColor = LIGHT_TEXT_COLOR;
+        _tipLab.font = [DZFontSize HomecellTimeFontSize14];
+        _tipLab.textColor = K_Color_LightText;
         _tipLab.textAlignment = NSTextAlignmentRight;
     }
     return _tipLab;
 }
 
-- (HomeIconTextView *)viewsLab {
+- (DZHomeIconTextView *)viewsLab {
     if (_viewsLab == nil) {
-        _viewsLab = [[HomeIconTextView alloc] init];;
+        _viewsLab = [[DZHomeIconTextView alloc] init];;
         _viewsLab.backgroundColor = [UIColor whiteColor];
     }
     return _viewsLab;
 }
 
-- (HomeIconTextView *)repliesLab {
+- (DZHomeIconTextView *)repliesLab {
     if (_repliesLab == nil) {
-        _repliesLab = [[HomeIconTextView alloc] init];
+        _repliesLab = [[DZHomeIconTextView alloc] init];
         _repliesLab.backgroundColor = [UIColor whiteColor];
     }
     return _repliesLab;
 }
 
-- (HomeIconTextView *)priceLab {
+- (DZHomeIconTextView *)priceLab {
     if (_priceLab == nil) {
-        _priceLab = [[HomeIconTextView alloc] init];
+        _priceLab = [[DZHomeIconTextView alloc] init];
         _priceLab.backgroundColor = [UIColor whiteColor];
     }
     return _priceLab;
@@ -479,7 +476,7 @@
 - (UIView *)lineV {
     if (_lineV == nil) {
         _lineV = [[UIView alloc] init];
-        _lineV.backgroundColor = LINE_COLOR;
+        _lineV.backgroundColor = K_Color_Line;
     }
     return _lineV;
 }
@@ -494,7 +491,7 @@
 - (UIView *)sepLine {
     if (_sepLine == nil) {
         _sepLine = [[UIView alloc] init];
-        _sepLine.backgroundColor = LINE_COLOR;
+        _sepLine.backgroundColor = K_Color_Line;
     }
     return _sepLine;
 }

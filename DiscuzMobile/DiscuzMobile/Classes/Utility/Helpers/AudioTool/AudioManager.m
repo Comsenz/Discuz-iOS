@@ -25,7 +25,7 @@
     audioRecordView.stopRecordBlock = ^{
         if ([AudioTool shareInstance].recordTime < 2) {
             [MBProgressHUD showInfo:@"录音时间太短"];
-            NSLog(@"录音时间太短");
+            DLog(@"录音时间太短");
             [weakAudioView resetAction];
             return;
         }

@@ -6,11 +6,11 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "DZBaseTableViewController.h"
 #import "ThreadModel.h"
 
 
-@interface PartInActitivityController : BaseTableViewController
+@interface PartInActitivityController : DZBaseTableViewController
 
 @property (nonatomic, strong) ThreadModel *threadModel;
 

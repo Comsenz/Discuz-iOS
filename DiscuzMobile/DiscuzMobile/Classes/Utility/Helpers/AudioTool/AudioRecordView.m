@@ -102,7 +102,7 @@
 }
 
 - (void)sliderValueChanged:(UISlider *)slider {
-    NSLog(@"slider value%f",slider.value);
+    DLog(@"slider value%f",slider.value);
     self.playTime = (NSInteger)(self.recordTime  * (1 - slider.value));
     self.sliderBlock?self.sliderBlock(slider.value):nil;
     if (self.recordStatus == r_play) {
@@ -116,7 +116,7 @@
 - (void)startRecord:(UILongPressGestureRecognizer *)gestureRecognizer {
     
     if (gestureRecognizer.state ==  UIGestureRecognizerStateBegan) {
-        NSLog(@"开始录音");
+        DLog(@"开始录音");
         self.recordTime = 0;
         if (self.startRecordBlock) {
             self.startRecordBlock();
@@ -127,7 +127,7 @@
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(recordingAction:) userInfo:nil repeats:YES];
     }
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
-        NSLog(@"结束录音");
+        DLog(@"结束录音");
         if (self.recordTimeBlock) {
             self.recordTimeBlock(self.recordTime);
         }
@@ -181,7 +181,7 @@
 
 // 播放
 - (void)playRecord {
-    NSLog(@"播放");
+    DLog(@"播放");
     if (self.playRecordBlock) {
         self.playRecordBlock();
     }
@@ -215,7 +215,7 @@
 
 // 停止、暂停
 - (void)pause {
-    NSLog(@"暂停");
+    DLog(@"暂停");
     self.recordStatus = r_pause;
     if (self.pausePlayBlock) {
         self.pausePlayBlock();
@@ -227,7 +227,7 @@
 }
 
 - (void)playCompleted {
-    NSLog(@"停止了");
+    DLog(@"停止了");
     if (self.stopPlayBlock) {
         self.stopPlayBlock();
     }

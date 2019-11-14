@@ -9,11 +9,10 @@
 #import "AppDelegate.h"
 #import "LoginModule.h"
 #import "RNCachingURLProtocol.h"
-#import "TabbarController.h"
-#import "ShareCenter.h"
-#import "LaunchImageManager.h"
-#import "ThreadViewController.h"
-#import "WebImageCacheNSURLProtocol.h"
+#import "DZRootTabBarController.h"
+#import "DZShareCenter.h"
+#import "DZLaunchScreenManager.h"
+#import "WebImageCacheUrlProtocol.h"
 
 #import "VersionUpdate.h"
 #import "SELUpdateAlert.h"
@@ -22,15 +21,15 @@
 
 @implementation AppDelegate
 
-static AppDelegate *_appDelegate;
+static AppDelegate *m_appDelegate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    _appDelegate = self;
+    m_appDelegate = self;
     
-    TabbarController * rootVC = [[TabbarController alloc] init];
+    DZRootTabBarController * rootVC = [[DZRootTabBarController alloc] init];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     
@@ -52,11 +51,11 @@ static AppDelegate *_appDelegate;
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
     // 分享平台参数配置
-    [[ShareCenter shareInstance] setupShareConfigure];
+    [[DZShareCenter shareInstance] setupShareConfigure];
     
 //    // 设置开机启动画面
 //    [self setLaunchView];
-//    [[LaunchImageManager shareInstance] setLaunchView];
+//    [[DZLaunchScreenManager shareInstance] setLaunchView];
     
     [self initCacheConfigure];
     
@@ -79,17 +78,19 @@ static AppDelegate *_appDelegate;
 - (void)initCacheConfigure {
     // 离线缓存
     [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
-//    [NSURLProtocol registerClass:[WebImageCacheNSURLProtocol class]];
+//    [NSURLProtocol registerClass:[WebImageCacheUrlProtocol class]];
     
-    SDWebImageManager.sharedManager.imageDownloader.downloadTimeout = 10;
-    SDWebImageManager.sharedManager.imageDownloader.maxConcurrentDownloads = 6;
-#if Penjing
-    SDWebImageManager.sharedManager.imageDownloader.executionOrder = SDWebImageDownloaderLIFOExecutionOrder;  // 图片加载方式默认FIFO先进先出，后入先出
-#endif
-    // 设置图片缓存信息
-    [SDImageCache sharedImageCache].config.maxCacheAge = 7 * 24 * 60 * 60; //7天
-    [SDImageCache sharedImageCache].config.maxCacheSize = 1024 * 1024 * 100; //100MB
-    [SDImageCache sharedImageCache].maxMemoryCost = 1024 * 1024 * 40; //40MB
+//    SDWebImageDownloaderConfig *coonfig = [[SDWebImageDownloaderConfig alloc] init];
+//    coonfig.downloadTimeout = 10;
+//    coonfig.maxConcurrentDownloads = 6;
+//    coonfig.executionOrder = SDWebImageDownloaderLIFOExecutionOrder;
+//   SDWebImageDownloader *downloader = [[SDWebImageDownloader alloc] initWithConfig:coonfig];
+//    // 设置图片缓存信息
+//    
+//    SDImageCacheConfig *cacheConfig = [[SDImageCacheConfig alloc] init];
+//    cacheConfig.maxCacheAge = 7 * 24 * 60 * 60; //7天
+//    cacheConfig.maxCacheSize = 1024 * 1024 * 100; //100MB
+//    cacheConfig.maxMemoryCost = 1024 * 1024 * 40; //40MB
 }
 
 #pragma mark - Status bar 点击tableview滚到顶部
@@ -98,7 +99,7 @@ static AppDelegate *_appDelegate;
     CGPoint location = [[[event allTouches] anyObject] locationInView:self.window];
     CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
     if (CGRectContainsPoint(statusBarFrame, location)) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:STATUSBARTAP object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DZ_STATUSBARTAP_Notify object:nil];
     }
 }
 
@@ -120,7 +121,7 @@ static AppDelegate *_appDelegate;
 }
 
 + (AppDelegate *)appDelegate {
-    return _appDelegate;
+    return m_appDelegate;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -139,7 +140,7 @@ static AppDelegate *_appDelegate;
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"COOKIEVALU"];
         //        // 首次打开APP
-        //        InstroductionView *helpView = [[InstroductionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        //        DZInstroductionView *helpView = [[DZInstroductionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         //        [self.window addSubview:helpView];
         //
         //        NSMutableArray *imageArr = [NSMutableArray array];
@@ -148,7 +149,7 @@ static AppDelegate *_appDelegate;
         //        }
         //        [helpView setPerpage:imageArr];
         //        helpView.dismissBlock = ^ {
-        //            [[NSNotificationCenter defaultCenter] postNotificationName:FIRSTAPP object:nil];
+        //            [[NSNotificationCenter defaultCenter] postNotificationName:DZ_FIRSTAPP_Notify object:nil];
         //        };
     } else {
         if (!self.isOpenUrl) {

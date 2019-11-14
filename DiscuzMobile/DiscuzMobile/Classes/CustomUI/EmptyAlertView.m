@@ -23,7 +23,7 @@
 - (void)commitInit {
     
     self.backgroundColor = [UIColor whiteColor];
-    self.emptyIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:EMPTYIMAGE]];
+    self.emptyIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:DZ_EMPTYIMAGE]];
     self.emptyIcon.frame = CGRectMake(0, 0, 160, 140);
     self.emptyIcon.center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) / 2);
     

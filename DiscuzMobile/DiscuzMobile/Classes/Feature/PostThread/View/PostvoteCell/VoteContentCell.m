@@ -21,10 +21,10 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.frame) - 20 - 60, CGRectGetHeight(self.frame) - 20)];
     self.textField.placeholder = @"    请输入投票选项";
-    self.textField.font = [FontSize HomecellTitleFontSize15];
+    self.textField.font = [DZFontSize HomecellTitleFontSize15];
     self.textField.layer.borderWidth = 1.0;
     self.textField.layer.cornerRadius = 4.0;
-    self.textField.layer.borderColor = LINE_COLOR.CGColor;
+    self.textField.layer.borderColor = K_Color_Line.CGColor;
     [self.contentView addSubview:self.textField];
     
     self.postImageBtn = [UIButton buttonWithType:UIButtonTypeCustom];

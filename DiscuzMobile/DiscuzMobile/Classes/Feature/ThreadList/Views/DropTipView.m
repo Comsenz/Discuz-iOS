@@ -29,7 +29,7 @@
     
     [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@40);
-        make.width.equalTo(@(WIDTH - 80));
+        make.width.equalTo(@(KScreenWidth - 80));
         make.top.bottom.equalTo(self);
     }];
     
@@ -58,7 +58,7 @@
     if (!_tipLabel) {
         _tipLabel = [[UILabel alloc] init];
         _tipLabel.textAlignment =  NSTextAlignmentCenter;
-        _tipLabel.font = [FontSize messageFontSize14];
+        _tipLabel.font = [DZFontSize messageFontSize14];
         _tipLabel.textColor = [UIColor whiteColor];
         _tipLabel.userInteractionEnabled = YES;
         [_tipLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTip)]];

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 comsenz-service.com.  All rights reserved.
 //
 
-#import "JTContainerController.h"
+#import "DZContainerController.h"
 
-@interface LianCollectionController : JTContainerController
+@interface LianCollectionController : DZContainerController
 
 @property (assign, nonatomic) BOOL childCanScroll;
 
